@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delete data – Shopping List & Notes</title>
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/png" href="/assets/kauppalista-favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/AI.png" alt="Shopping List & Notes logo">
+        <div>
+          <h1>Shopping List &amp; Notes <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/legal/kauppalista/" data-i18n="nav_privacy">Privacy Policy</a>
+        <a href="/legal/kauppalista/support.html" data-i18n="nav_support">Support</a>
+        <a href="/legal/kauppalista/terms.html" data-i18n="nav_terms">Terms</a>
+        <a class="active" href="/legal/kauppalista/delete-data.html" data-i18n="nav_delete">Delete data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Last updated</span>: <span>2026-05-12</span></span>
+      <h2 data-i18n="title">Delete your data</h2>
+      <p data-i18n="subtitle">How to remove local app data and optional shared collaboration data.</p>
+    </section>
+
+    <main class="card">
+      <h3 data-i18n="h_local">Local app data</h3>
+
+      <p data-i18n="p1">
+        Most app data, such as local shopping lists, notes, favorites, and preferences, is stored locally on your device.
+        To delete local app data:
+      </p>
+
+      <h3 data-i18n="h_android">Android (general steps)</h3>
+      <ol>
+        <li data-i18n="a1">Open <b>Settings</b></li>
+        <li data-i18n="a2">Go to <b>Apps</b> → <b>Shopping List &amp; Notes</b></li>
+        <li data-i18n="a3">Open <b>Storage</b></li>
+        <li data-i18n="a4">Tap <b>Clear data</b> (and optionally <b>Clear cache</b>)</li>
+        <li data-i18n="a5">Optionally uninstall the app to remove it completely</li>
+      </ol>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="h_shared">Shared lists and Google Sign-In data</h3>
+
+      <p data-i18n="p_shared_1">
+        If you use optional shared list collaboration, some data may be stored in Firebase services to provide realtime sync,
+        invitations, roles, member information, and shared list notifications.
+      </p>
+
+      <p data-i18n="p_shared_2">
+        To stop using shared lists, you can sign out from the app settings. Signing out disables shared collaboration on that device
+        and removes or disables the device notification token where applicable.
+      </p>
+
+      <p data-i18n="p_shared_3">
+        If you want shared collaboration data associated with your Google account to be removed, contact support using the email address below.
+        Include the Google account email used for shared lists so the request can be identified.
+      </p>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="h_notifications">Push notification data</h3>
+
+      <p data-i18n="p_notifications">
+        Shared list push notifications use Firebase Cloud Messaging. You can disable notifications from Android notification settings
+        or from the app settings where available. Signing out also disables shared-list notification delivery for that device where applicable.
+      </p>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="h_backups">Exports and backups</h3>
+
+      <p data-i18n="p2">
+        If you use export/import backups, deleting app data does not automatically delete files you exported elsewhere.
+        Delete those files manually from your device storage, cloud storage, or any other location where you saved them.
+      </p>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="h_contact">Request data deletion</h3>
+
+      <p data-i18n="p_contact">
+        To request deletion of optional cloud/shared collaboration data, contact:
+        <b><a href="mailto:janstech.apps@gmail.com">janstech.apps@gmail.com</a></b>
+      </p>
+
+      <p class="footer">© 2026 Janstech</p>
+    </main>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy Policy",
+        nav_support:"Support",
+        nav_terms:"Terms",
+        nav_delete:"Delete data",
+        lang_label:"Language",
+        badge:"Last updated",
+
+        title:"Delete your data",
+        subtitle:"How to remove local app data and optional shared collaboration data.",
+
+        h_local:"Local app data",
+        p1:"Most app data, such as local shopping lists, notes, favorites, and preferences, is stored locally on your device. To delete local app data:",
+
+        h_android:"Android (general steps)",
+        a1:"Open <b>Settings</b>",
+        a2:"Go to <b>Apps</b> → <b>Shopping List &amp; Notes</b>",
+        a3:"Open <b>Storage</b>",
+        a4:"Tap <b>Clear data</b> (and optionally <b>Clear cache</b>)",
+        a5:"Optionally uninstall the app to remove it completely",
+
+        h_shared:"Shared lists and Google Sign-In data",
+        p_shared_1:"If you use optional shared list collaboration, some data may be stored in Firebase services to provide realtime sync, invitations, roles, member information, and shared list notifications.",
+        p_shared_2:"To stop using shared lists, you can sign out from the app settings. Signing out disables shared collaboration on that device and removes or disables the device notification token where applicable.",
+        p_shared_3:"If you want shared collaboration data associated with your Google account to be removed, contact support using the email address below. Include the Google account email used for shared lists so the request can be identified.",
+
+        h_notifications:"Push notification data",
+        p_notifications:"Shared list push notifications use Firebase Cloud Messaging. You can disable notifications from Android notification settings or from the app settings where available. Signing out also disables shared-list notification delivery for that device where applicable.",
+
+        h_backups:"Exports and backups",
+        p2:"If you use export/import backups, deleting app data does not automatically delete files you exported elsewhere. Delete those files manually from your device storage, cloud storage, or any other location where you saved them.",
+
+        h_contact:"Request data deletion",
+        p_contact:"To request deletion of optional cloud/shared collaboration data, contact: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>"
+      },
+
+      fi: {
+        nav_privacy:"Tietosuoja",
+        nav_support:"Tuki",
+        nav_terms:"Käyttöehdot",
+        nav_delete:"Poista tiedot",
+        lang_label:"Kieli",
+        badge:"Päivitetty",
+
+        title:"Tietojen poistaminen",
+        subtitle:"Näin poistat paikalliset sovellustiedot ja vapaaehtoisen jaettujen listojen pilvidatan.",
+
+        h_local:"Paikalliset sovellustiedot",
+        p1:"Suurin osa sovelluksen tiedoista, kuten paikalliset kauppalistat, muistiinpanot, suosikit ja asetukset, tallennetaan paikallisesti omalle laitteellesi. Poistaaksesi paikalliset sovellustiedot:",
+
+        h_android:"Android (yleiset ohjeet)",
+        a1:"Avaa <b>Asetukset</b>",
+        a2:"Siirry kohtaan <b>Sovellukset</b> → <b>Kauppalista &amp; Muistiinpanot</b>",
+        a3:"Avaa <b>Tallennustila</b>",
+        a4:"Valitse <b>Tyhjennä tiedot</b> (halutessasi myös <b>Tyhjennä välimuisti</b>)",
+        a5:"Halutessasi poista sovellus kokonaan laitteeltasi",
+
+        h_shared:"Jaetut listat ja Google-kirjautumisen tiedot",
+        p_shared_1:"Jos käytät vapaaehtoista jaettujen listojen yhteiskäyttöä, osa tiedoista voidaan tallentaa Firebase-palveluihin reaaliaikaisen synkronoinnin, kutsujen, roolien, jäsenyystietojen ja jaettujen listojen ilmoitusten toteuttamiseksi.",
+        p_shared_2:"Voit lopettaa jaettujen listojen käytön kirjautumalla ulos sovelluksen asetuksista. Uloskirjautuminen poistaa jaettujen listojen käytön kyseisellä laitteella ja poistaa tai poistaa käytöstä laitteen ilmoitustokenin silloin, kun se on sovellettavissa.",
+        p_shared_3:"Jos haluat poistaa Google-tiliisi liittyvän jaettujen listojen yhteiskäyttödatan, ota yhteyttä tukeen alla olevalla sähköpostiosoitteella. Liitä mukaan Google-tilin sähköpostiosoite, jota käytit jaetuissa listoissa, jotta pyyntö voidaan tunnistaa.",
+
+        h_notifications:"Push-ilmoitusten tiedot",
+        p_notifications:"Jaettujen listojen push-ilmoitukset käyttävät Firebase Cloud Messagingia. Voit poistaa ilmoitukset käytöstä Androidin ilmoitusasetuksista tai sovelluksen asetuksista silloin, kun se on tuettu. Uloskirjautuminen poistaa myös jaettujen listojen ilmoitusten toimituksen kyseiselle laitteelle silloin, kun se on sovellettavissa.",
+
+        h_backups:"Vientitiedostot ja varmuuskopiot",
+        p2:"Jos käytät vientiä/tuontia tai varmuuskopioita, sovelluksen tietojen poistaminen ei automaattisesti poista erikseen tallennettuja tiedostoja. Poista ne tarvittaessa manuaalisesti laitteen tallennustilasta, pilvitallennuksesta tai muusta sijainnista, johon olet ne tallentanut.",
+
+        h_contact:"Pyydä tietojen poistamista",
+        p_contact:"Pyytääksesi vapaaehtoisen pilvi-/jaettujen listojen yhteiskäyttödatan poistamista, ota yhteyttä: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>"
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) {
+          el.innerHTML = dict[lang][key];
+        }
+      }
+
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+
+    document.getElementById("btnFi").addEventListener("click", () => setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", () => setLang("en"));
+
+    setLang(saved);
+  </script>
+</body>
+</html>

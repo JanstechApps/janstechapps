@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WaveIQ Radio – Privacy Policy</title>
+  <link rel="icon" type="image/png" href="/assets/waveiq-skull.png" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="robots" content="index,follow" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/iq_kuv1.png" alt="WaveIQ Radio logo">
+        <div>
+          <h1>WaveIQ Radio <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="active" href="/legal/waveiq/" data-i18n="nav_privacy">Privacy</a>
+        <a href="/legal/waveiq/support.html" data-i18n="nav_support">Support</a>
+        <a href="/legal/waveiq/terms.html" data-i18n="nav_terms">Terms</a>
+        <a href="/legal/waveiq/delete-data.html" data-i18n="nav_delete">Delete Data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span id="lastUpdated">2026-02-23</span></span>
+      <h2 data-i18n="title">Privacy Policy</h2>
+      <p data-i18n="subtitle">
+        This page explains what data WaveIQ Radio processes, why it’s processed, and how you can request deletion.
+      </p>
+    </section>
+
+    <div class="grid">
+      <main class="card">
+        <h3 data-i18n="pp_overview_h">Overview</h3>
+        <p data-i18n="pp_overview_p">
+          WaveIQ Radio is a “personal listening intelligence” radio app. The app can store your stations locally and (optionally) send listening telemetry to our backend to enable history-based recommendations and stream health validation.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_data_h">Data we process</h3>
+        <p class="small" data-i18n="pp_data_note">
+          We keep data collection minimal. Some features can work without sending history to the backend (depending on build / configuration).
+        </p>
+        <ul>
+          <li data-i18n="pp_data_1"><b>App instance identifier</b> (random device/app ID, not your real name) to group events under one install.</li>
+          <li data-i18n="pp_data_2"><b>Listening events</b> (station start, listening sessions) to build aggregated taste signals.</li>
+          <li data-i18n="pp_data_3"><b>Now playing metadata</b> (track title text, station id) to improve recommendations and deduplicate facts.</li>
+          <li data-i18n="pp_data_4"><b>Stream health</b> pings/results (success/fail, timing) to filter silent or broken streams.</li>
+          <li data-i18n="pp_data_5"><b>AI usage counters</b> (daily call counts/tokens/quota hits) to enforce fair use and prevent abuse.</li>
+          <li data-i18n="pp_data_6"><b>Firebase Analytics</b> (if enabled in your build) for app stability and usage insights.</li>
+          <li data-i18n="pp_data_7"><b>App Check tokens</b> are used for security validation. Tokens are verified to ensure requests come from a legitimate app instance.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_purpose_h">Why we process data</h3>
+        <ul>
+          <li data-i18n="pp_purpose_1">To provide core functionality (station playback, saving stations, sleep timer).</li>
+          <li data-i18n="pp_purpose_2">To generate <b>history-driven recommendations</b> and maintain a taste profile.</li>
+          <li data-i18n="pp_purpose_3">To detect broken/silent streams and improve playback reliability.</li>
+          <li data-i18n="pp_purpose_4">To protect the backend and AI endpoints from abuse (App Check, quota controls).</li>
+          <li data-i18n="pp_purpose_5">To measure and improve app quality (crash/usage analytics if enabled).</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_storage_h">Where data is stored</h3>
+        <ul>
+          <li data-i18n="pp_storage_1"><b>On device:</b> Your saved stations, settings, and (optional) backups are stored locally on your device.</li>
+          <li data-i18n="pp_storage_2"><b>Backend:</b> Listening telemetry and derived taste signals may be stored in our database (MariaDB) to power recommendations.</li>
+          <li data-i18n="pp_storage_3"><b>Firebase:</b> App Check (security) and (optionally) Analytics.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_sharing_h">Data sharing</h3>
+        <p data-i18n="pp_sharing_p">
+          We do not sell your data. Data may be processed by service providers used to operate the app (e.g., Firebase, hosting provider). AI calls (if enabled) may be processed by the configured AI provider.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_retention_h">Retention</h3>
+        <p data-i18n="pp_retention_p">
+          We keep backend telemetry only as long as needed for recommendations, analytics, and security. You can request deletion (see “Delete Data” page).
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_security_h">Security</h3>
+        <ul>
+          <li data-i18n="pp_security_1">Requests to AI endpoints are protected by <b>Firebase App Check (Play Integrity)</b>.</li>
+          <li data-i18n="pp_security_2">Data is transmitted over HTTPS.</li>
+          <li data-i18n="pp_security_3">We log only what is necessary for debugging and abuse prevention.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_contact_h">Contact</h3>
+        <p data-i18n="pp_contact_p">
+          For privacy questions or deletion requests, contact: <b>janstech.apps@gmail.com</b>
+        </p>
+
+        <p class="footer">
+          <span data-i18n="pp_footer">
+            This policy may change as features evolve. The “Updated” date at the top indicates the latest revision.
+          </span>
+        </p>
+      </main>
+
+      <aside class="card">
+        <h3 data-i18n="quick_h">Quick links</h3>
+        <ul>
+          <li><a href="/legal/waveiq/delete-data.html" data-i18n="quick_delete">How to delete data</a></li>
+          <li><a href="/legal/waveiq/support.html" data-i18n="quick_support">Support</a></li>
+          <li><a href="/legal/waveiq/terms.html" data-i18n="quick_terms">Terms of Use</a></li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="facts_h">What WaveIQ stores locally</h3>
+        <ul>
+          <li data-i18n="facts_1">Saved stations list</li>
+          <li data-i18n="facts_2">Favorites & ordering</li>
+          <li data-i18n="facts_3">Settings (theme, timer, etc.)</li>
+          <li data-i18n="facts_4">Optional backup archive (Drive AppData if enabled)</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="build_h">Build notes</h3>
+        <p data-i18n="build_p">
+          Debug builds may use a debug App Check provider for development. Release/closed-test builds use Play Integrity.
+        </p>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy: "Privacy",
+        nav_support: "Support",
+        nav_terms: "Terms",
+        nav_delete: "Delete Data",
+        lang_label: "Language",
+        badge: "Updated",
+        title: "Privacy Policy",
+        subtitle: "This page explains what data WaveIQ Radio processes, why it’s processed, and how you can request deletion.",
+
+        pp_overview_h: "Overview",
+        pp_overview_p: "WaveIQ Radio is a “personal listening intelligence” radio app. The app can store your stations locally and (optionally) send listening telemetry to our backend to enable history-based recommendations and stream health validation.",
+
+        pp_data_h: "Data we process",
+        pp_data_note: "We keep data collection minimal. Some features can work without sending history to the backend (depending on build / configuration).",
+        pp_data_1: "<b>App instance identifier</b> (random device/app ID, not your real name) to group events under one install.",
+        pp_data_2: "<b>Listening events</b> (station start, listening sessions) to build aggregated taste signals.",
+        pp_data_3: "<b>Now playing metadata</b> (track title text, station id) to improve recommendations and deduplicate facts.",
+        pp_data_4: "<b>Stream health</b> pings/results (success/fail, timing) to filter silent or broken streams.",
+        pp_data_5: "<b>AI usage counters</b> (daily call counts/tokens/quota hits) to enforce fair use and prevent abuse.",
+        pp_data_6: "<b>Firebase Analytics</b> (if enabled in your build) for app stability and usage insights.",
+        pp_data_7: "<b>App Check tokens</b> are used for security validation. Tokens are verified to ensure requests come from a legitimate app instance.",
+
+        pp_purpose_h: "Why we process data",
+        pp_purpose_1: "To provide core functionality (station playback, saving stations, sleep timer).",
+        pp_purpose_2: "To generate <b>history-driven recommendations</b> and maintain a taste profile.",
+        pp_purpose_3: "To detect broken/silent streams and improve playback reliability.",
+        pp_purpose_4: "To protect the backend and AI endpoints from abuse (App Check, quota controls).",
+        pp_purpose_5: "To measure and improve app quality (crash/usage analytics if enabled).",
+
+        pp_storage_h: "Where data is stored",
+        pp_storage_1: "<b>On device:</b> Your saved stations, settings, and (optional) backups are stored locally on your device.",
+        pp_storage_2: "<b>Backend:</b> Listening telemetry and derived taste signals may be stored in our database (MariaDB) to power recommendations.",
+        pp_storage_3: "<b>Firebase:</b> App Check (security) and (optionally) Analytics.",
+
+        pp_sharing_h: "Data sharing",
+        pp_sharing_p: "We do not sell your data. Data may be processed by service providers used to operate the app (e.g., Firebase, hosting provider). AI calls (if enabled) may be processed by the configured AI provider.",
+
+        pp_retention_h: "Retention",
+        pp_retention_p: "We keep backend telemetry only as long as needed for recommendations, analytics, and security. You can request deletion (see “Delete Data” page).",
+
+        pp_security_h: "Security",
+        pp_security_1: "Requests to AI endpoints are protected by <b>Firebase App Check (Play Integrity)</b>.",
+        pp_security_2: "Data is transmitted over HTTPS.",
+        pp_security_3: "We log only what is necessary for debugging and abuse prevention.",
+
+        pp_contact_h: "Contact",
+        pp_contact_p: "For privacy questions or deletion requests, contact: <b>janstech.apps@gmail.com</b>",
+
+        pp_footer: "This policy may change as features evolve. The “Updated” date at the top indicates the latest revision.",
+
+        quick_h: "Quick links",
+        quick_delete: "How to delete data",
+        quick_support: "Support",
+        quick_terms: "Terms of Use",
+
+        facts_h: "What WaveIQ stores locally",
+        facts_1: "Saved stations list",
+        facts_2: "Favorites & ordering",
+        facts_3: "Settings (theme, timer, etc.)",
+        facts_4: "Optional backup archive (Drive AppData if enabled)",
+
+        build_h: "Build notes",
+        build_p: "Debug builds may use a debug App Check provider for development. Release/closed-test builds use Play Integrity."
+      },
+      fi: {
+        nav_privacy: "Tietosuoja",
+        nav_support: "Tuki",
+        nav_terms: "Käyttöehdot",
+        nav_delete: "Poista tiedot",
+        lang_label: "Kieli",
+        badge: "Päivitetty",
+        title: "Tietosuojakäytäntö",
+        subtitle: "Tällä sivulla kerrotaan, mitä tietoja WaveIQ Radio käsittelee, miksi, sekä miten voit pyytää tietojen poistamista.",
+
+        pp_overview_h: "Yleiskuva",
+        pp_overview_p: "WaveIQ Radio on “personal listening intelligence” -radio. Sovellus voi tallentaa asemat laitteelle ja (valinnaisesti) lähettää kuuntelutapahtumia taustajärjestelmään history-pohjaisia suosituksia ja stream health -validointia varten.",
+
+        pp_data_h: "Mitä tietoja käsitellään",
+        pp_data_note: "Pidämme datankeruun minimissä. Osa ominaisuuksista toimii ilman historian lähettämistä backendiin (riippuen buildistä / asetuksista).",
+        pp_data_1: "<b>Sovellusinstanssin tunniste</b> (satunnainen laite/app-id, ei oikea nimesi) tapahtumien ryhmittämiseen saman asennuksen alle.",
+        pp_data_2: "<b>Kuuntelutapahtumat</b> (aseman aloitus, kuuntelusessiot) makutason signaalien muodostamiseen.",
+        pp_data_3: "<b>Now playing -metadata</b> (kappaleen otsikkoteksti, station id) suositusten parantamiseen ja deduplikointiin.",
+        pp_data_4: "<b>Stream health</b> (onnistui/epäonnistui, ajoitus) hiljaisten/rikkoutuneiden streamien suodattamiseen.",
+        pp_data_5: "<b>AI-käyttölaskurit</b> (päivittäiset kutsut/tokenit/quota-hit) reilun käytön ja abuse-eston toteuttamiseen.",
+        pp_data_6: "<b>Firebase Analytics</b> (jos käytössä buildissä) vakauden ja käytön mittaamiseen.",
+        pp_data_7: "<b>App Check -tokenit</b> turvallisuusvalidointiin. Tokenit verifioidaan, jotta pyynnöt tulevat aidosta sovellusinstanssista.",
+
+        pp_purpose_h: "Miksi tietoja käsitellään",
+        pp_purpose_1: "Perustoiminnallisuuksien tarjoamiseen (toisto, asemien tallennus, uniajastin).",
+        pp_purpose_2: "<b>History-pohjaisten suositusten</b> ja taste-profiilin tuottamiseen.",
+        pp_purpose_3: "Hiljaisten/rikkoutuneiden streamien tunnistamiseen ja toiston luotettavuuden parantamiseen.",
+        pp_purpose_4: "Backendin ja AI-endpointtien suojaamiseen väärinkäytöltä (App Check, quota).",
+        pp_purpose_5: "Sovelluksen laadun kehittämiseen (crash/käyttöanalytiikka jos käytössä).",
+
+        pp_storage_h: "Missä data säilytetään",
+        pp_storage_1: "<b>Laitteella:</b> Tallennetut asemat, asetukset ja (valinnaiset) varmuuskopiot säilytetään laitteellasi.",
+        pp_storage_2: "<b>Backend:</b> Kuunteludata ja johdettu taste-profiili voidaan tallentaa tietokantaan (MariaDB) suosituksia varten.",
+        pp_storage_3: "<b>Firebase:</b> App Check (turva) ja (valinnaisesti) Analytics.",
+
+        pp_sharing_h: "Tietojen luovutus",
+        pp_sharing_p: "Emme myy tietojasi. Tietoja voidaan käsitellä palveluntarjoajien toimesta sovelluksen operointia varten (esim. Firebase, hosting). AI-kutsut (jos käytössä) voivat kulkea valitun AI-palvelun kautta.",
+
+        pp_retention_h: "Säilytysaika",
+        pp_retention_p: "Säilytämme backend-telemetrian vain niin kauan kuin se on tarpeen suosituksille, analytiikalle ja turvallisuudelle. Voit pyytää poistamista (katso “Poista tiedot”).",
+
+        pp_security_h: "Tietoturva",
+        pp_security_1: "AI-endpointit on suojattu <b>Firebase App Checkillä (Play Integrity)</b>.",
+        pp_security_2: "Tieto siirtyy HTTPS-yhteydellä.",
+        pp_security_3: "Lokia kerätään vain tarvittava määrä debuggausta ja abuse-estämistä varten.",
+
+        pp_contact_h: "Yhteys",
+        pp_contact_p: "Tietosuoja- ja poistopyynnöt: <b>janstech.apps@gmail.com</b>",
+
+        pp_footer: "Tätä käytäntöä voidaan päivittää ominaisuuksien kehittyessä. Yläreunan “Päivitetty”-päivä kertoo viimeisimmän version.",
+
+        quick_h: "Pikalinkit",
+        quick_delete: "Miten tietoja poistetaan",
+        quick_support: "Tuki",
+        quick_terms: "Käyttöehdot",
+
+        facts_h: "Mitä WaveIQ tallentaa laitteelle",
+        facts_1: "Tallennettu asemalista",
+        facts_2: "Suosikit ja järjestys",
+        facts_3: "Asetukset (teema, ajastin jne.)",
+        facts_4: "Valinnainen varmuuskopio (Drive AppData jos käytössä)",
+
+        build_h: "Build-huomio",
+        build_p: "Debug-buildit voivat käyttää kehitystä varten debug App Check -provideria. Release/closed-test käyttää Play Integrityä."
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
+</body>
+</html>

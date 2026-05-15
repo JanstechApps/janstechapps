@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support – Shopping List & Notes</title>
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/png" href="/assets/kauppalista-favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/AI.png" alt="Shopping List & Notes logo">
+        <div>
+          <h1>Shopping List &amp; Notes <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/legal/kauppalista/" data-i18n="nav_privacy">Privacy Policy</a>
+        <a class="active" href="/legal/kauppalista/support.html" data-i18n="nav_support">Support</a>
+        <a href="/legal/kauppalista/terms.html" data-i18n="nav_terms">Terms</a>
+        <a href="/legal/kauppalista/delete-data.html" data-i18n="nav_delete">Delete data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Last updated</span>: <span>2026-05-12</span></span>
+      <h2 data-i18n="title">Support</h2>
+      <p data-i18n="subtitle">Help, troubleshooting, and common questions.</p>
+    </section>
+
+    <div class="grid">
+      <main class="card">
+        <h3 data-i18n="contact_h">Contact</h3>
+        <p data-i18n="contact_p">Email: <b><a href="mailto:janstech.apps@gmail.com">janstech.apps@gmail.com</a></b></p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="faq_h">Common questions</h3>
+        <ul>
+          <li data-i18n="faq_1"><b>Does the app work offline?</b> Yes. Local lists, notes, favorites, and most everyday features work offline.</li>
+          <li data-i18n="faq_2"><b>When is an internet connection required?</b> Internet is required for optional AI features, shared list collaboration, Google Sign-In, invite links, push notifications, and some voice recognition providers.</li>
+          <li data-i18n="faq_3"><b>Do I need an account?</b> No account is required for normal local use. Google Sign-In is only needed for optional shared list collaboration.</li>
+          <li data-i18n="faq_4"><b>AI is not working</b> Check your internet connection, update the app, and retry. If the issue persists, contact support and include your device model, Android version, app version, and what you tried to generate.</li>
+          <li data-i18n="faq_5"><b>Backup / restore</b> If you use export/import, ensure the backup file is accessible and required storage permissions are granted.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="shared_h">Shared lists troubleshooting</h3>
+        <ul>
+          <li data-i18n="shared_1"><b>Invite link does not open the app:</b> Make sure the app is installed and updated. If needed, copy the invite link and open it again from the same device.</li>
+          <li data-i18n="shared_2"><b>Cannot join a shared list:</b> Check that you are signed in with Google and that the invite link is still valid.</li>
+          <li data-i18n="shared_3"><b>List does not update in realtime:</b> Check your internet connection, close and reopen the shared list, and make sure you are still a member of the list.</li>
+          <li data-i18n="shared_4"><b>You cannot edit items:</b> Your role may be Viewer. Ask the list owner to change your role if editing is needed.</li>
+          <li data-i18n="shared_5"><b>Notifications are missing:</b> Check Android notification permission, app notification settings, shared list notification preference, and battery/background restrictions.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="account_h">Google Sign-In and shared data</h3>
+        <p data-i18n="account_p">
+          Google Sign-In is optional and is used only for shared list collaboration. You can sign out from the app settings.
+          To request deletion of optional cloud/shared collaboration data, contact support using the email address above and include the Google account email used for shared lists.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="bug_h">Bug reports</h3>
+        <p data-i18n="bug_p">
+          When reporting a bug, please include:<br/>
+          • App version<br/>
+          • Device model and Android version<br/>
+          • Whether the issue concerns local lists, AI, shared lists, invite links, Google Sign-In, or notifications<br/>
+          • What you expected vs. what happened<br/>
+          • Steps to reproduce (if possible)<br/>
+          • Screenshots or screen recording if helpful
+        </p>
+
+        <p class="footer">© 2026 Janstech</p>
+      </main>
+
+      <aside class="card">
+        <h3 data-i18n="tips_h">Tips</h3>
+        <ul>
+          <li data-i18n="tips_1">Try restarting the app after an update.</li>
+          <li data-i18n="tips_2">If voice input fails, verify your device speech recognition settings.</li>
+          <li data-i18n="tips_3">Keep backups in a safe location if you export them.</li>
+          <li data-i18n="tips_4">For shared lists, keep the app updated on all participating devices.</li>
+          <li data-i18n="tips_5">If notifications are delayed, check battery optimization and background activity settings.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="links_h">Useful pages</h3>
+        <ul>
+          <li><a href="/legal/kauppalista/" data-i18n="links_privacy">Privacy Policy</a></li>
+          <li><a href="/legal/kauppalista/terms.html" data-i18n="links_terms">Terms</a></li>
+          <li><a href="/legal/kauppalista/delete-data.html" data-i18n="links_delete">Delete data</a></li>
+        </ul>
+
+        <p class="footer" data-i18n="footer_note">Most app data stays local unless you choose optional AI or shared collaboration features.</p>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy Policy",
+        nav_support:"Support",
+        nav_terms:"Terms",
+        nav_delete:"Delete data",
+        lang_label:"Language",
+        badge:"Last updated",
+
+        title:"Support",
+        subtitle:"Help, troubleshooting, and common questions.",
+
+        contact_h:"Contact",
+        contact_p:"Email: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>",
+
+        faq_h:"Common questions",
+        faq_1:"<b>Does the app work offline?</b> Yes. Local lists, notes, favorites, and most everyday features work offline.",
+        faq_2:"<b>When is an internet connection required?</b> Internet is required for optional AI features, shared list collaboration, Google Sign-In, invite links, push notifications, and some voice recognition providers.",
+        faq_3:"<b>Do I need an account?</b> No account is required for normal local use. Google Sign-In is only needed for optional shared list collaboration.",
+        faq_4:"<b>AI is not working</b> Check your internet connection, update the app, and retry. If the issue persists, contact support and include your device model, Android version, app version, and what you tried to generate.",
+        faq_5:"<b>Backup / restore</b> If you use export/import, ensure the backup file is accessible and required storage permissions are granted.",
+
+        shared_h:"Shared lists troubleshooting",
+        shared_1:"<b>Invite link does not open the app:</b> Make sure the app is installed and updated. If needed, copy the invite link and open it again from the same device.",
+        shared_2:"<b>Cannot join a shared list:</b> Check that you are signed in with Google and that the invite link is still valid.",
+        shared_3:"<b>List does not update in realtime:</b> Check your internet connection, close and reopen the shared list, and make sure you are still a member of the list.",
+        shared_4:"<b>You cannot edit items:</b> Your role may be Viewer. Ask the list owner to change your role if editing is needed.",
+        shared_5:"<b>Notifications are missing:</b> Check Android notification permission, app notification settings, shared list notification preference, and battery/background restrictions.",
+
+        account_h:"Google Sign-In and shared data",
+        account_p:"Google Sign-In is optional and is used only for shared list collaboration. You can sign out from the app settings. To request deletion of optional cloud/shared collaboration data, contact support using the email address above and include the Google account email used for shared lists.",
+
+        bug_h:"Bug reports",
+        bug_p:"When reporting a bug, please include:<br/>• App version<br/>• Device model and Android version<br/>• Whether the issue concerns local lists, AI, shared lists, invite links, Google Sign-In, or notifications<br/>• What you expected vs. what happened<br/>• Steps to reproduce (if possible)<br/>• Screenshots or screen recording if helpful",
+
+        tips_h:"Tips",
+        tips_1:"Try restarting the app after an update.",
+        tips_2:"If voice input fails, verify your device speech recognition settings.",
+        tips_3:"Keep backups in a safe location if you export them.",
+        tips_4:"For shared lists, keep the app updated on all participating devices.",
+        tips_5:"If notifications are delayed, check battery optimization and background activity settings.",
+
+        links_h:"Useful pages",
+        links_privacy:"Privacy Policy",
+        links_terms:"Terms",
+        links_delete:"Delete data",
+
+        footer_note:"Most app data stays local unless you choose optional AI or shared collaboration features."
+      },
+
+      fi: {
+        nav_privacy:"Tietosuoja",
+        nav_support:"Tuki",
+        nav_terms:"Käyttöehdot",
+        nav_delete:"Poista tiedot",
+        lang_label:"Kieli",
+        badge:"Päivitetty",
+
+        title:"Tuki",
+        subtitle:"Apua, vianhaku ja yleiset kysymykset.",
+
+        contact_h:"Yhteys",
+        contact_p:"Sähköposti: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>",
+
+        faq_h:"Usein kysytyt kysymykset",
+        faq_1:"<b>Toimiiko sovellus offline-tilassa?</b> Kyllä. Paikalliset listat, muistiinpanot, suosikit ja useimmat arjen ominaisuudet toimivat ilman internet-yhteyttä.",
+        faq_2:"<b>Milloin internet-yhteyttä tarvitaan?</b> Internet-yhteyttä tarvitaan vapaaehtoisiin AI-toimintoihin, jaettujen listojen yhteiskäyttöön, Google-kirjautumiseen, kutsulinkkeihin, push-ilmoituksiin ja joihinkin puheentunnistuspalveluihin.",
+        faq_3:"<b>Tarvitsenko käyttäjätilin?</b> Tavallinen paikallinen käyttö ei vaadi käyttäjätiliä. Google-kirjautumista tarvitaan vain vapaaehtoiseen jaettujen listojen yhteiskäyttöön.",
+        faq_4:"<b>AI ei toimi</b> Tarkista internet-yhteys, päivitä sovellus ja kokeile uudelleen. Jos ongelma jatkuu, ota yhteyttä tukeen ja kerro laitemalli, Android-versio, sovellusversio ja mitä yritit luoda.",
+        faq_5:"<b>Varmuuskopio / palautus</b> Jos käytät vientiä/tuontia, varmista että varmuuskopiotiedosto on käytettävissä ja tarvittavat käyttöoikeudet ovat sallittu.",
+
+        shared_h:"Jaettujen listojen vianhaku",
+        shared_1:"<b>Kutsulinkki ei avaa sovellusta:</b> Varmista, että sovellus on asennettu ja päivitetty. Tarvittaessa kopioi kutsulinkki ja avaa se uudelleen samalla laitteella.",
+        shared_2:"<b>Jaettuun listaan liittyminen ei onnistu:</b> Tarkista, että olet kirjautunut Googlella ja että kutsulinkki on edelleen voimassa.",
+        shared_3:"<b>Lista ei päivity reaaliajassa:</b> Tarkista internet-yhteys, sulje ja avaa jaettu lista uudelleen ja varmista, että olet edelleen listan jäsen.",
+        shared_4:"<b>Et voi muokata rivejä:</b> Roolisi voi olla Katselija. Pyydä listan omistajaa vaihtamaan roolisi, jos tarvitset muokkausoikeudet.",
+        shared_5:"<b>Ilmoitukset eivät tule perille:</b> Tarkista Androidin ilmoituslupa, sovelluksen ilmoitusasetukset, jaettujen listojen ilmoitusasetus sekä akun-/taustakäytön rajoitukset.",
+
+        account_h:"Google-kirjautuminen ja jaettu data",
+        account_p:"Google-kirjautuminen on vapaaehtoista ja sitä käytetään vain jaettujen listojen yhteiskäyttöön. Voit kirjautua ulos sovelluksen asetuksista. Jos haluat pyytää vapaaehtoisen pilvi-/jaettujen listojen yhteiskäyttödatan poistamista, ota yhteyttä tukeen yllä olevalla sähköpostiosoitteella ja liitä mukaan Google-tilin sähköposti, jota käytit jaetuissa listoissa.",
+
+        bug_h:"Virheraportit",
+        bug_p:"Virheestä ilmoittaessasi kerro mielellään:<br/>• Sovelluksen versio<br/>• Laitemalli ja Android-versio<br/>• Koskeeko ongelma paikallisia listoja, AI:tä, jaettuja listoja, kutsulinkkejä, Google-kirjautumista vai ilmoituksia<br/>• Mitä odotit tapahtuvan ja mitä tapahtui<br/>• Toistamisohjeet (jos mahdollista)<br/>• Kuvakaappaukset tai ruuduntallennus, jos niistä on apua",
+
+        tips_h:"Vinkit",
+        tips_1:"Kokeile käynnistää sovellus uudelleen päivityksen jälkeen.",
+        tips_2:"Jos puheentunnistus ei toimi, tarkista laitteen puheentunnistusasetukset.",
+        tips_3:"Säilytä mahdolliset varmuuskopiot turvallisessa paikassa, jos viet ne tiedostoksi.",
+        tips_4:"Jaettuja listoja varten pidä sovellus päivitettynä kaikilla osallistuvilla laitteilla.",
+        tips_5:"Jos ilmoitukset viivästyvät, tarkista akun optimointi ja taustakäytön asetukset.",
+
+        links_h:"Hyödylliset sivut",
+        links_privacy:"Tietosuojakäytäntö",
+        links_terms:"Käyttöehdot",
+        links_delete:"Poista tiedot",
+
+        footer_note:"Suurin osa sovelluksen datasta pysyy paikallisena, ellet valitse vapaaehtoisia AI- tai yhteiskäyttöominaisuuksia."
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) {
+          el.innerHTML = dict[lang][key];
+        }
+      }
+
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+
+    document.getElementById("btnFi").addEventListener("click", () => setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", () => setLang("en"));
+
+    setLang(saved);
+  </script>
+</body>
+</html>

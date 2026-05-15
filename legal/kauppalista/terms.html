@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Use – Shopping List & Notes</title>
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/png" href="/assets/kauppalista-favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/AI.png" alt="Shopping List & Notes logo">
+        <div>
+          <h1>Shopping List &amp; Notes <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/legal/kauppalista/" data-i18n="nav_privacy">Privacy Policy</a>
+        <a href="/legal/kauppalista/support.html" data-i18n="nav_support">Support</a>
+        <a class="active" href="/legal/kauppalista/terms.html" data-i18n="nav_terms">Terms</a>
+        <a href="/legal/kauppalista/delete-data.html" data-i18n="nav_delete">Delete data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Last updated</span>: <span>2026-05-12</span></span>
+      <h2 data-i18n="title">Terms of Use</h2>
+      <p data-i18n="subtitle">Basic terms for using the app.</p>
+    </section>
+
+    <main class="card">
+      <h3 data-i18n="t1_h">1. General</h3>
+      <p data-i18n="t1_p">
+        Shopping List &amp; Notes (Kauppalista &amp; Muistiinpanot) is provided “as is”.
+        You are responsible for how you use the app, its features, and its outputs.
+      </p>
+
+      <h3 data-i18n="t2_h">2. Local and offline use</h3>
+      <p data-i18n="t2_p">
+        Most app features are designed to work locally on your device. You are responsible for your device security,
+        local app data, and any backups or exports you create.
+      </p>
+
+      <h3 data-i18n="t3_h">3. Optional AI features</h3>
+      <p data-i18n="t3_p">
+        AI-powered suggestions are optional and are provided for informational and inspirational purposes only.
+        AI-generated content may be inaccurate, incomplete, or unsuitable for your situation.
+        It does not constitute professional, medical, nutritional, legal, or safety advice.
+      </p>
+
+      <h3 data-i18n="t4_h">4. Optional Google Sign-In and shared lists</h3>
+      <p data-i18n="t4_p">
+        Google Sign-In is not required for normal local use. It is required only for optional shared list collaboration.
+        By using shared lists, you agree that shared list content, member information, roles, and updates may be synchronized
+        between the members of that shared list.
+      </p>
+
+      <h3 data-i18n="t5_h">5. Shared list invitations, roles, and responsibility</h3>
+      <p data-i18n="t5_p">
+        Shared list owners are responsible for whom they invite and what permissions they grant.
+        Users should only share invite links with people they trust. Members with editing permissions may add, edit,
+        complete, archive, or delete shared list items according to their role.
+      </p>
+
+      <h3 data-i18n="t6_h">6. Acceptable use</h3>
+      <p data-i18n="t6_p">
+        You may not use the app, AI features, shared lists, invitations, notifications, or backend services for abuse,
+        spam, harassment, unlawful content, attempts to bypass security, automated scraping, excessive load,
+        or any activity that disrupts the service or other users.
+      </p>
+
+      <h3 data-i18n="t7_h">7. Push notifications</h3>
+      <p data-i18n="t7_p">
+        Shared list notifications are provided as a convenience and may not always be delivered instantly or reliably.
+        Notification delivery depends on device settings, network conditions, Firebase Cloud Messaging, and Android system behavior.
+      </p>
+
+      <h3 data-i18n="t8_h">8. Availability, limits, and changes</h3>
+      <p data-i18n="t8_p">
+        Features, including AI features, shared list collaboration, notifications, and backend services, may change,
+        be limited, temporarily unavailable, or discontinued at any time to improve the app, protect service availability,
+        prevent abuse, or meet technical and platform requirements.
+      </p>
+
+      <h3 data-i18n="t9_h">9. No guarantee of data availability</h3>
+      <p data-i18n="t9_p">
+        The app is provided without a guarantee that data, backups, shared lists, AI outputs, or notifications will always
+        be available, accurate, complete, or recoverable. You are responsible for keeping important information backed up
+        where appropriate.
+      </p>
+
+      <h3 data-i18n="t10_h">10. Privacy</h3>
+      <p data-i18n="t10_p">
+        The app’s privacy practices are described in the Privacy Policy. Please review it to understand how local data,
+        optional AI requests, Google Sign-In, shared lists, notifications, and technical security data are handled.
+      </p>
+
+      <h3 data-i18n="t11_h">11. Contact</h3>
+      <p data-i18n="t11_p"><b><a href="mailto:janstech.apps@gmail.com">janstech.apps@gmail.com</a></b></p>
+
+      <p class="footer">© 2026 Janstech</p>
+    </main>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy Policy",
+        nav_support:"Support",
+        nav_terms:"Terms",
+        nav_delete:"Delete data",
+        lang_label:"Language",
+        badge:"Last updated",
+
+        title:"Terms of Use",
+        subtitle:"Basic terms for using the app.",
+
+        t1_h:"1. General",
+        t1_p:"Shopping List &amp; Notes (Kauppalista &amp; Muistiinpanot) is provided “as is”. You are responsible for how you use the app, its features, and its outputs.",
+
+        t2_h:"2. Local and offline use",
+        t2_p:"Most app features are designed to work locally on your device. You are responsible for your device security, local app data, and any backups or exports you create.",
+
+        t3_h:"3. Optional AI features",
+        t3_p:"AI-powered suggestions are optional and are provided for informational and inspirational purposes only. AI-generated content may be inaccurate, incomplete, or unsuitable for your situation. It does not constitute professional, medical, nutritional, legal, or safety advice.",
+
+        t4_h:"4. Optional Google Sign-In and shared lists",
+        t4_p:"Google Sign-In is not required for normal local use. It is required only for optional shared list collaboration. By using shared lists, you agree that shared list content, member information, roles, and updates may be synchronized between the members of that shared list.",
+
+        t5_h:"5. Shared list invitations, roles, and responsibility",
+        t5_p:"Shared list owners are responsible for whom they invite and what permissions they grant. Users should only share invite links with people they trust. Members with editing permissions may add, edit, complete, archive, or delete shared list items according to their role.",
+
+        t6_h:"6. Acceptable use",
+        t6_p:"You may not use the app, AI features, shared lists, invitations, notifications, or backend services for abuse, spam, harassment, unlawful content, attempts to bypass security, automated scraping, excessive load, or any activity that disrupts the service or other users.",
+
+        t7_h:"7. Push notifications",
+        t7_p:"Shared list notifications are provided as a convenience and may not always be delivered instantly or reliably. Notification delivery depends on device settings, network conditions, Firebase Cloud Messaging, and Android system behavior.",
+
+        t8_h:"8. Availability, limits, and changes",
+        t8_p:"Features, including AI features, shared list collaboration, notifications, and backend services, may change, be limited, temporarily unavailable, or discontinued at any time to improve the app, protect service availability, prevent abuse, or meet technical and platform requirements.",
+
+        t9_h:"9. No guarantee of data availability",
+        t9_p:"The app is provided without a guarantee that data, backups, shared lists, AI outputs, or notifications will always be available, accurate, complete, or recoverable. You are responsible for keeping important information backed up where appropriate.",
+
+        t10_h:"10. Privacy",
+        t10_p:"The app’s privacy practices are described in the Privacy Policy. Please review it to understand how local data, optional AI requests, Google Sign-In, shared lists, notifications, and technical security data are handled.",
+
+        t11_h:"11. Contact",
+        t11_p:"<b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>"
+      },
+
+      fi: {
+        nav_privacy:"Tietosuoja",
+        nav_support:"Tuki",
+        nav_terms:"Käyttöehdot",
+        nav_delete:"Poista tiedot",
+        lang_label:"Kieli",
+        badge:"Päivitetty",
+
+        title:"Käyttöehdot",
+        subtitle:"Perusehdot sovelluksen käyttöön.",
+
+        t1_h:"1. Yleistä",
+        t1_p:"Kauppalista &amp; Muistiinpanot -sovellus tarjotaan sellaisenaan. Käyttäjä vastaa siitä, miten käyttää sovellusta, sen ominaisuuksia ja sen tuottamia sisältöjä.",
+
+        t2_h:"2. Paikallinen ja offline-käyttö",
+        t2_p:"Useimmat sovelluksen ominaisuudet on suunniteltu toimimaan paikallisesti omalla laitteellasi. Käyttäjä vastaa laitteen tietoturvasta, paikallisista sovellustiedoista sekä luomistaan varmuuskopioista ja vientitiedostoista.",
+
+        t3_h:"3. Vapaaehtoiset AI-toiminnot",
+        t3_p:"Tekoälypohjaiset ehdotukset ovat vapaaehtoisia ja tarkoitettu vain yleiseksi tiedoksi ja inspiraatioksi. Tekoälyn tuottama sisältö voi olla virheellistä, puutteellista tai tilanteeseesi sopimatonta. Se ei ole ammatillista, lääketieteellistä, ravitsemuksellista, juridista tai turvallisuuteen liittyvää neuvontaa.",
+
+        t4_h:"4. Vapaaehtoinen Google-kirjautuminen ja jaetut listat",
+        t4_p:"Google-kirjautumista ei tarvita tavalliseen paikalliseen käyttöön. Sitä tarvitaan vain vapaaehtoiseen jaettujen listojen yhteiskäyttöön. Käyttämällä jaettuja listoja hyväksyt, että jaetun listan sisältö, jäsentiedot, roolit ja päivitykset voidaan synkronoida kyseisen jaetun listan jäsenten välillä.",
+
+        t5_h:"5. Jaettujen listojen kutsut, roolit ja vastuu",
+        t5_p:"Jaetun listan omistaja vastaa siitä, keitä kutsuu ja mitä käyttöoikeuksia antaa. Kutsulinkkejä kannattaa jakaa vain luotetuille henkilöille. Muokkausoikeuden omaavat jäsenet voivat roolinsa mukaisesti lisätä, muokata, merkitä valmiiksi, arkistoida tai poistaa jaetun listan rivejä.",
+
+        t6_h:"6. Hyväksyttävä käyttö",
+        t6_p:"Sovellusta, AI-toimintoja, jaettuja listoja, kutsuja, ilmoituksia tai taustapalveluita ei saa käyttää väärinkäytöksiin, roskapostiin, häirintään, lainvastaiseen sisältöön, tietoturvan ohittamiseen, automatisoituun kaavintaan, kohtuuttomaan kuormitukseen tai toimintaan, joka häiritsee palvelua tai muita käyttäjiä.",
+
+        t7_h:"7. Push-ilmoitukset",
+        t7_p:"Jaettujen listojen ilmoitukset tarjotaan käyttömukavuutta varten, eivätkä ne välttämättä aina saavu välittömästi tai luotettavasti. Ilmoitusten toimitus riippuu laitteen asetuksista, verkkoyhteydestä, Firebase Cloud Messagingista ja Android-järjestelmän toiminnasta.",
+
+        t8_h:"8. Saatavuus, rajoitukset ja muutokset",
+        t8_p:"Ominaisuuksia, mukaan lukien AI-toiminnot, jaettujen listojen yhteiskäyttö, ilmoitukset ja taustapalvelut, voidaan muuttaa, rajoittaa, keskeyttää tilapäisesti tai poistaa käytöstä milloin tahansa sovelluksen parantamiseksi, palvelun saatavuuden suojaamiseksi, väärinkäytösten estämiseksi tai teknisten ja alustavaatimusten täyttämiseksi.",
+
+        t9_h:"9. Ei takuuta tietojen saatavuudesta",
+        t9_p:"Sovellus tarjotaan ilman takuuta siitä, että tiedot, varmuuskopiot, jaetut listat, AI-vastaukset tai ilmoitukset ovat aina saatavilla, oikeellisia, täydellisiä tai palautettavissa. Käyttäjä vastaa tärkeiden tietojen varmuuskopioinnista tarvittaessa.",
+
+        t10_h:"10. Tietosuoja",
+        t10_p:"Sovelluksen tietosuojakäytännöt kuvataan tietosuojakäytännössä. Tutustu siihen ymmärtääksesi, miten paikallisia tietoja, vapaaehtoisia AI-pyyntöjä, Google-kirjautumista, jaettuja listoja, ilmoituksia ja teknisiä turvatietoja käsitellään.",
+
+        t11_h:"11. Yhteystiedot",
+        t11_p:"<b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>"
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) {
+          el.innerHTML = dict[lang][key];
+        }
+      }
+
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+
+    document.getElementById("btnFi").addEventListener("click", () => setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", () => setLang("en"));
+
+    setLang(saved);
+  </script>
+</body>
+</html>

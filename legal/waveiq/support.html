@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WaveIQ Radio – Support</title>
+  <link rel="icon" type="image/png" href="/assets/waveiq-skull.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/iq_kuv1.png" alt="WaveIQ Radio logo">
+        <div>
+          <h1>WaveIQ Radio <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/legal/waveiq/" data-i18n="nav_privacy">Privacy</a>
+        <a class="active" href="/legal/waveiq/support.html" data-i18n="nav_support">Support</a>
+        <a href="/legal/waveiq/terms.html" data-i18n="nav_terms">Terms</a>
+        <a href="/legal/waveiq/delete-data.html" data-i18n="nav_delete">Delete Data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span>2026-02-23</span></span>
+      <h2 data-i18n="title">Support</h2>
+      <p data-i18n="subtitle">Get help with WaveIQ Radio, troubleshooting, and feature questions.</p>
+    </section>
+
+    <main class="card">
+      <h3 data-i18n="contact_h">Contact</h3>
+      <p data-i18n="contact_p">Email: <b>janstech.apps@gmail.com</b></p>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="faq_h">FAQ</h3>
+      <ul>
+        <li data-i18n="faq_1"><b>Playback stops / stream unavailable:</b> Some stations go offline. Try another station or use Find Stations.</li>
+        <li data-i18n="faq_2"><b>Recommendations are empty:</b> Listen to a few stations first so the taste profile can build.</li>
+        <li data-i18n="faq_3"><b>AI search says “Security validation failed”:</b> Ensure you are using an official app build; App Check is enforced.</li>
+        <li data-i18n="faq_4"><b>AI limit reached (429):</b> AI features have a quota to ensure fair use. Try again later.</li>
+      </ul>
+
+      <p class="footer" data-i18n="footer">
+        When reporting an issue, include your device model, Android version, and what you were doing when it happened.
+      </p>
+    </main>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy", nav_support:"Support", nav_terms:"Terms", nav_delete:"Delete Data",
+        lang_label:"Language", badge:"Updated",
+        title:"Support",
+        subtitle:"Get help with WaveIQ Radio, troubleshooting, and feature questions.",
+        contact_h:"Contact",
+        contact_p:"Email: <b>janstech.apps@gmail.com</b>",
+        faq_h:"FAQ",
+        faq_1:"<b>Playback stops / stream unavailable:</b> Some stations go offline. Try another station or use Find Stations.",
+        faq_2:"<b>Recommendations are empty:</b> Listen to a few stations first so the taste profile can build.",
+        faq_3:"<b>AI search says “Security validation failed”:</b> Ensure you are using an official app build; App Check is enforced.",
+        faq_4:"<b>AI limit reached (429):</b> AI features have a quota to ensure fair use. Try again later.",
+        footer:"When reporting an issue, include your device model, Android version, and what you were doing when it happened."
+      },
+      fi: {
+        nav_privacy:"Tietosuoja", nav_support:"Tuki", nav_terms:"Käyttöehdot", nav_delete:"Poista tiedot",
+        lang_label:"Kieli", badge:"Päivitetty",
+        title:"Tuki",
+        subtitle:"Apua WaveIQ Radioon, vianhakuun ja ominaisuuskysymyksiin.",
+        contact_h:"Yhteystiedot",
+        contact_p:"Sähköposti: <b>janstech.apps@gmail.com</b>",
+        faq_h:"UKK",
+        faq_1:"<b>Toisto pysähtyy / striimi ei ole saatavilla:</b> Osa asemista menee offlineen. Kokeile toista asemaa tai hae uusi Find Stations -näkymästä.",
+        faq_2:"<b>Suositukset ovat tyhjiä:</b> Kuuntele muutamia asemia, jotta taste-profiili ehtii muodostua.",
+        faq_3:"<b>AI-haku näyttää “Security validation failed”:</b> Käytä virallista buildiä; App Check on käytössä.",
+        faq_4:"<b>AI limit reached (429):</b> AI-ominaisuuksissa on quota reilun käytön varmistamiseksi. Yritä myöhemmin uudelleen.",
+        footer:"Kun raportoit bugia, kerro laitteen malli, Android-versio ja mitä teit juuri ennen ongelmaa."
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
+</body>
+</html>

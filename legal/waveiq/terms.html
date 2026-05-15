@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WaveIQ Radio – Terms</title>
+  <link rel="icon" type="image/png" href="/assets/waveiq-skull.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/iq_kuv1.png" alt="WaveIQ Radio logo">
+        <div>
+          <h1>WaveIQ Radio <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/legal/waveiq/" data-i18n="nav_privacy">Privacy</a>
+        <a href="/legal/waveiq/support.html" data-i18n="nav_support">Support</a>
+        <a class="active" href="/legal/waveiq/terms.html" data-i18n="nav_terms">Terms</a>
+        <a href="/legal/waveiq/delete-data.html" data-i18n="nav_delete">Delete Data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span>2026-02-23</span></span>
+      <h2 data-i18n="title">Terms of Use</h2>
+      <p data-i18n="subtitle">Basic terms for using WaveIQ Radio.</p>
+    </section>
+
+    <main class="card">
+      <h3 data-i18n="t1_h">1) Service “as is”</h3>
+      <p data-i18n="t1_p">WaveIQ Radio is provided as-is, without warranties. Streams are third-party sources and may change or become unavailable at any time.</p>
+
+      <h3 data-i18n="t2_h">2) Acceptable use</h3>
+      <p data-i18n="t2_p">Do not abuse the service, attempt to bypass security (App Check), or overload the backend/AI endpoints. Quota limits exist to ensure fair use.</p>
+
+      <h3 data-i18n="t3_h">3) Content</h3>
+      <p data-i18n="t3_p">Station content is provided by third parties. We do not control broadcasts and are not responsible for third-party content.</p>
+
+      <h3 data-i18n="t4_h">4) Changes</h3>
+      <p data-i18n="t4_p">Features may change over time. Updated terms will be published on this page.</p>
+
+      <p class="footer" data-i18n="footer">If you have questions, contact: <b>janstech.apps@gmail.com</b></p>
+    </main>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy", nav_support:"Support", nav_terms:"Terms", nav_delete:"Delete Data",
+        lang_label:"Language", badge:"Updated",
+        title:"Terms of Use",
+        subtitle:"Basic terms for using WaveIQ Radio.",
+        t1_h:"1) Service “as is”",
+        t1_p:"WaveIQ Radio is provided as-is, without warranties. Streams are third-party sources and may change or become unavailable at any time.",
+        t2_h:"2) Acceptable use",
+        t2_p:"Do not abuse the service, attempt to bypass security (App Check), or overload the backend/AI endpoints. Quota limits exist to ensure fair use.",
+        t3_h:"3) Content",
+        t3_p:"Station content is provided by third parties. We do not control broadcasts and are not responsible for third-party content.",
+        t4_h:"4) Changes",
+        t4_p:"Features may change over time. Updated terms will be published on this page.",
+        footer:"If you have questions, contact: <b>janstech.apps@gmail.com</b>"
+      },
+      fi: {
+        nav_privacy:"Tietosuoja", nav_support:"Tuki", nav_terms:"Käyttöehdot", nav_delete:"Poista tiedot",
+        lang_label:"Kieli", badge:"Päivitetty",
+        title:"Käyttöehdot",
+        subtitle:"Perusehdot WaveIQ Radion käyttöön.",
+        t1_h:"1) Palvelu “sellaisenaan”",
+        t1_p:"WaveIQ Radio tarjotaan sellaisenaan ilman takuita. Streamit ovat kolmansien osapuolien lähteitä ja voivat muuttua tai poistua käytöstä milloin tahansa.",
+        t2_h:"2) Hyväksyttävä käyttö",
+        t2_p:"Älä väärinkäytä palvelua, yritä kiertää suojausta (App Check) tai kuormita backendiä/AI-endpointteja. Quota-rajoitukset varmistavat reilun käytön.",
+        t3_h:"3) Sisältö",
+        t3_p:"Asemien sisältö tulee kolmansilta osapuolilta. Emme hallitse lähetyksiä emmekä vastaa kolmannen osapuolen sisällöstä.",
+        t4_h:"4) Muutokset",
+        t4_p:"Ominaisuudet voivat muuttua ajan myötä. Päivitetyt ehdot julkaistaan tällä sivulla.",
+        footer:"Kysymykset: <b>janstech.apps@gmail.com</b>"
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
+</body>
+</html>

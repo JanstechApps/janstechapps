@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WaveIQ Radio – Delete Data</title>
+  <link rel="icon" type="image/png" href="/assets/waveiq-skull.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/iq_kuv1.png" alt="WaveIQ Radio logo">
+        <div>
+          <h1>WaveIQ Radio <span class="sub">Legal & Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/legal/waveiq/" data-i18n="nav_privacy">Privacy</a>
+        <a href="/legal/waveiq/support.html" data-i18n="nav_support">Support</a>
+        <a href="/legal/waveiq/terms.html" data-i18n="nav_terms">Terms</a>
+        <a class="active" href="/legal/waveiq/delete-data.html" data-i18n="nav_delete">Delete Data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button">EN</button>
+        <button id="btnFi" type="button">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span>2026-02-23</span></span>
+      <h2 data-i18n="title">Delete Data</h2>
+      <p data-i18n="subtitle">Instructions for deleting your data from WaveIQ Radio.</p>
+    </section>
+
+    <main class="card">
+      <h3 data-i18n="local_h">1) Delete local data (on your device)</h3>
+      <ul>
+        <li data-i18n="local_1">Android Settings → Apps → <b>WaveIQ Radio</b> → Storage → <b>Clear data</b> (or uninstall the app).</li>
+        <li data-i18n="local_2">This removes saved stations, settings, and cached logos from the device.</li>
+      </ul>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="backend_h">2) Request backend data deletion</h3>
+      <p data-i18n="backend_p">
+        If you used features that send listening history to our backend (recommendations, taste profile, stream health telemetry), you can request deletion.
+      </p>
+
+      <div class="kv">
+        <div data-i18n="kv_email_k">Email</div>
+        <div><b>janstech.apps@gmail.com</b></div>
+
+        <div data-i18n="kv_subject_k">Subject</div>
+        <div><span class="inline code">WaveIQ – Data deletion request</span></div>
+
+        <div data-i18n="kv_body_k">Include</div>
+        <div data-i18n="kv_body_v">
+          Your app instance identifier (if available) and approximate time window of usage. If you can’t access an identifier, tell us your device model + install date range.
+        </div>
+      </div>
+
+      <p class="footer" data-i18n="footer">
+        We may ask for minimal additional information to ensure we delete the correct dataset. We do not require your real name.
+      </p>
+    </main>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy", nav_support:"Support", nav_terms:"Terms", nav_delete:"Delete Data",
+        lang_label:"Language", badge:"Updated",
+        title:"Delete Data",
+        subtitle:"Instructions for deleting your data from WaveIQ Radio.",
+        local_h:"1) Delete local data (on your device)",
+        local_1:"Android Settings → Apps → <b>WaveIQ Radio</b> → Storage → <b>Clear data</b> (or uninstall the app).",
+        local_2:"This removes saved stations, settings, and cached logos from the device.",
+        backend_h:"2) Request backend data deletion",
+        backend_p:"If you used features that send listening history to our backend (recommendations, taste profile, stream health telemetry), you can request deletion.",
+        kv_email_k:"Email",
+        kv_subject_k:"Subject",
+        kv_body_k:"Include",
+        kv_body_v:"Your app instance identifier (if available) and approximate time window of usage. If you can’t access an identifier, tell us your device model + install date range.",
+        footer:"We may ask for minimal additional information to ensure we delete the correct dataset. We do not require your real name."
+      },
+      fi: {
+        nav_privacy:"Tietosuoja", nav_support:"Tuki", nav_terms:"Käyttöehdot", nav_delete:"Poista tiedot",
+        lang_label:"Kieli", badge:"Päivitetty",
+        title:"Tietojen poistaminen",
+        subtitle:"Ohjeet WaveIQ Radion tietojen poistamiseen.",
+        local_h:"1) Poista paikalliset tiedot (laitteelta)",
+        local_1:"Androidin Asetukset → Sovellukset → <b>WaveIQ Radio</b> → Tallennustila → <b>Tyhjennä tiedot</b> (tai poista sovellus).",
+        local_2:"Tämä poistaa tallennetut asemat, asetukset ja välimuistilogot laitteelta.",
+        backend_h:"2) Pyydä backend-tietojen poistaminen",
+        backend_p:"Jos käytit ominaisuuksia, jotka lähettävät kuunteluhistoriaa backendiin (suositukset, taste-profiili, stream health -telemetria), voit pyytää tietojen poistamista.",
+        kv_email_k:"Sähköposti",
+        kv_subject_k:"Aihe",
+        kv_body_k:"Liitä viestiin",
+        kv_body_v:"Sovellusinstanssin tunniste (jos saatavilla) ja likimääräinen käyttöaikaväli. Jos et löydä tunnistetta, kerro laitteen malli + arvioitu asennus-/käyttöaikaväli.",
+        footer:"Saatamme pyytää minimimäärän lisätietoa, jotta poistamme oikean datasetin. Emme vaadi oikeaa nimeäsi."
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
+</body>
+</html>
