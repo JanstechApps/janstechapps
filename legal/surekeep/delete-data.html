@@ -22,6 +22,25 @@ const dict={
   en:{nav_privacy:"Privacy Policy",nav_support:"Support",nav_terms:"Terms",nav_delete:"Delete data",lang_label:"Language",badge:"Last updated",title:"Delete data",subtitle:"How to request deletion of SureKeep data.",local_h:"Local data",local_p:"Data stored only on your device can usually be removed by deleting receipts in the app, clearing app data, or uninstalling the app.",account_h:"Account and synced data",account_p:"If you use account or sync features, you can request deletion of account-related backend data by contacting support.",request_h:"How to request deletion",request_p:"Send a deletion request to: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>.",request_note:"Use the email address associated with your SureKeep account when possible.",business_h:"Business receipt notice",business_p:"If you use SureKeep for business receipts or accounting material, consider applicable bookkeeping, tax, and retention obligations before deleting records.",quick_h:"Quick links",quick_privacy:"Privacy Policy",quick_support:"Support",quick_terms:"Terms"},
   fi:{nav_privacy:"Tietosuoja",nav_support:"Tuki",nav_terms:"Käyttöehdot",nav_delete:"Poista tiedot",lang_label:"Kieli",badge:"Päivitetty",title:"Poista tiedot",subtitle:"Näin voit pyytää SureKeep-tietojen poistamista.",local_h:"Paikalliset tiedot",local_p:"Vain laitteelle tallennetut tiedot voi yleensä poistaa poistamalla kuitteja sovelluksessa, tyhjentämällä sovellusdatan tai poistamalla sovelluksen.",account_h:"Tili- ja synkronoidut tiedot",account_p:"Jos käytät tili- tai synkronointiominaisuuksia, voit pyytää tilin/backendin tietojen poistamista ottamalla yhteyttä tukeen.",request_h:"Näin pyydät poistamista",request_p:"Lähetä poistopyyntö osoitteeseen: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>.",request_note:"Käytä mahdollisuuksien mukaan SureKeep-tiliisi liitettyä sähköpostiosoitetta.",business_h:"Huomio yrityskuittien poistamisesta",business_p:"Jos käytät SureKeepiä yrityskuittien tai kirjanpitoaineiston hallintaan, huomioi sovellettavat kirjanpito-, vero- ja säilytysvelvoitteet ennen tietojen poistamista.",quick_h:"Pikalinkit",quick_privacy:"Tietosuoja",quick_support:"Tuki",quick_terms:"Käyttöehdot"}
 };
-function setLang(lang){const selected=lang==='fi'?'fi':'en';localStorage.setItem('surekeep_legal_lang',selected);document.documentElement.lang=selected;for(const el of document.querySelectorAll('[data-i18n]')){const key=el.getAttribute('data-i18n');if(dict[selected][key]!=null)el.innerHTML=dict[selected][key]}document.getElementById('btnFi').classList.toggle('active',selected==='fi');document.getElementById('btnEn').classList.toggle('active',selected==='en')}
-document.getElementById('btnFi').addEventListener('click',()=>setLang('fi'));document.getElementById('btnEn').addEventListener('click',()=>setLang('en'));setLang(localStorage.getItem('surekeep_legal_lang')||'en');
+function setLang(lang){
+  const selected = (lang === "fi") ? "fi" : "en";
+  localStorage.setItem("lang", selected);
+  localStorage.setItem("surekeep_legal_lang", selected);
+  document.documentElement.lang = selected;
+
+  for (const el of document.querySelectorAll("[data-i18n]")) {
+    const key = el.getAttribute("data-i18n");
+    if (dict[selected] && dict[selected][key] != null) {
+      el.innerHTML = dict[selected][key];
+    }
+  }
+
+  document.getElementById("btnFi").classList.toggle("active", selected === "fi");
+  document.getElementById("btnEn").classList.toggle("active", selected === "en");
+}
+
+const saved = localStorage.getItem("lang") || localStorage.getItem("surekeep_legal_lang") || "en";
+document.getElementById("btnFi").addEventListener("click", () => setLang("fi"));
+document.getElementById("btnEn").addEventListener("click", () => setLang("en"));
+setLang(saved);
 </script></body></html>

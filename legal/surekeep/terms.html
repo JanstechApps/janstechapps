@@ -24,6 +24,25 @@ const dict={
   en:{nav_privacy:"Privacy Policy",nav_support:"Support",nav_terms:"Terms",nav_delete:"Delete data",lang_label:"Language",badge:"Last updated",title:"Terms of Use",subtitle:"Basic terms for using SureKeep.",accept_h:"Acceptance",accept_p:"By using SureKeep, you agree to these Terms of Use.",service_h:"Service description",service_p:"SureKeep helps users store and organize receipts, warranties, documents, product information, AI-assisted extraction results, business receipts, and archive information.",responsibility_h:"User responsibility",responsibility_p:"You are responsible for the accuracy, legality, and appropriateness of the data you add to the app. For business receipts, accounting, taxes, warranties and legal obligations, verify important information independently.",ai_h:"AI features",ai_p:"AI-assisted extraction is for convenience only. AI output may be incomplete, inaccurate, or incorrect and is not accounting, tax, legal, warranty, financial, or professional advice.",business_h:"Business workflows",business_p:"Opening an email draft does not guarantee delivery and does not prove that accounting material has been accepted, filed, or legally submitted.",contact_h:"Contact",quick_h:"Quick links",quick_privacy:"Privacy Policy",quick_support:"Support",quick_delete:"Delete data"},
   fi:{nav_privacy:"Tietosuoja",nav_support:"Tuki",nav_terms:"Käyttöehdot",nav_delete:"Poista tiedot",lang_label:"Kieli",badge:"Päivitetty",title:"Käyttöehdot",subtitle:"SureKeepin käytön perusehdot.",accept_h:"Hyväksyminen",accept_p:"Käyttämällä SureKeepiä hyväksyt nämä käyttöehdot.",service_h:"Palvelun kuvaus",service_p:"SureKeep auttaa käyttäjiä tallentamaan ja järjestämään kuitteja, takuita, dokumentteja, tuotetietoja, AI-avusteisia tunnistustuloksia, yrityskuitteja ja arkistotietoja.",responsibility_h:"Käyttäjän vastuu",responsibility_p:"Vastaat itse sovellukseen lisäämiesi tietojen oikeellisuudesta, lainmukaisuudesta ja soveltuvuudesta. Yrityskuittien, kirjanpidon, verotuksen, takuiden ja lakisääteisten velvoitteiden osalta tarkista tärkeät tiedot itse.",ai_h:"AI-toiminnot",ai_p:"AI-avusteinen tunnistus on käyttömukavuutta varten. AI-tulos voi olla puutteellinen, epätarkka tai virheellinen, eikä se ole kirjanpito-, vero-, laki-, takuu-, talous- tai muuta ammatillista neuvontaa.",business_h:"Yritystoiminnot",business_p:"Sähköpostiluonnoksen avaaminen ei takaa toimitusta eikä todista, että kirjanpitoaineisto on hyväksytty, jätetty tai lain mukaan toimitettu.",contact_h:"Yhteystiedot",quick_h:"Pikalinkit",quick_privacy:"Tietosuoja",quick_support:"Tuki",quick_delete:"Poista tiedot"}
 };
-function setLang(lang){const selected=lang==='fi'?'fi':'en';localStorage.setItem('surekeep_legal_lang',selected);document.documentElement.lang=selected;for(const el of document.querySelectorAll('[data-i18n]')){const key=el.getAttribute('data-i18n');if(dict[selected][key]!=null)el.innerHTML=dict[selected][key]}document.getElementById('btnFi').classList.toggle('active',selected==='fi');document.getElementById('btnEn').classList.toggle('active',selected==='en')}
-document.getElementById('btnFi').addEventListener('click',()=>setLang('fi'));document.getElementById('btnEn').addEventListener('click',()=>setLang('en'));setLang(localStorage.getItem('surekeep_legal_lang')||'en');
+function setLang(lang){
+  const selected = (lang === "fi") ? "fi" : "en";
+  localStorage.setItem("lang", selected);
+  localStorage.setItem("surekeep_legal_lang", selected);
+  document.documentElement.lang = selected;
+
+  for (const el of document.querySelectorAll("[data-i18n]")) {
+    const key = el.getAttribute("data-i18n");
+    if (dict[selected] && dict[selected][key] != null) {
+      el.innerHTML = dict[selected][key];
+    }
+  }
+
+  document.getElementById("btnFi").classList.toggle("active", selected === "fi");
+  document.getElementById("btnEn").classList.toggle("active", selected === "en");
+}
+
+const saved = localStorage.getItem("lang") || localStorage.getItem("surekeep_legal_lang") || "en";
+document.getElementById("btnFi").addEventListener("click", () => setLang("fi"));
+document.getElementById("btnEn").addEventListener("click", () => setLang("en"));
+setLang(saved);
 </script></body></html>

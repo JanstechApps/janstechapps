@@ -13,6 +13,6 @@ Files:
 - `style.css` – Shared styling
 
 Notes:
-- All SureKeep legal pages use the same EN/FI language switching model with `surekeep_legal_lang` localStorage persistence. They do not show mixed bilingual body text at the same time.
+- All SureKeep legal pages use the same EN/FI language switching model as the other app legal pages, with `lang` localStorage persistence. The legacy `surekeep_legal_lang` key is still read/written for compatibility. Pages do not show mixed bilingual body text at the same time.
 - Replace `/assets/surekeep-logo.png` and `/assets/surekeep-favicon.ico` with real website assets.
 - Review legal content before production publishing.
