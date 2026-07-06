@@ -12,6 +12,7 @@ This repository contains the static Janstech Apps website served from the reposi
 - `legal/kauppalista/` - Shopping List & Notes privacy, support, terms, and delete-data pages.
 - `legal/waveiq/` - WaveIQ Radio privacy, support, terms, and delete-data pages.
 - `legal/gainsai/` - GainsAI privacy, support, terms, and delete-data pages.
+- `legal/surekeep/` - SureKeep privacy, support, terms, and delete-data pages.
 - `CNAME` - GitHub Pages custom domain configuration for `janstechapps.com`.
 
 ## Production URLs
@@ -19,18 +20,34 @@ This repository contains the static Janstech Apps website served from the reposi
 - https://janstechapps.com/
 - https://janstechapps.com/apps/kauppalista/
 - https://janstechapps.com/apps/waveiq/
+
+### Shopping List & Notes
+
 - https://janstechapps.com/legal/kauppalista/
 - https://janstechapps.com/legal/kauppalista/support.html
 - https://janstechapps.com/legal/kauppalista/terms.html
 - https://janstechapps.com/legal/kauppalista/delete-data.html
+
+### WaveIQ Radio
+
 - https://janstechapps.com/legal/waveiq/
 - https://janstechapps.com/legal/waveiq/support.html
 - https://janstechapps.com/legal/waveiq/terms.html
 - https://janstechapps.com/legal/waveiq/delete-data.html
+
+### GainsAI
+
 - https://janstechapps.com/legal/gainsai/
 - https://janstechapps.com/legal/gainsai/support.html
 - https://janstechapps.com/legal/gainsai/terms.html
 - https://janstechapps.com/legal/gainsai/delete-data.html
+
+### SureKeep
+
+- https://janstechapps.com/legal/surekeep/
+- https://janstechapps.com/legal/surekeep/support.html
+- https://janstechapps.com/legal/surekeep/terms.html
+- https://janstechapps.com/legal/surekeep/delete-data.html
 
 ## Deployment
 
