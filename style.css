@@ -363,6 +363,23 @@ summary:focus-visible{
     linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.025));
 }
 
+.gainsai-promo-visual{
+  width:100%;
+  max-width:1024px;
+  margin:26px auto 0;
+  overflow:hidden;
+  border:1px solid rgba(143,211,255,.22);
+  border-radius:24px;
+  background:rgba(5,14,29,.9);
+  box-shadow:0 22px 64px rgba(0,0,0,.25);
+}
+
+.gainsai-promo-visual img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
 .app-hero-copy{
   min-width:0;
   display:flex;
@@ -954,6 +971,11 @@ html[lang="fi"] .screenshot-frame[data-screenshot-lang="fi"]{
     padding:20px;
     border-radius:22px;
     gap:20px;
+  }
+
+  .gainsai-promo-visual{
+    margin-top:20px;
+    border-radius:18px;
   }
 
   .app-visual-mark{
