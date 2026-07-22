@@ -71,8 +71,10 @@ entitlement. Account deletion does not cancel a Google Play subscription.
 - Updated GainsAI privacy, support, terms, and deletion information for
   verified billing, account-deletion, and subscription behaviour.
 - Used /assets/GainsAI.png as the branded app visual. It was checked against
-  the Android launcher artwork. No screenshots were added because no
-  release-ready marketing screenshots were found in the source project.
+  the Android launcher artwork.
+- Added current localized in-app screenshots from
+  /assets/gainsai/en_screenshots/ and /assets/gainsai/fi_screenshots/. The
+  gallery selects the images that match the active EN/FI language.
 - EN/FI content is maintained with each page's existing client-side language
   dictionary and language preference key.
 

@@ -656,6 +656,44 @@ summary:focus-visible{
   font-size:.95rem;
 }
 
+.screenshot-gallery{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:minmax(230px, 292px);
+  gap:16px;
+  margin-top:28px;
+  padding:4px 4px 16px;
+  overflow-x:auto;
+  overscroll-behavior-inline:contain;
+  scroll-snap-type:x mandatory;
+  scrollbar-color:rgba(143,211,255,.72) rgba(255,255,255,.06);
+}
+
+.screenshot-frame{
+  display:none;
+  min-width:0;
+  margin:0;
+  scroll-snap-align:start;
+  border:1px solid rgba(143,211,255,.2);
+  border-radius:18px;
+  overflow:hidden;
+  background:rgba(5,14,29,.9);
+  box-shadow:0 16px 40px rgba(0,0,0,.22);
+}
+
+html[lang="en"] .screenshot-frame[data-screenshot-lang="en"],
+html[lang="fi"] .screenshot-frame[data-screenshot-lang="fi"]{
+  display:block;
+}
+
+.screenshot-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1048 / 2048;
+  object-fit:cover;
+}
+
 .faq-list{
   display:grid;
   gap:12px;
@@ -979,6 +1017,12 @@ summary:focus-visible{
   .pro-card{
     padding:20px;
     border-radius:18px;
+  }
+
+  .screenshot-gallery{
+    grid-auto-columns:minmax(218px, 75vw);
+    gap:14px;
+    margin-top:18px;
   }
 
   .faq-list{
