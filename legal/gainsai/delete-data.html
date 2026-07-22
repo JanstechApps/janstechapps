@@ -34,15 +34,22 @@
     </header>
 
     <section class="hero">
-      <span class="badge"><i></i> <span data-i18n="badge">Last updated</span>: <span>2026-04-22</span></span>
+      <span class="badge"><i></i> <span data-i18n="badge">Last updated</span>: <span>2026-07-22</span></span>
       <h2 data-i18n="title">Delete Data</h2>
       <p data-i18n="subtitle">
-        This page explains how to request deletion of eligible GainsAI account and app-related data.
+        This page explains how to delete a GainsAI account in the app or request help if the in-app flow is unavailable.
       </p>
     </section>
 
     <div class="grid">
       <main class="card">
+        <h3 data-i18n="h_inapp">Delete your account in GainsAI</h3>
+        <p data-i18n="p_inapp">
+          In GainsAI, open Settings, choose Account and subscription, and select Delete GainsAI account. Confirm the deletion in the app. You can choose whether the GainsAI backup in Google Drive should also be deleted.
+        </p>
+
+        <hr class="sep"/>
+
         <h3 data-i18n="h_request">How to request deletion</h3>
         <p data-i18n="p_request_1">
           If you would like to request deletion of eligible data associated with your use of GainsAI, please contact:
@@ -64,25 +71,32 @@
 
         <h3 data-i18n="h_scope">What this may include</h3>
         <p data-i18n="p_scope">
-          Depending on your usage, eligible deletion requests may relate to backend-stored app data such as training profile data,
-          workout logs, saved programs, substitution preferences, body metrics, weekly check-ins, and similar app-related records.
+          Depending on your usage, account deletion may relate to backend-stored app data such as training and nutrition profile data,
+          workout logs, saved programs, body metrics, weekly check-ins, GainsAI Coach data, and similar app-related records.
         </p>
 
         <hr class="sep"/>
 
         <h3 data-i18n="h_note">Important notes</h3>
         <p data-i18n="p_note_1">
-          Some technical, legal, security, fraud-prevention, backup, analytics, or recordkeeping data may need to be retained where permitted or required by applicable law.
+          Account deletion is permanent. The app deletes GainsAI backend and local account data, and attempts to delete the associated Firebase Authentication user where possible.
         </p>
         <p data-i18n="p_note_2">
-          Data stored only on your own device may also require deletion by uninstalling the app, clearing app storage, or deleting local backups you created.
+          In some cases, Firebase Authentication cleanup can require you to authenticate again. The app provides a recovery step when further action is needed to finish that cleanup.
         </p>
 
         <hr class="sep"/>
 
         <h3 data-i18n="h_drive">Google Drive backup data</h3>
         <p data-i18n="p_drive">
-          If you have used optional Google Drive backup features, related backup data stored in your Google Drive app data area may need to be removed separately, depending on implementation and current app behavior.
+          The in-app deletion flow can delete the GainsAI backup stored in Google Drive appDataFolder. If you do not select that option, the backup remains and may contain older account data. Google sign-in can be required to remove the backup.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="h_subscription">Google Play subscription</h3>
+        <p data-i18n="p_subscription">
+          Deleting a GainsAI account does not cancel a Google Play subscription. Manage or cancel an active subscription through Google Play.
         </p>
 
         <hr class="sep"/>
@@ -120,8 +134,10 @@
         nav_privacy:"Privacy Policy", nav_support:"Support", nav_terms:"Terms", nav_delete:"Delete data",
         lang_label:"Language", badge:"Last updated",
         title:"Delete Data",
-        subtitle:"This page explains how to request deletion of eligible GainsAI account and app-related data.",
+        subtitle:"This page explains how to delete a GainsAI account in the app or request help if the in-app flow is unavailable.",
 
+        h_inapp:"Delete your account in GainsAI",
+        p_inapp:"In GainsAI, open Settings, choose Account and subscription, and select Delete GainsAI account. Confirm the deletion in the app. You can choose whether the GainsAI backup in Google Drive should also be deleted.",
         h_request:"How to request deletion",
         p_request_1:"If you would like to request deletion of eligible data associated with your use of GainsAI, please contact:",
         p_request_2:"<b><a href=\"mailto:janstech.apps@gmail.com?subject=GainsAI%20Data%20Deletion%20Request\">janstech.apps@gmail.com</a></b>",
@@ -132,14 +148,17 @@
         i3:"optional screenshots or additional context if needed",
 
         h_scope:"What this may include",
-        p_scope:"Depending on your usage, eligible deletion requests may relate to backend-stored app data such as training profile data, workout logs, saved programs, substitution preferences, body metrics, weekly check-ins, and similar app-related records.",
+        p_scope:"Depending on your usage, account deletion may relate to backend-stored app data such as training and nutrition profile data, workout logs, saved programs, body metrics, weekly check-ins, GainsAI Coach data, and similar app-related records.",
 
         h_note:"Important notes",
-        p_note_1:"Some technical, legal, security, fraud-prevention, backup, analytics, or recordkeeping data may need to be retained where permitted or required by applicable law.",
-        p_note_2:"Data stored only on your own device may also require deletion by uninstalling the app, clearing app storage, or deleting local backups you created.",
+        p_note_1:"Account deletion is permanent. The app deletes GainsAI backend and local account data, and attempts to delete the associated Firebase Authentication user where possible.",
+        p_note_2:"In some cases, Firebase Authentication cleanup can require you to authenticate again. The app provides a recovery step when further action is needed to finish that cleanup.",
 
         h_drive:"Google Drive backup data",
-        p_drive:"If you have used optional Google Drive backup features, related backup data stored in your Google Drive app data area may need to be removed separately, depending on implementation and current app behavior.",
+        p_drive:"The in-app deletion flow can delete the GainsAI backup stored in Google Drive appDataFolder. If you do not select that option, the backup remains and may contain older account data. Google sign-in can be required to remove the backup.",
+
+        h_subscription:"Google Play subscription",
+        p_subscription:"Deleting a GainsAI account does not cancel a Google Play subscription. Manage or cancel an active subscription through Google Play.",
 
         h_contact:"Contact",
         p_contact:"For deletion requests or related privacy questions, contact: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>",
@@ -156,8 +175,10 @@
         nav_privacy:"Tietosuoja", nav_support:"Tuki", nav_terms:"Käyttöehdot", nav_delete:"Poista tiedot",
         lang_label:"Kieli", badge:"Päivitetty",
         title:"Poista tiedot",
-        subtitle:"Tällä sivulla kerrotaan, miten voit pyytää GainsAI:hin liittyvien poistokelpoisten tietojen poistamista.",
+        subtitle:"Tällä sivulla kerrotaan, miten poistat GainsAI-tilin sovelluksessa tai pyydät apua, jos sovelluksen poistotoiminto ei ole käytettävissä.",
 
+        h_inapp:"Poista tilisi GainsAI-sovelluksessa",
+        p_inapp:"Avaa GainsAI-sovelluksessa Asetukset, valitse Tili ja tilaus ja sen jälkeen Poista GainsAI-tili. Vahvista poisto sovelluksessa. Voit valita, poistetaanko samalla myös GainsAI-varmuuskopio Google Drivesta.",
         h_request:"Miten pyydät tietojen poistoa",
         p_request_1:"Jos haluat pyytää GainsAI:n käyttöön liittyvien poistokelpoisten tietojen poistamista, ota yhteyttä:",
         p_request_2:"<b><a href=\"mailto:janstech.apps@gmail.com?subject=GainsAI%20Data%20Deletion%20Request\">janstech.apps@gmail.com</a></b>",
@@ -168,14 +189,17 @@
         i3:"tarvittaessa kuvakaappauksia tai lisätietoja",
 
         h_scope:"Mitä tämä voi koskea",
-        p_scope:"Käytöstäsi riippuen poistopyyntö voi koskea taustapalveluun tallennettuja sovellustietoja, kuten treeniprofiilia, treenilokeja, tallennettuja ohjelmia, korvauspreferenssejä, kehon mittareita, weekly check-in -tietoja ja muita vastaavia sovellukseen liittyviä tietoja.",
+        p_scope:"Käytöstäsi riippuen tilinpoisto voi koskea taustapalveluun tallennettuja sovellustietoja, kuten treeni- ja ravitsemusprofiilia, treenilokeja, tallennettuja ohjelmia, kehomittareita, viikoittaisia check-in-tietoja, GainsAI Coach -tietoja ja muita vastaavia sovellukseen liittyviä tietoja.",
 
         h_note:"Tärkeitä huomioita",
-        p_note_1:"Osa teknisistä, juridisista, turvallisuuteen, petosten estoon, varmuuskopiointiin, analytiikkaan tai kirjanpitoon liittyvistä tiedoista voidaan joutua säilyttämään sovellettavan lain sallimissa tai edellyttämissä rajoissa.",
-        p_note_2:"Vain omalle laitteellesi tallennetut tiedot voidaan joutua poistamaan myös poistamalla sovellus, tyhjentämällä sovelluksen tallennustiedot tai poistamalla itse luodut paikalliset varmuuskopiot.",
+        p_note_1:"Tilin poistaminen on pysyvää. Sovellus poistaa GainsAI-backendin ja paikalliset tilitiedot sekä yrittää poistaa siihen liittyvän Firebase Authentication -käyttäjän, kun se on mahdollista.",
+        p_note_2:"Joissakin tilanteissa Firebase Authentication -tilin poistaminen voi edellyttää uudelleentunnistautumista. Sovellus tarjoaa palautusvaiheen, jos poiston viimeistely vaatii lisätoimia.",
 
         h_drive:"Google Drive -varmuuskopiot",
-        p_drive:"Jos olet käyttänyt valinnaista Google Drive -varmuuskopiointia, Google Drive -tilisi sovellusdata-alueelle tallennetut varmuuskopiot voidaan joutua poistamaan erikseen toteutuksesta ja sovelluksen senhetkisestä toiminnasta riippuen.",
+        p_drive:"Sovelluksen tilinpoistotoiminto voi poistaa Google Driven appDataFolder-alueelle tallennetun GainsAI-varmuuskopion. Jos et valitse tätä vaihtoehtoa, varmuuskopio jää talteen ja voi sisältää vanhoja tilitietoja. Varmuuskopion poistaminen voi edellyttää Google-kirjautumista.",
+
+        h_subscription:"Google Play -tilaus",
+        p_subscription:"GainsAI-tilin poistaminen ei peruuta Google Play -tilausta. Hallitse tai peruuta aktiivinen tilaus Google Playn kautta.",
 
         h_contact:"Yhteystiedot",
         p_contact:"Tietojen poistopyynnöissä ja tietosuojaan liittyvissä kysymyksissä ota yhteyttä: <b><a href=\"mailto:janstech.apps@gmail.com\">janstech.apps@gmail.com</a></b>",

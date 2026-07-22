@@ -23,6 +23,7 @@
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-19F6NRS712"></script>
+  <script src="/assets/gainsai-config.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -58,7 +59,7 @@
     </header>
 
     <section class="hero">
-      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span id="lastUpdated">2026-05-12</span></span>
+      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span id="lastUpdated">2026-07-22</span></span>
       <h2 data-i18n="title">Janstech Android Apps</h2>
       <p data-i18n="subtitle">
         Explore Janstech apps built for practical everyday use: smart shopping and notes, AI-powered radio discovery and adaptive fitness coaching.
@@ -123,20 +124,25 @@
         <article class="app-card">
           <h4>
             <img class="app-logo" src="/assets/GainsAI.png" alt="GainsAI logo">
-            <span data-i18n="gainsai_title">GainsAI</span>
+            <a href="/apps/gainsai/" data-i18n="gainsai_title">GainsAI</a>
           </h4>
           <p data-i18n="gainsai_desc">
-            AI personal trainer platform with workout generation, training logs, progress analytics, recommendations and adaptive coaching foundations.
+            Personal AI training platform for planning workouts, logging training, understanding progress, and making a practical next decision.
           </p>
           <ul class="feature-list">
-            <li data-i18n="gainsai_f1">AI-generated training plans and program management</li>
-            <li data-i18n="gainsai_f2">Workout logging, session history and saved programs</li>
-            <li data-i18n="gainsai_f3">Progress analytics and estimated 1RM trends</li>
-            <li data-i18n="gainsai_f4">Backend-connected coaching, recommendations and backup features</li>
+            <li data-i18n="gainsai_f1">AI-assisted training plans, saved programs and program management</li>
+            <li data-i18n="gainsai_f2">Workout logging, session history and estimated 1RM trends</li>
+            <li data-i18n="gainsai_f3">Progress analysis, body metrics, check-ins and adaptive recommendations</li>
+            <li data-i18n="gainsai_f4">GainsAI Coach, meal planning and Pro backup with Google Drive</li>
           </ul>
           <div class="app-actions">
-            <span class="app-btn ghost" data-i18n="gainsai_status">In development / closed testing</span>
+            <span class="app-btn ghost" data-i18n="gainsai_status">Production-ready Android release</span>
+            <a id="gainsaiGooglePlayRoot" class="app-btn primary" href="#" target="_blank" rel="noopener noreferrer" hidden data-i18n="btn_google_play">Google Play</a>
+            <a class="app-btn" href="/apps/gainsai/" data-i18n="btn_app_page">App page</a>
             <a class="app-btn" href="/legal/gainsai/" data-i18n="btn_privacy">Privacy Policy</a>
+            <a class="app-btn" href="/legal/gainsai/support.html" data-i18n="btn_support">Support</a>
+            <a class="app-btn" href="/legal/gainsai/terms.html" data-i18n="btn_terms">Terms</a>
+            <a class="app-btn" href="/legal/gainsai/delete-data.html" data-i18n="btn_delete">Delete Data</a>
           </div>
         </article>
       </div>
@@ -147,6 +153,7 @@
           <ul>
             <li><a href="/apps/kauppalista/" data-i18n="quick_shopping_app">Shopping List &amp; Notes app page</a></li>
             <li><a href="/apps/waveiq/" data-i18n="quick_waveiq_app">WaveIQ Radio app page</a></li>
+            <li><a href="/apps/gainsai/" data-i18n="quick_gainsai_app">GainsAI app page</a></li>
             <li><a href="/legal/kauppalista/" data-i18n="quick_shopping_legal">Shopping List &amp; Notes legal pages</a></li>
             <li><a href="/legal/waveiq/" data-i18n="quick_waveiq_legal">WaveIQ Radio legal pages</a></li>
             <li><a href="/legal/gainsai/" data-i18n="quick_gainsai_legal">GainsAI legal pages</a></li>
@@ -206,12 +213,12 @@
         waveiq_f3: "Personalized recommendations and similar stations",
         waveiq_f4: "Google Drive backup and restore for saved stations, settings and logos",
         gainsai_title: "GainsAI",
-        gainsai_desc: "AI personal trainer platform with workout generation, training logs, progress analytics, recommendations and adaptive coaching foundations.",
-        gainsai_f1: "AI-generated training plans and program management",
-        gainsai_f2: "Workout logging, session history and saved programs",
-        gainsai_f3: "Progress analytics and estimated 1RM trends",
-        gainsai_f4: "Backend-connected coaching, recommendations and backup features",
-        gainsai_status: "In development / closed testing",
+        gainsai_desc: "Personal AI training platform for planning workouts, logging training, understanding progress, and making a practical next decision.",
+        gainsai_f1: "AI-assisted training plans, saved programs and program management",
+        gainsai_f2: "Workout logging, session history and estimated 1RM trends",
+        gainsai_f3: "Progress analysis, body metrics, check-ins and adaptive recommendations",
+        gainsai_f4: "GainsAI Coach, meal planning and Pro backup with Google Drive",
+        gainsai_status: "Production-ready Android release",
         btn_google_play: "Google Play",
         btn_app_page: "App page",
         btn_privacy: "Privacy Policy",
@@ -221,6 +228,7 @@
         quick_h: "Quick links",
         quick_shopping_app: "Shopping List & Notes app page",
         quick_waveiq_app: "WaveIQ Radio app page",
+        quick_gainsai_app: "GainsAI app page",
         quick_shopping_legal: "Shopping List & Notes legal pages",
         quick_waveiq_legal: "WaveIQ Radio legal pages",
         quick_gainsai_legal: "GainsAI legal pages",
@@ -254,12 +262,12 @@
         waveiq_f3: "Personoidut suositukset ja samankaltaiset asemat",
         waveiq_f4: "Google Drive -varmuuskopiointi ja palautus tallennetuille asemille, asetuksille ja logoille",
         gainsai_title: "GainsAI",
-        gainsai_desc: "AI personal trainer -alusta, jossa on treeniohjelmien generointi, treenilogit, progress-analytiikka, suositukset ja adaptiivisen valmennuksen perusta.",
-        gainsai_f1: "AI-generoidut treeniohjelmat ja ohjelmien hallinta",
-        gainsai_f2: "Workout-logging, sessiohistoria ja tallennetut ohjelmat",
-        gainsai_f3: "Progress-analytiikka ja arvioidut 1RM-trendit",
-        gainsai_f4: "Backendiin kytkeytyvä valmennus, suositukset ja backup-ominaisuudet",
-        gainsai_status: "Kehityksessä / suljetussa testauksessa",
+        gainsai_desc: "Henkilökohtainen AI-valmennusalusta treeniohjelmien suunnitteluun, harjoittelun kirjaamiseen, kehityksen ymmärtämiseen ja seuraavan käytännöllisen askeleen tunnistamiseen.",
+        gainsai_f1: "AI-avusteiset treeniohjelmat, tallennetut ohjelmat ja ohjelmien hallinta",
+        gainsai_f2: "Treenikirjaus, sessiohistoria ja arvioidut 1RM-trendit",
+        gainsai_f3: "Kehitysanalyysi, kehomittarit, check-init ja adaptiiviset suositukset",
+        gainsai_f4: "GainsAI Coach, ateriasuunnittelu ja Pro-tason Google Drive -varmuuskopiointi",
+        gainsai_status: "Tuotantovalmis Android-julkaisu",
         btn_google_play: "Google Play",
         btn_app_page: "Sovellussivu",
         btn_privacy: "Tietosuoja",
@@ -269,6 +277,7 @@
         quick_h: "Pikalinkit",
         quick_shopping_app: "Kauppalista & Muistiinpanot -sovellussivu",
         quick_waveiq_app: "WaveIQ Radio -sovellussivu",
+        quick_gainsai_app: "GainsAI-sovellussivu",
         quick_shopping_legal: "Kauppalista & Muistiinpanot legal-sivut",
         quick_waveiq_legal: "WaveIQ Radion legal-sivut",
         quick_gainsai_legal: "GainsAI legal-sivut",
@@ -300,6 +309,12 @@
     const saved = localStorage.getItem("janstech_apps_lang") || "en";
     document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
     document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    const gainsaiPlayUrl = window.GainsAIConfig && window.GainsAIConfig.playStoreUrl;
+    if (gainsaiPlayUrl) {
+      const gainsaiPlayLink = document.getElementById("gainsaiGooglePlayRoot");
+      gainsaiPlayLink.href = gainsaiPlayUrl;
+      gainsaiPlayLink.hidden = false;
+    }
     setLang(saved);
   </script>
 </body>

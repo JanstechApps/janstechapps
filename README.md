@@ -9,6 +9,9 @@ This repository contains the static Janstech Apps website served from the reposi
 - `assets/` - Shared app images and favicon files.
 - `apps/kauppalista/` - Shopping List & Notes public app landing page.
 - `apps/waveiq/` - WaveIQ Radio public app landing page.
+- `apps/gainsai/` - GainsAI public app landing page.
+- `assets/gainsai-config.js` - Central GainsAI Google Play URL and verified regional Pro-price configuration.
+- `docs/apps/gainsai_app_profile.md` - GainsAI public product profile, source audit, and website release notes.
 - `legal/kauppalista/` - Shopping List & Notes privacy, support, terms, and delete-data pages.
 - `legal/waveiq/` - WaveIQ Radio privacy, support, terms, and delete-data pages.
 - `legal/gainsai/` - GainsAI privacy, support, terms, and delete-data pages.
@@ -20,6 +23,7 @@ This repository contains the static Janstech Apps website served from the reposi
 - https://janstechapps.com/
 - https://janstechapps.com/apps/kauppalista/
 - https://janstechapps.com/apps/waveiq/
+- https://janstechapps.com/apps/gainsai/
 
 ### Shopping List & Notes
 
@@ -37,6 +41,7 @@ This repository contains the static Janstech Apps website served from the reposi
 
 ### GainsAI
 
+- https://janstechapps.com/apps/gainsai/
 - https://janstechapps.com/legal/gainsai/
 - https://janstechapps.com/legal/gainsai/support.html
 - https://janstechapps.com/legal/gainsai/terms.html
@@ -52,3 +57,11 @@ This repository contains the static Janstech Apps website served from the reposi
 ## Deployment
 
 GitHub Pages serves this static site directly from the repository root. Keep public page links root-relative or absolute to `https://janstechapps.com` so pages work from their final production URLs.
+
+## GainsAI Google Play and Pro configuration
+
+The GainsAI app page and homepage card read `assets/gainsai-config.js`. Keep
+`playStoreUrl` empty until the exact public Google Play listing URL is confirmed.
+Regional Pro prices are also intentionally empty until verified from the live
+Google Play offer; this keeps the CTA hidden and avoids publishing an
+unverified price.

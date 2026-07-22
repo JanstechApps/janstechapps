@@ -44,6 +44,12 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #e9e2ff;
+  outline-offset: 3px;
+}
+
 a:hover {
   text-decoration: underline;
 }
