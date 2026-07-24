@@ -225,14 +225,63 @@ summary:focus-visible{
 }
 
 .app-card{
+  --app-accent:var(--accent);
+  --app-accent-soft:var(--accent2);
+  --app-glow:rgba(143,211,255,.18);
+  position:relative;
+  overflow:hidden;
   border:1px solid var(--border);
-  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border-top:2px solid var(--app-accent);
+  background:
+    radial-gradient(360px 190px at 0 0, var(--app-glow), transparent 75%),
+    linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.018) 48%);
   border-radius:22px;
   padding:22px;
   min-width:0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06), 0 12px 30px rgba(0,0,0,.12);
+  transition:transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.app-card::after{
+  content:"";
+  position:absolute;
+  width:130px;
+  height:130px;
+  right:-72px;
+  bottom:-72px;
+  border-radius:50%;
+  background:var(--app-glow);
+  filter:blur(10px);
+  pointer-events:none;
+}
+
+.app-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--app-accent);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10), 0 20px 42px rgba(0,0,0,.24), 0 0 26px var(--app-glow);
+}
+
+.app-card--shopping{
+  --app-accent:#73e6c5;
+  --app-accent-soft:#79c8ff;
+  --app-glow:rgba(65,224,188,.18);
+}
+
+.app-card--waveiq{
+  --app-accent:#ff8877;
+  --app-accent-soft:#f54ca6;
+  --app-glow:rgba(235,63,105,.19);
+}
+
+.app-card--gainsai{
+  --app-accent:#a786ff;
+  --app-accent-soft:#55c6ff;
+  --app-glow:rgba(111,112,255,.20);
 }
 
 .app-card h4{
+  position:relative;
+  z-index:1;
   margin:0 0 12px;
   font-size:1.65rem;
   line-height:1.2;
@@ -242,6 +291,10 @@ summary:focus-visible{
   gap:10px;
 }
 
+.app-card h4 a:hover{
+  color:var(--app-accent);
+}
+
 .app-logo{
   flex:0 0 auto;
   width:56px;
@@ -249,11 +302,14 @@ summary:focus-visible{
   object-fit:contain;
   border-radius:14px;
   display:block;
-  background:rgba(255,255,255,.04);
+  background:color-mix(in srgb, var(--app-accent) 18%, transparent);
+  box-shadow:0 8px 20px var(--app-glow);
   padding:4px;
 }
 
 .app-card p{
+  position:relative;
+  z-index:1;
   margin:0 0 16px;
   color:var(--muted);
   line-height:1.75;
@@ -261,6 +317,8 @@ summary:focus-visible{
 }
 
 .feature-list{
+  position:relative;
+  z-index:1;
   list-style:none;
   padding:0;
   margin:0 0 18px;
@@ -283,11 +341,13 @@ summary:focus-visible{
   width:7px;
   height:7px;
   border-radius:50%;
-  background:linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow:0 0 10px rgba(143,211,255,.25);
+  background:linear-gradient(135deg, var(--app-accent), var(--app-accent-soft));
+  box-shadow:0 0 10px var(--app-glow);
 }
 
 .app-actions{
+  position:relative;
+  z-index:1;
   display:flex;
   flex-wrap:wrap;
   gap:10px;
@@ -320,6 +380,10 @@ summary:focus-visible{
   background:linear-gradient(135deg, var(--accent), var(--accent2));
   color:#071120;
   border-color:transparent;
+}
+
+.app-card .app-btn.primary{
+  background:linear-gradient(135deg, var(--app-accent), var(--app-accent-soft));
 }
 
 .app-btn.ghost{
