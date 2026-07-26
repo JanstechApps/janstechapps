@@ -13,8 +13,8 @@
 
 ## Verified release information
 
-The Android project configures productionRelease with version name 1.0.5.9,
-version code 61, package com.janstech.gainsai, and the production backend
+The Android project configures productionRelease with version name 1.0.7.5,
+version code 77, package com.janstech.gainsai, and the production backend
 variant. The project contains Google Play Billing for the gainsai_pro product
 with monthly and yearly base plans, backend purchase verification, and
 backend-owned entitlement presentation.
@@ -24,10 +24,12 @@ website therefore keeps the Google Play CTA hidden until
 assets/gainsai-config.js receives the exact listing URL. Do not infer the URL
 from the package name.
 
-The repository displays no fixed Pro price. The app receives formatted prices
-from Google Play at runtime, and the central website config keeps regional
-prices empty until a live offer has been verified. This avoids publishing the
-user-provided Finnish price candidates without a source-backed confirmation.
+The public Terms page states the owner-provided intended Finland prices as of
+2026-07-26: EUR 12.99/month and EUR 119.99/year, with no free trial. The app
+still receives final formatted prices, taxes, renewal terms, and regional offer
+details from Google Play at runtime. The central website config keeps the
+marketing price summary empty until the owner confirms that the Play listing
+and public offer presentation should be enabled.
 
 ## Public feature scope
 
@@ -69,7 +71,9 @@ entitlement. Account deletion does not cancel a Google Play subscription.
   routes. The Google Play action is configuration-driven and hidden while the
   listing URL is unavailable.
 - Updated GainsAI privacy, support, terms, and deletion information for
-  verified billing, account-deletion, and subscription behaviour.
+  verified billing, account-deletion, subscription behaviour, Health Connect,
+  Firebase, OpenAI API processing, Crashlytics, and Google Play disclosure
+  coverage.
 - Used /assets/GainsAI.png as the branded app visual. It was checked against
   the Android launcher artwork.
 - Used /assets/gainsai/ominaisuuskuva/promo.png as a wide visual brand
@@ -85,9 +89,19 @@ entitlement. Account deletion does not cancel a Google Play subscription.
 Primary GainsAI sources:
 
 - android/app/build.gradle.kts
+- android/app/src/main/AndroidManifest.xml
+- android/app/build.gradle.kts
 - android/app/src/main/java/com/janstech/gainsai/data/billing/BillingRepository.kt
+- android/app/src/main/java/com/janstech/gainsai/data/health/HealthConnectRepository.kt
+- android/app/src/main/java/com/janstech/gainsai/data/backup/BackupSnapshot.kt
+- android/app/src/main/java/com/janstech/gainsai/data/analytics/GainsAnalytics.kt
+- android/app/src/main/java/com/janstech/gainsai/platform/SafeCrashReporter.kt
 - android/app/src/main/java/com/janstech/gainsai/ui/billing/ProPaywall.kt
+- android/app/src/main/java/com/janstech/gainsai/ui/coach/CoachScreen.kt
 - backend/app/services/billing_constants.py
+- backend/app/services/account_deletion_service.py
+- backend/app/services/coach_prompt_service.py
+- backend/app/services/coach_safety_service.py
 - android/app/src/main/res/values/strings.xml
 - android/app/src/main/java/com/janstech/gainsai/ui/settings/AccountDeletionViewModel.kt
 - docs/architecture/changes/2026-07-22-google-play-billing-prod-valmius.md
@@ -103,7 +117,13 @@ Reference implementation sources:
 ## Remaining publication inputs
 
 - Exact public Google Play listing URL.
-- Live Google Play confirmation for regional monthly and yearly Pro prices.
+- Owner confirmation before exposing public marketing price summary in
+  `assets/gainsai-config.js`.
+- Play Console Data safety, Health apps, AI-generated content, account deletion,
+  content rating, and subscription configuration confirmation.
+- An in-app report/flag path for AI-generated Coach content before paid
+  production release.
 
-When either value is confirmed, edit only assets/gainsai-config.js; page code
-will reveal the store action and price summary automatically.
+When the listing URL and public price presentation are confirmed, edit
+`assets/gainsai-config.js`; page code will reveal the store action and price
+summary automatically.
