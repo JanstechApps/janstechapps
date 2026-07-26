@@ -62,6 +62,7 @@
           <li data-i18n="d7">Diagnostics and analytics: Firebase Analytics app interaction events, feature usage, app version, language, high-level result states, Crashlytics crash traces in production release builds, and bounded backend operational logs.</li>
           <li data-i18n="d8">Optional Google Drive backup data: a GainsAI backup file in your Google Drive app data area, which can contain account/profile, plan, saved program, substitution, active workout, settings, Firebase UID, and Google account email snapshot data.</li>
           <li data-i18n="d9">Optional Health Connect data: weight records are read and written only if Health Connect is available and you grant the requested permissions.</li>
+          <li data-i18n="d10">Optional AI content reports: when you report a GainsAI Coach response in the app, GainsAI may process the report category, optional comment, message reference, bounded AI-response snapshot or hash, content language, app version, status, and timestamp.</li>
         </ul>
 
         <hr class="sep"/>
@@ -75,6 +76,7 @@
         <h3 data-i18n="h_ai">AI features and OpenAI</h3>
         <p data-i18n="p_ai_1">GainsAI uses backend AI processing for features such as program generation, recommendation text, nutrition localization, meal-plan generation, and Coach. Relevant user inputs and compact app context may be sent from the backend to OpenAI API services when those features are used.</p>
         <p data-i18n="p_ai_2">AI outputs may be incomplete, inaccurate, or unsuitable for your situation. GainsAI does not use AI outputs for advertising or cross-app tracking. GainsAI does not state that OpenAI has zero data retention unless that has been separately enabled and verified.</p>
+        <p data-i18n="p_ai_3">You can report problematic GainsAI Coach responses in the app. Reports are used to review AI safety issues and may include a bounded snapshot of the reported AI response plus your optional comment. Do not include passwords, tokens, or extra personal information in the report comment.</p>
 
         <hr class="sep"/>
 
@@ -91,7 +93,7 @@
 
         <h3 data-i18n="h_retention">Retention and deletion</h3>
         <p data-i18n="p_retention_1">Backend account data is retained while needed to provide GainsAI features and is deleted when you complete account deletion, except for limited records retained for security, fraud prevention, legal compliance, or billing-token replay prevention where applicable.</p>
-        <p data-i18n="p_retention_2">The in-app account deletion flow deletes GainsAI backend data, clears local account data, attempts Firebase Authentication deletion, and can delete the GainsAI Google Drive appDataFolder backup if you choose that option. If you do not delete the Drive backup, it may remain in your Google Drive and may contain older account data.</p>
+        <p data-i18n="p_retention_2">The in-app account deletion flow deletes GainsAI backend data, including current AI content reports and Coach message reporting receipts, clears local account data, attempts Firebase Authentication deletion, and can delete the GainsAI Google Drive appDataFolder backup if you choose that option. If you do not delete the Drive backup, it may remain in your Google Drive and may contain older account data.</p>
         <p data-i18n="p_retention_3">Crashlytics, Firebase, Google, OpenAI, Google Play, and hosting-provider logs may follow their own retention rules. GainsAI limits intentional logging of free-text user content, tokens, purchase tokens, email addresses, and health data.</p>
 
         <hr class="sep"/>
@@ -163,12 +165,14 @@
         d7:"Diagnostics and analytics: Firebase Analytics app interaction events, feature usage, app version, language, high-level result states, Crashlytics crash traces in production release builds, and bounded backend operational logs.",
         d8:"Optional Google Drive backup data: a GainsAI backup file in your Google Drive app data area, which can contain account/profile, plan, saved program, substitution, active workout, settings, Firebase UID, and Google account email snapshot data.",
         d9:"Optional Health Connect data: weight records are read and written only if Health Connect is available and you grant the requested permissions.",
+        d10:"Optional AI content reports: when you report a GainsAI Coach response in the app, GainsAI may process the report category, optional comment, message reference, bounded AI-response snapshot or hash, content language, app version, status, and timestamp.",
         h_purpose:"Purposes and legal bases",
         p_purpose_1:"Data is processed to provide app functionality, authenticate users, keep account-linked data separate, generate and display training and nutrition features, verify Pro subscriptions, protect the backend, maintain service quality, respond to support and privacy requests, and comply with legal obligations.",
         p_purpose_2:"For EU/EEA users, the legal bases may include contract performance for app features and subscriptions, consent for optional features such as Health Connect and Google Drive backup, legitimate interests for security, diagnostics and product improvement, and legal obligation where records must be kept.",
         h_ai:"AI features and OpenAI",
         p_ai_1:"GainsAI uses backend AI processing for features such as program generation, recommendation text, nutrition localization, meal-plan generation, and Coach. Relevant user inputs and compact app context may be sent from the backend to OpenAI API services when those features are used.",
         p_ai_2:"AI outputs may be incomplete, inaccurate, or unsuitable for your situation. GainsAI does not use AI outputs for advertising or cross-app tracking. GainsAI does not state that OpenAI has zero data retention unless that has been separately enabled and verified.",
+        p_ai_3:"You can report problematic GainsAI Coach responses in the app. Reports are used to review AI safety issues and may include a bounded snapshot of the reported AI response plus your optional comment. Do not include passwords, tokens, or extra personal information in the report comment.",
         h_health:"Health and fitness data",
         p_health_1:"GainsAI is a fitness and wellness app, not a medical device or healthcare provider. It uses health and fitness-related data to provide training, body metric, nutrition, progress, and Coach features.",
         p_health_2:"Do not use GainsAI for diagnosis, treatment, emergency help, or professional medical decisions. Consult a qualified professional when you have pain, injury, illness, pregnancy, an eating disorder, unexplained weight loss, medication-related questions, or other health concerns.",
@@ -176,7 +180,7 @@
         p_services:"GainsAI may use Firebase Authentication, Firebase Analytics, Firebase App Check, Firebase Crashlytics, Google Play Integrity, Google Play Billing, Google Play In-App Updates, Google Drive API, Health Connect, OpenAI API, Hetzner-hosted backend/database infrastructure, and email services used when you contact support.",
         h_retention:"Retention and deletion",
         p_retention_1:"Backend account data is retained while needed to provide GainsAI features and is deleted when you complete account deletion, except for limited records retained for security, fraud prevention, legal compliance, or billing-token replay prevention where applicable.",
-        p_retention_2:"The in-app account deletion flow deletes GainsAI backend data, clears local account data, attempts Firebase Authentication deletion, and can delete the GainsAI Google Drive appDataFolder backup if you choose that option. If you do not delete the Drive backup, it may remain in your Google Drive and may contain older account data.",
+        p_retention_2:"The in-app account deletion flow deletes GainsAI backend data, including current AI content reports and Coach message reporting receipts, clears local account data, attempts Firebase Authentication deletion, and can delete the GainsAI Google Drive appDataFolder backup if you choose that option. If you do not delete the Drive backup, it may remain in your Google Drive and may contain older account data.",
         p_retention_3:"Crashlytics, Firebase, Google, OpenAI, Google Play, and hosting-provider logs may follow their own retention rules. GainsAI limits intentional logging of free-text user content, tokens, purchase tokens, email addresses, and health data.",
         h_transfer:"International transfers",
         p_transfer:"Because GainsAI uses global service providers, data may be processed outside your country, including outside the EU/EEA. Transfers are handled through the relevant service provider terms, safeguards, and applicable law.",
@@ -210,12 +214,14 @@
         d7:"Diagnostiikka ja analytiikka: Firebase Analytics -käyttötapahtumat, ominaisuuksien käyttö, sovellusversio, kieli, korkean tason tulostilat, Crashlyticsin crash trace -tiedot productionRelease-buildissa sekä rajatut backendin operointilokit.",
         d8:"Valinnainen Google Drive -varmuuskopiodata: GainsAI-varmuuskopiotiedosto Google Drive -tilisi sovellusdata-alueella. Se voi sisältää tilin/profiilin, ohjelmat, tallennetut ohjelmat, korvaukset, aktiivisen treenin, asetukset, Firebase UID:n ja Google-tilin sähköpostin snapshot-tietoja.",
         d9:"Valinnainen Health Connect -data: painotietoja luetaan ja kirjoitetaan vain, jos Health Connect on saatavilla ja myönnät pyydetyt oikeudet.",
+        d10:"Valinnaiset AI-sisältöraportit: kun ilmoitat GainsAI Coach -vastauksesta sovelluksessa, GainsAI voi käsitellä raportin syyluokan, vapaaehtoisen kommentin, viittauksen viestiin, rajatun AI-vastaussnapshotin tai hashin, sisällön kielen, sovellusversion, tilan ja aikaleiman.",
         h_purpose:"Käyttötarkoitukset ja oikeusperusteet",
         p_purpose_1:"Tietoja käsitellään sovellustoimintojen tarjoamiseen, käyttäjän tunnistamiseen, tilikohtaisen datan erottamiseen, treeni- ja ravitsemustoimintojen generointiin ja näyttämiseen, Pro-tilauksen varmentamiseen, backendin suojaamiseen, palvelun laadun ylläpitoon, tuki- ja tietosuojapyyntöihin vastaamiseen sekä lakisääteisiin velvoitteisiin.",
         p_purpose_2:"EU/ETA-käyttäjille oikeusperusteita voivat olla sopimuksen täyttäminen sovellustoiminnoissa ja tilauksissa, suostumus valinnaisille ominaisuuksille kuten Health Connectille ja Google Drive -varmuuskopiolle, oikeutettu etu tietoturvaan, diagnostiikkaan ja tuotteen parantamiseen sekä lakisääteinen velvoite, kun tietoja pitää säilyttää.",
         h_ai:"AI-toiminnot ja OpenAI",
         p_ai_1:"GainsAI käyttää backendin AI-käsittelyä muun muassa ohjelmien generointiin, suositusteksteihin, ravitsemuksen lokalisointiin, ateriasuunnitelmiin ja Coachiin. Olennaisia käyttäjän syötteitä ja tiivistä sovelluskontekstia voidaan lähettää backendistä OpenAI API -palveluihin, kun käytät näitä toimintoja.",
         p_ai_2:"AI-tuotokset voivat olla puutteellisia, virheellisiä tai tilanteeseesi sopimattomia. GainsAI ei käytä AI-tuotoksia mainontaan tai sovellusten väliseen seurantaan. GainsAI ei väitä OpenAI:n zero data retention -asetuksen olevan käytössä, ellei sitä ole erikseen otettu käyttöön ja varmennettu.",
+        p_ai_3:"Voit ilmoittaa ongelmallisista GainsAI Coach -vastauksista sovelluksessa. Raportteja käytetään AI-turvallisuusongelmien arviointiin, ja niihin voi sisältyä rajattu snapshot raportoidusta AI-vastauksesta sekä vapaaehtoinen kommenttisi. Älä lisää raporttikommenttiin salasanoja, tokeneita tai ylimääräisiä henkilötietoja.",
         h_health:"Terveys- ja kuntodata",
         p_health_1:"GainsAI on kuntoilu- ja hyvinvointisovellus, ei lääketieteellinen laite tai terveydenhuollon palveluntarjoaja. Se käyttää terveys- ja kuntoiluluonteista dataa treeni-, kehonmittaus-, ravitsemus-, edistymis- ja Coach-toimintoihin.",
         p_health_2:"Älä käytä GainsAI:ta diagnoosiin, hoitoon, hätätilanteisiin tai ammattimaisiin lääketieteellisiin päätöksiin. Käänny pätevän ammattilaisen puoleen, jos sinulla on kipua, vamma, sairaus, raskaus, syömishäiriö, selittämätön painonlasku, lääkitykseen liittyviä kysymyksiä tai muita terveyshuolia.",
@@ -223,7 +229,7 @@
         p_services:"GainsAI voi käyttää Firebase Authenticationia, Firebase Analyticsia, Firebase App Checkia, Firebase Crashlyticsia, Google Play Integrityä, Google Play Billingiä, Google Play In-App Updatesia, Google Drive API:a, Health Connectia, OpenAI API:a, Hetznerissä ajettavaa backend-/tietokantainfraa sekä sähköpostipalveluita, kun otat yhteyttä tukeen.",
         h_retention:"Säilytys ja poistaminen",
         p_retention_1:"Backendin tilidata säilytetään niin kauan kuin sitä tarvitaan GainsAI-toimintojen tarjoamiseen ja poistetaan tilinpoiston valmistuessa, paitsi rajatut tiedot, joita säilytetään tietoturvaa, väärinkäytösten estoa, lakisääteisiä velvoitteita tai billing-tokenin uudelleenkäytön estoa varten.",
-        p_retention_2:"Sovelluksen sisäinen tilinpoisto poistaa GainsAI-backend-datan, tyhjentää paikallisen tilidatan, yrittää poistaa Firebase Authentication -käyttäjän ja voi poistaa GainsAI:n Google Drive appDataFolder -varmuuskopion, jos valitset sen. Jos et poista Drive-varmuuskopiota, se voi jäädä Google Driveesi ja sisältää vanhaa tilidataa.",
+        p_retention_2:"Sovelluksen sisäinen tilinpoisto poistaa GainsAI-backend-datan, mukaan lukien nykyiset AI-sisältöraportit ja Coach-viestien raportointireceiptit, tyhjentää paikallisen tilidatan, yrittää poistaa Firebase Authentication -käyttäjän ja voi poistaa GainsAI:n Google Drive appDataFolder -varmuuskopion, jos valitset sen. Jos et poista Drive-varmuuskopiota, se voi jäädä Google Driveesi ja sisältää vanhaa tilidataa.",
         p_retention_3:"Crashlyticsin, Firebase-palveluiden, Googlen, OpenAI:n, Google Playn ja hosting-palveluntarjoajan lokit voivat noudattaa omia säilytyssääntöjään. GainsAI rajaa tarkoituksellisen vapaatekstin, tokenien, purchase tokenien, sähköpostien ja terveystietojen lokitusta.",
         h_transfer:"Kansainväliset siirrot",
         p_transfer:"Koska GainsAI käyttää globaaleja palveluntarjoajia, tietoja voidaan käsitellä maasi ulkopuolella, myös EU/ETA-alueen ulkopuolella. Siirrot perustuvat kyseisten palveluntarjoajien ehtoihin, suojatoimiin ja sovellettavaan lakiin.",

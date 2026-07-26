@@ -39,6 +39,9 @@ and public offer presentation should be enabled.
 - Adaptive training recommendations that help highlight a next training focus.
 - GainsAI Coach, using the app backend and deterministic coaching logic to
   explain program, progress, and priority signals.
+- In-app reporting for problematic AI-generated Coach responses, backed by an
+  authenticated server-side report queue once the matching backend migration
+  and deployment have been completed.
 - Multi-day meal plans, Google Drive backup and restore, and a dedicated
   account-deletion flow.
 - Google sign-in / Firebase Authentication for account-linked functionality.
@@ -72,8 +75,8 @@ entitlement. Account deletion does not cancel a Google Play subscription.
   listing URL is unavailable.
 - Updated GainsAI privacy, support, terms, and deletion information for
   verified billing, account-deletion, subscription behaviour, Health Connect,
-  Firebase, OpenAI API processing, Crashlytics, and Google Play disclosure
-  coverage.
+  Firebase, OpenAI API processing, Crashlytics, Google Play disclosure
+  coverage, and AI-generated Coach content reporting.
 - Used /assets/GainsAI.png as the branded app visual. It was checked against
   the Android launcher artwork.
 - Used /assets/gainsai/ominaisuuskuva/promo.png as a wide visual brand
@@ -102,6 +105,8 @@ Primary GainsAI sources:
 - backend/app/services/account_deletion_service.py
 - backend/app/services/coach_prompt_service.py
 - backend/app/services/coach_safety_service.py
+- backend/app/services/coach_content_report_service.py
+- backend/app/api/v1/routers/coach.py
 - android/app/src/main/res/values/strings.xml
 - android/app/src/main/java/com/janstech/gainsai/ui/settings/AccountDeletionViewModel.kt
 - docs/architecture/changes/2026-07-22-google-play-billing-prod-valmius.md
@@ -121,8 +126,9 @@ Reference implementation sources:
   `assets/gainsai-config.js`.
 - Play Console Data safety, Health apps, AI-generated content, account deletion,
   content rating, and subscription configuration confirmation.
-- An in-app report/flag path for AI-generated Coach content before paid
-  production release.
+- Migration/deploy/physical-test proof that the in-app report path for
+  AI-generated Coach content is available and that reports reach the
+  operational review queue.
 
 When the listing URL and public price presentation are confirmed, edit
 `assets/gainsai-config.js`; page code will reveal the store action and price
