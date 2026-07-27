@@ -17,6 +17,11 @@ This repository contains the static Janstech Apps website served from the reposi
 - `legal/gainsai/` - GainsAI privacy, support, terms, and delete-data pages.
 - `legal/surekeep/` - SureKeep privacy, support, terms, and delete-data pages.
 - `CNAME` - GitHub Pages custom domain configuration for `janstechapps.com`.
+- `sitemap.xml` - Generated sitemap of every indexable page, submitted to Google Search Console.
+- `robots.txt` - Crawler rules and the `Sitemap:` reference.
+- `.nojekyll` - Publishes the repository verbatim instead of running it through Jekyll.
+- `tools/validate_site.py` - Sitemap, robots.txt and internal-link validator/generator.
+- `.github/workflows/validate-site.yml` - Runs the validator on push and pull request.
 
 ## Production URLs
 
@@ -56,7 +61,44 @@ This repository contains the static Janstech Apps website served from the reposi
 
 ## Deployment
 
-GitHub Pages serves this static site directly from the repository root. Keep public page links root-relative or absolute to `https://janstechapps.com` so pages work from their final production URLs.
+GitHub Pages serves this static site directly from the repository root ("Deploy from a branch", `main` / `/ (root)`). There is no build step: the repository root *is* the publish root, so every committed file is published at the matching path. `.nojekyll` keeps GitHub Pages from running the content through Jekyll, which guarantees files such as `sitemap.xml` and `robots.txt` are published exactly as committed.
+
+Keep public page links root-relative or absolute to `https://janstechapps.com` so pages work from their final production URLs.
+
+## Sitemap and robots.txt
+
+`sitemap.xml` lists all 20 indexable pages: the landing page, the three app pages and the four legal pages of each app. It is generated from the pages on disk, so it never lists a page that does not exist and never misses one that does. Each `<lastmod>` is the file's last git commit date; no `priority` or `changefreq` values are published.
+
+Regenerate it after adding, removing, renaming or editing a public page:
+
+~~~bash
+python tools/validate_site.py --write
+~~~
+
+Then commit the updated `sitemap.xml` together with the page change.
+
+## Validation
+
+~~~bash
+python tools/validate_site.py
+~~~
+
+The validator fails the build if any of the following is true, and the same command runs in CI via `.github/workflows/validate-site.yml`:
+
+- `sitemap.xml` or `robots.txt` is missing from the publish root
+- `sitemap.xml` is not well-formed UTF-8 XML in the sitemaps.org 0.9 namespace
+- a sitemap URL is not an absolute `https://janstechapps.com` URL, or contains a fragment, query string or duplicate
+- a sitemap URL does not resolve to a real page, or its path casing does not match the file on disk
+- an indexable page on disk is missing from the sitemap
+- a `<lastmod>` value disagrees with the file's git commit date
+- `robots.txt` blocks an indexable page or is missing the `Sitemap:` line
+- an internal link or asset reference in any page points at a file that does not exist
+
+To also check the pages in a browser, serve the publish root locally:
+
+~~~bash
+python -m http.server 8000
+~~~
 
 ## GainsAI Google Play and Pro configuration
 

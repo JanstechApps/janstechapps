@@ -1,0 +1,28 @@
+name: Validate site
+
+# Validation only. GitHub Pages still deploys this repository from the main
+# branch root ("Deploy from a branch"); this workflow does not publish anything.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # validate_site.py reads per-file git commit dates for <lastmod>
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate sitemap.xml, robots.txt and internal links
+        run: python tools/validate_site.py

@@ -1,0 +1,5 @@
+# robots.txt for https://janstechapps.com
+User-agent: *
+Allow: /
+
+Sitemap: https://janstechapps.com/sitemap.xml

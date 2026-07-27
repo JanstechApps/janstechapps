@@ -53,7 +53,13 @@ Expected structure:
 ├── README.md
 ├── index.html
 ├── style.css
+├── sitemap.xml
+├── robots.txt
+├── .nojekyll
 ├── AGENTS.md
+├── .github/
+│   └── workflows/
+├── tools/
 ├── assets/
 ├── apps/
 │   ├── kauppalista/
@@ -73,9 +79,16 @@ Root is reserved for:
 - index.html
 - style.css
 - CNAME
+- sitemap.xml
+- robots.txt
+- .nojekyll
 - README.md
 - AGENTS.md
 - high-level config files only
+
+Maintenance scripts belong under:
+
+- tools/
 
 Shared images, icons and favicons belong under:
 
@@ -300,6 +313,16 @@ At minimum, validate:
 - privacy/support/terms/delete-data links work
 - no 404s for expected public pages
 
+Agents MUST also run the automated check, which validates `sitemap.xml`,
+`robots.txt` and every internal link and asset reference:
+
+~~~bash
+python tools/validate_site.py
+~~~
+
+It exits non-zero on failure and also runs in CI on every push and pull
+request via `.github/workflows/validate-site.yml`.
+
 ---
 
 # 🔎 REQUIRED SEARCHES BEFORE COMPLETION
@@ -403,6 +426,51 @@ Do NOT delete or rename CNAME.
 
 Do NOT replace it with the old GitHub Pages domain.
 
+The publishing source is "Deploy from a branch": `main` / `/ (root)`.
+
+There is no build step, so the repository root is the publish root. Do NOT
+move the site into `docs/` or switch the publishing source to a GitHub Actions
+workflow without explicit instruction; both would change every production URL
+or silently stop publishing.
+
+`.nojekyll` keeps GitHub Pages from processing the site with Jekyll. Do NOT
+delete it — it is what guarantees files such as `sitemap.xml` and `robots.txt`
+are published exactly as committed.
+
+---
+
+# 🗺️ SITEMAP AND ROBOTS RULE
+
+`sitemap.xml` and `robots.txt` live in the publish root and are submitted to
+Google Search Console.
+
+`sitemap.xml` is generated, not hand-edited. Whenever a public page is added,
+removed, renamed or edited, regenerate and commit it:
+
+~~~bash
+python tools/validate_site.py --write
+~~~
+
+The sitemap must contain only canonical, indexable pages. Agents MUST NOT add:
+
+- 404 pages
+- redirect URLs
+- URLs with fragments or query strings
+- duplicate URLs
+- noindex pages
+- development or test files
+- assets such as images, CSS or JavaScript
+
+Keep sitemap URLs consistent with the linking rule: absolute
+`https://janstechapps.com` URLs, lowercase paths, and a trailing slash for
+directory URLs (`/legal/waveiq/`, not `/legal/waveiq/index.html`).
+
+`robots.txt` MUST NOT block public pages and MUST keep its final line:
+
+~~~text
+Sitemap: https://janstechapps.com/sitemap.xml
+~~~
+
 ---
 
 # ✅ DEFINITION OF DONE
@@ -414,6 +482,8 @@ A task is complete only when:
 - no expected public page returns 404 locally
 - root folder remains clean
 - legal content is preserved unless explicitly changed
+- `python tools/validate_site.py` passes
+- sitemap.xml is regenerated if public pages changed
 - README is updated if structure or URLs changed
 - changes are committed
 
