@@ -52,6 +52,7 @@ Expected structure:
 ├── CNAME
 ├── README.md
 ├── index.html
+├── home.css
 ├── style.css
 ├── sitemap.xml
 ├── robots.txt
@@ -77,6 +78,7 @@ Root should stay clean.
 Root is reserved for:
 
 - index.html
+- home.css
 - style.css
 - CNAME
 - sitemap.xml
@@ -436,6 +438,39 @@ or silently stop publishing.
 `.nojekyll` keeps GitHub Pages from processing the site with Jekyll. Do NOT
 delete it — it is what guarantees files such as `sitemap.xml` and `robots.txt`
 are published exactly as committed.
+
+---
+
+# 🎨 STYLESHEET OWNERSHIP RULE
+
+Stylesheets are split by page type. Agents MUST respect this split.
+
+~~~text
+index.html            -> /home.css
+apps/*/index.html     -> /style.css
+legal/*/*.html        -> legal/<app>/style.css   (local, relative)
+~~~
+
+`home.css` is the landing page design system: tokens, shell, header, hero,
+app cards, benefit grid and footer. It is mobile first, so base rules are the
+small-screen layout and every media query is `min-width`.
+
+Consequences:
+
+- landing page work belongs in `home.css` and MUST NOT edit `style.css`
+- app page work belongs in `style.css` and MUST NOT edit `home.css`
+- do NOT re-point `index.html` at `style.css`, and do NOT merge the two files
+- when adding a landing page rule, use the `:root` tokens in `home.css` instead
+  of new hard-coded colours, radii or spacing values
+
+`home.css` contains `[hidden]{display:none !important}`. Do NOT remove it.
+`.btn` is `display:inline-flex`, which otherwise overrides the user-agent
+`[hidden]` rule and reveals the GainsAI Google Play link before a verified
+store URL exists in `assets/gainsai-config.js`.
+
+Every visible landing page string needs a `data-i18n` key present in BOTH
+`dict.en` and `dict.fi`. A landing page change is not complete until both
+languages are updated.
 
 ---
 

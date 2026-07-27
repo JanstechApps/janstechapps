@@ -1,25 +1,42 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <meta name="description" content="Janstech Apps Android apps: Shopping List & Notes, WaveIQ Radio and GainsAI. Practical Android apps for shopping, notes, AI radio discovery and adaptive fitness coaching.">
+  <meta name="description" content="Janstech Apps builds practical Android apps: Shopping List &amp; Notes, WaveIQ Radio and GainsAI. Shopping and notes, AI-assisted radio discovery and adaptive training coaching.">
   <meta name="keywords" content="android apps, shopping list app, AI radio app, fitness app, janstech apps, WaveIQ Radio, GainsAI">
   <meta name="author" content="Janstech Apps">
   <meta name="robots" content="index,follow" />
 
   <link rel="canonical" href="https://janstechapps.com/">
 
-  <meta property="og:title" content="Janstech Apps">
-  <meta property="og:description" content="Android apps by Janstech Apps: Shopping List & Notes, WaveIQ Radio and GainsAI.">
+  <meta property="og:title" content="Janstech Apps – Practical Android apps">
+  <meta property="og:description" content="Android apps by Janstech Apps: Shopping List &amp; Notes, WaveIQ Radio and GainsAI.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://janstechapps.com/">
   <meta property="og:image" content="https://janstechapps.com/assets/AI.png">
+  <meta property="og:site_name" content="Janstech Apps">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Janstech Apps – Practical Android apps">
+  <meta name="twitter:description" content="Android apps by Janstech Apps: Shopping List &amp; Notes, WaveIQ Radio and GainsAI.">
+  <meta name="twitter:image" content="https://janstechapps.com/assets/AI.png">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Janstech Apps",
+      "url": "https://janstechapps.com/",
+      "logo": "https://janstechapps.com/assets/AI.png",
+      "email": "janstech.apps@gmail.com"
+    }
+  </script>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-19F6NRS712"></script>
@@ -31,262 +48,437 @@
     gtag('config', 'G-19F6NRS712');
   </script>
 
-  <title>Janstech Apps</title>
+  <title>Janstech Apps – Practical Android apps</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/home.css">
 </head>
 <body>
-  <div class="container">
-    <header class="topbar">
-      <div class="brand">
-        <h1>
-          Janstech Apps
-          <span class="sub" data-i18n="sub">Android Apps</span>
-        </h1>
-      </div>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
-      <div class="topbar-right">
-        <nav class="nav" aria-label="Primary">
-          <a class="active" href="/" data-i18n="nav_apps">Apps</a>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="/">
+        <span class="brand__name">Janstech Apps</span>
+        <span class="brand__tag" data-i18n="sub">Android Apps</span>
+      </a>
+
+      <div class="header__controls">
+        <nav class="site-nav" aria-label="Primary">
+          <a class="site-nav__link" href="/" aria-current="page" data-i18n="nav_apps">Apps</a>
         </nav>
 
-        <div class="lang">
-          <span class="hint" data-i18n="lang_label">Language</span>
-          <button id="btnEn" type="button" aria-label="English">EN</button>
-          <button id="btnFi" type="button" aria-label="Suomi">FI</button>
+        <div class="lang-switch">
+          <span class="lang-switch__label" data-i18n="lang_label">Language</span>
+          <div class="lang-switch__group">
+            <button class="lang-switch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+            <button class="lang-switch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
+          </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
+  <main id="main">
     <section class="hero">
-      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span id="lastUpdated">2026-07-22</span></span>
-      <h2 data-i18n="title">Practical Android apps</h2>
-      <p data-i18n="subtitle">
-        Smart shopping and notes, AI-powered radio discovery and adaptive fitness coaching for everyday use.
-      </p>
+      <div class="shell hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow" data-i18n="hero_eyebrow">Independent Finnish Android developer</span>
+
+          <h1 class="hero__title" data-i18n="hero_title">Smart Android apps for real everyday needs</h1>
+
+          <p class="hero__lead" data-i18n="hero_lead">
+            Shopping lists and notes, AI-assisted radio discovery and adaptive training coaching. Practical Android apps built around everyday use, privacy and genuinely useful smart features.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#apps" data-i18n="cta_apps">Explore the apps</a>
+            <a class="btn" href="#why" data-i18n="cta_why">Why Janstech Apps?</a>
+          </div>
+
+          <ul class="trust">
+            <li class="trust__item" data-i18n="trust_1">Android</li>
+            <li class="trust__item" data-i18n="trust_2">Privacy considered</li>
+            <li class="trust__item" data-i18n="trust_3">Actively developed</li>
+            <li class="trust__item" data-i18n="trust_4">Practical by design</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="icon-stack">
+            <div class="icon-stack__item">
+              <img class="icon-stack__img" src="/assets/AI.png" alt="" width="512" height="512" loading="lazy" decoding="async">
+              <span>
+                <span class="icon-stack__name" data-i18n="shopping_title">Shopping List &amp; Notes</span>
+                <span class="icon-stack__meta" data-i18n="cat_shopping">Shopping &amp; notes</span>
+              </span>
+            </div>
+            <div class="icon-stack__item">
+              <img class="icon-stack__img" src="/assets/iq_kuv1.png" alt="" width="512" height="512" loading="lazy" decoding="async">
+              <span>
+                <span class="icon-stack__name" data-i18n="waveiq_title">WaveIQ Radio</span>
+                <span class="icon-stack__meta" data-i18n="cat_waveiq">Internet radio</span>
+              </span>
+            </div>
+            <div class="icon-stack__item">
+              <img class="icon-stack__img" src="/assets/GainsAI.png" alt="" width="512" height="512" loading="lazy" decoding="async">
+              <span>
+                <span class="icon-stack__name" data-i18n="gainsai_title">GainsAI</span>
+                <span class="icon-stack__meta" data-i18n="cat_gainsai">Training &amp; progress</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section-shell">
-      <h3 data-i18n="apps_h">Apps</h3>
-      <p data-i18n="apps_note">
-        Find app pages, Google Play links and legal/support information in one place.
-      </p>
-
-      <div class="apps-grid">
-        <article class="app-card app-card--shopping">
-          <h4>
-            <img class="app-logo" src="/assets/AI.png" alt="Shopping List &amp; Notes logo">
-            <a href="/apps/kauppalista/" data-i18n="shopping_title">Shopping List &amp; Notes</a>
-          </h4>
-          <p data-i18n="shopping_desc">
-            Privacy-first shopping list, notes and recipe app. Local lists work on-device, while optional AI features and realtime shared lists use online services when enabled.
+    <section class="section" id="apps">
+      <div class="shell">
+        <div class="section__head">
+          <h2 class="section__title" data-i18n="apps_h">Apps</h2>
+          <p class="section__intro" data-i18n="apps_note">
+            Find app pages, Google Play links and legal/support information in one place.
           </p>
-          <ul class="feature-list">
-            <li data-i18n="shopping_f1">Shopping lists, favorites, notes and recipes</li>
-            <li data-i18n="shopping_f2">Optional AI recipes, meal plans and ingredient scanning</li>
-            <li data-i18n="shopping_f3">Optional realtime shared shopping and task lists</li>
-            <li data-i18n="shopping_f4">No mandatory login for normal local use</li>
-          </ul>
-          <div class="app-actions">
-            <a class="app-btn primary" href="https://play.google.com/store/apps/details?id=com.janstech.kauppalista" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
-            <a class="app-btn" href="/apps/kauppalista/" data-i18n="btn_app_page">App page</a>
-            <a class="app-btn" href="/legal/kauppalista/" data-i18n="btn_privacy">Privacy Policy</a>
-            <a class="app-btn" href="/legal/kauppalista/support.html" data-i18n="btn_support">Support</a>
-            <a class="app-btn" href="/legal/kauppalista/terms.html" data-i18n="btn_terms">Terms</a>
-            <a class="app-btn" href="/legal/kauppalista/delete-data.html" data-i18n="btn_delete">Delete Data</a>
-          </div>
-        </article>
+        </div>
 
-        <article class="app-card app-card--waveiq">
-          <h4>
-            <img class="app-logo" src="/assets/iq_kuv1.png" alt="WaveIQ Radio logo">
-            <a href="/apps/waveiq/" data-i18n="waveiq_title">WaveIQ Radio</a>
-          </h4>
-          <p data-i18n="waveiq_desc">
-            AI-assisted internet radio app for finding, saving, understanding and rediscovering stations that match your taste.
-          </p>
-          <ul class="feature-list">
-            <li data-i18n="waveiq_f1">Internet radio playback with saved stations and favorites</li>
-            <li data-i18n="waveiq_f2">AI-assisted station search from natural prompts</li>
-            <li data-i18n="waveiq_f3">Personalized recommendations and similar stations</li>
-            <li data-i18n="waveiq_f4">Google Drive backup and restore for saved stations, settings and logos</li>
-          </ul>
-          <div class="app-actions">
-            <a class="app-btn primary" href="https://play.google.com/store/apps/details?id=com.janstech.radioplayer" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
-            <a class="app-btn" href="/apps/waveiq/" data-i18n="btn_app_page">App page</a>
-            <a class="app-btn" href="/legal/waveiq/" data-i18n="btn_privacy">Privacy Policy</a>
-            <a class="app-btn" href="/legal/waveiq/support.html" data-i18n="btn_support">Support</a>
-            <a class="app-btn" href="/legal/waveiq/terms.html" data-i18n="btn_terms">Terms</a>
-            <a class="app-btn" href="/legal/waveiq/delete-data.html" data-i18n="btn_delete">Delete Data</a>
-          </div>
-        </article>
+        <div class="app-grid">
+          <article class="app-card app-card--shopping">
+            <div class="app-card__head">
+              <img class="app-card__icon" src="/assets/AI.png" alt="Shopping List &amp; Notes logo" width="512" height="512" loading="lazy" decoding="async">
+              <h3 class="app-card__title">
+                <a href="/apps/kauppalista/" data-i18n="shopping_title">Shopping List &amp; Notes</a>
+              </h3>
+            </div>
 
-        <article class="app-card app-card--gainsai">
-          <h4>
-            <img class="app-logo" src="/assets/GainsAI.png" alt="GainsAI logo">
-            <a href="/apps/gainsai/" data-i18n="gainsai_title">GainsAI</a>
-          </h4>
-          <p data-i18n="gainsai_desc">
-            Personal AI training platform for planning workouts, logging training, understanding progress, and making a practical next decision.
-          </p>
-          <ul class="feature-list">
-            <li data-i18n="gainsai_f1">AI-assisted training plans, saved programs and program management</li>
-            <li data-i18n="gainsai_f2">Workout logging, session history and estimated 1RM trends</li>
-            <li data-i18n="gainsai_f3">Progress analysis, body metrics, check-ins and adaptive recommendations</li>
-            <li data-i18n="gainsai_f4">GainsAI Coach, meal planning and Pro backup with Google Drive</li>
-          </ul>
-          <div class="app-actions">
-            <a id="gainsaiGooglePlayRoot" class="app-btn primary" href="#" target="_blank" rel="noopener noreferrer" hidden data-i18n="btn_google_play">Google Play</a>
-            <a class="app-btn" href="/apps/gainsai/" data-i18n="btn_app_page">App page</a>
-            <a class="app-btn" href="/legal/gainsai/" data-i18n="btn_privacy">Privacy Policy</a>
-            <a class="app-btn" href="/legal/gainsai/support.html" data-i18n="btn_support">Support</a>
-            <a class="app-btn" href="/legal/gainsai/terms.html" data-i18n="btn_terms">Terms</a>
-            <a class="app-btn" href="/legal/gainsai/delete-data.html" data-i18n="btn_delete">Delete Data</a>
-          </div>
-        </article>
+            <p class="app-card__promise" data-i18n="shopping_promise">
+              Plan shopping and keep notes and recipes in one place, on your own device.
+            </p>
+
+            <ul class="app-card__features">
+              <li data-i18n="shopping_f1">Shopping lists, favorites, notes and recipes</li>
+              <li data-i18n="shopping_f2">Optional AI recipes, meal plans and ingredient scanning</li>
+              <li data-i18n="shopping_f3">Optional realtime shared shopping and task lists</li>
+              <li data-i18n="shopping_f4">No mandatory login for normal local use</li>
+            </ul>
+
+            <div class="app-card__actions">
+              <a class="btn btn--primary" href="/apps/kauppalista/" data-i18n="btn_app_page">Explore the app</a>
+              <a class="btn" href="https://play.google.com/store/apps/details?id=com.janstech.kauppalista" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
+            </div>
+
+            <ul class="app-card__legal">
+              <li><a href="/legal/kauppalista/" data-i18n="btn_privacy">Privacy Policy</a></li>
+              <li><a href="/legal/kauppalista/support.html" data-i18n="btn_support">Support</a></li>
+              <li><a href="/legal/kauppalista/terms.html" data-i18n="btn_terms">Terms</a></li>
+              <li><a href="/legal/kauppalista/delete-data.html" data-i18n="btn_delete">Delete Data</a></li>
+            </ul>
+          </article>
+
+          <article class="app-card app-card--waveiq">
+            <div class="app-card__head">
+              <img class="app-card__icon" src="/assets/iq_kuv1.png" alt="WaveIQ Radio logo" width="512" height="512" loading="lazy" decoding="async">
+              <h3 class="app-card__title">
+                <a href="/apps/waveiq/" data-i18n="waveiq_title">WaveIQ Radio</a>
+              </h3>
+            </div>
+
+            <p class="app-card__promise" data-i18n="waveiq_promise">
+              Find, save and rediscover internet radio stations that match your taste.
+            </p>
+
+            <ul class="app-card__features">
+              <li data-i18n="waveiq_f1">Internet radio playback with saved stations and favorites</li>
+              <li data-i18n="waveiq_f2">AI-assisted station search from natural prompts</li>
+              <li data-i18n="waveiq_f3">Personalized recommendations and similar stations</li>
+              <li data-i18n="waveiq_f4">Google Drive backup and restore</li>
+            </ul>
+
+            <div class="app-card__actions">
+              <a class="btn btn--primary" href="/apps/waveiq/" data-i18n="btn_app_page">Explore the app</a>
+              <a class="btn" href="https://play.google.com/store/apps/details?id=com.janstech.radioplayer" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
+            </div>
+
+            <ul class="app-card__legal">
+              <li><a href="/legal/waveiq/" data-i18n="btn_privacy">Privacy Policy</a></li>
+              <li><a href="/legal/waveiq/support.html" data-i18n="btn_support">Support</a></li>
+              <li><a href="/legal/waveiq/terms.html" data-i18n="btn_terms">Terms</a></li>
+              <li><a href="/legal/waveiq/delete-data.html" data-i18n="btn_delete">Delete Data</a></li>
+            </ul>
+          </article>
+
+          <article class="app-card app-card--gainsai">
+            <div class="app-card__head">
+              <img class="app-card__icon" src="/assets/GainsAI.png" alt="GainsAI logo" width="512" height="512" loading="lazy" decoding="async">
+              <h3 class="app-card__title">
+                <a href="/apps/gainsai/" data-i18n="gainsai_title">GainsAI</a>
+              </h3>
+            </div>
+
+            <p class="app-card__promise" data-i18n="gainsai_promise">
+              Plan training, log your workouts and see a practical next step.
+            </p>
+
+            <ul class="app-card__features">
+              <li data-i18n="gainsai_f1">AI-assisted training plans and saved programs</li>
+              <li data-i18n="gainsai_f2">Workout logging, history and estimated 1RM trends</li>
+              <li data-i18n="gainsai_f3">Progress analysis, body metrics and check-ins</li>
+              <li data-i18n="gainsai_f4">GainsAI Coach, meal planning and Pro backup</li>
+            </ul>
+
+            <div class="app-card__actions">
+              <a class="btn btn--primary" href="/apps/gainsai/" data-i18n="btn_app_page">Explore the app</a>
+              <a id="gainsaiGooglePlayRoot" class="btn" href="#" target="_blank" rel="noopener noreferrer" hidden data-i18n="btn_google_play">Google Play</a>
+            </div>
+
+            <ul class="app-card__legal">
+              <li><a href="/legal/gainsai/" data-i18n="btn_privacy">Privacy Policy</a></li>
+              <li><a href="/legal/gainsai/support.html" data-i18n="btn_support">Support</a></li>
+              <li><a href="/legal/gainsai/terms.html" data-i18n="btn_terms">Terms</a></li>
+              <li><a href="/legal/gainsai/delete-data.html" data-i18n="btn_delete">Delete Data</a></li>
+            </ul>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="side-grid">
-        <section class="mini-card">
-          <h4 data-i18n="quick_h">Quick links</h4>
-          <ul>
-            <li><a href="/apps/kauppalista/" data-i18n="quick_shopping_app">Shopping List &amp; Notes app page</a></li>
-            <li><a href="/apps/waveiq/" data-i18n="quick_waveiq_app">WaveIQ Radio app page</a></li>
-            <li><a href="/apps/gainsai/" data-i18n="quick_gainsai_app">GainsAI app page</a></li>
+    <section class="section" id="why">
+      <div class="shell">
+        <div class="section__head">
+          <h2 class="section__title" data-i18n="why_h">Why Janstech Apps?</h2>
+          <p class="section__intro" data-i18n="why_intro">
+            A small app portfolio with a shared starting point: solve a real everyday task well on Android.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card">
+            <h3 class="why-card__title" data-i18n="why_1_h">Practical solutions</h3>
+            <p class="why-card__text" data-i18n="why_1_p">
+              Every app starts from a real everyday task: a shopping list, a radio station, a training session.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <h3 class="why-card__title" data-i18n="why_2_h">Built for Android</h3>
+            <p class="why-card__text" data-i18n="why_2_p">
+              Designed and built for Android, from everyday navigation to how each app behaves on your device.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <h3 class="why-card__title" data-i18n="why_3_h">Privacy considered</h3>
+            <p class="why-card__text" data-i18n="why_3_p">
+              Some apps are local-first and work on-device. Online services are used for the features that need them.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <h3 class="why-card__title" data-i18n="why_4_h">Actively developed</h3>
+            <p class="why-card__text" data-i18n="why_4_p">
+              Each app has its own page with current privacy, support and terms information.
+            </p>
+          </article>
+        </div>
+
+        <div class="about">
+          <h3 class="about__title" data-i18n="developer_h">Janstech Apps</h3>
+          <p class="about__text" data-i18n="developer_p1">
+            The apps are built around usability, privacy, practical everyday value and smart features.
+          </p>
+          <p class="about__text" data-i18n="developer_p2">
+            Some apps are local-first, while others rely on internet connectivity for streaming, AI, synchronization, backups or backend-powered features.
+          </p>
+          <div class="about__actions">
+            <a class="btn" href="mailto:janstech.apps@gmail.com" data-i18n="developer_email">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <div class="footer-grid">
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_apps_h">Apps</h2>
+          <ul class="footer-links">
+            <li><a href="/apps/kauppalista/" data-i18n="shopping_title">Shopping List &amp; Notes</a></li>
+            <li><a href="/apps/waveiq/" data-i18n="waveiq_title">WaveIQ Radio</a></li>
+            <li><a href="/apps/gainsai/" data-i18n="gainsai_title">GainsAI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_legal_h">Support &amp; privacy</h2>
+          <ul class="footer-links">
             <li><a href="/legal/kauppalista/" data-i18n="quick_shopping_legal">Shopping List &amp; Notes legal pages</a></li>
             <li><a href="/legal/waveiq/" data-i18n="quick_waveiq_legal">WaveIQ Radio legal pages</a></li>
             <li><a href="/legal/gainsai/" data-i18n="quick_gainsai_legal">GainsAI legal pages</a></li>
           </ul>
-        </section>
+        </div>
 
-        <section class="mini-card">
-          <h4 data-i18n="about_h">About this site</h4>
-          <p data-i18n="about_p">
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_brand_h">Janstech Apps</h2>
+          <p class="footer-group__text" data-i18n="about_p">
             A central home for app information, store links, privacy policies, support pages and terms.
           </p>
-          <p class="footer-note" data-i18n="future_note">
-            Each app has its own privacy, support and terms pages where applicable.
-          </p>
-        </section>
+          <ul class="footer-links">
+            <li><a href="mailto:janstech.apps@gmail.com" data-i18n="developer_email">Email</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_lang_h">Language</h2>
+          <div class="lang-switch">
+            <div class="lang-switch__group">
+              <button class="lang-switch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+              <button class="lang-switch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section class="developer">
-      <h2 data-i18n="developer_h">Janstech Apps</h2>
-
-      <p data-i18n="developer_p1">
-        The apps are built around usability, privacy, practical everyday value and smart features.
-      </p>
-
-      <p data-i18n="developer_p2">
-        Some apps are local-first, while others rely on internet connectivity for streaming, AI, synchronization, backups or backend-powered features.
-      </p>
-
-      <div class="dev-links">
-        <a href="mailto:janstech.apps@gmail.com" class="app-btn" data-i18n="developer_email">Email</a>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Janstech Apps</p>
+        <p data-i18n="footer_note">Each app has its own privacy, support and terms pages where applicable.</p>
       </div>
-    </section>
-  </div>
+    </div>
+  </footer>
 
   <script>
     const dict = {
       en: {
+        skip: "Skip to content",
         sub: "Android Apps",
         nav_apps: "Apps",
         lang_label: "Language",
-        badge: "Updated",
-        title: "Practical Android apps",
-        subtitle: "Smart shopping and notes, AI-powered radio discovery and adaptive fitness coaching for everyday use.",
+        hero_eyebrow: "Independent Finnish Android developer",
+        hero_title: "Smart Android apps for real everyday needs",
+        hero_lead: "Shopping lists and notes, AI-assisted radio discovery and adaptive training coaching. Practical Android apps built around everyday use, privacy and genuinely useful smart features.",
+        cta_apps: "Explore the apps",
+        cta_why: "Why Janstech Apps?",
+        trust_1: "Android",
+        trust_2: "Privacy considered",
+        trust_3: "Actively developed",
+        trust_4: "Practical by design",
+        cat_shopping: "Shopping & notes",
+        cat_waveiq: "Internet radio",
+        cat_gainsai: "Training & progress",
         apps_h: "Apps",
         apps_note: "Find app pages, Google Play links and legal/support information in one place.",
         shopping_title: "Shopping List & Notes",
-        shopping_desc: "Privacy-first shopping list, notes and recipe app. Local lists work on-device, while optional AI features and realtime shared lists use online services when enabled.",
+        shopping_promise: "Plan shopping and keep notes and recipes in one place, on your own device.",
         shopping_f1: "Shopping lists, favorites, notes and recipes",
         shopping_f2: "Optional AI recipes, meal plans and ingredient scanning",
         shopping_f3: "Optional realtime shared shopping and task lists",
         shopping_f4: "No mandatory login for normal local use",
         waveiq_title: "WaveIQ Radio",
-        waveiq_desc: "AI-assisted internet radio app for finding, saving, understanding and rediscovering stations that match your taste.",
+        waveiq_promise: "Find, save and rediscover internet radio stations that match your taste.",
         waveiq_f1: "Internet radio playback with saved stations and favorites",
         waveiq_f2: "AI-assisted station search from natural prompts",
         waveiq_f3: "Personalized recommendations and similar stations",
-        waveiq_f4: "Google Drive backup and restore for saved stations, settings and logos",
+        waveiq_f4: "Google Drive backup and restore",
         gainsai_title: "GainsAI",
-        gainsai_desc: "Personal AI training platform for planning workouts, logging training, understanding progress, and making a practical next decision.",
-        gainsai_f1: "AI-assisted training plans, saved programs and program management",
-        gainsai_f2: "Workout logging, session history and estimated 1RM trends",
-        gainsai_f3: "Progress analysis, body metrics, check-ins and adaptive recommendations",
-        gainsai_f4: "GainsAI Coach, meal planning and Pro backup with Google Drive",
-        gainsai_status: "Production-ready Android release",
+        gainsai_promise: "Plan training, log your workouts and see a practical next step.",
+        gainsai_f1: "AI-assisted training plans and saved programs",
+        gainsai_f2: "Workout logging, history and estimated 1RM trends",
+        gainsai_f3: "Progress analysis, body metrics and check-ins",
+        gainsai_f4: "GainsAI Coach, meal planning and Pro backup",
         btn_google_play: "Google Play",
-        btn_app_page: "App page",
+        btn_app_page: "Explore the app",
         btn_privacy: "Privacy Policy",
         btn_support: "Support",
         btn_terms: "Terms",
         btn_delete: "Delete Data",
-        quick_h: "Quick links",
-        quick_shopping_app: "Shopping List & Notes app page",
-        quick_waveiq_app: "WaveIQ Radio app page",
-        quick_gainsai_app: "GainsAI app page",
-        quick_shopping_legal: "Shopping List & Notes legal pages",
-        quick_waveiq_legal: "WaveIQ Radio legal pages",
-        quick_gainsai_legal: "GainsAI legal pages",
-        about_h: "About this site",
-        about_p: "A central home for app information, store links, privacy policies, support pages and terms.",
-        future_note: "Each app has its own privacy, support and terms pages where applicable.",
+        why_h: "Why Janstech Apps?",
+        why_intro: "A small app portfolio with a shared starting point: solve a real everyday task well on Android.",
+        why_1_h: "Practical solutions",
+        why_1_p: "Every app starts from a real everyday task: a shopping list, a radio station, a training session.",
+        why_2_h: "Built for Android",
+        why_2_p: "Designed and built for Android, from everyday navigation to how each app behaves on your device.",
+        why_3_h: "Privacy considered",
+        why_3_p: "Some apps are local-first and work on-device. Online services are used for the features that need them.",
+        why_4_h: "Actively developed",
+        why_4_p: "Each app has its own page with current privacy, support and terms information.",
         developer_h: "Janstech Apps",
         developer_p1: "The apps are built around usability, privacy, practical everyday value and smart features.",
         developer_p2: "Some apps are local-first, while others rely on internet connectivity for streaming, AI, synchronization, backups or backend-powered features.",
-        developer_email: "Email"
+        developer_email: "Email",
+        footer_apps_h: "Apps",
+        footer_legal_h: "Support & privacy",
+        footer_brand_h: "Janstech Apps",
+        footer_lang_h: "Language",
+        about_p: "A central home for app information, store links, privacy policies, support pages and terms.",
+        quick_shopping_legal: "Shopping List & Notes legal pages",
+        quick_waveiq_legal: "WaveIQ Radio legal pages",
+        quick_gainsai_legal: "GainsAI legal pages",
+        footer_note: "Each app has its own privacy, support and terms pages where applicable."
       },
       fi: {
+        skip: "Siirry sisältöön",
         sub: "Android-sovellukset",
         nav_apps: "Sovellukset",
         lang_label: "Kieli",
-        badge: "Päivitetty",
-        title: "Käytännöllisiä Android-sovelluksia",
-        subtitle: "Älykäs ostoslista ja muistiinpanot, AI-avusteinen radion löytäminen sekä adaptiivinen treenivalmennus arjen käyttöön.",
+        hero_eyebrow: "Suomalainen itsenäinen Android-kehittäjä",
+        hero_title: "Älykkäitä Android-sovelluksia arjen oikeisiin tarpeisiin",
+        hero_lead: "Ostoslistat ja muistiinpanot, AI-avusteinen radion löytäminen sekä adaptiivinen treenivalmennus. Käytännöllisiä Android-sovelluksia, jotka rakentuvat arjen käytön, yksityisyyden ja aidosti hyödyllisten älytoimintojen ympärille.",
+        cta_apps: "Tutustu sovelluksiin",
+        cta_why: "Miksi Janstech Apps?",
+        trust_1: "Android",
+        trust_2: "Yksityisyys huomioitu",
+        trust_3: "Aktiivisesti kehitetty",
+        trust_4: "Käytännönläheinen",
+        cat_shopping: "Ostokset ja muistiinpanot",
+        cat_waveiq: "Nettiradio",
+        cat_gainsai: "Treeni ja kehitys",
         apps_h: "Sovellukset",
         apps_note: "Löydä sovellussivut, Google Play -linkit sekä tietosuoja-, tuki- ja käyttöehtosivut yhdestä paikasta.",
         shopping_title: "Kauppalista & Muistiinpanot",
-        shopping_desc: "Privacy-first ostoslista-, muistiinpano- ja reseptisovellus. Paikalliset listat toimivat laitteella, kun taas vapaaehtoiset AI-toiminnot ja reaaliaikaiset jaetut listat käyttävät verkkopalveluita, kun ne otetaan käyttöön.",
+        shopping_promise: "Suunnittele kaupassakäynti ja pidä muistiinpanot ja reseptit yhdessä paikassa omalla laitteellasi.",
         shopping_f1: "Ostoslistat, suosikit, muistiinpanot ja reseptit",
         shopping_f2: "Vapaaehtoiset AI-reseptit, viikkoruokalistat ja aineskannaus",
         shopping_f3: "Vapaaehtoiset reaaliaikaiset jaetut kauppa- ja tehtävälistat",
         shopping_f4: "Ei pakollista kirjautumista normaaliin paikalliseen käyttöön",
         waveiq_title: "WaveIQ Radio",
-        waveiq_desc: "AI-avusteinen internet-radio, joka auttaa löytämään, tallentamaan, ymmärtämään ja uudelleen löytämään omaan makuun sopivia asemia.",
+        waveiq_promise: "Löydä, tallenna ja löydä uudelleen omaan makuusi sopivia nettiradioasemia.",
         waveiq_f1: "Internet-radion kuuntelu, tallennetut asemat ja suosikit",
         waveiq_f2: "AI-avusteinen asemahaku luonnollisista kehotteista",
         waveiq_f3: "Personoidut suositukset ja samankaltaiset asemat",
-        waveiq_f4: "Google Drive -varmuuskopiointi ja palautus tallennetuille asemille, asetuksille ja logoille",
+        waveiq_f4: "Google Drive -varmuuskopiointi ja palautus",
         gainsai_title: "GainsAI",
-        gainsai_desc: "Henkilökohtainen AI-valmennusalusta treeniohjelmien suunnitteluun, harjoittelun kirjaamiseen, kehityksen ymmärtämiseen ja seuraavan käytännöllisen askeleen tunnistamiseen.",
-        gainsai_f1: "AI-avusteiset treeniohjelmat, tallennetut ohjelmat ja ohjelmien hallinta",
-        gainsai_f2: "Treenikirjaus, sessiohistoria ja arvioidut 1RM-trendit",
-        gainsai_f3: "Kehitysanalyysi, kehomittarit, check-init ja adaptiiviset suositukset",
-        gainsai_f4: "GainsAI Coach, ateriasuunnittelu ja Pro-tason Google Drive -varmuuskopiointi",
-        gainsai_status: "Tuotantovalmis Android-julkaisu",
+        gainsai_promise: "Suunnittele treenit, kirjaa harjoitukset ja näe käytännöllinen seuraava askel.",
+        gainsai_f1: "AI-avusteiset treeniohjelmat ja tallennetut ohjelmat",
+        gainsai_f2: "Treenikirjaus, historia ja arvioidut 1RM-trendit",
+        gainsai_f3: "Kehitysanalyysi, kehomittarit ja check-init",
+        gainsai_f4: "GainsAI Coach, ateriasuunnittelu ja Pro-varmuuskopiointi",
         btn_google_play: "Google Play",
-        btn_app_page: "Sovellussivu",
+        btn_app_page: "Tutustu sovellukseen",
         btn_privacy: "Tietosuoja",
         btn_support: "Tuki",
         btn_terms: "Käyttöehdot",
         btn_delete: "Poista tiedot",
-        quick_h: "Pikalinkit",
-        quick_shopping_app: "Kauppalista & Muistiinpanot -sovellussivu",
-        quick_waveiq_app: "WaveIQ Radio -sovellussivu",
-        quick_gainsai_app: "GainsAI-sovellussivu",
-        quick_shopping_legal: "Kauppalista & Muistiinpanot legal-sivut",
-        quick_waveiq_legal: "WaveIQ Radion legal-sivut",
-        quick_gainsai_legal: "GainsAI legal-sivut",
-        about_h: "Tietoa tästä sivustosta",
-        about_p: "Sivusto kokoaa sovellustiedot, kauppalinkit, tietosuojakäytännöt, tukisivut ja käyttöehdot selkeästi yhteen.",
-        future_note: "Jokaisella sovelluksella on tarvittaessa omat tietosuoja-, tuki- ja käyttöehtosivut.",
+        why_h: "Miksi Janstech Apps?",
+        why_intro: "Pieni sovellusvalikoima, jolla on yhteinen lähtökohta: ratkaista arjen oikea tarve hyvin Androidilla.",
+        why_1_h: "Käytännölliset ratkaisut",
+        why_1_p: "Jokainen sovellus lähtee arjen oikeasta tarpeesta: ostoslistasta, radioasemasta tai treenistä.",
+        why_2_h: "Androidille suunniteltu",
+        why_2_p: "Suunniteltu ja toteutettu Androidille – arjen navigaatiosta siihen, miten sovellus toimii laitteellasi.",
+        why_3_h: "Yksityisyys huomioitu",
+        why_3_p: "Osa sovelluksista on local-first ja toimii laitteella. Verkkopalveluita käytetään niitä vaativiin ominaisuuksiin.",
+        why_4_h: "Aktiivisesti kehitetty",
+        why_4_p: "Jokaisella sovelluksella on oma sivunsa, jossa on ajantasaiset tietosuoja-, tuki- ja käyttöehtotiedot.",
         developer_h: "Janstech Apps",
         developer_p1: "Sovellukset rakentuvat käytettävyyden, yksityisyyden, käytännön hyödyn ja älykkäiden ominaisuuksien ympärille.",
         developer_p2: "Osa sovelluksista on local-first-tyylisiä, kun taas osa tarvitsee internet-yhteyttä suoratoistoon, AI-toimintoihin, synkronointiin, varmuuskopioihin tai backend-pohjaisiin ominaisuuksiin.",
-        developer_email: "Sähköposti"
+        developer_email: "Sähköposti",
+        footer_apps_h: "Sovellukset",
+        footer_legal_h: "Tuki ja tietosuoja",
+        footer_brand_h: "Janstech Apps",
+        footer_lang_h: "Kieli",
+        about_p: "Sivusto kokoaa sovellustiedot, kauppalinkit, tietosuojakäytännöt, tukisivut ja käyttöehdot selkeästi yhteen.",
+        quick_shopping_legal: "Kauppalista & Muistiinpanot legal-sivut",
+        quick_waveiq_legal: "WaveIQ Radion legal-sivut",
+        quick_gainsai_legal: "GainsAI legal-sivut",
+        footer_note: "Jokaisella sovelluksella on tarvittaessa omat tietosuoja-, tuki- ja käyttöehtosivut."
       }
     };
 
@@ -297,24 +489,29 @@
       for (const el of document.querySelectorAll("[data-i18n]")){
         const key = el.getAttribute("data-i18n");
         if (dict[lang] && dict[lang][key] != null){
-          el.innerHTML = dict[lang][key];
+          el.textContent = dict[lang][key];
         }
       }
 
-      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
-      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+      for (const btn of document.querySelectorAll("[data-set-lang]")){
+        btn.setAttribute("aria-pressed", String(btn.dataset.setLang === lang));
+      }
     }
 
-    const saved = localStorage.getItem("janstech_apps_lang") || "en";
-    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
-    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    for (const btn of document.querySelectorAll("[data-set-lang]")){
+      btn.addEventListener("click", () => setLang(btn.dataset.setLang));
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
     const gainsaiPlayUrl = window.GainsAIConfig && window.GainsAIConfig.playStoreUrl;
     if (gainsaiPlayUrl) {
       const gainsaiPlayLink = document.getElementById("gainsaiGooglePlayRoot");
       gainsaiPlayLink.href = gainsaiPlayUrl;
       gainsaiPlayLink.hidden = false;
     }
-    setLang(saved);
+
+    setLang(localStorage.getItem("janstech_apps_lang") || "en");
   </script>
 </body>
 </html>
