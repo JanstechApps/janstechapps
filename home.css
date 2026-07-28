@@ -11,12 +11,32 @@
    -------------------------------------------------------------------------- */
 
 :root{
-  /* Backgrounds and surfaces */
+  /* Page background scale, darkest to lightest. The page ramps
+     deep -> base -> mid -> base -> deep from the top edge to the footer. */
+  --bg-deep:#040a16;
   --bg:#060f1f;
-  --bg-2:#0a1730;
+  --bg-mid:#0b1a36;
+
+  /* Ambient light washes layered over the ramp. Kept low-alpha and very large
+     so they read as light, never as coloured blobs. */
+  --ambient-cyan:rgba(86,170,255,.13);
+  --ambient-mint:rgba(104,236,199,.065);
+  --ambient-violet:rgba(139,116,255,.085);
+
+  /* Fixed sheen: a soft light from above and a settle towards the bottom. */
+  --ambient-top:rgba(255,255,255,.032);
+  --ambient-bottom:rgba(2,6,14,.42);
+
+  /* Barely-there dot grid drawn over the washes. */
+  --grid-line:rgba(255,255,255,.022);
+
+  /* Surfaces */
   --surface:rgba(255,255,255,.035);
   --surface-hover:rgba(255,255,255,.06);
   --surface-strong:rgba(255,255,255,.07);
+  /* Dark veil under translucent panels so they stay readable wherever an
+     ambient wash falls behind them. */
+  --surface-veil:rgba(6,13,26,.5);
 
   /* Borders */
   --border:rgba(255,255,255,.10);
@@ -84,18 +104,67 @@ html{
   scroll-behavior:smooth;
 }
 
+/* --------------------------------------------------------------------------
+   2a. Page background
+
+   Three static layers, no images and no animation:
+
+   1. body background  - page-anchored. A vertical ramp through the background
+                         scale plus three ambient washes near the hero, so the
+                         top of the page is the liveliest part and the page
+                         settles back to deep navy at the footer.
+   2. body::before     - viewport-fixed sheen (light above, settle below) and
+                         the dot grid, so no scroll position is ever a flat
+                         fill. Gradients only: no blur, no filter, no repaint
+                         cost beyond one composited layer.
+   3. component surfaces - unchanged, with --surface-veil keeping panels
+                         readable over the washes.
+
+   Wash sizes use clamp() against vw/vh so one declaration covers 320px phones
+   and 1920px desktops; the caps stop them growing into a flat colour wash on
+   very wide screens.
+   -------------------------------------------------------------------------- */
+
 body{
   margin:0;
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   color:var(--text);
   background:
-    radial-gradient(900px 620px at 12% -12%, rgba(143,211,255,.14), transparent 62%),
-    radial-gradient(760px 560px at 100% 2%, rgba(143,255,200,.07), transparent 58%),
-    linear-gradient(180deg, var(--bg), var(--bg-2));
+    radial-gradient(clamp(520px, 88vw, 1180px) clamp(360px, 62vh, 780px)
+      at 88% -6vh, var(--ambient-cyan), transparent 62%),
+    radial-gradient(clamp(460px, 80vw, 1000px) clamp(320px, 54vh, 680px)
+      at -6% 13vh, var(--ambient-mint), transparent 60%),
+    radial-gradient(clamp(480px, 84vw, 1080px) clamp(340px, 58vh, 760px)
+      at 78% 64vh, var(--ambient-violet), transparent 64%),
+    linear-gradient(180deg,
+      var(--bg-deep) 0%,
+      var(--bg) 15%,
+      var(--bg-mid) 48%,
+      var(--bg) 80%,
+      var(--bg-deep) 100%);
   background-attachment:scroll;
   min-height:100vh;
   line-height:1.6;
   overflow-wrap:break-word;
+}
+
+/* Static, non-interactive, behind every content layer. */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 1px 1px, var(--grid-line) 1px, transparent 0),
+    radial-gradient(130% 60% at 50% -14%, var(--ambient-top), transparent 62%),
+    radial-gradient(130% 55% at 50% 114%, var(--ambient-bottom), transparent 64%);
+  background-repeat:repeat, no-repeat, no-repeat;
+  background-size:64px 64px, auto, auto;
+}
+
+@media (min-width: 1024px){
+  body::before{ background-size:88px 88px, auto, auto; }
 }
 
 h1,h2,h3,h4{
@@ -444,7 +513,8 @@ button:focus-visible{
   border-radius:var(--r-xl);
   background:
     radial-gradient(420px 260px at 80% 0%, rgba(143,211,255,.14), transparent 70%),
-    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
+    var(--surface-veil);
   box-shadow:var(--shadow-lg);
 }
 
@@ -504,9 +574,12 @@ button:focus-visible{
   border:1px solid var(--border);
   border-top:2px solid var(--app-accent);
   border-radius:var(--r-lg);
+  /* The veil in the final layer keeps the card a distinct surface wherever an
+     ambient wash falls behind it. */
   background:
     radial-gradient(320px 180px at 0 0, var(--app-glow), transparent 72%),
-    linear-gradient(160deg, rgba(255,255,255,.055), rgba(255,255,255,.015) 55%);
+    linear-gradient(160deg, rgba(255,255,255,.055), rgba(255,255,255,.015) 55%),
+    var(--surface-veil);
   box-shadow:var(--shadow-sm);
   transition:transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
 }
@@ -649,7 +722,9 @@ button:focus-visible{
   padding:clamp(1.25rem, 2.5vw, 1.6rem);
   border:1px solid var(--border);
   border-radius:var(--r-md);
-  background:var(--surface);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025)),
+    var(--surface-veil);
 }
 
 .why-card__title{
@@ -668,7 +743,9 @@ button:focus-visible{
   padding:clamp(1.5rem, 3.5vw, 2.25rem);
   border:1px solid var(--border);
   border-radius:var(--r-lg);
-  background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015)),
+    var(--surface-veil);
 }
 
 .about__title{

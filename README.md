@@ -106,6 +106,27 @@ individual rules. Per-app accent colours are set on `.app-card--shopping`,
 and `--app-glow`, which drive the card top border, bullets, icon glow and
 primary button.
 
+### Landing page background
+
+The landing page background is built only from CSS gradients in `home.css`: no
+images, no filters and no animation. It has three parts:
+
+- the `body` background: a vertical ramp through `--bg-deep`, `--bg` and
+  `--bg-mid`, plus the `--ambient-cyan`, `--ambient-mint` and `--ambient-violet`
+  washes that keep the hero area the liveliest part of the page
+- `body::before`: a viewport-fixed sheen (`--ambient-top`, `--ambient-bottom`)
+  and the `--grid-line` dot grid
+- `--surface-veil`, the last background layer on cards and panels, which keeps
+  translucent surfaces readable wherever a wash falls behind them
+
+Tune the background from these tokens rather than from individual rules, and
+keep it static — the page must stay motion-free by default.
+
+These background tokens are landing-page only and are deliberately **not**
+mirrored into `style.css`, which keeps its own flatter `--bg` / `--bg-2` pair
+for the app pages. The mirroring rule in AGENTS.md applies to the shared visual
+system (accents, radii, spacing, text colours), not to this background stack.
+
 `home.css` also contains `[hidden]{display:none !important}`. Keep it: `.btn` is
 `display:inline-flex`, which would otherwise override the browser's `[hidden]`
 rule and reveal the GainsAI Google Play link before a verified store URL exists
