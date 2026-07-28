@@ -16,6 +16,16 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://janstechapps.com/apps/gainsai/">
   <meta property="og:image" content="https://janstechapps.com/assets/GainsAI.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:site_name" content="Janstech Apps">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fi_FI">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GainsAI – Personal training platform">
+  <meta name="twitter:description" content="Plan training, log workouts, understand progress, and use adaptive recommendations in one Android app.">
+  <meta name="twitter:image" content="https://janstechapps.com/assets/GainsAI.png">
 
   <script type="application/ld+json">
     {
@@ -26,235 +36,314 @@
       "operatingSystem": "Android",
       "url": "https://janstechapps.com/apps/gainsai/",
       "image": "https://janstechapps.com/assets/GainsAI.png",
-      "description": "An Android personal training platform for training plans, workout logging, progress analysis, adaptive recommendations, meal planning, check-ins, and secure Pro access."
+      "inLanguage": ["en", "fi"],
+      "description": "An Android personal training platform for training plans, workout logging, progress analysis, adaptive recommendations, meal planning, check-ins, and secure Pro access.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Janstech Apps",
+        "url": "https://janstechapps.com/"
+      }
     }
   </script>
 
   <title>GainsAI – Janstech Apps</title>
   <link rel="stylesheet" href="/style.css">
+  <script>
+    // Apply the stored language to <html lang> before first paint so the page
+    // never renders with the wrong language attribute or screenshot set.
+    try {
+      var storedLang = localStorage.getItem("janstech_apps_lang");
+      if (storedLang === "fi" || storedLang === "en") document.documentElement.lang = storedLang;
+    } catch (e) {}
+  </script>
 </head>
-<body>
-  <div class="container">
-    <header class="topbar">
-      <div class="brand">
-        <h1>Janstech Apps <span class="sub" data-i18n="sub">GainsAI</span></h1>
-      </div>
+<body class="app-page app--gainsai">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
-      <div class="topbar-right">
-        <nav class="nav" aria-label="Primary">
-          <a href="/" data-i18n="nav_apps">Apps</a>
-          <a class="active" href="/apps/gainsai/" data-i18n="nav_app">GainsAI</a>
-          <a href="/legal/gainsai/" data-i18n="nav_legal">Legal</a>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="/">
+        <span class="brand__name">Janstech Apps</span>
+        <span class="brand__tag" data-i18n="sub">GainsAI</span>
+      </a>
+
+      <div class="header__controls">
+        <nav class="site-nav" aria-label="Primary">
+          <a class="site-nav__link" href="/" data-i18n="nav_apps">Apps</a>
+          <a class="site-nav__link" href="/apps/gainsai/" aria-current="page" data-i18n="nav_app">GainsAI</a>
+          <a class="site-nav__link" href="/legal/gainsai/" data-i18n="nav_legal">Legal</a>
         </nav>
-        <div class="lang">
-          <span class="hint" data-i18n="lang_label">Language</span>
-          <button id="btnEn" type="button" aria-label="English" aria-pressed="true">EN</button>
-          <button id="btnFi" type="button" aria-label="Suomi" aria-pressed="false">FI</button>
+
+        <div class="lang-switch">
+          <span class="lang-switch__label" data-i18n="lang_label">Language</span>
+          <div class="lang-switch__group">
+            <button class="lang-switch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+            <button class="lang-switch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
+          </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="app-hero gainsai-hero">
-        <div class="app-hero-copy">
-          <span class="badge"><i></i> <span data-i18n="badge">Production-ready Android release</span></span>
-          <h2 data-i18n="hero_title">GainsAI</h2>
-          <p class="app-kicker" data-i18n="kicker">Personal AI training platform</p>
-          <p data-i18n="hero_p">Build a training plan, log the work you complete, and use your history to understand a practical next step. GainsAI brings programs, training, analysis, check-ins, meal planning, and backup into one Android app.</p>
-          <div class="app-actions hero-actions">
-            <a id="gainsaiGooglePlayHero" class="app-btn primary" href="#" target="_blank" rel="noopener noreferrer" hidden data-i18n="btn_google_play">Google Play</a>
-            <a class="app-btn" href="/legal/gainsai/" data-i18n="btn_privacy">Privacy Policy</a>
-            <a class="app-btn" href="/legal/gainsai/support.html" data-i18n="btn_support">Support</a>
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow"><span data-i18n="badge">Production-ready Android release</span></span>
+
+          <h1 class="hero__title" data-i18n="hero_title">GainsAI</h1>
+          <p class="hero__kicker" data-i18n="kicker">Personal AI training platform</p>
+
+          <p class="hero__lead" data-i18n="hero_p">Build a training plan, log the work you complete, and use your history to understand a practical next step. GainsAI brings programs, training, analysis, check-ins, meal planning, and backup into one Android app.</p>
+
+          <div class="hero__actions">
+            <a id="gainsaiGooglePlayHero" class="btn btn--primary" href="#" target="_blank" rel="noopener noreferrer" hidden data-gainsai-play data-i18n="btn_google_play">Google Play</a>
+            <a class="btn" href="#features" data-i18n="btn_features">Features</a>
           </div>
+
+          <ul class="quiet-links hero__links">
+            <li><a href="/legal/gainsai/" data-i18n="btn_privacy">Privacy Policy</a></li>
+            <li><a href="/legal/gainsai/support.html" data-i18n="btn_support">Support</a></li>
+          </ul>
         </div>
 
-        <div class="app-hero-visual">
-          <div class="app-visual-mark">
-            <img class="app-hero-logo" src="/assets/GainsAI.png" alt="GainsAI app icon">
+        <div class="hero__visual">
+          <div class="app-mark">
+            <img class="app-mark__img" src="/assets/GainsAI.png" alt="GainsAI app icon" width="512" height="512" decoding="async">
           </div>
-          <div class="app-hero-panel" aria-label="GainsAI summary">
-            <div><span data-i18n="panel_1_h">Plan</span><strong data-i18n="panel_1_p">AI-assisted programs and a saved program library</strong></div>
-            <div><span data-i18n="panel_2_h">Train</span><strong data-i18n="panel_2_p">Workout logging, history, and estimated 1RM trends</strong></div>
-            <div><span data-i18n="panel_3_h">Understand</span><strong data-i18n="panel_3_p">Adaptive recommendations, check-ins, and GainsAI Coach</strong></div>
+          <ul class="hero__panel" data-i18n-label="aria_summary" aria-label="GainsAI summary">
+            <li><span data-i18n="panel_1_h">Plan</span><strong data-i18n="panel_1_p">AI-assisted programs and a saved program library</strong></li>
+            <li><span data-i18n="panel_2_h">Train</span><strong data-i18n="panel_2_p">Workout logging, history, and estimated 1RM trends</strong></li>
+            <li><span data-i18n="panel_3_h">Understand</span><strong data-i18n="panel_3_p">Adaptive recommendations, check-ins, and GainsAI Coach</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <figure class="media-band" aria-hidden="true">
+      <div class="shell">
+        <div class="media-band__frame">
+          <img src="/assets/gainsai/ominaisuuskuva/promo.png" width="1024" height="500" fetchpriority="high" decoding="async" alt="">
+        </div>
+      </div>
+    </figure>
+
+    <section class="section" id="features">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_features">Features</span>
+          <h2 class="section__title" data-i18n="features_h">From a training plan to your next useful decision</h2>
+          <p class="section__intro" data-i18n="features_p">GainsAI is designed to connect planning with the training you actually complete. It analyses training signals and presents recommendations to help you decide what to focus on next, instead of only displaying data.</p>
+        </div>
+
+        <div class="card-grid card-grid--2">
+          <article class="card">
+            <h3 class="card__title" data-i18n="f1_h">AI-assisted training plans</h3>
+            <p class="card__text" data-i18n="f1_p">Create a first training plan around your profile and training preferences. Keep programs in a library and return to the plan that fits your current training block.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title" data-i18n="f2_h">Log the work you do</h3>
+            <p class="card__text" data-i18n="f2_p">Record exercises, sets, reps, and loads during a workout. Workout history turns completed sessions into a usable record of your training.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title" data-i18n="f3_h">Progress with context</h3>
+            <p class="card__text" data-i18n="f3_p">Review exercise signals, estimated 1RM trends, body metrics, and weekly check-ins together. The app can surface where consistency, recovery, or training priorities need attention.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title" data-i18n="f4_h">Plans beyond the workout</h3>
+            <p class="card__text" data-i18n="f4_p">Create multi-day meal plans, complete weekly check-ins, and keep body metrics alongside training data when those tools support your own routine.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="screenshots-title">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_screens">Screenshots</span>
+          <h2 class="section__title" id="screenshots-title" data-i18n="screenshots_h">Inside GainsAI</h2>
+          <p class="section__intro" data-i18n="screenshots_p">Browse a selection of current app screens. Swipe or scroll horizontally to view the gallery.</p>
+        </div>
+
+        <div class="gallery" tabindex="0" role="group" data-i18n-label="aria_gallery" aria-label="GainsAI screenshot gallery, scrollable">
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2008.40.10.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI-sovelluksen kuvakaappaus 1">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2008.40.57.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI-sovelluksen kuvakaappaus 2">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2008.41.36.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI-sovelluksen kuvakaappaus 3">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2011.58.05.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI-sovelluksen kuvakaappaus 4">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2011.59.12.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI-sovelluksen kuvakaappaus 5">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2012.47.39.jpeg" width="945" height="2048" loading="lazy" decoding="async" alt="GainsAI-sovelluksen kuvakaappaus 6">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2012.49.17.jpeg" width="986" height="2048" loading="lazy" decoding="async" alt="GainsAI-sovelluksen kuvakaappaus 7">
+          </figure>
+
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2019.56.44.jpeg" width="945" height="2048" loading="lazy" decoding="async" alt="GainsAI app screenshot 1">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.02.36.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI app screenshot 2">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.03.13.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI app screenshot 3">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.03.39.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI app screenshot 4">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.04.20.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI app screenshot 5">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.04.52.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI app screenshot 6">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.05.39.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI app screenshot 7">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.07.00.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI app screenshot 8">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.09.28.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="GainsAI app screenshot 9">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_how">How it works</span>
+          <h2 class="section__title" data-i18n="how_h">How GainsAI works</h2>
+          <p class="section__intro" data-i18n="how_p">GainsAI keeps the planning, action, and review loop connected so the next recommendation has a basis in your own logged training.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3 class="step__title" data-i18n="how_1_h">Set up your direction</h3>
+            <p class="step__text" data-i18n="how_1_p">Use your training profile and preferences to start a program that gives your sessions a clear structure.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3 class="step__title" data-i18n="how_2_h">Train and log</h3>
+            <p class="step__text" data-i18n="how_2_p">Complete workouts and capture what happened, from working sets to the exercises you performed.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3 class="step__title" data-i18n="how_3_h">Review and adjust</h3>
+            <p class="step__text" data-i18n="how_3_p">Use progress analysis, check-ins, and Coach guidance to identify a sensible next focus for your training.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">4</span>
+            <h3 class="step__title" data-i18n="how_4_h">Keep your data available</h3>
+            <p class="step__text" data-i18n="how_4_p">With Pro, connect Google Drive for backup and restore under a Google account you authorise separately.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_coach">Coach</span>
+          <h2 class="section__title" data-i18n="coach_section_h">Coach and recommendations</h2>
+        </div>
+
+        <div class="card-grid card-grid--2">
+          <article class="card card--wide">
+            <h3 class="card__title" data-i18n="coach_h">GainsAI Coach</h3>
+            <p class="card__text" data-i18n="coach_p1">GainsAI Coach uses the app’s own backend, your current training context, and deterministic coaching logic to explain program, progress, and training-priority signals.</p>
+            <p class="card__text" data-i18n="coach_p2">It is built to help you understand possible next actions. It does not diagnose, treat, or replace a doctor, physiotherapist, dietitian, personal trainer, or other healthcare professional.</p>
+          </article>
+          <article class="card card--wide">
+            <h3 class="card__title" data-i18n="analysis_h">Adaptive, not absolute</h3>
+            <p class="card__text" data-i18n="analysis_p1">Recommendations can draw attention to exercise progress, training consistency, recovery check-ins, and body-trend context. They are suggestions to assess, not promises of a result.</p>
+            <p class="card__text" data-i18n="analysis_p2">Training decisions remain yours. Use your judgement and seek qualified professional advice when it is appropriate for your circumstances.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="pro-title">
+      <div class="shell">
+        <div class="panel">
+          <div class="panel__head">
+            <span class="panel__badge" data-i18n="pro_badge">GainsAI Pro</span>
+            <h2 class="panel__title" id="pro-title" data-i18n="pro_h">More room for planning, analysis, and continuity</h2>
+            <p class="panel__intro" data-i18n="pro_p">GainsAI Pro opens additional tools while keeping the purchase flow in Google Play and the entitlement decision verified by the GainsAI backend.</p>
           </div>
+
+          <div class="plan-grid">
+            <article class="plan-card">
+              <h3 class="plan-card__title" data-i18n="free_h">GainsAI Free</h3>
+              <p class="plan-card__text" data-i18n="free_p">Start with a personalised first plan, log workouts, and use the first five GainsAI Coach questions.</p>
+              <ul class="card__list">
+                <li data-i18n="free_1">First AI-assisted training plan</li>
+                <li data-i18n="free_2">Workout logging and training history</li>
+                <li data-i18n="free_3">Five free GainsAI Coach questions</li>
+              </ul>
+            </article>
+
+            <article class="plan-card plan-card--featured">
+              <h3 class="plan-card__title" data-i18n="pro_card_h">GainsAI Pro</h3>
+              <p class="plan-card__text" data-i18n="pro_card_p">For users who want more programs, deeper analysis, multi-day planning, and backup continuity.</p>
+              <ul class="card__list">
+                <li data-i18n="pro_1">Additional AI programs and manual programs</li>
+                <li data-i18n="pro_2">Progress and analytics tools</li>
+                <li data-i18n="pro_3">Google Drive backup and restore</li>
+                <li data-i18n="pro_4">Multi-day meal plans</li>
+                <li data-i18n="pro_5">Unlimited GainsAI Coach conversations after the free questions</li>
+              </ul>
+              <p class="plan-price" id="gainsaiPriceSummary" hidden></p>
+              <p class="plan-note" data-i18n="pro_price_note">Prices and availability are shown in Google Play before purchase and can vary by country or region.</p>
+            </article>
+          </div>
+
+          <p class="fineprint" data-i18n="pro_fineprint">Subscriptions are managed through Google Play. You can restore purchases in the app; active Google Play subscriptions can also be managed through Google Play. Pro access is shown in the app as a securely checked entitlement.</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <figure class="gainsai-promo-visual" aria-hidden="true">
-        <img src="/assets/gainsai/ominaisuuskuva/promo.png" width="1024" height="500" fetchpriority="high" alt="">
-      </figure>
-
-      <section class="section-shell app-section">
-        <h3 data-i18n="features_h">From a training plan to your next useful decision</h3>
-        <p data-i18n="features_p">GainsAI is designed to connect planning with the training you actually complete. It analyses training signals and presents recommendations to help you decide what to focus on next, instead of only displaying data.</p>
-
-        <div class="landing-grid">
-          <article class="feature-card">
-            <h4 data-i18n="f1_h">AI-assisted training plans</h4>
-            <p data-i18n="f1_p">Create a first training plan around your profile and training preferences. Keep programs in a library and return to the plan that fits your current training block.</p>
-          </article>
-          <article class="feature-card">
-            <h4 data-i18n="f2_h">Log the work you do</h4>
-            <p data-i18n="f2_p">Record exercises, sets, reps, and loads during a workout. Workout history turns completed sessions into a usable record of your training.</p>
-          </article>
-          <article class="feature-card">
-            <h4 data-i18n="f3_h">Progress with context</h4>
-            <p data-i18n="f3_p">Review exercise signals, estimated 1RM trends, body metrics, and weekly check-ins together. The app can surface where consistency, recovery, or training priorities need attention.</p>
-          </article>
-          <article class="feature-card">
-            <h4 data-i18n="f4_h">Plans beyond the workout</h4>
-            <p data-i18n="f4_p">Create multi-day meal plans, complete weekly check-ins, and keep body metrics alongside training data when those tools support your own routine.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-shell app-section screenshot-section" aria-labelledby="screenshots-title">
-        <h3 id="screenshots-title" data-i18n="screenshots_h">Inside GainsAI</h3>
-        <p data-i18n="screenshots_p">Browse a selection of current app screens. Swipe or scroll horizontally to view the gallery.</p>
-        <div class="screenshot-gallery">
-          <figure class="screenshot-frame" data-screenshot-lang="fi">
-            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2008.40.10.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI-sovelluksen kuvakaappaus 1">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="fi">
-            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2008.40.57.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI-sovelluksen kuvakaappaus 2">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="fi">
-            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2008.41.36.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI-sovelluksen kuvakaappaus 3">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="fi">
-            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2011.58.05.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI-sovelluksen kuvakaappaus 4">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="fi">
-            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2011.59.12.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI-sovelluksen kuvakaappaus 5">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="fi">
-            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2012.47.39.jpeg" width="945" height="2048" loading="lazy" alt="GainsAI-sovelluksen kuvakaappaus 6">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="fi">
-            <img src="/assets/gainsai/fi_screenshots/WhatsApp%20Image%202026-07-22%20at%2012.49.17.jpeg" width="986" height="2048" loading="lazy" alt="GainsAI-sovelluksen kuvakaappaus 7">
-          </figure>
-
-          <figure class="screenshot-frame" data-screenshot-lang="en">
-            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2019.56.44.jpeg" width="945" height="2048" loading="lazy" alt="GainsAI app screenshot 1">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="en">
-            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.02.36.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI app screenshot 2">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="en">
-            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.03.13.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI app screenshot 3">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="en">
-            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.03.39.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI app screenshot 4">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="en">
-            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.04.20.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI app screenshot 5">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="en">
-            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.04.52.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI app screenshot 6">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="en">
-            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.05.39.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI app screenshot 7">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="en">
-            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.07.00.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI app screenshot 8">
-          </figure>
-          <figure class="screenshot-frame" data-screenshot-lang="en">
-            <img src="/assets/gainsai/en_screenshots/WhatsApp%20Image%202026-07-22%20at%2020.09.28.jpeg" width="1048" height="2048" loading="lazy" alt="GainsAI app screenshot 9">
-          </figure>
-        </div>
-      </section>
-
-      <section class="section-shell app-section how-it-works">
-        <h3 data-i18n="how_h">How GainsAI works</h3>
-        <p data-i18n="how_p">GainsAI keeps the planning, action, and review loop connected so the next recommendation has a basis in your own logged training.</p>
-        <div class="landing-grid">
-          <article class="feature-card process-card">
-            <span class="process-number" aria-hidden="true">1</span>
-            <h4 data-i18n="how_1_h">Set up your direction</h4>
-            <p data-i18n="how_1_p">Use your training profile and preferences to start a program that gives your sessions a clear structure.</p>
-          </article>
-          <article class="feature-card process-card">
-            <span class="process-number" aria-hidden="true">2</span>
-            <h4 data-i18n="how_2_h">Train and log</h4>
-            <p data-i18n="how_2_p">Complete workouts and capture what happened, from working sets to the exercises you performed.</p>
-          </article>
-          <article class="feature-card process-card">
-            <span class="process-number" aria-hidden="true">3</span>
-            <h4 data-i18n="how_3_h">Review and adjust</h4>
-            <p data-i18n="how_3_p">Use progress analysis, check-ins, and Coach guidance to identify a sensible next focus for your training.</p>
-          </article>
-          <article class="feature-card process-card">
-            <span class="process-number" aria-hidden="true">4</span>
-            <h4 data-i18n="how_4_h">Keep your data available</h4>
-            <p data-i18n="how_4_p">With Pro, connect Google Drive for backup and restore under a Google account you authorise separately.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="split-section">
-        <article class="mini-card emphasis-card">
-          <h3 data-i18n="coach_h">GainsAI Coach</h3>
-          <p data-i18n="coach_p1">GainsAI Coach uses the app’s own backend, your current training context, and deterministic coaching logic to explain program, progress, and training-priority signals.</p>
-          <p data-i18n="coach_p2">It is built to help you understand possible next actions. It does not diagnose, treat, or replace a doctor, physiotherapist, dietitian, personal trainer, or other healthcare professional.</p>
-        </article>
-        <article class="mini-card emphasis-card">
-          <h3 data-i18n="analysis_h">Adaptive, not absolute</h3>
-          <p data-i18n="analysis_p1">Recommendations can draw attention to exercise progress, training consistency, recovery check-ins, and body-trend context. They are suggestions to assess, not promises of a result.</p>
-          <p data-i18n="analysis_p2">Training decisions remain yours. Use your judgement and seek qualified professional advice when it is appropriate for your circumstances.</p>
-        </article>
-      </section>
-
-      <section class="section-shell app-section pro-section" aria-labelledby="pro-title">
-        <div class="pro-heading">
-          <span class="pro-badge" data-i18n="pro_badge">GainsAI Pro</span>
-          <h3 id="pro-title" data-i18n="pro_h">More room for planning, analysis, and continuity</h3>
-          <p data-i18n="pro_p">GainsAI Pro opens additional tools while keeping the purchase flow in Google Play and the entitlement decision verified by the GainsAI backend.</p>
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_trust">Privacy</span>
+          <h2 class="section__title" data-i18n="trust_h">Privacy, account, and backup</h2>
         </div>
 
-        <div class="pro-grid">
-          <article class="pro-card">
-            <h4 data-i18n="free_h">GainsAI Free</h4>
-            <p data-i18n="free_p">Start with a personalised first plan, log workouts, and use the first five GainsAI Coach questions.</p>
-            <ul>
-              <li data-i18n="free_1">First AI-assisted training plan</li>
-              <li data-i18n="free_2">Workout logging and training history</li>
-              <li data-i18n="free_3">Five free GainsAI Coach questions</li>
-            </ul>
+        <div class="card-grid card-grid--2">
+          <article class="card card--wide">
+            <h3 class="card__title" data-i18n="privacy_h">Privacy and account controls</h3>
+            <p class="card__text" data-i18n="privacy_p1">GainsAI uses authenticated backend services for account-linked features. Google sign-in, Firebase Authentication, the backend, and Google Drive are used only for the functions you choose to use.</p>
+            <p class="card__text" data-i18n="privacy_p2">You can delete a GainsAI account from the app. The flow covers backend and local account data, can include the GainsAI Drive backup, and attempts Firebase Authentication cleanup where possible. Deleting an account does not cancel a Google Play subscription.</p>
           </article>
-          <article class="pro-card pro-card-featured">
-            <h4 data-i18n="pro_card_h">GainsAI Pro</h4>
-            <p data-i18n="pro_card_p">For users who want more programs, deeper analysis, multi-day planning, and backup continuity.</p>
-            <ul>
-              <li data-i18n="pro_1">Additional AI programs and manual programs</li>
-              <li data-i18n="pro_2">Progress and analytics tools</li>
-              <li data-i18n="pro_3">Google Drive backup and restore</li>
-              <li data-i18n="pro_4">Multi-day meal plans</li>
-              <li data-i18n="pro_5">Unlimited GainsAI Coach conversations after the free questions</li>
-            </ul>
-            <p class="pro-price" id="gainsaiPriceSummary" hidden></p>
-            <p class="pro-price-note" data-i18n="pro_price_note">Prices and availability are shown in Google Play before purchase and can vary by country or region.</p>
+          <article class="card card--wide">
+            <h3 class="card__title" data-i18n="backup_h">Google Drive backup and restore</h3>
+            <p class="card__text" data-i18n="backup_p1">Pro includes Google Drive backup and restore. Drive is authorised separately, and backups are stored in Google Drive’s app-specific storage area.</p>
+            <p class="card__text" data-i18n="backup_p2">Before replacing an existing backup, the app can ask you to review recovery and account-mismatch information. This helps you make an informed choice when changing device or account.</p>
           </article>
         </div>
+      </div>
+    </section>
 
-        <p class="pro-fineprint" data-i18n="pro_fineprint">Subscriptions are managed through Google Play. You can restore purchases in the app; active Google Play subscriptions can also be managed through Google Play. Pro access is shown in the app as a securely checked entitlement.</p>
-      </section>
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_faq">FAQ</span>
+          <h2 class="section__title" data-i18n="faq_h">Frequently asked questions</h2>
+        </div>
 
-      <section class="split-section">
-        <article class="mini-card emphasis-card">
-          <h3 data-i18n="privacy_h">Privacy and account controls</h3>
-          <p data-i18n="privacy_p1">GainsAI uses authenticated backend services for account-linked features. Google sign-in, Firebase Authentication, the backend, and Google Drive are used only for the functions you choose to use.</p>
-          <p data-i18n="privacy_p2">You can delete a GainsAI account from the app. The flow covers backend and local account data, can include the GainsAI Drive backup, and attempts Firebase Authentication cleanup where possible. Deleting an account does not cancel a Google Play subscription.</p>
-        </article>
-        <article class="mini-card emphasis-card">
-          <h3 data-i18n="backup_h">Google Drive backup and restore</h3>
-          <p data-i18n="backup_p1">Pro includes Google Drive backup and restore. Drive is authorised separately, and backups are stored in Google Drive’s app-specific storage area.</p>
-          <p data-i18n="backup_p2">Before replacing an existing backup, the app can ask you to review recovery and account-mismatch information. This helps you make an informed choice when changing device or account.</p>
-        </article>
-      </section>
-
-      <section class="section-shell app-section faq-section">
-        <h3 data-i18n="faq_h">Frequently asked questions</h3>
-        <div class="faq-list">
+        <div class="faq">
           <details>
             <summary data-i18n="faq_1_q">Does GainsAI replace a healthcare or fitness professional?</summary>
             <p data-i18n="faq_1_a">No. GainsAI is a fitness and wellness tool. It does not provide medical diagnosis, treatment, emergency assistance, or professional healthcare advice.</p>
@@ -272,53 +361,114 @@
             <p data-i18n="faq_4_a">Use the in-app account deletion flow or review the deletion instructions. The app can delete account data and optionally remove the GainsAI backup from Google Drive; a subscription must be managed separately in Google Play.</p>
           </details>
         </div>
-      </section>
-
-      <section class="section-shell app-section">
-        <h3 data-i18n="legal_h">Legal and support</h3>
-        <p data-i18n="legal_p">Review published information for privacy, support, terms, and data deletion before using account-linked and subscription features.</p>
-        <div class="app-actions">
-          <a class="app-btn" href="/legal/gainsai/" data-i18n="btn_privacy">Privacy Policy</a>
-          <a class="app-btn" href="/legal/gainsai/support.html" data-i18n="btn_support">Support</a>
-          <a class="app-btn" href="/legal/gainsai/terms.html" data-i18n="btn_terms">Terms</a>
-          <a class="app-btn" href="/legal/gainsai/delete-data.html" data-i18n="btn_delete">Delete Data</a>
-          <a class="app-btn" href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="app-footer">
-      <p data-i18n="footer_p">GainsAI is an Android fitness and wellness tool by Janstech Apps.</p>
-      <div class="app-actions">
-        <a href="/" data-i18n="footer_apps">All apps</a>
-        <a href="/legal/gainsai/" data-i18n="footer_privacy">Privacy</a>
-        <a href="/legal/gainsai/support.html" data-i18n="footer_support">Support</a>
       </div>
-    </footer>
-  </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_legal">Legal</span>
+          <h2 class="section__title" data-i18n="legal_h">Legal and support</h2>
+          <p class="section__intro" data-i18n="legal_p">Review published information for privacy, support, terms, and data deletion before using account-linked and subscription features.</p>
+        </div>
+
+        <div class="link-row">
+          <a class="btn" href="/legal/gainsai/" data-i18n="btn_privacy">Privacy Policy</a>
+          <a class="btn" href="/legal/gainsai/support.html" data-i18n="btn_support">Support</a>
+          <a class="btn" href="/legal/gainsai/terms.html" data-i18n="btn_terms">Terms</a>
+          <a class="btn" href="/legal/gainsai/delete-data.html" data-i18n="btn_delete">Delete Data</a>
+          <a class="btn" href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="shell cta-band__inner">
+        <div>
+          <h2 class="cta-band__title" data-i18n="cta_h">GainsAI at a glance</h2>
+          <p class="cta-band__text" data-i18n="cta_p">Programs, workout logging, progress analysis, check-ins, meal planning, and backup in one Android app.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a id="gainsaiGooglePlayCta" class="btn btn--primary" href="#" target="_blank" rel="noopener noreferrer" hidden data-gainsai-play data-i18n="btn_google_play">Google Play</a>
+          <a class="btn" href="/" data-i18n="btn_all_apps">All apps</a>
+          <a class="btn" href="/legal/gainsai/support.html" data-i18n="btn_support">Support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <div class="footer-grid">
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="sub">GainsAI</h2>
+          <p class="footer-group__text" data-i18n="footer_p">GainsAI is an Android fitness and wellness tool by Janstech Apps.</p>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_legal_h">Support &amp; privacy</h2>
+          <ul class="footer-links">
+            <li><a href="/legal/gainsai/" data-i18n="footer_privacy">Privacy</a></li>
+            <li><a href="/legal/gainsai/support.html" data-i18n="footer_support">Support</a></li>
+            <li><a href="/legal/gainsai/terms.html" data-i18n="footer_terms">Terms</a></li>
+            <li><a href="/legal/gainsai/delete-data.html" data-i18n="footer_delete">Delete data</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_apps_h">Apps</h2>
+          <ul class="footer-links">
+            <li><a href="/" data-i18n="footer_apps">All apps</a></li>
+            <li><a href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_lang_h">Language</h2>
+          <div class="lang-switch">
+            <div class="lang-switch__group">
+              <button class="lang-switch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+              <button class="lang-switch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Janstech Apps</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="/assets/gainsai-config.js"></script>
   <script>
     const dict = {
       en: {
+        skip: "Skip to content",
         sub: "GainsAI", nav_apps: "Apps", nav_app: "GainsAI", nav_legal: "Legal", lang_label: "Language",
         badge: "Production-ready Android release", hero_title: "GainsAI", kicker: "Personal AI training platform",
         hero_p: "Build a training plan, log the work you complete, and use your history to understand a practical next step. GainsAI brings programs, training, analysis, check-ins, meal planning, and backup into one Android app.",
+        aria_summary: "GainsAI summary",
         panel_1_h: "Plan", panel_1_p: "AI-assisted programs and a saved program library",
         panel_2_h: "Train", panel_2_p: "Workout logging, history, and estimated 1RM trends",
         panel_3_h: "Understand", panel_3_p: "Adaptive recommendations, check-ins, and GainsAI Coach",
+        eyebrow_features: "Features",
         features_h: "From a training plan to your next useful decision",
         features_p: "GainsAI is designed to connect planning with the training you actually complete. It analyses training signals and presents recommendations to help you decide what to focus on next, instead of only displaying data.",
         f1_h: "AI-assisted training plans", f1_p: "Create a first training plan around your profile and training preferences. Keep programs in a library and return to the plan that fits your current training block.",
         f2_h: "Log the work you do", f2_p: "Record exercises, sets, reps, and loads during a workout. Workout history turns completed sessions into a usable record of your training.",
         f3_h: "Progress with context", f3_p: "Review exercise signals, estimated 1RM trends, body metrics, and weekly check-ins together. The app can surface where consistency, recovery, or training priorities need attention.",
         f4_h: "Plans beyond the workout", f4_p: "Create multi-day meal plans, complete weekly check-ins, and keep body metrics alongside training data when those tools support your own routine.",
+        eyebrow_screens: "Screenshots",
         screenshots_h: "Inside GainsAI", screenshots_p: "Browse a selection of current app screens. Swipe or scroll horizontally to view the gallery.",
+        aria_gallery: "GainsAI screenshot gallery, scrollable",
+        eyebrow_how: "How it works",
         how_h: "How GainsAI works", how_p: "GainsAI keeps the planning, action, and review loop connected so the next recommendation has a basis in your own logged training.",
         how_1_h: "Set up your direction", how_1_p: "Use your training profile and preferences to start a program that gives your sessions a clear structure.",
         how_2_h: "Train and log", how_2_p: "Complete workouts and capture what happened, from working sets to the exercises you performed.",
         how_3_h: "Review and adjust", how_3_p: "Use progress analysis, check-ins, and Coach guidance to identify a sensible next focus for your training.",
         how_4_h: "Keep your data available", how_4_p: "With Pro, connect Google Drive for backup and restore under a Google account you authorise separately.",
+        eyebrow_coach: "Coach", coach_section_h: "Coach and recommendations",
         coach_h: "GainsAI Coach", coach_p1: "GainsAI Coach uses the app’s own backend, your current training context, and deterministic coaching logic to explain program, progress, and training-priority signals.",
         coach_p2: "It is built to help you understand possible next actions. It does not diagnose, treat, or replace a doctor, physiotherapist, dietitian, personal trainer, or other healthcare professional.",
         analysis_h: "Adaptive, not absolute", analysis_p1: "Recommendations can draw attention to exercise progress, training consistency, recovery check-ins, and body-trend context. They are suggestions to assess, not promises of a result.",
@@ -330,39 +480,52 @@
         pro_1: "Additional AI programs and manual programs", pro_2: "Progress and analytics tools", pro_3: "Google Drive backup and restore", pro_4: "Multi-day meal plans", pro_5: "Unlimited GainsAI Coach conversations after the free questions",
         pro_price_note: "Prices and availability are shown in Google Play before purchase and can vary by country or region.",
         pro_fineprint: "Subscriptions are managed through Google Play. You can restore purchases in the app; active Google Play subscriptions can also be managed through Google Play. Pro access is shown in the app as a securely checked entitlement.",
+        eyebrow_trust: "Privacy", trust_h: "Privacy, account, and backup",
         privacy_h: "Privacy and account controls", privacy_p1: "GainsAI uses authenticated backend services for account-linked features. Google sign-in, Firebase Authentication, the backend, and Google Drive are used only for the functions you choose to use.",
         privacy_p2: "You can delete a GainsAI account from the app. The flow covers backend and local account data, can include the GainsAI Drive backup, and attempts Firebase Authentication cleanup where possible. Deleting an account does not cancel a Google Play subscription.",
         backup_h: "Google Drive backup and restore", backup_p1: "Pro includes Google Drive backup and restore. Drive is authorised separately, and backups are stored in Google Drive’s app-specific storage area.",
         backup_p2: "Before replacing an existing backup, the app can ask you to review recovery and account-mismatch information. This helps you make an informed choice when changing device or account.",
-        faq_h: "Frequently asked questions",
+        eyebrow_faq: "FAQ", faq_h: "Frequently asked questions",
         faq_1_q: "Does GainsAI replace a healthcare or fitness professional?", faq_1_a: "No. GainsAI is a fitness and wellness tool. It does not provide medical diagnosis, treatment, emergency assistance, or professional healthcare advice.",
         faq_2_q: "How is Pro access handled?", faq_2_a: "Purchases are made through Google Play. The app sends a purchase for secure backend verification, then shows the backend-confirmed Pro entitlement. You can restore purchases and manage a Google Play subscription through the app or Google Play.",
         faq_3_q: "Can I back up or restore my data?", faq_3_a: "Yes, GainsAI Pro includes Google Drive backup and restore after you authorise a Google account for Drive. Drive connection is separate from your GainsAI sign-in.",
         faq_4_q: "How can I delete my account and data?", faq_4_a: "Use the in-app account deletion flow or review the deletion instructions. The app can delete account data and optionally remove the GainsAI backup from Google Drive; a subscription must be managed separately in Google Play.",
+        eyebrow_legal: "Legal",
         legal_h: "Legal and support", legal_p: "Review published information for privacy, support, terms, and data deletion before using account-linked and subscription features.",
-        btn_google_play: "Google Play", btn_privacy: "Privacy Policy", btn_support: "Support", btn_terms: "Terms", btn_delete: "Delete Data", btn_email: "Email support",
+        cta_h: "GainsAI at a glance", cta_p: "Programs, workout logging, progress analysis, check-ins, meal planning, and backup in one Android app.",
+        btn_google_play: "Google Play", btn_features: "Features", btn_all_apps: "All apps",
+        btn_privacy: "Privacy Policy", btn_support: "Support", btn_terms: "Terms", btn_delete: "Delete Data", btn_email: "Email support",
         footer_p: "GainsAI is an Android fitness and wellness tool by Janstech Apps.", footer_apps: "All apps", footer_privacy: "Privacy", footer_support: "Support",
+        footer_terms: "Terms", footer_delete: "Delete data",
+        footer_legal_h: "Support & privacy", footer_apps_h: "Apps", footer_lang_h: "Language",
         pro_price_template: "Monthly {monthly} · Yearly {yearly}"
       },
       fi: {
+        skip: "Siirry sisältöön",
         sub: "GainsAI", nav_apps: "Sovellukset", nav_app: "GainsAI", nav_legal: "Legal", lang_label: "Kieli",
         badge: "Tuotantovalmis Android-julkaisu", hero_title: "GainsAI", kicker: "Henkilökohtainen AI-valmennusalusta",
         hero_p: "Rakenna treeniohjelma, kirjaa tekemäsi harjoittelu ja hyödynnä historiaasi seuraavan käytännöllisen askeleen ymmärtämiseen. GainsAI yhdistää ohjelmat, treenit, analyysin, check-init, ateriasuunnittelun ja varmuuskopioinnin samaan Android-sovellukseen.",
+        aria_summary: "GainsAI-tiivistelmä",
         panel_1_h: "Suunnittele", panel_1_p: "AI-avusteiset ohjelmat ja tallennettujen ohjelmien kirjasto",
         panel_2_h: "Harjoittele", panel_2_p: "Treenikirjaus, historia ja arvioidut 1RM-trendit",
         panel_3_h: "Ymmärrä", panel_3_p: "Adaptiiviset suositukset, check-init ja GainsAI Coach",
+        eyebrow_features: "Ominaisuudet",
         features_h: "Treeniohjelmasta seuraavaan hyödylliseen päätökseen",
         features_p: "GainsAI yhdistää suunnittelun toteutuneeseen harjoitteluun. Se analysoi treenisignaaleja ja nostaa esiin suosituksia, joiden avulla voit päättää, mihin harjoittelussa kannattaa keskittyä seuraavaksi – pelkän datan näyttämisen sijaan.",
         f1_h: "AI-avusteiset treeniohjelmat", f1_p: "Luo ensimmäinen treeniohjelma profiilisi ja harjoittelutoiveidesi pohjalta. Säilytä ohjelmat kirjastossa ja palaa nykyiseen treenijaksoosi sopivaan ohjelmaan.",
         f2_h: "Kirjaa toteutunut harjoittelu", f2_p: "Tallenna treenin aikana liikkeet, sarjat, toistot ja painot. Treenihistoria muuttaa toteutuneet sessiot käyttökelpoiseksi harjoittelun historiaksi.",
         f3_h: "Kehitys kontekstissaan", f3_p: "Tarkastele yhdessä liikekohtaisia signaaleja, arvioituja 1RM-trendejä, kehomittareita ja viikoittaisia check-inejä. Sovellus voi nostaa esiin tilanteita, joissa johdonmukaisuus, palautuminen tai harjoitusprioriteetit kaipaavat huomiota.",
         f4_h: "Suunnitelmia treenin ympärille", f4_p: "Luo monipäiväisiä ateriasuunnitelmia, tee viikoittaisia check-inejä ja pidä kehomittarit treenitietojen rinnalla silloin, kun nämä työkalut tukevat omaa rutiiniasi.",
+        eyebrow_screens: "Kuvakaappaukset",
         screenshots_h: "GainsAI käytössä", screenshots_p: "Selaa sovelluksen nykyisiä näkymiä. Näytä galleria pyyhkäisemällä tai vierittämällä vaakasuunnassa.",
+        aria_gallery: "GainsAI-kuvakaappausgalleria, vieritettävä",
+        eyebrow_how: "Näin se toimii",
         how_h: "Näin GainsAI toimii", how_p: "GainsAI pitää suunnittelu–tekeminen–arviointi-syklin yhteydessä, jotta seuraava suositus perustuu omaan kirjattuun harjoitteluusi.",
         how_1_h: "Aseta suunta", how_1_p: "Käytä harjoitteluprofiiliasi ja toiveitasi ohjelman aloittamiseen, jotta treeneilläsi on selkeä rakenne.",
         how_2_h: "Harjoittele ja kirjaa", how_2_p: "Toteuta treenit ja tallenna, mitä tapahtui – työsarjoista tekemiisi liikkeisiin.",
         how_3_h: "Arvioi ja säädä", how_3_p: "Hyödynnä kehitysanalyysiä, check-inejä ja Coach-ohjausta, kun tunnistat harjoittelun järkevää seuraavaa painopistettä.",
         how_4_h: "Pidä tiedot saatavilla", how_4_p: "Pro-tasolla voit yhdistää Google Driven varmuuskopiointia ja palautusta varten erikseen valtuuttamallasi Google-tilillä.",
+        eyebrow_coach: "Coach", coach_section_h: "Coach ja suositukset",
         coach_h: "GainsAI Coach", coach_p1: "GainsAI Coach hyödyntää sovelluksen omaa backendia, nykyistä harjoittelukontekstiasi ja determinististä valmennuslogiikkaa ohjelma-, kehitys- ja harjoitusprioriteettisignaalien selittämiseen.",
         coach_p2: "Sen tarkoitus on auttaa ymmärtämään mahdollisia seuraavia toimia. Se ei diagnosoi, hoida eikä korvaa lääkäriä, fysioterapeuttia, ravitsemusterapeuttia, henkilökohtaista valmentajaa tai muuta terveydenhuollon ammattilaista.",
         analysis_h: "Adaptiivinen, ei ehdoton", analysis_p1: "Suositukset voivat kiinnittää huomiota liikekohtaiseen kehitykseen, harjoittelun johdonmukaisuuteen, palautumisen check-ineihin ja kehityksen kontekstiin. Ne ovat arvioitavia ehdotuksia, eivät lupauksia tuloksista.",
@@ -374,18 +537,24 @@
         pro_1: "Lisää AI-ohjelmia ja manuaaliset ohjelmat", pro_2: "Kehitys- ja analytiikkatyökalut", pro_3: "Google Drive -varmuuskopiointi ja palautus", pro_4: "Monipäiväiset ateriasuunnitelmat", pro_5: "Rajattomat GainsAI Coach -keskustelut maksuttomien kysymysten jälkeen",
         pro_price_note: "Hinnat ja saatavuus näytetään Google Playssa ennen ostoa, ja ne voivat vaihdella maan tai alueen mukaan.",
         pro_fineprint: "Tilauksia hallitaan Google Playn kautta. Voit palauttaa ostot sovelluksessa, ja aktiivista Google Play -tilausta voi hallita myös Google Playssa. Pro-käyttöoikeus näytetään sovelluksessa turvallisesti tarkistettuna tilana.",
+        eyebrow_trust: "Tietosuoja", trust_h: "Tietosuoja, tili ja varmuuskopiointi",
         privacy_h: "Tietosuoja ja tilin hallinta", privacy_p1: "GainsAI käyttää tilikohtaisissa ominaisuuksissa todennettuja backend-palveluita. Google-kirjautumista, Firebase Authenticationia, backendia ja Google Drivea käytetään vain valitsemissasi toiminnoissa.",
         privacy_p2: "Voit poistaa GainsAI-tilin sovelluksesta. Toiminto kattaa backendin ja paikalliset tilitiedot, voi sisältää GainsAI Drive -varmuuskopion ja yrittää poistaa Firebase Authentication -tilin, kun se on mahdollista. Tilin poistaminen ei peruuta Google Play -tilausta.",
         backup_h: "Google Drive -varmuuskopiointi ja palautus", backup_p1: "Pro sisältää Google Drive -varmuuskopioinnin ja palautuksen. Drive valtuutetaan erikseen, ja varmuuskopiot tallennetaan Google Driven sovelluskohtaiseen tallennustilaan.",
         backup_p2: "Ennen olemassa olevan varmuuskopion korvaamista sovellus voi pyytää tarkistamaan palautukseen ja tilien mahdolliseen ristiriitaan liittyviä tietoja. Tämä tukee harkittua valintaa laitetta tai tiliä vaihdettaessa.",
-        faq_h: "Usein kysyttyä",
+        eyebrow_faq: "UKK", faq_h: "Usein kysyttyä",
         faq_1_q: "Korvaako GainsAI terveydenhuollon tai liikunta-alan ammattilaisen?", faq_1_a: "Ei. GainsAI on kuntoilu- ja hyvinvointityökalu. Se ei tarjoa lääketieteellistä diagnoosia, hoitoa, hätäapua tai ammattimaista terveysneuvontaa.",
         faq_2_q: "Miten Pro-käyttöoikeus käsitellään?", faq_2_a: "Ostot tehdään Google Playn kautta. Sovellus lähettää oston turvallista backend-varmennusta varten ja näyttää sen jälkeen backendin vahvistaman Pro-käyttöoikeuden. Voit palauttaa ostot ja hallita Google Play -tilausta sovelluksen tai Google Playn kautta.",
         faq_3_q: "Voinko varmuuskopioida tai palauttaa tietoni?", faq_3_a: "Kyllä. GainsAI Pro sisältää Google Drive -varmuuskopioinnin ja palautuksen, kun olet valtuuttanut Google-tilin Drivea varten. Drive-yhteys on erillinen GainsAI-kirjautumisesta.",
         faq_4_q: "Miten poistan tilini ja tietoni?", faq_4_a: "Käytä sovelluksen tilinpoistotoimintoa tai tutustu poisto-ohjeisiin. Sovellus voi poistaa tilitiedot ja valinnaisesti GainsAI-varmuuskopion Google Drivesta; tilaus on hallittava erikseen Google Playssa.",
+        eyebrow_legal: "Legal",
         legal_h: "Legal ja tuki", legal_p: "Tutustu julkaistuihin tietosuoja-, tuki-, käyttöehto- ja tietojen poisto-ohjeisiin ennen tilikohtaisten ja tilaustoimintojen käyttöä.",
-        btn_google_play: "Google Play", btn_privacy: "Tietosuoja", btn_support: "Tuki", btn_terms: "Käyttöehdot", btn_delete: "Poista tiedot", btn_email: "Sähköpostituki",
+        cta_h: "GainsAI lyhyesti", cta_p: "Ohjelmat, treenikirjaus, kehitysanalyysi, check-init, ateriasuunnittelu ja varmuuskopiointi samassa Android-sovelluksessa.",
+        btn_google_play: "Google Play", btn_features: "Ominaisuudet", btn_all_apps: "Kaikki sovellukset",
+        btn_privacy: "Tietosuoja", btn_support: "Tuki", btn_terms: "Käyttöehdot", btn_delete: "Poista tiedot", btn_email: "Sähköpostituki",
         footer_p: "GainsAI on Janstech Apps -Android-kuntoilu- ja hyvinvointityökalu.", footer_apps: "Kaikki sovellukset", footer_privacy: "Tietosuoja", footer_support: "Tuki",
+        footer_terms: "Käyttöehdot", footer_delete: "Poista tiedot",
+        footer_legal_h: "Tuki ja tietosuoja", footer_apps_h: "Sovellukset", footer_lang_h: "Kieli",
         pro_price_template: "Kuukausi {monthly} · Vuosi {yearly}"
       }
     };
@@ -393,14 +562,21 @@
     function setLang(lang) {
       localStorage.setItem("janstech_apps_lang", lang);
       document.documentElement.lang = lang === "fi" ? "fi" : "en";
+
       for (const el of document.querySelectorAll("[data-i18n]")) {
         const key = el.getAttribute("data-i18n");
-        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+        if (dict[lang][key] != null) el.textContent = dict[lang][key];
       }
-      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
-      document.getElementById("btnEn").classList.toggle("active", lang === "en");
-      document.getElementById("btnFi").setAttribute("aria-pressed", String(lang === "fi"));
-      document.getElementById("btnEn").setAttribute("aria-pressed", String(lang === "en"));
+
+      for (const el of document.querySelectorAll("[data-i18n-label]")) {
+        const key = el.getAttribute("data-i18n-label");
+        if (dict[lang][key] != null) el.setAttribute("aria-label", dict[lang][key]);
+      }
+
+      for (const btn of document.querySelectorAll("[data-set-lang]")) {
+        btn.setAttribute("aria-pressed", String(btn.dataset.setLang === lang));
+      }
+
       updatePriceSummary(lang);
     }
 
@@ -417,18 +593,25 @@
       summary.hidden = false;
     }
 
+    // The Google Play actions stay hidden until assets/gainsai-config.js holds a
+    // verified public store URL. Adding the URL there reveals every action.
     function applyGainsAIConfig() {
       const url = window.GainsAIConfig && window.GainsAIConfig.playStoreUrl;
       if (!url) return;
-      document.querySelectorAll("#gainsaiGooglePlayHero").forEach((link) => {
+      document.querySelectorAll("[data-gainsai-play]").forEach((link) => {
         link.href = url;
         link.hidden = false;
       });
     }
 
     const saved = localStorage.getItem("janstech_apps_lang") || "en";
-    document.getElementById("btnFi").addEventListener("click", () => setLang("fi"));
-    document.getElementById("btnEn").addEventListener("click", () => setLang("en"));
+
+    for (const btn of document.querySelectorAll("[data-set-lang]")) {
+      btn.addEventListener("click", () => setLang(btn.dataset.setLang));
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
     applyGainsAIConfig();
     setLang(saved);
   </script>

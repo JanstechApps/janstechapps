@@ -63,6 +63,7 @@ Expected structure:
 ├── tools/
 ├── assets/
 ├── apps/
+│   ├── gainsai/
 │   ├── kauppalista/
 │   └── waveiq/
 ├── docs/
@@ -98,6 +99,7 @@ Shared images, icons and favicons belong under:
 
 Public app landing pages belong under:
 
+- apps/gainsai/
 - apps/kauppalista/
 - apps/waveiq/
 
@@ -146,6 +148,7 @@ Agents MUST preserve or intentionally update these public URLs.
 
 ## GainsAI
 
+- https://janstechapps.com/apps/gainsai/
 - https://janstechapps.com/legal/gainsai/
 - https://janstechapps.com/legal/gainsai/support.html
 - https://janstechapps.com/legal/gainsai/terms.html
@@ -463,14 +466,33 @@ Consequences:
 - when adding a landing page rule, use the `:root` tokens in `home.css` instead
   of new hard-coded colours, radii or spacing values
 
-`home.css` contains `[hidden]{display:none !important}`. Do NOT remove it.
-`.btn` is `display:inline-flex`, which otherwise overrides the user-agent
-`[hidden]` rule and reveals the GainsAI Google Play link before a verified
-store URL exists in `assets/gainsai-config.js`.
+`style.css` is the app page design system and follows the same rules: mobile
+first, `min-width` media queries only, and a `:root` token block that
+intentionally MIRRORS the tokens in `home.css` so both files share one visual
+system while staying independent. `home.css` is the reference for shared values:
+change it there first, then mirror into `style.css`. Do NOT introduce a third
+shared stylesheet or re-point pages at another file without explicit
+instruction.
 
-Every visible landing page string needs a `data-i18n` key present in BOTH
-`dict.en` and `dict.fi`. A landing page change is not complete until both
-languages are updated.
+Each app page sets `<body class="app-page app--<app>">`. The `.app--<app>` block
+in `style.css` overrides `--accent`, `--accent-2` and `--glow` only; those
+values match the app's card on the landing page. Do NOT give an app page a
+separate design — the accent is the only per-app visual difference.
+
+BOTH `home.css` and `style.css` contain `[hidden]{display:none !important}`.
+Do NOT remove it. `.btn` is `display:inline-flex`, which otherwise overrides the
+user-agent `[hidden]` rule and reveals the GainsAI Google Play buttons before a
+verified store URL exists in `assets/gainsai-config.js`.
+
+The GainsAI Play actions are marked `hidden` and carry `data-gainsai-play`;
+`applyGainsAIConfig()` reveals them only when `assets/gainsai-config.js` holds a
+URL. Agents MUST NOT add a guessed URL, a disabled button, a "coming soon"
+label, or any placeholder that renders as a broken action. Publishing the store
+link is a one-line change in `assets/gainsai-config.js`.
+
+Every visible landing page and app page string needs a `data-i18n` key present
+in BOTH `dict.en` and `dict.fi`; translated `aria-label`s use `data-i18n-label`.
+A page change is not complete until both languages are updated.
 
 ---
 

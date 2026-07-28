@@ -137,6 +137,133 @@ natural places are a strip directly under the hero (or replacing the
 the promise line and the feature list. Do not add empty placeholders in the
 meantime.
 
+## App pages
+
+The three app pages under `apps/` (`gainsai/`, `kauppalista/`, `waveiq/`) share
+one structure and one stylesheet, `style.css`. Each page is a single HTML file
+with its own inline EN/FI dictionary. There is no build step and no framework.
+
+### Shared structure
+
+`header.site-header` (brand link, app nav with `aria-current="page"`, EN/FI
+switch) → `main#main` → `footer.site-footer` (app blurb, support/privacy links,
+apps, second EN/FI switch, copyright). There is exactly one `h1`: the app name
+in the hero. Section titles are `h2`, card titles are `h3`.
+
+| Block | Markup | Used by |
+| --- | --- | --- |
+| Hero | `section.hero > .shell.hero__inner` with `.hero__copy` (eyebrow, `h1`, optional `.hero__kicker`, lead, `.hero__actions`, `.quiet-links`) and `.hero__visual` (`.app-mark` icon + `.hero__panel` three summary rows) | all |
+| Promo image | `figure.media-band > .shell > .media-band__frame` | GainsAI |
+| Section head | `section.section > .shell > .section__head` (`.section__eyebrow` + `h2.section__title` + `p.section__intro`) | all |
+| Feature cards | `.card-grid.card-grid--2` + `article.card` (`h3.card__title`, `p.card__text`) | all |
+| Steps | `ol.steps > li.step` (`.step__num`, `h3.step__title`, `p.step__text`) | GainsAI |
+| Screenshot gallery | `.gallery[tabindex="0"][role="group"] > figure.gallery__item` | GainsAI |
+| Plans | `.panel > .plan-grid > article.plan-card` | GainsAI |
+| FAQ | `.faq > details > summary + p` | GainsAI |
+| Link row | `.link-row > a.btn` | all |
+| Closing CTA | `section.cta-band > .shell.cta-band__inner` | all |
+
+### Widths and breakpoints
+
+The pages are mobile first: base rules are the small-screen layout and every
+media query is `min-width`. `.shell` centres content at `--shell-max` (1200px)
+with a `--gutter` that steps 18px → 28px (600px) → 40px (1024px), so content
+stays centred on very wide screens without stretching. Body copy is additionally
+capped: `--measure` (64ch) for section heads, `--prose` (68ch) for intros and
+fine print, 56–66ch inside cards, so text lines never run the full 1200px.
+
+| Breakpoint | What changes |
+| --- | --- |
+| base | one column everywhere, full-width hero/CTA buttons, header nav on its own row |
+| 480px | hero and CTA buttons go side by side |
+| 600px | cards, steps, plans and footer to 2 columns; "Language" label appears; hero icon moves beside the summary panel; gallery screenshots grow to 520px tall |
+| 900px | header on one row, footer to 4 columns, CTA text and actions side by side |
+| 1024px | hero to 2 columns, hero visual stacks again, steps to 4 columns, `.card-grid--3/--4` to 3/4 columns |
+
+### Design tokens and per-app accents
+
+`style.css` starts with a `:root` block holding backgrounds and surfaces,
+borders, text colours, accents, radii, shadows, a spacing scale (`--s-1` …
+`--s-8`), layout values (`--shell-max`, `--gutter`, `--section-gap`, `--measure`,
+`--prose`) and transition durations. It intentionally mirrors the token block in
+`home.css`: the two stylesheets stay independent (see AGENTS.md "Stylesheet
+ownership rule") while sharing one visual system. `home.css` is the reference
+for shared values — change it there first, then mirror.
+
+Each page sets an app class on `<body>` that overrides `--accent`, `--accent-2`
+and `--glow`. The values match that app's card on the landing page, so an app
+keeps the same colour identity across the site:
+
+| App | `body` class | `--accent` / `--accent-2` |
+| --- | --- | --- |
+| GainsAI | `app-page app--gainsai` | `#a786ff` / `#55c6ff` |
+| Shopping List & Notes | `app-page app--kauppalista` | `#5fe3bf` / `#79c8ff` |
+| WaveIQ Radio | `app-page app--waveiq` | `#ff9a86` / `#f56ca6` |
+
+The accent drives the hero kicker, the section eyebrow rule, primary buttons,
+bullet dots, step numbers, the hero panel edge, the featured plan card, the CTA
+band top border, the background glow and the focus ring. `--focus-ring` is
+declared on `.app-page` rather than `:root`, because a `var()` inside a custom
+property resolves against the element that declares it.
+
+`style.css` contains `[hidden]{display:none !important}`. Keep it: `.btn` is
+`display:inline-flex`, which would otherwise override the browser's `[hidden]`
+rule and reveal the GainsAI Google Play buttons before a verified store URL
+exists in `assets/gainsai-config.js`.
+
+### Google Play CTA logic
+
+Kauppalista and WaveIQ Radio link straight to their published Play listings from
+the hero, the closing CTA and the footer.
+
+GainsAI has no public Play URL yet, so `assets/gainsai-config.js` keeps
+`playStoreUrl: null` on purpose. Both GainsAI Play buttons (hero and closing
+CTA) are marked `hidden` and carry `data-gainsai-play`; `applyGainsAIConfig()`
+reveals them and sets their `href` only when the config holds a URL. The layout
+already reserves their place, so publishing the store link is a one-line change
+in `assets/gainsai-config.js` with no markup change. The Pro price summary is
+hidden the same way until `proPricing` is filled in. Do not add a guessed URL, a
+disabled button, or a placeholder that renders as a broken action.
+
+### Screenshot gallery
+
+`.gallery` is a horizontal scroll-snap strip. It is `tabindex="0"` with
+`role="group"` and a translated `aria-label`, so it can be scrolled with the
+keyboard as well as by touch. Every `figure.gallery__item` carries
+`data-screenshot-lang="en|fi"`, and CSS shows only the items matching
+`html[lang]`, so the visitor sees screenshots in their own language. Images keep
+their real `width`/`height` attributes and are sized by height
+(`--shot-h`: 400–520px), so each screenshot keeps its own aspect ratio, nothing
+is cropped and nothing is scaled past its natural size. All gallery images use
+`loading="lazy"`; the hero icon and the GainsAI promo image do not, because they
+are in the first viewport.
+
+### Adding a new app page
+
+1. Copy `apps/waveiq/index.html` to `apps/<app>/index.html` (it is the smallest
+   page: hero, features, trust cards, legal links, closing CTA, footer).
+2. Update the head block: description, canonical, Open Graph, Twitter Card,
+   `SoftwareApplication` JSON-LD, title.
+3. Set `<body class="app-page app--<app>">` and add an `.app--<app>` accent block
+   to `style.css`.
+4. Point the nav, legal, footer and Play links at the new app's pages.
+5. Translate every visible string: each carries `data-i18n="key"` and must exist
+   in both `dict.en` and `dict.fi`. Any `aria-label` that needs translating uses
+   `data-i18n-label="key"`.
+6. Add the app to `index.html` (landing page card, hero icon stack, footer) and
+   to the README URL list.
+7. Regenerate the sitemap and run the validator.
+
+### FI/EN texts
+
+`setLang()` writes `textContent`, sets `<html lang>`, updates `document.title`
+and the meta description where the page defines `meta_title`/`meta_description`,
+applies `data-i18n-label` aria-labels, and syncs `aria-pressed` on both EN/FI
+switches. The stored choice lives in `localStorage` under `janstech_apps_lang`
+and the default is English. A small script in `<head>` applies the stored
+language to `<html lang>` before first paint, so the language-filtered
+screenshots and the `lang` attribute are correct from the first frame.
+
 ## Sitemap and robots.txt
 
 `sitemap.xml` lists all 20 indexable pages: the landing page, the three app pages and the four legal pages of each app. It is generated from the pages on disk, so it never lists a page that does not exist and never misses one that does. Each `<lastmod>` is the file's last git commit date; no `priority` or `changefreq` values are published.
@@ -171,6 +298,13 @@ To also check the pages in a browser, serve the publish root locally:
 ~~~bash
 python -m http.server 8000
 ~~~
+
+Then check both languages of every app page at 320, 360, 390, 412, 768, 1024,
+1366 and 1920px. What to look for: no horizontal scrolling, exactly one `h1`,
+the primary action visible without a long scroll, touch targets at least 44px
+tall, visible focus rings when tabbing, readable screenshots, and no visible
+`href="#"` link (the GainsAI Play buttons must stay hidden while
+`assets/gainsai-config.js` has `playStoreUrl: null`).
 
 ## GainsAI Google Play and Pro configuration
 

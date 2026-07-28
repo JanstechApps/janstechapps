@@ -86,6 +86,13 @@ entitlement. Account deletion does not cancel a Google Play subscription.
   gallery selects the images that match the active EN/FI language.
 - EN/FI content is maintained with each page's existing client-side language
   dictionary and language preference key.
+- Rebuilt the page on the shared app-page design system in `style.css`
+  (see README.md "App pages"): the app name is the single `h1`, sections use
+  eyebrow + `h2`, and the violet/blue accent comes from
+  `body.app--gainsai`. Content, links, and metadata were preserved. Both
+  Google Play actions (hero and closing CTA) carry `data-gainsai-play`, stay
+  `hidden` while `playStoreUrl` is null, and appear in place as soon as the
+  verified listing URL is added to `assets/gainsai-config.js`.
 
 ## Sources checked
 

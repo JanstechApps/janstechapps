@@ -17,101 +17,244 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://janstechapps.com/apps/waveiq/">
   <meta property="og:image" content="https://janstechapps.com/assets/iq_kuv1.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:site_name" content="Janstech Apps">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fi_FI">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WaveIQ Radio">
+  <meta name="twitter:description" content="An AI-assisted internet radio app for finding, saving, understanding, and rediscovering stations that match your taste.">
+  <meta name="twitter:image" content="https://janstechapps.com/assets/iq_kuv1.png">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "WaveIQ Radio",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Android",
+      "url": "https://janstechapps.com/apps/waveiq/",
+      "image": "https://janstechapps.com/assets/iq_kuv1.png",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.janstech.radioplayer",
+      "inLanguage": ["en", "fi"],
+      "description": "An AI-assisted internet radio app that helps listeners find, save, understand, and rediscover stations that match their taste.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Janstech Apps",
+        "url": "https://janstechapps.com/"
+      }
+    }
+  </script>
 
   <title>WaveIQ Radio - Janstech Apps</title>
   <link rel="stylesheet" href="/style.css">
+  <script>
+    // Apply the stored language to <html lang> before first paint so the page
+    // never renders with the wrong language attribute.
+    try {
+      var storedLang = localStorage.getItem("janstech_apps_lang");
+      if (storedLang === "fi" || storedLang === "en") document.documentElement.lang = storedLang;
+    } catch (e) {}
+  </script>
 </head>
-<body>
-  <div class="container">
-    <header class="topbar">
-      <div class="brand">
-        <h1>Janstech Apps <span class="sub" data-i18n="sub">WaveIQ Radio</span></h1>
-      </div>
+<body class="app-page app--waveiq">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
-      <div class="topbar-right">
-        <nav class="nav" aria-label="Primary">
-          <a href="/" data-i18n="nav_apps">Apps</a>
-          <a class="active" href="/apps/waveiq/" data-i18n="nav_app">WaveIQ Radio</a>
-          <a href="/legal/waveiq/" data-i18n="nav_legal">Legal</a>
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="/">
+        <span class="brand__name">Janstech Apps</span>
+        <span class="brand__tag" data-i18n="sub">WaveIQ Radio</span>
+      </a>
+
+      <div class="header__controls">
+        <nav class="site-nav" aria-label="Primary">
+          <a class="site-nav__link" href="/" data-i18n="nav_apps">Apps</a>
+          <a class="site-nav__link" href="/apps/waveiq/" aria-current="page" data-i18n="nav_app">WaveIQ Radio</a>
+          <a class="site-nav__link" href="/legal/waveiq/" data-i18n="nav_legal">Legal</a>
         </nav>
-        <div class="lang">
-          <span class="hint" data-i18n="lang_label">Language</span>
-          <button id="btnEn" type="button" aria-label="English">EN</button>
-          <button id="btnFi" type="button" aria-label="Suomi">FI</button>
+
+        <div class="lang-switch">
+          <span class="lang-switch__label" data-i18n="lang_label">Language</span>
+          <div class="lang-switch__group">
+            <button class="lang-switch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+            <button class="lang-switch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
+          </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="app-hero waveiq-hero">
-        <div class="app-hero-copy">
-          <span class="badge"><i></i> <span data-i18n="badge">AI-assisted internet radio</span></span>
-          <h2 data-i18n="hero_title">WaveIQ Radio</h2>
-          <p data-i18n="hero_p">An AI-assisted internet radio app that helps listeners find, save, understand, and rediscover stations that match their taste.</p>
-          <div class="app-actions hero-actions">
-            <a class="app-btn primary" href="https://play.google.com/store/apps/details?id=com.janstech.radioplayer" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
-            <a class="app-btn" href="/legal/waveiq/" data-i18n="btn_privacy">Privacy Policy</a>
-            <a class="app-btn" href="/legal/waveiq/support.html" data-i18n="btn_support">Support</a>
+  <main id="main">
+    <section class="hero">
+      <div class="shell hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow"><span data-i18n="badge">AI-assisted internet radio</span></span>
+
+          <h1 class="hero__title" data-i18n="hero_title">WaveIQ Radio</h1>
+
+          <p class="hero__lead" data-i18n="hero_p">An AI-assisted internet radio app that helps listeners find, save, understand, and rediscover stations that match their taste.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.radioplayer" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
+            <a class="btn" href="#features" data-i18n="btn_features">Features</a>
+          </div>
+
+          <ul class="quiet-links hero__links">
+            <li><a href="/legal/waveiq/" data-i18n="btn_privacy">Privacy Policy</a></li>
+            <li><a href="/legal/waveiq/support.html" data-i18n="btn_support">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <div class="app-mark">
+            <img class="app-mark__img" src="/assets/iq_kuv1.png" alt="WaveIQ Radio logo" width="512" height="512" decoding="async">
+          </div>
+          <ul class="hero__panel" data-i18n-label="aria_summary" aria-label="App summary">
+            <li><span data-i18n="panel_1_h">Listening</span><strong data-i18n="panel_1_p">Playback, saved stations, and favorites</strong></li>
+            <li><span data-i18n="panel_2_h">Discovery</span><strong data-i18n="panel_2_p">AI search, recommendations, and similar stations</strong></li>
+            <li><span data-i18n="panel_3_h">Backup</span><strong data-i18n="panel_3_p">Google Drive backup and restore</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_features">Features</span>
+          <h2 class="section__title" data-i18n="features_h">Radio discovery with more context</h2>
+          <p class="section__intro" data-i18n="features_p">WaveIQ Radio combines internet radio playback with discovery tools for finding stations by name, genre, country, language, or natural prompts.</p>
+        </div>
+
+        <div class="card-grid card-grid--2">
+          <article class="card">
+            <h3 class="card__title" data-i18n="f1_h">Play and save stations</h3>
+            <p class="card__text" data-i18n="f1_p">Listen to internet radio, preview stations before saving them, keep saved stations and favorites, and use station cards with logos or consistent placeholders.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title" data-i18n="f2_h">Search and browse</h3>
+            <p class="card__text" data-i18n="f2_p">Browse and search stations by name, genre, country, or language, with AI-assisted station search from natural prompts.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title" data-i18n="f3_h">Recommendations</h3>
+            <p class="card__text" data-i18n="f3_p">Personalized recommendations use listening taste and station signals. Where enough station data is available, recommendation explanations can help explain why a station appears.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title" data-i18n="f4_h">Similar stations</h3>
+            <p class="card__text" data-i18n="f4_p">Discover alternatives to a station you already like, with tuning options for less talk, more energy, and calmer results.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_trust">Privacy</span>
+          <h2 class="section__title" data-i18n="trust_h">Privacy and backup</h2>
+        </div>
+
+        <div class="card-grid card-grid--2">
+          <article class="card card--wide">
+            <h3 class="card__title" data-i18n="privacy_h">Privacy and local-first summary</h3>
+            <p class="card__text" data-i18n="privacy_p1">WaveIQ Radio keeps the core listening experience local-first: saved stations, favorites, settings, and station logos are stored on the device.</p>
+            <p class="card__text" data-i18n="privacy_p2">Online features such as AI search, recommendations, similar stations, stream health, and backup require network services.</p>
+          </article>
+
+          <article class="card card--wide">
+            <h3 class="card__title" data-i18n="backup_h">Backup and restore</h3>
+            <p class="card__text" data-i18n="backup_p1">WaveIQ Radio supports backup and restore for saved stations, settings, and logos.</p>
+            <p class="card__text" data-i18n="backup_p2">Google Drive backup is available through user-authorized Google sign-in, with manual backup/restore and automatic backup controls including Wi-Fi-only behavior.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <span class="section__eyebrow" data-i18n="eyebrow_legal">Legal</span>
+          <h2 class="section__title" data-i18n="legal_h">Legal and support</h2>
+          <p class="section__intro" data-i18n="legal_p">Review the published legal pages for privacy, terms, support, and data deletion information.</p>
+        </div>
+
+        <div class="link-row">
+          <a class="btn" href="/legal/waveiq/" data-i18n="btn_privacy">Privacy Policy</a>
+          <a class="btn" href="/legal/waveiq/support.html" data-i18n="btn_support">Support</a>
+          <a class="btn" href="/legal/waveiq/terms.html" data-i18n="btn_terms">Terms</a>
+          <a class="btn" href="/legal/waveiq/delete-data.html" data-i18n="btn_delete">Delete Data</a>
+          <a class="btn" href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="shell cta-band__inner">
+        <div>
+          <h2 class="cta-band__title" data-i18n="cta_h">Download WaveIQ Radio</h2>
+          <p class="cta-band__text" data-i18n="cta_p">Internet radio playback with saved stations, AI-assisted search, recommendations, and Google Drive backup.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.radioplayer" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
+          <a class="btn" href="/" data-i18n="btn_all_apps">All apps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <div class="footer-grid">
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="sub">WaveIQ Radio</h2>
+          <p class="footer-group__text" data-i18n="footer_p">WaveIQ Radio is an Android internet radio app by Janstech Apps.</p>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_legal_h">Support &amp; privacy</h2>
+          <ul class="footer-links">
+            <li><a href="/legal/waveiq/" data-i18n="footer_privacy">Privacy</a></li>
+            <li><a href="/legal/waveiq/support.html" data-i18n="footer_support">Support</a></li>
+            <li><a href="/legal/waveiq/terms.html" data-i18n="footer_terms">Terms</a></li>
+            <li><a href="/legal/waveiq/delete-data.html" data-i18n="footer_delete">Delete data</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_apps_h">Apps</h2>
+          <ul class="footer-links">
+            <li><a href="/" data-i18n="footer_apps">All apps</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.janstech.radioplayer" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a></li>
+            <li><a href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_lang_h">Language</h2>
+          <div class="lang-switch">
+            <div class="lang-switch__group">
+              <button class="lang-switch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+              <button class="lang-switch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="app-hero-visual">
-          <div class="app-visual-mark">
-            <img class="app-hero-logo" src="/assets/iq_kuv1.png" alt="WaveIQ Radio logo">
-          </div>
-          <div class="app-hero-panel" aria-label="App summary">
-            <div><span data-i18n="panel_1_h">Listening</span><strong data-i18n="panel_1_p">Playback, saved stations, and favorites</strong></div>
-            <div><span data-i18n="panel_2_h">Discovery</span><strong data-i18n="panel_2_p">AI search, recommendations, and similar stations</strong></div>
-            <div><span data-i18n="panel_3_h">Backup</span><strong data-i18n="panel_3_p">Google Drive backup and restore</strong></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-shell app-section">
-        <h3 data-i18n="features_h">Radio discovery with more context</h3>
-        <p data-i18n="features_p">WaveIQ Radio combines internet radio playback with discovery tools for finding stations by name, genre, country, language, or natural prompts.</p>
-
-        <div class="landing-grid">
-          <article class="feature-card"><h4 data-i18n="f1_h">Play and save stations</h4><p data-i18n="f1_p">Listen to internet radio, preview stations before saving them, keep saved stations and favorites, and use station cards with logos or consistent placeholders.</p></article>
-          <article class="feature-card"><h4 data-i18n="f2_h">Search and browse</h4><p data-i18n="f2_p">Browse and search stations by name, genre, country, or language, with AI-assisted station search from natural prompts.</p></article>
-          <article class="feature-card"><h4 data-i18n="f3_h">Recommendations</h4><p data-i18n="f3_p">Personalized recommendations use listening taste and station signals. Where enough station data is available, recommendation explanations can help explain why a station appears.</p></article>
-          <article class="feature-card"><h4 data-i18n="f4_h">Similar stations</h4><p data-i18n="f4_p">Discover alternatives to a station you already like, with tuning options for less talk, more energy, and calmer results.</p></article>
-        </div>
-      </section>
-
-      <section class="split-section">
-        <article class="mini-card emphasis-card">
-          <h3 data-i18n="privacy_h">Privacy and local-first summary</h3>
-          <p data-i18n="privacy_p1">WaveIQ Radio keeps the core listening experience local-first: saved stations, favorites, settings, and station logos are stored on the device.</p>
-          <p data-i18n="privacy_p2">Online features such as AI search, recommendations, similar stations, stream health, and backup require network services.</p>
-        </article>
-
-        <article class="mini-card emphasis-card">
-          <h3 data-i18n="backup_h">Backup and restore</h3>
-          <p data-i18n="backup_p1">WaveIQ Radio supports backup and restore for saved stations, settings, and logos.</p>
-          <p data-i18n="backup_p2">Google Drive backup is available through user-authorized Google sign-in, with manual backup/restore and automatic backup controls including Wi-Fi-only behavior.</p>
-        </article>
-      </section>
-
-      <section class="section-shell app-section">
-        <h3 data-i18n="legal_h">Legal and support</h3>
-        <p data-i18n="legal_p">Review the published legal pages for privacy, terms, support, and data deletion information.</p>
-        <div class="app-actions">
-          <a class="app-btn" href="/legal/waveiq/" data-i18n="btn_privacy">Privacy Policy</a>
-          <a class="app-btn" href="/legal/waveiq/support.html" data-i18n="btn_support">Support</a>
-          <a class="app-btn" href="/legal/waveiq/terms.html" data-i18n="btn_terms">Terms</a>
-          <a class="app-btn" href="/legal/waveiq/delete-data.html" data-i18n="btn_delete">Delete Data</a>
-          <a class="app-btn" href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a>
-        </div>
-      </section>
-    </main>
-  </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Janstech Apps</p>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const dict = {
       en: {
         meta_title: "WaveIQ Radio - Janstech Apps",
         meta_description: "WaveIQ Radio is an AI-assisted internet radio app that helps listeners find, save, understand, and rediscover stations that match their taste.",
+        skip: "Skip to content",
         sub: "WaveIQ Radio",
         nav_apps: "Apps",
         nav_app: "WaveIQ Radio",
@@ -120,12 +263,14 @@
         badge: "AI-assisted internet radio",
         hero_title: "WaveIQ Radio",
         hero_p: "An AI-assisted internet radio app that helps listeners find, save, understand, and rediscover stations that match their taste.",
+        aria_summary: "App summary",
         panel_1_h: "Listening",
         panel_1_p: "Playback, saved stations, and favorites",
         panel_2_h: "Discovery",
         panel_2_p: "AI search, recommendations, and similar stations",
         panel_3_h: "Backup",
         panel_3_p: "Google Drive backup and restore",
+        eyebrow_features: "Features",
         features_h: "Radio discovery with more context",
         features_p: "WaveIQ Radio combines internet radio playback with discovery tools for finding stations by name, genre, country, language, or natural prompts.",
         f1_h: "Play and save stations",
@@ -136,24 +281,41 @@
         f3_p: "Personalized recommendations use listening taste and station signals. Where enough station data is available, recommendation explanations can help explain why a station appears.",
         f4_h: "Similar stations",
         f4_p: "Discover alternatives to a station you already like, with tuning options for less talk, more energy, and calmer results.",
+        eyebrow_trust: "Privacy",
+        trust_h: "Privacy and backup",
         privacy_h: "Privacy and local-first summary",
         privacy_p1: "WaveIQ Radio keeps the core listening experience local-first: saved stations, favorites, settings, and station logos are stored on the device.",
         privacy_p2: "Online features such as AI search, recommendations, similar stations, stream health, and backup require network services.",
         backup_h: "Backup and restore",
         backup_p1: "WaveIQ Radio supports backup and restore for saved stations, settings, and logos.",
         backup_p2: "Google Drive backup is available through user-authorized Google sign-in, with manual backup/restore and automatic backup controls including Wi-Fi-only behavior.",
+        eyebrow_legal: "Legal",
         legal_h: "Legal and support",
         legal_p: "Review the published legal pages for privacy, terms, support, and data deletion information.",
+        cta_h: "Download WaveIQ Radio",
+        cta_p: "Internet radio playback with saved stations, AI-assisted search, recommendations, and Google Drive backup.",
         btn_google_play: "Google Play",
+        btn_features: "Features",
+        btn_all_apps: "All apps",
         btn_privacy: "Privacy Policy",
         btn_support: "Support",
         btn_terms: "Terms",
         btn_delete: "Delete Data",
-        btn_email: "Email support"
+        btn_email: "Email support",
+        footer_p: "WaveIQ Radio is an Android internet radio app by Janstech Apps.",
+        footer_legal_h: "Support & privacy",
+        footer_apps_h: "Apps",
+        footer_lang_h: "Language",
+        footer_apps: "All apps",
+        footer_privacy: "Privacy",
+        footer_support: "Support",
+        footer_terms: "Terms",
+        footer_delete: "Delete data"
       },
       fi: {
         meta_title: "WaveIQ Radio - Janstech Apps",
         meta_description: "WaveIQ Radio on AI-avusteinen internet-radio, joka auttaa löytämään, tallentamaan, ymmärtämään ja uudelleen löytämään omaan makuun sopivia asemia.",
+        skip: "Siirry sisältöön",
         sub: "WaveIQ Radio",
         nav_apps: "Sovellukset",
         nav_app: "WaveIQ Radio",
@@ -162,12 +324,14 @@
         badge: "AI-avusteinen internet-radio",
         hero_title: "WaveIQ Radio",
         hero_p: "AI-avusteinen internet-radio, joka auttaa löytämään, tallentamaan, ymmärtämään ja uudelleen löytämään omaan makuun sopivia asemia.",
+        aria_summary: "Sovelluksen tiivistelmä",
         panel_1_h: "Kuuntelu",
         panel_1_p: "Toisto, tallennetut asemat ja suosikit",
         panel_2_h: "Löytäminen",
         panel_2_p: "AI-haku, suositukset ja samankaltaiset asemat",
         panel_3_h: "Varmuuskopiointi",
         panel_3_p: "Google Drive -varmuuskopiointi ja palautus",
+        eyebrow_features: "Ominaisuudet",
         features_h: "Radion löytämistä lisäkontekstilla",
         features_p: "WaveIQ Radio yhdistää internet-radion kuuntelun ja löytötyökalut asemien etsimiseen nimen, genren, maan, kielen tai luonnollisten kehotteiden perusteella.",
         f1_h: "Kuuntele ja tallenna asemia",
@@ -178,41 +342,69 @@
         f3_p: "Personoidut suositukset käyttävät kuuntelumakua ja asemasignaaleja. Kun asemadataa on riittävästi, suositusten selitykset voivat avata, miksi asema näytetään.",
         f4_h: "Samankaltaiset asemat",
         f4_p: "Löydä vaihtoehtoja asemalle, josta jo pidät, ja säädä tuloksia valinnoilla vähemmän puhetta, enemmän energiaa ja rauhallisempi.",
+        eyebrow_trust: "Tietosuoja",
+        trust_h: "Tietosuoja ja varmuuskopiointi",
         privacy_h: "Tietosuoja ja paikallisen käytön yhteenveto",
         privacy_p1: "WaveIQ Radio pitää ydinkuuntelukokemuksen paikallista käyttöä painottavana: tallennetut asemat, suosikit, asetukset ja asemalogot tallennetaan laitteelle.",
         privacy_p2: "Verkko-ominaisuudet, kuten AI-haku, suositukset, samankaltaiset asemat, stream health ja varmuuskopiointi, tarvitsevat verkkopalveluita.",
         backup_h: "Varmuuskopiointi ja palautus",
         backup_p1: "WaveIQ Radio tukee tallennettujen asemien, asetusten ja logojen varmuuskopiointia ja palautusta.",
         backup_p2: "Google Drive -varmuuskopiointi on saatavilla käyttäjän valtuuttamalla Google-kirjautumisella, manuaalisella varmuuskopioinnilla/palautuksella ja automaattisen varmuuskopioinnin asetuksilla, kuten vain Wi-Fi -käytöllä.",
+        eyebrow_legal: "Lakiasiat",
         legal_h: "Lakiasiat ja tuki",
         legal_p: "Julkaistuilta legal-sivuilta löytyvät tietosuoja-, käyttöehto-, tuki- ja tietojen poisto-ohjeet.",
+        cta_h: "Lataa WaveIQ Radio",
+        cta_p: "Internet-radion kuuntelu tallennetuilla asemilla, AI-avusteinen haku, suositukset ja Google Drive -varmuuskopiointi.",
         btn_google_play: "Google Play",
+        btn_features: "Ominaisuudet",
+        btn_all_apps: "Kaikki sovellukset",
         btn_privacy: "Tietosuoja",
         btn_support: "Tuki",
         btn_terms: "Käyttöehdot",
         btn_delete: "Poista tiedot",
-        btn_email: "Sähköpostituki"
+        btn_email: "Sähköpostituki",
+        footer_p: "WaveIQ Radio on Janstech Appsin Android-nettiradiosovellus.",
+        footer_legal_h: "Tuki ja tietosuoja",
+        footer_apps_h: "Sovellukset",
+        footer_lang_h: "Kieli",
+        footer_apps: "Kaikki sovellukset",
+        footer_privacy: "Tietosuoja",
+        footer_support: "Tuki",
+        footer_terms: "Käyttöehdot",
+        footer_delete: "Poista tiedot"
       }
     };
 
     function setLang(lang){
       localStorage.setItem("janstech_apps_lang", lang);
       document.documentElement.lang = (lang === "fi") ? "fi" : "en";
-      document.title = dict[lang].meta_title;
+
+      if (dict[lang].meta_title) document.title = dict[lang].meta_title;
       const meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute("content", dict[lang].meta_description);
+      if (meta && dict[lang].meta_description) meta.setAttribute("content", dict[lang].meta_description);
+
       for (const el of document.querySelectorAll("[data-i18n]")){
         const key = el.getAttribute("data-i18n");
-        if (dict[lang][key] != null) el.innerHTML = dict[lang][key];
+        if (dict[lang][key] != null) el.textContent = dict[lang][key];
       }
-      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
-      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+
+      for (const el of document.querySelectorAll("[data-i18n-label]")){
+        const key = el.getAttribute("data-i18n-label");
+        if (dict[lang][key] != null) el.setAttribute("aria-label", dict[lang][key]);
+      }
+
+      for (const btn of document.querySelectorAll("[data-set-lang]")){
+        btn.setAttribute("aria-pressed", String(btn.dataset.setLang === lang));
+      }
     }
 
-    const saved = localStorage.getItem("janstech_apps_lang") || "en";
-    document.getElementById("btnFi").addEventListener("click", () => setLang("fi"));
-    document.getElementById("btnEn").addEventListener("click", () => setLang("en"));
-    setLang(saved);
+    for (const btn of document.querySelectorAll("[data-set-lang]")){
+      btn.addEventListener("click", () => setLang(btn.dataset.setLang));
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    setLang(localStorage.getItem("janstech_apps_lang") || "en");
   </script>
 </body>
 </html>
