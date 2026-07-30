@@ -11,7 +11,7 @@ This repository contains the static Janstech Apps website served from the reposi
 - `apps/kauppalista/` - Shopping List & Notes public app landing page.
 - `apps/waveiq/` - WaveIQ Radio public app landing page.
 - `apps/gainsai/` - GainsAI public app landing page.
-- `assets/gainsai-config.js` - Central GainsAI Google Play URL and verified regional Pro-price configuration.
+- `assets/gainsai-config.js` - Central verified regional GainsAI Pro-price configuration.
 - `docs/apps/gainsai_app_profile.md` - GainsAI public product profile, source audit, and website release notes.
 - `legal/kauppalista/` - Shopping List & Notes privacy, support, terms, and delete-data pages.
 - `legal/waveiq/` - WaveIQ Radio privacy, support, terms, and delete-data pages.
@@ -129,8 +129,7 @@ system (accents, radii, spacing, text colours), not to this background stack.
 
 `home.css` also contains `[hidden]{display:none !important}`. Keep it: `.btn` is
 `display:inline-flex`, which would otherwise override the browser's `[hidden]`
-rule and reveal the GainsAI Google Play link before a verified store URL exists
-in `assets/gainsai-config.js`.
+rule and reveal elements a page keeps hidden until it has verified data.
 
 ### Adding an app to the landing page
 
@@ -229,22 +228,19 @@ property resolves against the element that declares it.
 
 `style.css` contains `[hidden]{display:none !important}`. Keep it: `.btn` is
 `display:inline-flex`, which would otherwise override the browser's `[hidden]`
-rule and reveal the GainsAI Google Play buttons before a verified store URL
-exists in `assets/gainsai-config.js`.
+rule and reveal elements a page keeps hidden until it has verified data, such as
+the GainsAI Pro price summary.
 
 ### Google Play CTA logic
 
-Kauppalista and WaveIQ Radio link straight to their published Play listings from
-the hero, the closing CTA and the footer.
+Kauppalista, WaveIQ Radio and GainsAI all link straight to their published Play
+listings from the hero, the closing CTA and the footer, and from their card on
+the landing page. The URL is a plain anchor `href` in the markup and is also the
+`downloadUrl` of each app page's `SoftwareApplication` JSON-LD block.
 
-GainsAI has no public Play URL yet, so `assets/gainsai-config.js` keeps
-`playStoreUrl: null` on purpose. Both GainsAI Play buttons (hero and closing
-CTA) are marked `hidden` and carry `data-gainsai-play`; `applyGainsAIConfig()`
-reveals them and sets their `href` only when the config holds a URL. The layout
-already reserves their place, so publishing the store link is a one-line change
-in `assets/gainsai-config.js` with no markup change. The Pro price summary is
-hidden the same way until `proPricing` is filled in. Do not add a guessed URL, a
-disabled button, or a placeholder that renders as a broken action.
+The GainsAI Pro price summary stays hidden until `proPricing` is filled in in
+`assets/gainsai-config.js`. Do not add a guessed store URL, a disabled button,
+or a placeholder that renders as a broken action.
 
 ### Screenshot gallery
 
@@ -324,13 +320,14 @@ Then check both languages of every app page at 320, 360, 390, 412, 768, 1024,
 1366 and 1920px. What to look for: no horizontal scrolling, exactly one `h1`,
 the primary action visible without a long scroll, touch targets at least 44px
 tall, visible focus rings when tabbing, readable screenshots, and no visible
-`href="#"` link (the GainsAI Play buttons must stay hidden while
-`assets/gainsai-config.js` has `playStoreUrl: null`).
+`href="#"` link.
 
-## GainsAI Google Play and Pro configuration
+## GainsAI Pro price configuration
 
-The GainsAI app page and homepage card read `assets/gainsai-config.js`. Keep
-`playStoreUrl` empty until the exact public Google Play listing URL is confirmed.
-Regional Pro prices are also intentionally empty until verified from the live
-Google Play offer; this keeps the CTA hidden and avoids publishing an
-unverified price.
+The GainsAI app page reads the Pro price summary from
+`assets/gainsai-config.js`. Regional prices stay empty until they are verified
+from the live Google Play offer; the summary stays hidden until then, which
+avoids publishing an unverified price. The Google Play listing URL itself is no
+longer configured here — like the other apps, GainsAI links to
+`https://play.google.com/store/apps/details?id=com.janstech.gainsai` directly
+from the markup.

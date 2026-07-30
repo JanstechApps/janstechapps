@@ -1,12 +1,12 @@
 /*
  * Central public configuration for GainsAI website references.
  *
- * Set playStoreUrl only after the exact public Google Play listing URL has been
- * confirmed. Set regional prices only after they have been verified from the
- * live Play offer. Pages hide unavailable values automatically.
+ * The public Google Play listing URL is published, so the store links are plain
+ * anchors in the pages, exactly like the other apps. Set regional prices only
+ * after they have been verified from the live Play offer; the app page hides an
+ * unavailable price summary automatically.
  */
 window.GainsAIConfig = Object.freeze({
-  playStoreUrl: null,
   proPricing: Object.freeze({
     monthly: null,
     yearly: null

@@ -40,7 +40,6 @@
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-19F6NRS712"></script>
-  <script src="/assets/gainsai-config.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -226,7 +225,7 @@
 
             <div class="app-card__actions">
               <a class="btn btn--primary" href="/apps/gainsai/" data-i18n="btn_app_page">Explore the app</a>
-              <a id="gainsaiGooglePlayRoot" class="btn" href="#" target="_blank" rel="noopener noreferrer" hidden data-i18n="btn_google_play">Google Play</a>
+              <a class="btn" href="https://play.google.com/store/apps/details?id=com.janstech.gainsai" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
             </div>
 
             <ul class="app-card__legal">
@@ -503,13 +502,6 @@
     }
 
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    const gainsaiPlayUrl = window.GainsAIConfig && window.GainsAIConfig.playStoreUrl;
-    if (gainsaiPlayUrl) {
-      const gainsaiPlayLink = document.getElementById("gainsaiGooglePlayRoot");
-      gainsaiPlayLink.href = gainsaiPlayUrl;
-      gainsaiPlayLink.hidden = false;
-    }
 
     setLang(localStorage.getItem("janstech_apps_lang") || "en");
   </script>

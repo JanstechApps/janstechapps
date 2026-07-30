@@ -36,6 +36,7 @@
       "operatingSystem": "Android",
       "url": "https://janstechapps.com/apps/gainsai/",
       "image": "https://janstechapps.com/assets/GainsAI.png",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.janstech.gainsai",
       "inLanguage": ["en", "fi"],
       "description": "An Android personal training platform for training plans, workout logging, progress analysis, adaptive recommendations, meal planning, check-ins, and secure Pro access.",
       "publisher": {
@@ -97,7 +98,7 @@
           <p class="hero__lead" data-i18n="hero_p">Build a training plan, log the work you complete, and use your history to understand a practical next step. GainsAI brings programs, training, analysis, check-ins, meal planning, and backup into one Android app.</p>
 
           <div class="hero__actions">
-            <a id="gainsaiGooglePlayHero" class="btn btn--primary" href="#" target="_blank" rel="noopener noreferrer" hidden data-gainsai-play data-i18n="btn_google_play">Google Play</a>
+            <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.gainsai" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
             <a class="btn" href="#features" data-i18n="btn_features">Features</a>
           </div>
 
@@ -389,7 +390,7 @@
           <p class="cta-band__text" data-i18n="cta_p">Programs, workout logging, progress analysis, check-ins, meal planning, and backup in one Android app.</p>
         </div>
         <div class="cta-band__actions">
-          <a id="gainsaiGooglePlayCta" class="btn btn--primary" href="#" target="_blank" rel="noopener noreferrer" hidden data-gainsai-play data-i18n="btn_google_play">Google Play</a>
+          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.gainsai" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
           <a class="btn" href="/" data-i18n="btn_all_apps">All apps</a>
           <a class="btn" href="/legal/gainsai/support.html" data-i18n="btn_support">Support</a>
         </div>
@@ -419,6 +420,7 @@
           <h2 class="footer-group__heading" data-i18n="footer_apps_h">Apps</h2>
           <ul class="footer-links">
             <li><a href="/" data-i18n="footer_apps">All apps</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.janstech.gainsai" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a></li>
             <li><a href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a></li>
           </ul>
         </div>
@@ -593,17 +595,6 @@
       summary.hidden = false;
     }
 
-    // The Google Play actions stay hidden until assets/gainsai-config.js holds a
-    // verified public store URL. Adding the URL there reveals every action.
-    function applyGainsAIConfig() {
-      const url = window.GainsAIConfig && window.GainsAIConfig.playStoreUrl;
-      if (!url) return;
-      document.querySelectorAll("[data-gainsai-play]").forEach((link) => {
-        link.href = url;
-        link.hidden = false;
-      });
-    }
-
     const saved = localStorage.getItem("janstech_apps_lang") || "en";
 
     for (const btn of document.querySelectorAll("[data-set-lang]")) {
@@ -612,7 +603,6 @@
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    applyGainsAIConfig();
     setLang(saved);
   </script>
 </body>

@@ -149,8 +149,8 @@ img{ max-width:100%; height:auto; }
 a{ color:inherit; text-decoration:none; }
 
 /* Author display rules below (.btn is inline-flex) would otherwise beat the
-   user-agent [hidden] rule, revealing the GainsAI Google Play link before a
-   verified store URL exists in assets/gainsai-config.js. */
+   user-agent [hidden] rule and reveal elements the page keeps hidden until it
+   has verified data, such as the GainsAI Pro price summary. */
 [hidden]{ display:none !important; }
 
 a:focus-visible,

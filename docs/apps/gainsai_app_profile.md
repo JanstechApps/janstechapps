@@ -19,10 +19,10 @@ variant. The project contains Google Play Billing for the gainsai_pro product
 with monthly and yearly base plans, backend purchase verification, and
 backend-owned entitlement presentation.
 
-The source does not contain a confirmed public Google Play listing URL. The
-website therefore keeps the Google Play CTA hidden until
-assets/gainsai-config.js receives the exact listing URL. Do not infer the URL
-from the package name.
+The public Google Play listing is live at
+https://play.google.com/store/apps/details?id=com.janstech.gainsai (owner
+confirmed on 2026-07-30). The website links to it directly from the landing page
+card, the app page hero, the closing CTA and the app page footer.
 
 The public Terms page states the owner-provided intended Finland prices as of
 2026-07-26: EUR 12.99/month and EUR 119.99/year, with no free trial. The app
@@ -89,10 +89,9 @@ entitlement. Account deletion does not cancel a Google Play subscription.
 - Rebuilt the page on the shared app-page design system in `style.css`
   (see README.md "App pages"): the app name is the single `h1`, sections use
   eyebrow + `h2`, and the violet/blue accent comes from
-  `body.app--gainsai`. Content, links, and metadata were preserved. Both
-  Google Play actions (hero and closing CTA) carry `data-gainsai-play`, stay
-  `hidden` while `playStoreUrl` is null, and appear in place as soon as the
-  verified listing URL is added to `assets/gainsai-config.js`.
+  `body.app--gainsai`. Content, links, and metadata were preserved. The Google
+  Play actions (hero, closing CTA, footer, and the landing page card) link
+  straight to the published listing, in the same pattern as the other apps.
 
 ## Sources checked
 
@@ -128,7 +127,6 @@ Reference implementation sources:
 
 ## Remaining publication inputs
 
-- Exact public Google Play listing URL.
 - Owner confirmation before exposing public marketing price summary in
   `assets/gainsai-config.js`.
 - Play Console Data safety, Health apps, AI-generated content, account deletion,
@@ -137,6 +135,6 @@ Reference implementation sources:
   AI-generated Coach content is available and that reports reach the
   operational review queue.
 
-When the listing URL and public price presentation are confirmed, edit
-`assets/gainsai-config.js`; page code will reveal the store action and price
-summary automatically.
+When the public price presentation is confirmed, edit
+`assets/gainsai-config.js`; the app page will reveal the price summary
+automatically.

@@ -481,14 +481,16 @@ separate design — the accent is the only per-app visual difference.
 
 BOTH `home.css` and `style.css` contain `[hidden]{display:none !important}`.
 Do NOT remove it. `.btn` is `display:inline-flex`, which otherwise overrides the
-user-agent `[hidden]` rule and reveals the GainsAI Google Play buttons before a
-verified store URL exists in `assets/gainsai-config.js`.
+user-agent `[hidden]` rule and reveals elements a page keeps hidden until it has
+verified data, such as the GainsAI Pro price summary.
 
-The GainsAI Play actions are marked `hidden` and carry `data-gainsai-play`;
-`applyGainsAIConfig()` reveals them only when `assets/gainsai-config.js` holds a
-URL. Agents MUST NOT add a guessed URL, a disabled button, a "coming soon"
-label, or any placeholder that renders as a broken action. Publishing the store
-link is a one-line change in `assets/gainsai-config.js`.
+Every app has a published Google Play listing, so all three apps link to their
+store page with plain anchors from the landing page card, the hero, the closing
+CTA and the app page footer. Agents MUST NOT add a guessed URL, a disabled
+button, a "coming soon" label, or any placeholder that renders as a broken
+action for an app whose listing is not public. `assets/gainsai-config.js` still
+holds the GainsAI Pro price summary, which stays hidden until the prices are
+verified from the live Play offer.
 
 Every visible landing page and app page string needs a `data-i18n` key present
 in BOTH `dict.en` and `dict.fi`; translated `aria-label`s use `data-i18n-label`.
