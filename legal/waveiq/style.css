@@ -1,16 +1,20 @@
+/* Colours follow the JanstechApps Product Editorial direction shared with
+   home.css and style.css (see docs/janstechapps-redesign.md). Only the palette,
+   radii and surfaces were harmonised here; the layout and the legal content of
+   these pages are unchanged. */
 :root{
-  --bg: #0b1020;
-  --panel: rgba(255,255,255,0.06);
-  --panel2: rgba(255,255,255,0.08);
-  --text: rgba(255,255,255,0.92);
-  --muted: rgba(255,255,255,0.72);
-  --faint: rgba(255,255,255,0.52);
-  --accent: #7c5cff;
-  --accent2: #2dd4bf;
-  --border: rgba(255,255,255,0.12);
-  --shadow: 0 10px 30px rgba(0,0,0,0.35);
-  --radius: 16px;
-  --radius2: 22px;
+  --bg: #121110;
+  --panel: #171614;
+  --panel2: #1b1917;
+  --text: #ece9e6;
+  --muted: #b5aea6;
+  --faint: #8f8880;
+  --accent: #e07a4f;
+  --accent2: #8aa6c6;
+  --border: #2b2825;
+  --shadow: none;
+  --radius: 6px;
+  --radius2: 8px;
   --maxw: 980px;
 }
 
@@ -18,16 +22,12 @@
 html, body{ height:100%; }
 body{
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(900px 500px at 10% 10%, rgba(124,92,255,0.22), transparent 60%),
-    radial-gradient(900px 500px at 90% 25%, rgba(45,212,191,0.18), transparent 60%),
-    radial-gradient(900px 600px at 35% 95%, rgba(124,92,255,0.14), transparent 60%),
-    linear-gradient(180deg, #070a14 0%, #0b1020 60%, #0b1020 100%);
+  background: var(--bg);
 }
 
-a{ color: #9aa7ff; text-decoration:none; }
+a{ color: var(--accent); text-decoration:none; }
 a:hover{ text-decoration:underline; }
 
 .container{
@@ -44,12 +44,10 @@ a:hover{ text-decoration:underline; }
   padding: 14px 16px;
   margin-top: 10px;
   border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.05));
+  background: var(--panel);
   border-radius: var(--radius2);
-  box-shadow: var(--shadow);
   position: sticky;
   top: 10px;
-  backdrop-filter: blur(10px);
   z-index: 10;
 }
 
@@ -63,10 +61,9 @@ a:hover{ text-decoration:underline; }
 .logo{
   width: 34px;
   height: 34px;
-  border-radius: 12px;
-  background: radial-gradient(circle at 30% 30%, rgba(124,92,255,0.9), rgba(45,212,191,0.55));
-  border: 1px solid rgba(255,255,255,0.16);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  border-radius: 6px;
+  background: var(--panel2);
+  border: 1px solid var(--border);
   flex: 0 0 auto;
 }
 
@@ -93,7 +90,7 @@ a:hover{ text-decoration:underline; }
 }
 .nav a{
   padding: 8px 10px;
-  border-radius: 12px;
+  border-radius: 6px;
   border: 1px solid transparent;
   color: var(--text);
   font-size: 13px;
@@ -101,11 +98,12 @@ a:hover{ text-decoration:underline; }
 }
 .nav a:hover{
   border-color: var(--border);
-  background: rgba(255,255,255,0.05);
+  background: var(--panel2);
 }
 .nav a.active{
-  border-color: rgba(124,92,255,0.35);
-  background: rgba(124,92,255,0.12);
+  border-color: var(--accent);
+  background: rgba(224,122,79,0.14);
+  color: var(--accent);
 }
 
 .lang{
@@ -121,16 +119,17 @@ a:hover{ text-decoration:underline; }
 }
 .lang button{
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.05);
+  background: var(--panel2);
   color: var(--text);
   padding: 8px 10px;
-  border-radius: 12px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 12px;
 }
 .lang button.active{
-  border-color: rgba(45,212,191,0.45);
-  background: rgba(45,212,191,0.14);
+  border-color: var(--accent);
+  background: rgba(224,122,79,0.14);
+  color: var(--accent);
 }
 
 .hero{
@@ -161,10 +160,9 @@ a:hover{ text-decoration:underline; }
 
 .card{
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.05);
+  background: var(--panel);
   border-radius: var(--radius2);
   padding: 18px 16px;
-  box-shadow: var(--shadow);
 }
 .card h3{
   margin: 0 0 10px;
@@ -197,7 +195,7 @@ a:hover{ text-decoration:underline; }
   padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
+  background: var(--panel);
   font-size: 12px;
   color: var(--muted);
 }
@@ -206,7 +204,7 @@ a:hover{ text-decoration:underline; }
   width: 10px;
   height: 10px;
   border-radius: 4px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background: var(--accent);
 }
 
 .footer{
@@ -230,8 +228,8 @@ code.inline{
   padding: 2px 6px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  background: rgba(0,0,0,0.25);
-  color: rgba(255,255,255,0.86);
+  background: var(--panel2);
+  color: var(--text);
 }
 
 @media (max-width: 900px){
@@ -266,7 +264,7 @@ code.inline{
   .logo{
     width: 52px;
     height: 52px;
-    border-radius: 16px;
+    border-radius: 8px;
   }
 
   .brand h1{

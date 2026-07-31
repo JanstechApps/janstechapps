@@ -240,6 +240,21 @@ Exceptions are allowed only if deliberately documented.
 
 # 🏷️ APP BRANDING RULE
 
+## Brand name spelling
+
+The brand name is written **JanstechApps** — one word, exactly this casing.
+
+`Janstech Apps` is wrong everywhere: visible UI text, headings, navigation,
+footers, `<title>` and meta tags, Open Graph, JSON-LD, documentation,
+`README.md`, this file, design docs, CSS comments, HTML comments and commit
+messages.
+
+Do NOT "fix" the domain `janstechapps.com`, file paths, technical identifiers
+(`janstech_apps_lang`, `com.janstech.*`, `janstech.apps@gmail.com`), existing
+URLs, or historical/external strings.
+
+## Scope
+
 This repository is for JanstechApps, not the personal portfolio.
 
 Agents MUST NOT add personal portfolio content unless explicitly requested.
@@ -250,6 +265,10 @@ Avoid:
 - portfolio project pages
 - generic GitHub profile promotion
 - unrelated developer biography
+
+The landing page `#developer` section is a deliberate exception: a short,
+factual credit for Jan Sarivuo with one link to `https://janstech.github.io/`.
+Keep it short. It is a trust signal, not a CV.
 
 Keep the site focused on:
 
@@ -454,9 +473,17 @@ apps/*/index.html     -> /style.css
 legal/*/*.html        -> legal/<app>/style.css   (local, relative)
 ~~~
 
-`home.css` is the landing page design system: tokens, shell, header, hero,
-app cards, benefit grid and footer. It is mobile first, so base rules are the
-small-screen layout and every media query is `min-width`.
+The visual direction for all of them is documented in
+`docs/janstechapps-redesign.md` ("JanstechApps Product Editorial"): flat warm
+charcoal page, hairlines and whitespace instead of rounded cards, one copper
+brand accent with quiet per-app identifiers, serif for the site's own headings
+and sans for product names. Read it before changing styling, and do NOT
+reintroduce ambient washes, glows, gradients, dot grids, glassmorphism or
+large-radius card grids.
+
+`home.css` is the landing page design system: tokens, shell, masthead, hero,
+app index rows, principles, developer note and footer. It is mobile first, so
+base rules are the small-screen layout and every media query is `min-width`.
 
 Consequences:
 
@@ -475,9 +502,15 @@ shared stylesheet or re-point pages at another file without explicit
 instruction.
 
 Each app page sets `<body class="app-page app--<app>">`. The `.app--<app>` block
-in `style.css` overrides `--accent`, `--accent-2` and `--glow` only; those
-values match the app's card on the landing page. Do NOT give an app page a
-separate design — the accent is the only per-app visual difference.
+in `style.css` overrides `--app-accent` only; the same value is applied on the
+landing page through the `.a-<app>` utility class. Do NOT give an app page a
+separate design — the accent is the only per-app visual difference, and it stays
+an identifier (index number, short rule, nav underline), never a surface, a glow
+or a card.
+
+Legal pages under `legal/` keep their own local stylesheets. Their palette was
+brought onto the site tokens; their markup and legal text must not be rewritten
+as part of design work.
 
 BOTH `home.css` and `style.css` contain `[hidden]{display:none !important}`.
 Do NOT remove it. `.btn` is `display:inline-flex`, which otherwise overrides the

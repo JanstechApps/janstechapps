@@ -12,6 +12,7 @@ This repository contains the static JanstechApps website served from the reposit
 - `apps/waveiq/` - WaveIQ Radio public app landing page.
 - `apps/gainsai/` - GainsAI public app landing page.
 - `assets/gainsai-config.js` - Central verified regional GainsAI Pro-price configuration.
+- `docs/janstechapps-redesign.md` - "JanstechApps Product Editorial" design direction: audit findings, colour, typography, spacing, breakpoints, per-app accents, and when a card is allowed.
 - `docs/apps/gainsai_app_profile.md` - GainsAI public product profile, source audit, and website release notes.
 - `legal/kauppalista/` - Shopping List & Notes privacy, support, terms, and delete-data pages.
 - `legal/waveiq/` - WaveIQ Radio privacy, support, terms, and delete-data pages.
@@ -66,6 +67,16 @@ GitHub Pages serves this static site directly from the repository root ("Deploy 
 
 Keep public page links root-relative or absolute to `https://janstechapps.com` so pages work from their final production URLs.
 
+## Design direction
+
+The whole site follows one documented direction, "JanstechApps Product
+Editorial": a flat warm-charcoal page, hairlines and whitespace instead of
+rounded cards, one copper brand accent with quiet per-app identifiers, and a
+serif/sans/mono type system. Colour values, the type scale, spacing, breakpoints
+and the rule for when a card is allowed all live in
+[`docs/janstechapps-redesign.md`](docs/janstechapps-redesign.md). Read that
+before changing any styling.
+
 ## Landing page
 
 `index.html` loads `home.css` only. The app pages under `apps/` load the root
@@ -74,58 +85,42 @@ styling can change without touching any other page.
 
 ### Structure
 
-`header` (brand, Apps link, EN/FI switch) → `main` with the hero, the `#apps`
-card grid and the `#why` benefit grid plus the JanstechApps intro → `footer`
-with four link groups and a second EN/FI switch. There is exactly one `h1`
-(the hero title).
+`header.masthead` (brand, three nav links, EN/FI switch) → `main` with the hero
+(message plus a typographic app index), the `#apps` product index, the
+`#principles` list and the `#developer` note → `footer` with four link groups
+and a second EN/FI switch. There is exactly one `h1` (the hero title).
 
 ### Responsive behaviour
 
 The page is mobile first: the base rules are the small-screen layout and every
 media query is `min-width`. A single `.shell` wrapper centres content at
-`--shell-max` (1200px) with a `--gutter` that steps 18px → 28px (600px) → 40px
-(1024px), so content stays centred on very wide screens without stretching.
+`--shell` (1240px) with a `--gutter` that steps 20px → 32px (640px) → 48px
+(1100px), so content stays centred on very wide screens without stretching.
 
 | Breakpoint | What changes |
 | --- | --- |
-| base | one column everywhere, full-width buttons, hero visual hidden |
-| 520px | hero and card buttons go side by side, benefit and footer grids to 2 columns |
-| 720px | app cards to 2 columns |
-| 900px | footer to 4 columns |
-| 1024px | hero to 2 columns and the app-icon panel appears, benefits to 4 columns |
-| 1120px | app cards to 3 columns |
+| base | one column everywhere; masthead nav on its own row; app rows stack |
+| 560px | app feature lists to 2 columns, footer to 2 columns |
+| 720px | masthead on one row, principles to 3 columns, developer note to 2 |
+| 900px | split section heads: title left, intro right |
+| 1024px | hero to 2 columns with a hairline, app rows to number/icon + body + availability, footer to 4 columns |
 
 ### Design tokens
 
-`home.css` starts with a `:root` block holding backgrounds and surfaces, borders,
-text colours, accents, radii, shadows, a spacing scale (`--s-1` … `--s-8`),
-layout values (`--shell-max`, `--gutter`, `--section-gap`, `--measure`) and
-transition durations. Change the look from these tokens rather than from
-individual rules. Per-app accent colours are set on `.app-card--shopping`,
-`.app-card--waveiq` and `.app-card--gainsai` as `--app-accent`, `--app-accent-2`
-and `--app-glow`, which drive the card top border, bullets, icon glow and
-primary button.
+`home.css` starts with a `:root` block holding page surfaces, text colours,
+hairlines, the copper brand accent, per-app accents, the three font stacks, a
+`clamp()` type scale, a spacing scale (`--space-1` … `--space-9`), layout values
+(`--shell`, `--gutter`, `--section-gap`, `--measure`, `--prose`) and small radii.
+Change the look from these tokens rather than from individual rules.
 
-### Landing page background
+The page background is a single flat colour: no gradients, no images, no dot
+grid, no ambient washes and no animation. Depth comes from typography, hairlines
+and whitespace.
 
-The landing page background is built only from CSS gradients in `home.css`: no
-images, no filters and no animation. It has three parts:
-
-- the `body` background: a vertical ramp through `--bg-deep`, `--bg` and
-  `--bg-mid`, plus the `--ambient-cyan`, `--ambient-mint` and `--ambient-violet`
-  washes that keep the hero area the liveliest part of the page
-- `body::before`: a viewport-fixed sheen (`--ambient-top`, `--ambient-bottom`)
-  and the `--grid-line` dot grid
-- `--surface-veil`, the last background layer on cards and panels, which keeps
-  translucent surfaces readable wherever a wash falls behind them
-
-Tune the background from these tokens rather than from individual rules, and
-keep it static — the page must stay motion-free by default.
-
-These background tokens are landing-page only and are deliberately **not**
-mirrored into `style.css`, which keeps its own flatter `--bg` / `--bg-2` pair
-for the app pages. The mirroring rule in AGENTS.md applies to the shared visual
-system (accents, radii, spacing, text colours), not to this background stack.
+Per-app accents are applied with the `.a-kauppalista`, `.a-waveiq` and
+`.a-gainsai` utility classes, which set `--app-accent` for that row only. The
+accent drives the index number and the short rule in front of each feature — not
+a background, a glow or a card.
 
 `home.css` also contains `[hidden]{display:none !important}`. Keep it: `.btn` is
 `display:inline-flex`, which would otherwise override the browser's `[hidden]`
@@ -133,13 +128,14 @@ rule and reveal elements a page keeps hidden until it has verified data.
 
 ### Adding an app to the landing page
 
-1. Add an `article.app-card.app-card--<app>` to the `.app-grid` with the app
-   icon, an `h3` title linking to the app page, a one-line promise, up to four
-   short feature bullets, the `Explore the app` and Google Play buttons, and the
-   `.app-card__legal` link row.
-2. Add an `.app-card--<app>` accent block to `home.css`.
-3. Add the app to the hero `.icon-stack` and to the footer link groups.
-4. Add every new visible string to both `dict.en` and `dict.fi` (see below).
+1. Add an `li.app-row.a-<app>` to the `.app-index` list with the index number,
+   the app icon (`alt=""`, the name is next to it), the category, an `h3` name
+   linking to the app page, a one-line promise, 3–4 feature lines, the `.spec`
+   list, the primary button, the Google Play link and the four legal links.
+2. Add the app to `.hero__index-list` with the same `.a-<app>` class.
+3. Add an `--accent-<app>` token and an `.a-<app>` rule to `home.css`.
+4. Add the app to the footer link groups.
+5. Add every new visible string to both `dict.en` and `dict.fi` (see below).
 
 ### FI/EN texts
 
@@ -151,10 +147,8 @@ both EN/FI switches. The stored choice lives in `localStorage` under
 
 ### Screenshots
 
-No screenshots are used on the landing page yet. When real ones exist, the
-natural places are a strip directly under the hero (or replacing the
-`.hero__visual` icon panel on wide screens), and one image per app card between
-the promise line and the feature list. Do not add empty placeholders in the
+No screenshots are used on the landing page. When real ones exist, the natural
+place is a strip directly under the hero. Do not add empty placeholders in the
 meantime.
 
 ## App pages
@@ -165,66 +159,67 @@ with its own inline EN/FI dictionary. There is no build step and no framework.
 
 ### Shared structure
 
-`header.site-header` (brand link, app nav with `aria-current="page"`, EN/FI
-switch) → `main#main` → `footer.site-footer` (app blurb, support/privacy links,
-apps, second EN/FI switch, copyright). There is exactly one `h1`: the app name
-in the hero. Section titles are `h2`, card titles are `h3`.
+`header.masthead` (brand link, app nav with `aria-current="page"`, EN/FI switch)
+→ `main#main` → `footer.site-footer` (app blurb, support/privacy links, apps,
+second EN/FI switch, copyright). There is exactly one `h1`: the app name in the
+hero. Section titles are `h2`, row and column titles are `h3`.
 
 | Block | Markup | Used by |
 | --- | --- | --- |
-| Hero | `section.hero > .shell.hero__inner` with `.hero__copy` (eyebrow, `h1`, optional `.hero__kicker`, lead, `.hero__actions`, `.quiet-links`) and `.hero__visual` (`.app-mark` icon + `.hero__panel` three summary rows) | all |
+| App hero | `section.app-hero > .shell.app-hero__inner` with `.app-hero__copy` (context line, `.app-hero__mark` icon + `h1`, promise, lead, actions, quiet links) and `.app-hero__facts` (`dl.spec` + `.summary`) | all |
 | Promo image | `figure.media-band > .shell > .media-band__frame` | GainsAI |
-| Section head | `section.section > .shell > .section__head` (`.section__eyebrow` + `h2.section__title` + `p.section__intro`) | all |
-| Feature cards | `.card-grid.card-grid--2` + `article.card` (`h3.card__title`, `p.card__text`) | all |
-| Steps | `ol.steps > li.step` (`.step__num`, `h3.step__title`, `p.step__text`) | GainsAI |
+| Section head | `section.section > .shell > .section__head` (`p.label` + `h2.section__title` [+ `p.section__intro` with `--split`]) | all |
+| Feature rows | `ol.feature-rows > li.feature` (`.feature__num`, `h3.feature__title`, `p.feature__text`) | all |
+| Open two-column prose | `.duo > .duo__col` (`h3.duo__title`, `p.duo__text`, optional `ul.duo__list`) | all |
+| Steps | `ol.steps > li.step` (`.step__num`, `h3.step__title`, `p.step__text`) | GainsAI, WaveIQ (`--3`) |
 | Screenshot gallery | `.gallery[tabindex="0"][role="group"] > figure.gallery__item` | GainsAI |
-| Plans | `.panel > .plan-grid > article.plan-card` | GainsAI |
+| Plans | `.plans > article.plan` | GainsAI |
 | FAQ | `.faq > details > summary + p` | GainsAI |
-| Link row | `.link-row > a.btn` | all |
-| Closing CTA | `section.cta-band > .shell.cta-band__inner` | all |
+| Quiet link row | `ul.quiet > li > a` | all |
+| Closing CTA | `section.closing > .shell.closing__inner` | all |
 
 ### Widths and breakpoints
 
 The pages are mobile first: base rules are the small-screen layout and every
-media query is `min-width`. `.shell` centres content at `--shell-max` (1200px)
-with a `--gutter` that steps 18px → 28px (600px) → 40px (1024px), so content
-stays centred on very wide screens without stretching. Body copy is additionally
-capped: `--measure` (64ch) for section heads, `--prose` (68ch) for intros and
-fine print, 56–66ch inside cards, so text lines never run the full 1200px.
+media query is `min-width`. `.shell` centres content at `--shell` (1240px) with
+a `--gutter` that steps 20px → 32px (640px) → 48px (1100px), so content stays
+centred on very wide screens without stretching. Body copy is additionally
+capped: `--measure` (64ch) for section intros, `--prose` (68ch) for fine print
+and FAQ answers, 52–60ch inside rows, so text lines never run the full width.
 
 | Breakpoint | What changes |
 | --- | --- |
-| base | one column everywhere, full-width hero/CTA buttons, header nav on its own row |
-| 480px | hero and CTA buttons go side by side |
-| 600px | cards, steps, plans and footer to 2 columns; "Language" label appears; hero icon moves beside the summary panel; gallery screenshots grow to 520px tall |
-| 900px | header on one row, footer to 4 columns, CTA text and actions side by side |
-| 1024px | hero to 2 columns, hero visual stacks again, steps to 4 columns, `.card-grid--3/--4` to 3/4 columns |
+| base | one column everywhere, header nav on its own row |
+| 620px | larger hero icon, gallery screenshots grow to 520px tall |
+| 720px | header on one row; "Language" label appears; feature rows, `.duo`, steps and plans go two-column |
+| 900px | split section heads, closing CTA text and actions side by side |
+| 1024px | app hero to 2 columns with a hairline, steps to 4 columns (`--3` to 3), gallery screenshots to 620px, footer to 4 columns |
 
 ### Design tokens and per-app accents
 
-`style.css` starts with a `:root` block holding backgrounds and surfaces,
-borders, text colours, accents, radii, shadows, a spacing scale (`--s-1` …
-`--s-8`), layout values (`--shell-max`, `--gutter`, `--section-gap`, `--measure`,
-`--prose`) and transition durations. It intentionally mirrors the token block in
-`home.css`: the two stylesheets stay independent (see AGENTS.md "Stylesheet
-ownership rule") while sharing one visual system. `home.css` is the reference
-for shared values — change it there first, then mirror.
+`style.css` starts with a `:root` block holding page surfaces, text colours,
+hairlines, the copper brand accent, per-app accents, the three font stacks, a
+`clamp()` type scale, a spacing scale (`--space-1` … `--space-9`), layout values
+(`--shell`, `--gutter`, `--section-gap`, `--measure`, `--prose`) and small radii.
+It intentionally mirrors the token block in `home.css`: the two stylesheets stay
+independent (see AGENTS.md "Stylesheet ownership rule") while sharing one visual
+system. `home.css` is the reference for shared values — change it there first,
+then mirror.
 
-Each page sets an app class on `<body>` that overrides `--accent`, `--accent-2`
-and `--glow`. The values match that app's card on the landing page, so an app
-keeps the same colour identity across the site:
+Each page sets an app class on `<body>` that overrides `--app-accent` only, so
+an app keeps the same quiet identifier colour from the landing page index to its
+own page:
 
-| App | `body` class | `--accent` / `--accent-2` |
+| App | `body` class | `--app-accent` |
 | --- | --- | --- |
-| GainsAI | `app-page app--gainsai` | `#a786ff` / `#55c6ff` |
-| Shopping List & Notes | `app-page app--kauppalista` | `#5fe3bf` / `#79c8ff` |
-| WaveIQ Radio | `app-page app--waveiq` | `#ff9a86` / `#f56ca6` |
+| Shopping List & Notes | `app-page app--kauppalista` | `#8fb894` |
+| WaveIQ Radio | `app-page app--waveiq` | `#8aa6c6` |
+| GainsAI | `app-page app--gainsai` | `#c78d6a` |
 
-The accent drives the hero kicker, the section eyebrow rule, primary buttons,
-bullet dots, step numbers, the hero panel edge, the featured plan card, the CTA
-band top border, the background glow and the focus ring. `--focus-ring` is
-declared on `.app-page` rather than `:root`, because a `var()` inside a custom
-property resolves against the element that declares it.
+The accent drives the hero context rule, index numbers, the short rules in front
+of list items, the step top rules, the summary labels and the active nav
+underline. It is never a background, a glow or a card. The focus ring is the
+brand copper (`--focus`) on every page, so focus looks the same site-wide.
 
 `style.css` contains `[hidden]{display:none !important}`. Keep it: `.btn` is
 `display:inline-flex`, which would otherwise override the browser's `[hidden]`
@@ -250,15 +245,17 @@ keyboard as well as by touch. Every `figure.gallery__item` carries
 `data-screenshot-lang="en|fi"`, and CSS shows only the items matching
 `html[lang]`, so the visitor sees screenshots in their own language. Images keep
 their real `width`/`height` attributes and are sized by height
-(`--shot-h`: 400–520px), so each screenshot keeps its own aspect ratio, nothing
-is cropped and nothing is scaled past its natural size. All gallery images use
-`loading="lazy"`; the hero icon and the GainsAI promo image do not, because they
+(`--shot-h`: 400 → 520 → 620px), so each screenshot keeps its own aspect ratio,
+nothing is cropped and nothing is scaled past its natural size. There is no
+per-image frame and no shadow. All gallery images use `loading="lazy"`; the hero
+icon and the GainsAI promo image use `fetchpriority="high"` instead, because they
 are in the first viewport.
 
 ### Adding a new app page
 
 1. Copy `apps/waveiq/index.html` to `apps/<app>/index.html` (it is the smallest
-   page: hero, features, trust cards, legal links, closing CTA, footer).
+   page: hero, feature rows, use cases, privacy columns, legal links, closing
+   CTA, footer).
 2. Update the head block: description, canonical, Open Graph, Twitter Card,
    `SoftwareApplication` JSON-LD, title.
 3. Set `<body class="app-page app--<app>">` and add an `.app--<app>` accent block
@@ -280,6 +277,15 @@ switches. The stored choice lives in `localStorage` under `janstech_apps_lang`
 and the default is English. A small script in `<head>` applies the stored
 language to `<html lang>` before first paint, so the language-filtered
 screenshots and the `lang` attribute are correct from the first frame.
+
+## Legal pages
+
+The pages under `legal/` keep their own HTML, structure, URLs and local
+stylesheet. Their content is legal text and is not rewritten as part of design
+work. Their four stylesheets were brought onto the site palette (flat warm
+charcoal, copper links, small radii, no blur or glow) so they no longer look
+like a different website; the markup and every legal sentence were left
+untouched.
 
 ## Sitemap and robots.txt
 
@@ -316,11 +322,12 @@ To also check the pages in a browser, serve the publish root locally:
 python -m http.server 8000
 ~~~
 
-Then check both languages of every app page at 320, 360, 390, 412, 768, 1024,
-1366 and 1920px. What to look for: no horizontal scrolling, exactly one `h1`,
-the primary action visible without a long scroll, touch targets at least 44px
-tall, visible focus rings when tabbing, readable screenshots, and no visible
-`href="#"` link.
+Then check both languages of the landing page and every app page at 320, 360,
+390, 412, 600, 768, 1024, 1366 and 1920px. What to look for: no horizontal
+scrolling, exactly one `h1`, the primary action visible without a long scroll,
+touch targets at least 44px tall, visible focus rings when tabbing, readable
+screenshots, no visible `href="#"` link, and identical key sets in `dict.en` and
+`dict.fi`.
 
 ## GainsAI Pro price configuration
 

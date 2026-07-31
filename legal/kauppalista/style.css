@@ -1,13 +1,18 @@
+/* Colours follow the JanstechApps Product Editorial direction shared with
+   home.css and style.css (see docs/janstechapps-redesign.md). Only the palette,
+   radii and surfaces were harmonised here; the layout and the legal content of
+   these pages are unchanged. */
 :root{
-  --bg:#0b1220;
-  --card:#0f1a2e;
-  --muted:#97a3b6;
-  --text:#e8eefc;
-  --border:rgba(255,255,255,.10);
-  --chip:rgba(255,255,255,.08);
-  --link:#9bbcff;
-  --shadow:0 20px 70px rgba(0,0,0,.45);
-  --radius:18px;
+  --bg:#121110;
+  --card:#171614;
+  --raised:#1b1917;
+  --muted:#b5aea6;
+  --text:#ece9e6;
+  --border:#2b2825;
+  --chip:#1b1917;
+  --link:#e07a4f;
+  --shadow:none;
+  --radius:8px;
 }
 
 *{box-sizing:border-box}
@@ -16,10 +21,7 @@ body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
-  background:
-    radial-gradient(1200px 600px at 20% -10%, rgba(155,188,255,.22), transparent 60%),
-    radial-gradient(900px 600px at 90% 0%, rgba(196,120,255,.16), transparent 55%),
-    var(--bg);
+  background:var(--bg);
   line-height:1.6;
 }
 
@@ -38,10 +40,9 @@ a:hover{text-decoration:underline}
   align-items:center;
   justify-content:space-between;
   padding:14px 16px;
-  background:rgba(255,255,255,.04);
+  background:var(--card);
   border:1px solid var(--border);
   border-radius:var(--radius);
-  backdrop-filter: blur(10px);
 }
 
 .brand{
@@ -54,9 +55,9 @@ a:hover{text-decoration:underline}
 .logo{
   width:34px;
   height:34px;
-  border-radius:12px;
-  background:linear-gradient(135deg, rgba(155,188,255,.9), rgba(196,120,255,.8));
-  box-shadow:0 10px 30px rgba(155,188,255,.18);
+  border-radius:8px;
+  background:var(--raised);
+  border:1px solid var(--border);
   flex:0 0 auto;
 }
 
@@ -86,19 +87,21 @@ a:hover{text-decoration:underline}
   align-items:center;
   justify-content:center;
   gap:8px;
+  min-height:44px;
   padding:8px 12px;
-  border-radius:999px;
+  border-radius:6px;
   border:1px solid var(--border);
-  background:rgba(255,255,255,.03);
+  background:var(--raised);
   color:var(--text);
-  font-weight:650;
+  font-weight:600;
   font-size:13px;
   text-align:center;
 }
 
 .nav a.active{
-  background:rgba(155,188,255,.14);
-  border-color:rgba(155,188,255,.35);
+  background:rgba(224,122,79,.14);
+  border-color:var(--link);
+  color:var(--link);
 }
 
 .lang{
@@ -111,23 +114,25 @@ a:hover{text-decoration:underline}
 .lang .hint{
   color:var(--muted);
   font-size:12px;
-  font-weight:650;
+  font-weight:600;
 }
 
 .lang button{
   border:1px solid var(--border);
-  background:rgba(255,255,255,.03);
+  background:var(--raised);
   color:var(--text);
-  border-radius:999px;
-  padding:8px 10px;
-  font-weight:750;
+  border-radius:6px;
+  min-height:44px;
+  padding:8px 12px;
+  font-weight:700;
   font-size:12px;
   cursor:pointer;
 }
 
 .lang button.active{
-  background:rgba(196,120,255,.16);
-  border-color:rgba(196,120,255,.35);
+  background:rgba(224,122,79,.14);
+  border-color:var(--link);
+  color:var(--link);
 }
 
 .hero{
@@ -135,8 +140,7 @@ a:hover{text-decoration:underline}
   padding:18px 18px 16px;
   border-radius:var(--radius);
   border:1px solid var(--border);
-  background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-  box-shadow:var(--shadow);
+  background:var(--card);
 }
 
 .badge{
@@ -146,7 +150,7 @@ a:hover{text-decoration:underline}
   padding:7px 10px;
   border:1px solid var(--border);
   border-radius:999px;
-  background:rgba(255,255,255,.03);
+  background:var(--raised);
   color:var(--muted);
   font-weight:700;
   font-size:12px;
@@ -156,8 +160,7 @@ a:hover{text-decoration:underline}
   width:10px;
   height:10px;
   border-radius:999px;
-  background:rgba(155,188,255,.9);
-  box-shadow:0 0 0 6px rgba(155,188,255,.10);
+  background:var(--link);
 }
 
 .hero h2{
@@ -182,8 +185,7 @@ a:hover{text-decoration:underline}
 .card{
   border-radius:var(--radius);
   border:1px solid var(--border);
-  background:rgba(15,26,46,.75);
-  box-shadow:var(--shadow);
+  background:var(--card);
   padding:18px;
 }
 
@@ -203,7 +205,7 @@ a:hover{text-decoration:underline}
 
 .card li{
   margin:6px 0;
-  color:rgba(232,238,252,.92);
+  color:var(--muted);
 }
 
 .small{
@@ -223,17 +225,17 @@ a:hover{text-decoration:underline}
   grid-template-columns:140px 1fr;
   gap:10px 14px;
   padding:12px;
-  border-radius:14px;
+  border-radius:6px;
   border:1px solid var(--border);
-  background:rgba(255,255,255,.03);
+  background:var(--raised);
 }
 
 .inline.code{
   font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   padding:2px 8px;
-  border-radius:999px;
+  border-radius:4px;
   border:1px solid var(--border);
-  background:rgba(255,255,255,.03);
+  background:var(--raised);
   font-size:12px;
 }
 
@@ -276,7 +278,7 @@ a:hover{text-decoration:underline}
   .logo{
     width:52px;
     height:52px;
-    border-radius:16px;
+    border-radius:11px;
   }
 
   .brand h1{

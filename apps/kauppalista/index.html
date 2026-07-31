@@ -8,11 +8,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="Shopping List & Notes is a local-first Android app for shopping lists, notes, tasks, recipes, birthdays, reminders, optional AI meal help, and shared lists." />
+  <meta name="description" content="Shopping List &amp; Notes is a local-first Android app for shopping lists, notes, tasks, recipes, birthdays, reminders, optional AI meal help, and shared lists." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://janstechapps.com/apps/kauppalista/">
 
-  <meta property="og:title" content="Shopping List & Notes">
+  <meta property="og:title" content="Shopping List &amp; Notes">
   <meta property="og:description" content="A local-first Android app for shopping lists, notes, tasks, recipes, optional AI meal help, and shared lists.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://janstechapps.com/apps/kauppalista/">
@@ -62,145 +62,231 @@
 <body class="app-page app--kauppalista">
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
-  <header class="site-header">
-    <div class="shell site-header__inner">
+  <header class="masthead">
+    <div class="shell masthead__inner">
       <a class="brand" href="/">
         <span class="brand__name">JanstechApps</span>
         <span class="brand__tag" data-i18n="sub">Shopping List &amp; Notes</span>
       </a>
 
-      <div class="header__controls">
-        <nav class="site-nav" aria-label="Primary">
-          <a class="site-nav__link" href="/" data-i18n="nav_apps">Apps</a>
-          <a class="site-nav__link" href="/apps/kauppalista/" aria-current="page" data-i18n="nav_app">Shopping List</a>
-          <a class="site-nav__link" href="/legal/kauppalista/" data-i18n="nav_legal">Legal</a>
-        </nav>
+      <nav class="masthead__nav" data-i18n-label="aria_nav" aria-label="Primary">
+        <a href="/" data-i18n="nav_apps">Apps</a>
+        <a href="/apps/kauppalista/" aria-current="page" data-i18n="nav_app">Shopping List</a>
+        <a href="/legal/kauppalista/" data-i18n="nav_legal">Legal</a>
+      </nav>
 
-        <div class="lang-switch">
-          <span class="lang-switch__label" data-i18n="lang_label">Language</span>
-          <div class="lang-switch__group">
-            <button class="lang-switch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
-            <button class="lang-switch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
-          </div>
+      <div class="langswitch">
+        <span class="langswitch__label" data-i18n="lang_label">Language</span>
+        <div class="langswitch__group">
+          <button class="langswitch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+          <button class="langswitch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
         </div>
       </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="shell hero__inner">
-        <div class="hero__copy">
-          <span class="eyebrow"><span data-i18n="badge">Android 8+ productivity app</span></span>
+    <section class="app-hero">
+      <div class="shell app-hero__inner">
+        <div class="app-hero__copy">
+          <p class="app-hero__context">
+            <span class="label" aria-hidden="true">01</span>
+            <span class="app-hero__context-sep" aria-hidden="true"></span>
+            <span class="label" data-i18n="hero_cat">Shopping &amp; notes</span>
+          </p>
 
-          <h1 class="hero__title" data-i18n="hero_title">Shopping List &amp; Notes</h1>
-          <p class="hero__kicker" data-i18n="kicker">Kauppalista &amp; Muistiinpanot</p>
-
-          <p class="hero__lead" data-i18n="hero_p">A local-first Android app for shopping lists, notes, tasks, recipes, birthdays, reminders, optional AI meal help, and shared lists when you choose to sign in.</p>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.kauppalista" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
-            <a class="btn" href="#features" data-i18n="btn_features">Features</a>
+          <div class="app-hero__mark">
+            <img class="app-hero__icon" src="/assets/AI.png" alt="Shopping List &amp; Notes app icon" width="512" height="512" fetchpriority="high" decoding="async">
+            <div>
+              <h1 class="app-hero__title" data-i18n="app_name">Shopping List &amp; Notes</h1>
+              <p class="app-hero__alt-name" data-i18n="alt_name">Kauppalista &amp; Muistiinpanot</p>
+            </div>
           </div>
 
-          <ul class="quiet-links hero__links">
-            <li><a href="/legal/kauppalista/" data-i18n="btn_privacy">Privacy Policy</a></li>
+          <p class="app-hero__promise" data-i18n="hero_promise">
+            Plan the shop and keep notes, recipes and reminders in one place on your own device.
+          </p>
+
+          <p class="app-hero__lede" data-i18n="hero_lede">
+            Lists, tasks, notes, folders, recipes and birthdays work locally, with no account. AI meal help and shared lists are there when you want them, and only then.
+          </p>
+
+          <div class="actions app-hero__actions">
+            <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.kauppalista" target="_blank" rel="noopener noreferrer" data-i18n="btn_play">Open in Google Play</a>
+            <a class="link" href="#features" data-i18n="btn_features">See the features</a>
+          </div>
+
+          <ul class="quiet app-hero__links">
+            <li><a href="/legal/kauppalista/" data-i18n="btn_privacy">Privacy</a></li>
             <li><a href="/legal/kauppalista/support.html" data-i18n="btn_support">Support</a></li>
+            <li><a href="/legal/kauppalista/terms.html" data-i18n="btn_terms">Terms</a></li>
+            <li><a href="/legal/kauppalista/delete-data.html" data-i18n="btn_delete">Delete data</a></li>
           </ul>
         </div>
 
-        <div class="hero__visual">
-          <div class="app-mark">
-            <img class="app-mark__img" src="/assets/AI.png" alt="Shopping List &amp; Notes logo" width="512" height="512" decoding="async">
+        <div class="app-hero__facts">
+          <p class="label" data-i18n="facts_label">At a glance</p>
+          <dl class="spec">
+            <div class="spec__row">
+              <dt class="label" data-i18n="spec_platform">Platform</dt>
+              <dd data-i18n="spec_platform_v">Android 8+</dd>
+            </div>
+            <div class="spec__row">
+              <dt class="label" data-i18n="spec_availability">Availability</dt>
+              <dd data-i18n="spec_availability_v">Google Play</dd>
+            </div>
+            <div class="spec__row">
+              <dt class="label" data-i18n="spec_account">Account</dt>
+              <dd data-i18n="spec_account_v">Not needed for local use</dd>
+            </div>
+            <div class="spec__row">
+              <dt class="label" data-i18n="spec_langs">App languages</dt>
+              <dd data-i18n="spec_langs_v">14</dd>
+            </div>
+          </dl>
+
+          <div class="summary">
+            <p class="label" data-i18n="summary_label">Where the data lives</p>
+            <dl class="summary__list">
+              <div>
+                <dt data-i18n="sum_1_h">On the device</dt>
+                <dd data-i18n="sum_1_p">Lists, favourites, tasks, notes, folders, recipes, birthdays, reminders, settings and local backup</dd>
+              </div>
+              <div>
+                <dt data-i18n="sum_2_h">Online, optional</dt>
+                <dd data-i18n="sum_2_p">AI recipes, weekly meal plans and ingredient scanning</dd>
+              </div>
+              <div>
+                <dt data-i18n="sum_3_h">In the cloud, optional</dt>
+                <dd data-i18n="sum_3_p">Shared shopping and task lists after Google sign-in</dd>
+              </div>
+            </dl>
           </div>
-          <ul class="hero__panel" data-i18n-label="aria_summary" aria-label="App summary">
-            <li><span data-i18n="panel_1_h">Core use</span><strong data-i18n="panel_1_p">Works locally without an account</strong></li>
-            <li><span data-i18n="panel_2_h">Online features</span><strong data-i18n="panel_2_p">Optional AI tools and shared lists</strong></li>
-            <li><span data-i18n="panel_3_h">Shared lists</span><strong data-i18n="panel_3_p">Google Sign-In for collaboration</strong></li>
-          </ul>
         </div>
       </div>
     </section>
 
     <section class="section" id="features">
       <div class="shell">
-        <div class="section__head">
-          <span class="section__eyebrow" data-i18n="eyebrow_features">Features</span>
-          <h2 class="section__title" data-i18n="features_h">Built for everyday planning</h2>
-          <p class="section__intro" data-i18n="features_p">Shopping List &amp; Notes brings local lists, notes, reminders, recipes, and optional online helpers into one Android app.</p>
+        <div class="section__head section__head--split">
+          <div>
+            <p class="label" data-i18n="features_label">Features</p>
+            <h2 class="section__title" data-i18n="features_h">Everything the week needs, in one app</h2>
+          </div>
+          <p class="section__intro" data-i18n="features_intro">
+            The app started as a shopping list and grew into the rest of the notes people keep on their phone anyway.
+          </p>
         </div>
 
-        <div class="card-grid card-grid--2">
-          <article class="card">
-            <h3 class="card__title" data-i18n="f1_h">Lists and tasks</h3>
-            <p class="card__text" data-i18n="f1_p">Shopping lists support item editing, reordering, purchased state, deletion, and favorites. Tasks support local one-time reminders.</p>
-          </article>
-          <article class="card">
-            <h3 class="card__title" data-i18n="f2_h">Notes, recipes, and planning</h3>
-            <p class="card__text" data-i18n="f2_p">Create notes and folders, save recipes as notes, plan weekly meals, and keep birthdays with local birthday reminders.</p>
-          </article>
-          <article class="card">
-            <h3 class="card__title" data-i18n="f3_h">Optional AI help</h3>
-            <p class="card__text" data-i18n="f3_p">AI features can generate recipes and weekly meal plans, scan ingredients, suggest recipes from scanned ingredients, and save AI-generated recipes to notes.</p>
-          </article>
-          <article class="card">
-            <h3 class="card__title" data-i18n="f4_h">Shared lists when needed</h3>
-            <p class="card__text" data-i18n="f4_p">Shared shopping and task lists are optional. Users can sign in with Google, invite others with a link, and see updates in real time.</p>
-          </article>
-        </div>
+        <ol class="feature-rows">
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">01</span>
+            <h3 class="feature__title" data-i18n="f1_h">Lists and tasks</h3>
+            <p class="feature__text" data-i18n="f1_p">
+              Shopping lists with item editing, reordering, a purchased state, deletion and favourites. Tasks support local one-time reminders.
+            </p>
+          </li>
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">02</span>
+            <h3 class="feature__title" data-i18n="f2_h">Notes, recipes and planning</h3>
+            <p class="feature__text" data-i18n="f2_p">
+              Notes and folders, recipes saved as notes, weekly meal plans, and birthdays with local birthday reminders.
+            </p>
+          </li>
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">03</span>
+            <h3 class="feature__title" data-i18n="f3_h">Optional AI help</h3>
+            <p class="feature__text" data-i18n="f3_p">
+              AI features can generate recipes and weekly meal plans, scan ingredients, suggest recipes from what was scanned, and save the result to your notes. None of it is required for ordinary use.
+            </p>
+          </li>
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">04</span>
+            <h3 class="feature__title" data-i18n="f4_h">Shared lists when they help</h3>
+            <p class="feature__text" data-i18n="f4_p">
+              Shared shopping and task lists are optional. Sign in with Google, invite someone with a link, and see updates in real time. Local “share as copy” stays separate and needs no account.
+            </p>
+          </li>
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">05</span>
+            <h3 class="feature__title" data-i18n="f5_h">Your own copy of the data</h3>
+            <p class="feature__text" data-i18n="f5_p">
+              Local backup, export and import for local app data, plus theme options and optional biometric protection for selected views.
+            </p>
+          </li>
+        </ol>
       </div>
     </section>
 
     <section class="section">
       <div class="shell">
         <div class="section__head">
-          <span class="section__eyebrow" data-i18n="eyebrow_trust">Privacy</span>
-          <h2 class="section__title" data-i18n="trust_h">Local use and privacy</h2>
+          <p class="label" data-i18n="local_label">Local first</p>
+          <h2 class="section__title" data-i18n="local_h">What works without an account</h2>
         </div>
 
-        <div class="card-grid card-grid--2">
-          <article class="card card--wide">
-            <h3 class="card__title" data-i18n="local_h">Local-first summary</h3>
-            <p class="card__text" data-i18n="local_p1">The core app works locally without an account. Shopping lists, favorites, tasks, notes, folders, recipes saved as notes, birthdays, local reminders, settings, and local backup/export/import are stored on the device.</p>
-            <p class="card__text" data-i18n="local_p2">AI features and cloud-backed shared lists are online-only areas. Shared-list cloud sync is separate from ordinary local app data.</p>
-          </article>
+        <div class="duo">
+          <div class="duo__col">
+            <h3 class="duo__title" data-i18n="local_1_h">Stored on the device</h3>
+            <p class="duo__text" data-i18n="local_1_p">
+              The core app works locally. These are kept on the phone and stay there unless you export them or turn on an online feature:
+            </p>
+            <ul class="duo__list">
+              <li data-i18n="local_1_l1">Shopping lists, favourites and tasks</li>
+              <li data-i18n="local_1_l2">Notes, folders and recipes saved as notes</li>
+              <li data-i18n="local_1_l3">Birthdays and local reminders</li>
+              <li data-i18n="local_1_l4">Settings and local backup, export and import</li>
+            </ul>
+          </div>
 
-          <article class="card card--wide">
-            <h3 class="card__title" data-i18n="privacy_h">Privacy and account use</h3>
-            <p class="card__text" data-i18n="privacy_p1">Core use does not require an account. Signing in does not automatically upload local lists, notes, recipes, birthdays, or reminders.</p>
-            <p class="card__text" data-i18n="privacy_p2">Shared lists are cloud data and may store list metadata, items, memberships, roles, invite metadata, notification settings, and push notification metadata.</p>
-          </article>
+          <div class="duo__col">
+            <h3 class="duo__title" data-i18n="local_2_h">Online, only where you ask for it</h3>
+            <p class="duo__text" data-i18n="local_2_p">
+              Two areas need the network. Signing in does not upload your local lists, notes, recipes, birthdays or reminders.
+            </p>
+            <ul class="duo__list">
+              <li data-i18n="local_2_l1">AI recipes, meal plans and ingredient scanning</li>
+              <li data-i18n="local_2_l2">Shared shopping and task lists, which are cloud data</li>
+              <li data-i18n="local_2_l3">Shared lists may store list metadata, items, memberships, roles, invite metadata and notification settings</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="shell">
-        <div class="section__head">
-          <span class="section__eyebrow" data-i18n="eyebrow_legal">Legal</span>
-          <h2 class="section__title" data-i18n="legal_h">Legal and support</h2>
-          <p class="section__intro" data-i18n="legal_p">Review the published legal pages for privacy, terms, support, and data deletion information.</p>
+        <div class="section__head section__head--split">
+          <div>
+            <p class="label" data-i18n="legal_label">Legal and support</p>
+            <h2 class="section__title" data-i18n="legal_h">Published pages for this app</h2>
+          </div>
+          <p class="section__intro" data-i18n="legal_p">
+            Privacy policy, terms, support instructions and data deletion, in Finnish and English.
+          </p>
         </div>
 
-        <div class="link-row">
-          <a class="btn" href="/legal/kauppalista/" data-i18n="btn_privacy">Privacy Policy</a>
-          <a class="btn" href="/legal/kauppalista/support.html" data-i18n="btn_support">Support</a>
-          <a class="btn" href="/legal/kauppalista/terms.html" data-i18n="btn_terms">Terms</a>
-          <a class="btn" href="/legal/kauppalista/delete-data.html" data-i18n="btn_delete">Delete Data</a>
-          <a class="btn" href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a>
-        </div>
+        <ul class="quiet">
+          <li><a href="/legal/kauppalista/" data-i18n="btn_privacy">Privacy</a></li>
+          <li><a href="/legal/kauppalista/support.html" data-i18n="btn_support">Support</a></li>
+          <li><a href="/legal/kauppalista/terms.html" data-i18n="btn_terms">Terms</a></li>
+          <li><a href="/legal/kauppalista/delete-data.html" data-i18n="btn_delete">Delete data</a></li>
+          <li><a href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a></li>
+        </ul>
       </div>
     </section>
 
-    <section class="cta-band">
-      <div class="shell cta-band__inner">
+    <section class="closing">
+      <div class="shell closing__inner">
         <div>
-          <h2 class="cta-band__title" data-i18n="cta_h">Download Shopping List &amp; Notes</h2>
-          <p class="cta-band__text" data-i18n="cta_p">Shopping lists, notes, tasks, recipes, and reminders on your own device, with optional AI help and shared lists.</p>
+          <h2 class="closing__title" data-i18n="cta_h">Shopping List &amp; Notes on Google Play</h2>
+          <p class="closing__text" data-i18n="cta_p">
+            Shopping lists, notes, tasks, recipes and reminders on your own device, with optional AI help and shared lists.
+          </p>
         </div>
-        <div class="cta-band__actions">
-          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.kauppalista" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a>
-          <a class="btn" href="/" data-i18n="btn_all_apps">All apps</a>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.kauppalista" target="_blank" rel="noopener noreferrer" data-i18n="btn_play">Open in Google Play</a>
+          <a class="link" href="/" data-i18n="btn_all_apps">All apps</a>
         </div>
       </div>
     </section>
@@ -211,34 +297,34 @@
       <div class="footer-grid">
         <div class="footer-group">
           <h2 class="footer-group__heading" data-i18n="sub">Shopping List &amp; Notes</h2>
-          <p class="footer-group__text" data-i18n="footer_p">Shopping List &amp; Notes is an Android productivity app by JanstechApps.</p>
+          <p class="footer-group__text" data-i18n="footer_p">An Android productivity app by JanstechApps.</p>
         </div>
 
         <div class="footer-group">
           <h2 class="footer-group__heading" data-i18n="footer_legal_h">Support &amp; privacy</h2>
           <ul class="footer-links">
-            <li><a href="/legal/kauppalista/" data-i18n="footer_privacy">Privacy</a></li>
-            <li><a href="/legal/kauppalista/support.html" data-i18n="footer_support">Support</a></li>
-            <li><a href="/legal/kauppalista/terms.html" data-i18n="footer_terms">Terms</a></li>
-            <li><a href="/legal/kauppalista/delete-data.html" data-i18n="footer_delete">Delete data</a></li>
+            <li><a href="/legal/kauppalista/" data-i18n="btn_privacy">Privacy</a></li>
+            <li><a href="/legal/kauppalista/support.html" data-i18n="btn_support">Support</a></li>
+            <li><a href="/legal/kauppalista/terms.html" data-i18n="btn_terms">Terms</a></li>
+            <li><a href="/legal/kauppalista/delete-data.html" data-i18n="btn_delete">Delete data</a></li>
           </ul>
         </div>
 
         <div class="footer-group">
           <h2 class="footer-group__heading" data-i18n="footer_apps_h">Apps</h2>
           <ul class="footer-links">
-            <li><a href="/" data-i18n="footer_apps">All apps</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.janstech.kauppalista" target="_blank" rel="noopener noreferrer" data-i18n="btn_google_play">Google Play</a></li>
+            <li><a href="/" data-i18n="btn_all_apps">All apps</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.janstech.kauppalista" target="_blank" rel="noopener noreferrer" data-i18n="btn_play">Open in Google Play</a></li>
             <li><a href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a></li>
           </ul>
         </div>
 
         <div class="footer-group">
           <h2 class="footer-group__heading" data-i18n="footer_lang_h">Language</h2>
-          <div class="lang-switch">
-            <div class="lang-switch__group">
-              <button class="lang-switch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
-              <button class="lang-switch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
+          <div class="langswitch">
+            <div class="langswitch__group">
+              <button class="langswitch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+              <button class="langswitch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
             </div>
           </div>
         </div>
@@ -257,124 +343,168 @@
         meta_description: "Shopping List & Notes is a local-first Android app for shopping lists, notes, tasks, recipes, birthdays, reminders, optional AI meal help, and shared lists.",
         skip: "Skip to content",
         sub: "Shopping List & Notes",
+        aria_nav: "Primary",
         nav_apps: "Apps",
         nav_app: "Shopping List",
         nav_legal: "Legal",
         lang_label: "Language",
-        badge: "Android 8+ productivity app",
-        hero_title: "Shopping List & Notes",
-        kicker: "Kauppalista & Muistiinpanot",
-        hero_p: "A local-first Android app for shopping lists, notes, tasks, recipes, birthdays, reminders, optional AI meal help, and shared lists when you choose to sign in.",
-        aria_summary: "App summary",
-        panel_1_h: "Core use",
-        panel_1_p: "Works locally without an account",
-        panel_2_h: "Online features",
-        panel_2_p: "Optional AI tools and shared lists",
-        panel_3_h: "Shared lists",
-        panel_3_p: "Google Sign-In for collaboration",
-        eyebrow_features: "Features",
-        features_h: "Built for everyday planning",
-        features_p: "Shopping List & Notes brings local lists, notes, reminders, recipes, and optional online helpers into one Android app.",
+
+        hero_cat: "Shopping & notes",
+        app_name: "Shopping List & Notes",
+        alt_name: "Kauppalista & Muistiinpanot",
+        hero_promise: "Plan the shop and keep notes, recipes and reminders in one place on your own device.",
+        hero_lede: "Lists, tasks, notes, folders, recipes and birthdays work locally, with no account. AI meal help and shared lists are there when you want them, and only then.",
+
+        facts_label: "At a glance",
+        spec_platform: "Platform",
+        spec_platform_v: "Android 8+",
+        spec_availability: "Availability",
+        spec_availability_v: "Google Play",
+        spec_account: "Account",
+        spec_account_v: "Not needed for local use",
+        spec_langs: "App languages",
+        spec_langs_v: "14",
+
+        summary_label: "Where the data lives",
+        sum_1_h: "On the device",
+        sum_1_p: "Lists, favourites, tasks, notes, folders, recipes, birthdays, reminders, settings and local backup",
+        sum_2_h: "Online, optional",
+        sum_2_p: "AI recipes, weekly meal plans and ingredient scanning",
+        sum_3_h: "In the cloud, optional",
+        sum_3_p: "Shared shopping and task lists after Google sign-in",
+
+        features_label: "Features",
+        features_h: "Everything the week needs, in one app",
+        features_intro: "The app started as a shopping list and grew into the rest of the notes people keep on their phone anyway.",
         f1_h: "Lists and tasks",
-        f1_p: "Shopping lists support item editing, reordering, purchased state, deletion, and favorites. Tasks support local one-time reminders.",
-        f2_h: "Notes, recipes, and planning",
-        f2_p: "Create notes and folders, save recipes as notes, plan weekly meals, and keep birthdays with local birthday reminders.",
+        f1_p: "Shopping lists with item editing, reordering, a purchased state, deletion and favourites. Tasks support local one-time reminders.",
+        f2_h: "Notes, recipes and planning",
+        f2_p: "Notes and folders, recipes saved as notes, weekly meal plans, and birthdays with local birthday reminders.",
         f3_h: "Optional AI help",
-        f3_p: "AI features can generate recipes and weekly meal plans, scan ingredients, suggest recipes from scanned ingredients, and save AI-generated recipes to notes.",
-        f4_h: "Shared lists when needed",
-        f4_p: "Shared shopping and task lists are optional. Users can sign in with Google, invite others with a link, and see updates in real time.",
-        eyebrow_trust: "Privacy",
-        trust_h: "Local use and privacy",
-        local_h: "Local-first summary",
-        local_p1: "The core app works locally without an account. Shopping lists, favorites, tasks, notes, folders, recipes saved as notes, birthdays, local reminders, settings, and local backup/export/import are stored on the device.",
-        local_p2: "AI features and cloud-backed shared lists are online-only areas. Shared-list cloud sync is separate from ordinary local app data.",
-        privacy_h: "Privacy and account use",
-        privacy_p1: "Core use does not require an account. Signing in does not automatically upload local lists, notes, recipes, birthdays, or reminders.",
-        privacy_p2: "Shared lists are cloud data and may store list metadata, items, memberships, roles, invite metadata, notification settings, and push notification metadata.",
-        eyebrow_legal: "Legal",
-        legal_h: "Legal and support",
-        legal_p: "Review the published legal pages for privacy, terms, support, and data deletion information.",
-        cta_h: "Download Shopping List & Notes",
-        cta_p: "Shopping lists, notes, tasks, recipes, and reminders on your own device, with optional AI help and shared lists.",
-        btn_google_play: "Google Play",
-        btn_features: "Features",
+        f3_p: "AI features can generate recipes and weekly meal plans, scan ingredients, suggest recipes from what was scanned, and save the result to your notes. None of it is required for ordinary use.",
+        f4_h: "Shared lists when they help",
+        f4_p: "Shared shopping and task lists are optional. Sign in with Google, invite someone with a link, and see updates in real time. Local “share as copy” stays separate and needs no account.",
+        f5_h: "Your own copy of the data",
+        f5_p: "Local backup, export and import for local app data, plus theme options and optional biometric protection for selected views.",
+
+        local_label: "Local first",
+        local_h: "What works without an account",
+        local_1_h: "Stored on the device",
+        local_1_p: "The core app works locally. These are kept on the phone and stay there unless you export them or turn on an online feature:",
+        local_1_l1: "Shopping lists, favourites and tasks",
+        local_1_l2: "Notes, folders and recipes saved as notes",
+        local_1_l3: "Birthdays and local reminders",
+        local_1_l4: "Settings and local backup, export and import",
+        local_2_h: "Online, only where you ask for it",
+        local_2_p: "Two areas need the network. Signing in does not upload your local lists, notes, recipes, birthdays or reminders.",
+        local_2_l1: "AI recipes, meal plans and ingredient scanning",
+        local_2_l2: "Shared shopping and task lists, which are cloud data",
+        local_2_l3: "Shared lists may store list metadata, items, memberships, roles, invite metadata and notification settings",
+
+        legal_label: "Legal and support",
+        legal_h: "Published pages for this app",
+        legal_p: "Privacy policy, terms, support instructions and data deletion, in Finnish and English.",
+
+        cta_h: "Shopping List & Notes on Google Play",
+        cta_p: "Shopping lists, notes, tasks, recipes and reminders on your own device, with optional AI help and shared lists.",
+
+        btn_play: "Open in Google Play",
+        btn_features: "See the features",
         btn_all_apps: "All apps",
-        btn_privacy: "Privacy Policy",
+        btn_privacy: "Privacy",
         btn_support: "Support",
         btn_terms: "Terms",
-        btn_delete: "Delete Data",
+        btn_delete: "Delete data",
         btn_email: "Email support",
-        footer_p: "Shopping List & Notes is an Android productivity app by JanstechApps.",
+
+        footer_p: "An Android productivity app by JanstechApps.",
         footer_legal_h: "Support & privacy",
         footer_apps_h: "Apps",
-        footer_lang_h: "Language",
-        footer_apps: "All apps",
-        footer_privacy: "Privacy",
-        footer_support: "Support",
-        footer_terms: "Terms",
-        footer_delete: "Delete data"
+        footer_lang_h: "Language"
       },
       fi: {
         meta_title: "Kauppalista & Muistiinpanot - JanstechApps",
-        meta_description: "Kauppalista & Muistiinpanot on paikallista käyttöä painottava Android-sovellus ostoslistoille, muistiinpanoille, tehtäville, resepteille, syntymäpäiville, muistutuksille, valinnaiselle AI-ruoka-avulle ja jaetuille listoille.",
+        meta_description: "Kauppalista & Muistiinpanot on local-first-tyylinen Android-sovellus ostoslistoille, muistiinpanoille, tehtäville, resepteille, syntymäpäiville, muistutuksille, valinnaiselle AI-ruoka-avulle ja jaetuille listoille.",
         skip: "Siirry sisältöön",
         sub: "Kauppalista & Muistiinpanot",
+        aria_nav: "Ensisijainen",
         nav_apps: "Sovellukset",
         nav_app: "Kauppalista",
-        nav_legal: "Lakiasiat",
+        nav_legal: "Legal",
         lang_label: "Kieli",
-        badge: "Android 8+ tuottavuussovellus",
-        hero_title: "Kauppalista & Muistiinpanot",
-        kicker: "Shopping List & Notes",
-        hero_p: "Paikallista käyttöä painottava Android-sovellus ostoslistoille, muistiinpanoille, tehtäville, resepteille, syntymäpäiville, muistutuksille, valinnaiselle AI-ruoka-avulle ja jaetuille listoille, kun päätät kirjautua sisään.",
-        aria_summary: "Sovelluksen tiivistelmä",
-        panel_1_h: "Peruskäyttö",
-        panel_1_p: "Toimii paikallisesti ilman tiliä",
-        panel_2_h: "Verkko-ominaisuudet",
-        panel_2_p: "Valinnaiset AI-työkalut ja jaetut listat",
-        panel_3_h: "Jaetut listat",
-        panel_3_p: "Google-kirjautuminen yhteiskäyttöön",
-        eyebrow_features: "Ominaisuudet",
-        features_h: "Rakennettu arjen suunnitteluun",
-        features_p: "Kauppalista & Muistiinpanot kokoaa paikalliset listat, muistiinpanot, muistutukset, reseptit ja valinnaiset verkkoavustajat yhteen Android-sovellukseen.",
+
+        hero_cat: "Ostokset ja muistiinpanot",
+        app_name: "Kauppalista & Muistiinpanot",
+        alt_name: "Shopping List & Notes",
+        hero_promise: "Suunnittele kaupassakäynti ja pidä muistiinpanot, reseptit ja muistutukset yhdessä paikassa omalla laitteellasi.",
+        hero_lede: "Listat, tehtävät, muistiinpanot, kansiot, reseptit ja syntymäpäivät toimivat paikallisesti ilman tiliä. AI-ruoka-apu ja jaetut listat ovat käytettävissä silloin kun niitä haluat – ja vain silloin.",
+
+        facts_label: "Lyhyesti",
+        spec_platform: "Alusta",
+        spec_platform_v: "Android 8+",
+        spec_availability: "Saatavuus",
+        spec_availability_v: "Google Play",
+        spec_account: "Tili",
+        spec_account_v: "Ei tarvita paikalliseen käyttöön",
+        spec_langs: "Sovelluskieliä",
+        spec_langs_v: "14",
+
+        summary_label: "Missä tiedot ovat",
+        sum_1_h: "Laitteella",
+        sum_1_p: "Listat, suosikit, tehtävät, muistiinpanot, kansiot, reseptit, syntymäpäivät, muistutukset, asetukset ja paikallinen varmuuskopio",
+        sum_2_h: "Verkossa, valinnaisesti",
+        sum_2_p: "AI-reseptit, viikkoruokalistat ja aineskannaus",
+        sum_3_h: "Pilvessä, valinnaisesti",
+        sum_3_p: "Jaetut ostos- ja tehtävälistat Google-kirjautumisen jälkeen",
+
+        features_label: "Ominaisuudet",
+        features_h: "Kaikki mitä viikko vaatii, samassa sovelluksessa",
+        features_intro: "Sovellus alkoi ostoslistasta ja kasvoi kattamaan loputkin muistiinpanot, joita puhelimessa kuitenkin pidetään.",
         f1_h: "Listat ja tehtävät",
         f1_p: "Ostoslistoissa voi muokata tuotteita, järjestää niitä uudelleen, merkitä ostetuksi, poistaa ja käyttää suosikkeja. Tehtävät tukevat paikallisia kertamuistutuksia.",
         f2_h: "Muistiinpanot, reseptit ja suunnittelu",
-        f2_p: "Luo muistiinpanoja ja kansioita, tallenna reseptejä muistiinpanoiksi, suunnittele viikkoruokia ja pidä syntymäpäivät paikallisilla syntymäpäivämuistutuksilla.",
+        f2_p: "Muistiinpanot ja kansiot, muistiinpanoiksi tallennetut reseptit, viikkoruokalistat sekä syntymäpäivät paikallisilla syntymäpäivämuistutuksilla.",
         f3_h: "Valinnainen AI-apu",
-        f3_p: "AI-ominaisuudet voivat luoda reseptejä ja viikkoruokalistoja, skannata ainesosia, ehdottaa reseptejä skannatuista ainesosista ja tallentaa AI-reseptejä muistiinpanoihin.",
-        f4_h: "Jaetut listat tarvittaessa",
-        f4_p: "Jaetut ostos- ja tehtävälistat ovat valinnaisia. Käyttäjät voivat kirjautua Googlella, kutsua muita linkillä ja nähdä päivitykset reaaliajassa.",
-        eyebrow_trust: "Tietosuoja",
-        trust_h: "Paikallinen käyttö ja tietosuoja",
-        local_h: "Paikallisen käytön yhteenveto",
-        local_p1: "Sovelluksen peruskäyttö toimii paikallisesti ilman tiliä. Ostoslistat, suosikit, tehtävät, muistiinpanot, kansiot, muistiinpanoiksi tallennetut reseptit, syntymäpäivät, paikalliset muistutukset, asetukset ja paikallinen varmuuskopiointi/vienti/tuonti tallennetaan laitteelle.",
-        local_p2: "AI-ominaisuudet ja pilvitaustaiset jaetut listat ovat verkko-ominaisuuksia. Jaettujen listojen pilvisynkronointi on erillinen tavallisesta paikallisesta sovellusdatasta.",
-        privacy_h: "Tietosuoja ja tilin käyttö",
-        privacy_p1: "Peruskäyttö ei vaadi tiliä. Kirjautuminen ei automaattisesti lataa paikallisia listoja, muistiinpanoja, reseptejä, syntymäpäiviä tai muistutuksia pilveen.",
-        privacy_p2: "Jaetut listat ovat pilvidataa ja voivat tallentaa listojen metatietoja, kohteita, jäsenyyksiä, rooleja, kutsujen metatietoja, ilmoitusasetuksia ja push-ilmoitusten metatietoja.",
-        eyebrow_legal: "Lakiasiat",
-        legal_h: "Lakiasiat ja tuki",
-        legal_p: "Julkaistuilta legal-sivuilta löytyvät tietosuoja-, käyttöehto-, tuki- ja tietojen poisto-ohjeet.",
-        cta_h: "Lataa Kauppalista & Muistiinpanot",
+        f3_p: "AI-ominaisuudet voivat luoda reseptejä ja viikkoruokalistoja, skannata ainesosia, ehdottaa reseptejä skannatuista aineksista ja tallentaa tuloksen muistiinpanoihin. Mikään näistä ei ole pakollista tavallisessa käytössä.",
+        f4_h: "Jaetut listat silloin kun niistä on hyötyä",
+        f4_p: "Jaetut ostos- ja tehtävälistat ovat valinnaisia. Kirjaudu Googlella, kutsu joku linkillä ja näe päivitykset reaaliajassa. Paikallinen ”jaa kopiona” on tästä erillinen eikä vaadi tiliä.",
+        f5_h: "Oma kopio tiedoista",
+        f5_p: "Paikallinen varmuuskopiointi, vienti ja tuonti sovelluksen paikalliselle datalle, lisäksi teemavalinnat ja valinnainen biometrinen suojaus valituille näkymille.",
+
+        local_label: "Local-first",
+        local_h: "Mikä toimii ilman tiliä",
+        local_1_h: "Laitteelle tallennettuna",
+        local_1_p: "Sovelluksen ydin toimii paikallisesti. Nämä pysyvät puhelimessa, ellet itse vie niitä ulos tai ota käyttöön verkko-ominaisuutta:",
+        local_1_l1: "Ostoslistat, suosikit ja tehtävät",
+        local_1_l2: "Muistiinpanot, kansiot ja muistiinpanoiksi tallennetut reseptit",
+        local_1_l3: "Syntymäpäivät ja paikalliset muistutukset",
+        local_1_l4: "Asetukset sekä paikallinen varmuuskopiointi, vienti ja tuonti",
+        local_2_h: "Verkossa vain pyydettäessä",
+        local_2_p: "Kaksi aluetta tarvitsee verkkoa. Kirjautuminen ei lataa paikallisia listojasi, muistiinpanojasi, reseptejäsi, syntymäpäiviäsi tai muistutuksiasi pilveen.",
+        local_2_l1: "AI-reseptit, viikkoruokalistat ja aineskannaus",
+        local_2_l2: "Jaetut ostos- ja tehtävälistat, jotka ovat pilvidataa",
+        local_2_l3: "Jaetut listat voivat tallentaa listojen metatietoja, kohteita, jäsenyyksiä, rooleja, kutsujen metatietoja ja ilmoitusasetuksia",
+
+        legal_label: "Legal ja tuki",
+        legal_h: "Tämän sovelluksen julkaistut sivut",
+        legal_p: "Tietosuojaseloste, käyttöehdot, tukiohjeet ja tietojen poisto suomeksi ja englanniksi.",
+
+        cta_h: "Kauppalista & Muistiinpanot Google Playssa",
         cta_p: "Ostoslistat, muistiinpanot, tehtävät, reseptit ja muistutukset omalla laitteellasi, valinnaisella AI-avulla ja jaetuilla listoilla.",
-        btn_google_play: "Google Play",
-        btn_features: "Ominaisuudet",
+
+        btn_play: "Avaa Google Playssa",
+        btn_features: "Katso ominaisuudet",
         btn_all_apps: "Kaikki sovellukset",
         btn_privacy: "Tietosuoja",
         btn_support: "Tuki",
         btn_terms: "Käyttöehdot",
         btn_delete: "Poista tiedot",
         btn_email: "Sähköpostituki",
-        footer_p: "Kauppalista & Muistiinpanot on JanstechAppsin Android-tuottavuussovellus.",
+
+        footer_p: "JanstechAppsin Android-tuottavuussovellus.",
         footer_legal_h: "Tuki ja tietosuoja",
         footer_apps_h: "Sovellukset",
-        footer_lang_h: "Kieli",
-        footer_apps: "Kaikki sovellukset",
-        footer_privacy: "Tietosuoja",
-        footer_support: "Tuki",
-        footer_terms: "Käyttöehdot",
-        footer_delete: "Poista tiedot"
+        footer_lang_h: "Kieli"
       }
     };
 
