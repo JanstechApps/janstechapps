@@ -1,6 +1,6 @@
-# 🤖 AGENTS.md — Janstech Apps repository rules for Codex / AI agents
+# 🤖 AGENTS.md — JanstechApps repository rules for Codex / AI agents
 
-This repository is the public Janstech Apps static website.
+This repository is the public JanstechApps static website.
 
 Production domain:
 
@@ -8,7 +8,7 @@ Production domain:
 
 The repository hosts:
 
-- Janstech Apps landing page
+- JanstechApps landing page
 - shared public assets
 - app-specific legal/support pages
 - GitHub Pages custom domain configuration
@@ -240,7 +240,7 @@ Exceptions are allowed only if deliberately documented.
 
 # 🏷️ APP BRANDING RULE
 
-This repository is for Janstech Apps, not the personal portfolio.
+This repository is for JanstechApps, not the personal portfolio.
 
 Agents MUST NOT add personal portfolio content unless explicitly requested.
 
@@ -253,7 +253,7 @@ Avoid:
 
 Keep the site focused on:
 
-- Janstech Apps
+- JanstechApps
 - Android apps
 - Google Play links
 - privacy/support/terms/delete-data pages
@@ -565,7 +565,7 @@ If no commit was made, clearly say why.
 
 # 🏁 FINAL RULE
 
-This repository represents the public Janstech Apps brand.
+This repository represents the public JanstechApps brand.
 
 Keep it:
 

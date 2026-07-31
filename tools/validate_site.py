@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate (or regenerate) the published Janstech Apps site metadata.
+"""Validate (or regenerate) the published JanstechApps site metadata.
 
 GitHub Pages serves this repository verbatim from the repository root, so the
 repository root *is* the publish root. This script therefore checks the same

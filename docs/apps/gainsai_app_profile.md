@@ -120,7 +120,7 @@ Primary GainsAI sources:
 
 Reference implementation sources:
 
-- Janstech Apps pages for Shopping List & Notes and WaveIQ Radio, used for the
+- JanstechApps pages for Shopping List & Notes and WaveIQ Radio, used for the
   shared hero, card, CTA, legal-link, responsive, and EN/FI patterns.
 - RadioPlayer/README.md and Shoppinglist/README.md, used to compare
   production-status and public-product documentation conventions.

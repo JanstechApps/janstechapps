@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Janstech Apps — app pages (/apps/<app>/index.html)
+   JanstechApps — app pages (/apps/<app>/index.html)
 
    The landing page (index.html) uses /home.css and legal pages use their own
    local legal/<app>/style.css. This file is loaded only by the app pages, so

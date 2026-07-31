@@ -1,10 +1,10 @@
-# Janstech Apps Website
+# JanstechApps Website
 
-This repository contains the static Janstech Apps website served from the repository root by GitHub Pages. The custom domain is configured with `CNAME`, so production pages are available under `https://janstechapps.com`.
+This repository contains the static JanstechApps website served from the repository root by GitHub Pages. The custom domain is configured with `CNAME`, so production pages are available under `https://janstechapps.com`.
 
 ## Structure
 
-- `index.html` - Janstech Apps landing page.
+- `index.html` - JanstechApps landing page.
 - `home.css` - Landing page stylesheet and design tokens (used only by `index.html`).
 - `style.css` - Stylesheet for the app pages under `apps/` (legal pages use their own local `style.css`).
 - `assets/` - Shared app images and favicon files.
@@ -75,7 +75,7 @@ styling can change without touching any other page.
 ### Structure
 
 `header` (brand, Apps link, EN/FI switch) → `main` with the hero, the `#apps`
-card grid and the `#why` benefit grid plus the Janstech Apps intro → `footer`
+card grid and the `#why` benefit grid plus the JanstechApps intro → `footer`
 with four link groups and a second EN/FI switch. There is exactly one `h1`
 (the hero title).
 
