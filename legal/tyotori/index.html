@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Työtori – Privacy Policy</title>
+  <link rel="icon" type="image/png" href="/assets/tyotori-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="robots" content="index,follow" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/tyotori-icon.png" alt="Työtori logo">
+        <div>
+          <h1>Työtori <span class="sub">Legal &amp; Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="active" href="/legal/tyotori/" data-i18n="nav_privacy">Privacy</a>
+        <a href="/legal/tyotori/support.html" data-i18n="nav_support">Support</a>
+        <a href="/legal/tyotori/terms.html" data-i18n="nav_terms">Terms</a>
+        <a href="/legal/tyotori/delete-data.html" data-i18n="nav_delete">Delete Data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button" aria-pressed="true">EN</button>
+        <button id="btnFi" type="button" aria-pressed="false">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span id="lastUpdated">2026-08-12</span></span>
+      <h2 data-i18n="title">Privacy Policy</h2>
+      <p data-i18n="subtitle">
+        This page explains what data Työtori processes, why it is processed, who it is sent to, and how you can delete it.
+      </p>
+    </section>
+
+    <div class="grid">
+      <main class="card">
+        <h3 data-i18n="pp_overview_h">Overview</h3>
+        <p data-i18n="pp_overview_p">
+          Työtori is an Android app for job seekers in Finland. It searches public job boards, keeps your job search profile and CV, prepares application drafts and their attachments, helps you fill in an employer’s application form, and tracks the applications of your review period. Työtori never sends an application to an employer: you always send it yourself.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_service_h">The service and how to contact us</h3>
+        <p data-i18n="pp_service_p">
+          Työtori is published on Google Play under the JanstechApps app brand, and its backend runs on CodentraTec-operated hosting. Privacy questions and deletion requests: <b>janstech.apps@gmail.com</b>
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_data_h">Data we process</h3>
+        <p class="small" data-i18n="pp_data_note">
+          Almost everything below is data you enter yourself. All of it is tied to your Työtori account and all of it is removed when you delete the account.
+        </p>
+        <ul>
+          <li data-i18n="pp_data_1"><b>Account:</b> email address, authentication identifiers from Firebase Authentication, and the numeric user id of the Työtori backend. Työtori does not store your password.</li>
+          <li data-i18n="pp_data_2"><b>Profile:</b> first and last name, phone number, city, LinkedIn and portfolio addresses, desired job titles and locations, remote work preference, education, work experience, skills, languages, driving licence details and profile summary.</li>
+          <li data-i18n="pp_data_3"><b>CV:</b> an uploaded PDF file, the text extracted from it, or a CV you wrote by hand in the app.</li>
+          <li data-i18n="pp_data_4"><b>Job searches and jobs:</b> the search addresses used, the results, saved jobs with their description and application deadline, and the suitability score, level and explanation.</li>
+          <li data-i18n="pp_data_5"><b>Applications:</b> application drafts, cover messages, the document language, the status of an application, and the dates it was marked as sent or archived.</li>
+          <li data-i18n="pp_data_6"><b>Subscription:</b> if you buy Työtori+, Google Play purchase and subscription state. Työtori does not receive or store card details.</li>
+          <li data-i18n="pp_data_7"><b>Usage statistics:</b> coarse events with a fixed set of parameters, if you leave usage statistics switched on in Settings.</li>
+          <li data-i18n="pp_data_8"><b>Crash reports:</b> stack traces and technical keys such as build type, app version, locale and error category.</li>
+          <li data-i18n="pp_data_9"><b>Abuse control:</b> the Android App Set ID, stored on the backend only as a keyed hash, used to keep the free search quota fair.</li>
+          <li data-i18n="pp_data_10"><b>Technical logs:</b> category-level server logs and standard web server access logs.</li>
+        </ul>
+        <p data-i18n="pp_data_not">
+          Työtori does not ask for a location permission, does not collect an Advertising ID, and does not support a profile photo.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_purpose_h">Why we process data</h3>
+        <ul>
+          <li data-i18n="pp_purpose_1">To create an account, sign you in and identify your data.</li>
+          <li data-i18n="pp_purpose_2">To search job boards and to score and order the results.</li>
+          <li data-i18n="pp_purpose_3">To draft application texts, cover messages, application letter PDFs and a PDF CV.</li>
+          <li data-i18n="pp_purpose_4">To help you fill in an employer’s form and to show the sending instructions of a posting.</li>
+          <li data-i18n="pp_purpose_5">To count the applications of your review period.</li>
+          <li data-i18n="pp_purpose_6">To verify a Työtori+ subscription and grant the matching access.</li>
+          <li data-i18n="pp_purpose_7">To keep the service working and secure, to fix errors and to prevent abuse.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_ai_h">AI processing</h3>
+        <p data-i18n="pp_ai_p1">
+          Työtori uses a text-generation service as a processor acting on its instructions. The backend, not the app, makes those calls, and there are four of them:
+        </p>
+        <ul>
+          <li data-i18n="pp_ai_1">Generating an application draft and its cover message from your profile, CV text and the job posting.</li>
+          <li data-i18n="pp_ai_2">Writing the suitability analysis of a single saved job.</li>
+          <li data-i18n="pp_ai_3">Explaining why the best candidates of a search were selected.</li>
+          <li data-i18n="pp_ai_4">Answering form help in the Työtori browser, from the visible questions of the form.</li>
+        </ul>
+        <p data-i18n="pp_ai_p2">
+          Because of this, we do not claim that your data is never passed to anyone: profile, CV, job posting and draft text really are transmitted for these purposes. The form help request never contains a value you typed into an employer’s form. Prompts and responses are not written to the application log.
+        </p>
+        <p data-i18n="pp_ai_p3">
+          Every AI result is a draft. Check it before you use it. The deterministic part of the suitability score works without the AI service, and the employer never sees Työtori’s estimate.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_browser_h">The Työtori browser and employer forms</h3>
+        <p data-i18n="pp_browser_p1">
+          Työtori has an internal browser for filling in an employer’s own application form. From the page, it reads only the visible structure of the form: field labels, field types, options, whether a field is required, and nearby help text. It does not read the values you type, passwords, hidden fields, cookies, local or session storage, and it does not extract the page’s HTML, DOM or full text.
+        </p>
+        <ul>
+          <li data-i18n="pp_browser_1">Checking the form, filling in basic details and inserting an application text are three separate actions that you start and confirm.</li>
+          <li data-i18n="pp_browser_2">Only name, first name, last name, email, phone, city, LinkedIn and portfolio can be filled, and only into text, email and phone fields.</li>
+          <li data-i18n="pp_browser_3">Checkboxes, radio buttons, dropdowns and consent controls are shown as recommendations and are never selected for you.</li>
+          <li data-i18n="pp_browser_4">You choose an attachment yourself in the employer page’s own file picker.</li>
+          <li data-i18n="pp_browser_5">Työtori never submits a form.</li>
+        </ul>
+        <p data-i18n="pp_browser_p2">
+          Employer pages commonly save a field as soon as its content changes. This means the employer’s service can hold the filled values, and a file you have chosen, before you press send. The app tells you this before each of those steps.
+        </p>
+        <p data-i18n="pp_browser_p3">
+          The employer’s site sets its own cookies and storage inside the browser view, under its own privacy policy. Työtori clears the browser cookies and storage at an account boundary: app start, sign-out, account deletion and a change of signed-in identity.
+        </p>
+        <p data-i18n="pp_browser_p4">
+          “Analyze application instructions” sends the visible text of the current page and its address to the Työtori backend, where the result is produced by rules, without the AI service, and is not stored.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_third_h">Third-party services</h3>
+        <ul>
+          <li data-i18n="pp_third_1"><b>Firebase Authentication</b> and <b>Google Sign-In</b> for signing in.</li>
+          <li data-i18n="pp_third_2"><b>Firebase App Check with Play Integrity</b>, so the backend can tell a genuine app installation from a forged request. No user content is sent.</li>
+          <li data-i18n="pp_third_3"><b>Firebase Analytics</b> for coarse usage events, unless you switch usage statistics off.</li>
+          <li data-i18n="pp_third_4"><b>Firebase Crashlytics</b> for crash and error diagnostics.</li>
+          <li data-i18n="pp_third_5"><b>A text-generation service</b> for the four purposes listed above.</li>
+          <li data-i18n="pp_third_6"><b>The Työtori backend</b> on CodentraTec-operated hosting, which stores everything in the list above.</li>
+          <li data-i18n="pp_third_7"><b>Google Play</b> and <b>Google Play Billing</b> for distribution, updates and the Työtori+ subscription.</li>
+        </ul>
+        <p data-i18n="pp_third_p1">
+          Työtori’s backend reads the public job boards <b>tyomarkkinatori.fi</b>, <b>duunitori.fi</b>, <b>jobly.fi</b>, <b>kuntarekry.fi</b> and <b>valtiolle.fi</b>. They receive an ordinary search request; they do not receive your profile, your CV or your application.
+        </p>
+        <p data-i18n="pp_third_p2">
+          Employer sites and applicant tracking systems that you open yourself are independent services with their own privacy policies.
+        </p>
+        <p data-i18n="pp_third_p3">
+          Työtori does not sell personal data and does not use it for advertising profiling.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_analytics_h">Usage statistics and crash reporting</h3>
+        <p data-i18n="pp_analytics_p1">
+          Usage statistics are coarse: fixed event names and a small allow-list of parameters such as search mode, number of sources, a bucketed result count, the sending channel and the action taken. Email address, name, phone number, LinkedIn or portfolio address, CV content, application text, the full text of a job posting, search words and exact locations are never sent to analytics. You can switch usage statistics off in Settings.
+        </p>
+        <p data-i18n="pp_analytics_p2">
+          Crash reporting is separate and stays on in release builds, because it is what makes a crash fixable. It carries stack traces and technical keys plus the backend user id, and no application content. <b>The usage statistics switch does not cover crash reporting.</b>
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_storage_h">Storage, retention and backups</h3>
+        <ul>
+          <li data-i18n="pp_storage_1"><b>Backend:</b> account, profile, CV, jobs, searches, applications and subscription state, kept as long as the account exists.</li>
+          <li data-i18n="pp_storage_2"><b>On the device:</b> prepared application material PDFs, generated CV PDFs, a preview cache and app settings. These are cleared on sign-out and on account deletion.</li>
+          <li data-i18n="pp_storage_3"><b>Server logs:</b> application logs are category-level and rotate after 14 days. Web server access logs are standard.</li>
+          <li data-i18n="pp_storage_4"><b>Android Auto Backup:</b> Android may back up the app’s private files to your own Google Drive. The browser session files are excluded, so an employer session never returns through a restore. This is your data going to your own Drive under Google’s platform backup.</li>
+          <li data-i18n="pp_storage_5"><b>Files you saved yourself:</b> attachments you save to your phone’s Downloads folder are your own files, and Työtori does not delete them.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_delete_h">Deleting your data</h3>
+        <p data-i18n="pp_delete_p">
+          You can delete your account and its data in the app: <b>Settings → Account → User account → Delete my account and all my data</b>. This removes your rows from the backend database, the CV files stored on the server, your Firebase identity, and the material files on the device. If the identity deletion fails, the app reports the deletion as incomplete instead of claiming success. Limited technical logs and backend backups can survive for a short time, so we do not promise instant erasure from every backup. A Työtori+ subscription is cancelled separately in Google Play. See the <a href="/legal/tyotori/delete-data.html">Delete Data</a> page.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_security_h">Security</h3>
+        <ul>
+          <li data-i18n="pp_security_1">All traffic between the app and the backend uses HTTPS.</li>
+          <li data-i18n="pp_security_2">Every protected backend request validates the Firebase ID token of the signed-in user.</li>
+          <li data-i18n="pp_security_3">Firebase App Check with Play Integrity is used to attest production requests.</li>
+          <li data-i18n="pp_security_4">Application logs record categories and error classes, not addresses, email, prompts, payloads, tokens or form values.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_rights_h">Your rights</h3>
+        <ul>
+          <li data-i18n="pp_rights_1">View and edit your profile and CV in the app at any time.</li>
+          <li data-i18n="pp_rights_2">Switch usage statistics off in Settings.</li>
+          <li data-i18n="pp_rights_3">Delete your account and its data in Settings, without a subscription.</li>
+          <li data-i18n="pp_rights_4">Ask about privacy or request deletion by email if you cannot get into the app.</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_children_h">Children</h3>
+        <p data-i18n="pp_children_p">
+          Työtori is not directed at children.
+        </p>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="pp_contact_h">Contact</h3>
+        <p data-i18n="pp_contact_p">
+          For privacy questions or deletion requests, contact: <b>janstech.apps@gmail.com</b>
+        </p>
+
+        <p class="footer">
+          <span data-i18n="pp_footer">
+            This policy may change as features, service providers or legal requirements change. The “Updated” date at the top indicates the latest revision.
+          </span>
+        </p>
+      </main>
+
+      <aside class="card">
+        <h3 data-i18n="quick_h">Quick links</h3>
+        <ul>
+          <li><a href="/legal/tyotori/delete-data.html" data-i18n="quick_delete">How to delete data</a></li>
+          <li><a href="/legal/tyotori/support.html" data-i18n="quick_support">Support</a></li>
+          <li><a href="/legal/tyotori/terms.html" data-i18n="quick_terms">Terms of Use</a></li>
+          <li><a href="/apps/tyotori/" data-i18n="quick_app">About Työtori</a></li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="facts_h">What Työtori never does</h3>
+        <ul>
+          <li data-i18n="facts_1">Send an application to an employer for you</li>
+          <li data-i18n="facts_2">Submit an employer’s form</li>
+          <li data-i18n="facts_3">Read what you type into an employer’s form</li>
+          <li data-i18n="facts_4">Choose or upload an attachment without you</li>
+          <li data-i18n="facts_5">Collect an Advertising ID or your location</li>
+        </ul>
+
+        <hr class="sep"/>
+
+        <h3 data-i18n="control_h">What you control</h3>
+        <ul>
+          <li data-i18n="control_1">Usage statistics on or off, in Settings</li>
+          <li data-i18n="control_2">Which job sources a search uses</li>
+          <li data-i18n="control_3">Every word of an application before it is sent</li>
+          <li data-i18n="control_4">Deleting your account and its data, at any time</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy: "Privacy",
+        nav_support: "Support",
+        nav_terms: "Terms",
+        nav_delete: "Delete Data",
+        lang_label: "Language",
+        badge: "Updated",
+        title: "Privacy Policy",
+        subtitle: "This page explains what data Työtori processes, why it is processed, who it is sent to, and how you can delete it.",
+
+        pp_overview_h: "Overview",
+        pp_overview_p: "Työtori is an Android app for job seekers in Finland. It searches public job boards, keeps your job search profile and CV, prepares application drafts and their attachments, helps you fill in an employer’s application form, and tracks the applications of your review period. Työtori never sends an application to an employer: you always send it yourself.",
+
+        pp_service_h: "The service and how to contact us",
+        pp_service_p: "Työtori is published on Google Play under the JanstechApps app brand, and its backend runs on CodentraTec-operated hosting. Privacy questions and deletion requests: <b>janstech.apps@gmail.com</b>",
+
+        pp_data_h: "Data we process",
+        pp_data_note: "Almost everything below is data you enter yourself. All of it is tied to your Työtori account and all of it is removed when you delete the account.",
+        pp_data_1: "<b>Account:</b> email address, authentication identifiers from Firebase Authentication, and the numeric user id of the Työtori backend. Työtori does not store your password.",
+        pp_data_2: "<b>Profile:</b> first and last name, phone number, city, LinkedIn and portfolio addresses, desired job titles and locations, remote work preference, education, work experience, skills, languages, driving licence details and profile summary.",
+        pp_data_3: "<b>CV:</b> an uploaded PDF file, the text extracted from it, or a CV you wrote by hand in the app.",
+        pp_data_4: "<b>Job searches and jobs:</b> the search addresses used, the results, saved jobs with their description and application deadline, and the suitability score, level and explanation.",
+        pp_data_5: "<b>Applications:</b> application drafts, cover messages, the document language, the status of an application, and the dates it was marked as sent or archived.",
+        pp_data_6: "<b>Subscription:</b> if you buy Työtori+, Google Play purchase and subscription state. Työtori does not receive or store card details.",
+        pp_data_7: "<b>Usage statistics:</b> coarse events with a fixed set of parameters, if you leave usage statistics switched on in Settings.",
+        pp_data_8: "<b>Crash reports:</b> stack traces and technical keys such as build type, app version, locale and error category.",
+        pp_data_9: "<b>Abuse control:</b> the Android App Set ID, stored on the backend only as a keyed hash, used to keep the free search quota fair.",
+        pp_data_10: "<b>Technical logs:</b> category-level server logs and standard web server access logs.",
+        pp_data_not: "Työtori does not ask for a location permission, does not collect an Advertising ID, and does not support a profile photo.",
+
+        pp_purpose_h: "Why we process data",
+        pp_purpose_1: "To create an account, sign you in and identify your data.",
+        pp_purpose_2: "To search job boards and to score and order the results.",
+        pp_purpose_3: "To draft application texts, cover messages, application letter PDFs and a PDF CV.",
+        pp_purpose_4: "To help you fill in an employer’s form and to show the sending instructions of a posting.",
+        pp_purpose_5: "To count the applications of your review period.",
+        pp_purpose_6: "To verify a Työtori+ subscription and grant the matching access.",
+        pp_purpose_7: "To keep the service working and secure, to fix errors and to prevent abuse.",
+
+        pp_ai_h: "AI processing",
+        pp_ai_p1: "Työtori uses a text-generation service as a processor acting on its instructions. The backend, not the app, makes those calls, and there are four of them:",
+        pp_ai_1: "Generating an application draft and its cover message from your profile, CV text and the job posting.",
+        pp_ai_2: "Writing the suitability analysis of a single saved job.",
+        pp_ai_3: "Explaining why the best candidates of a search were selected.",
+        pp_ai_4: "Answering form help in the Työtori browser, from the visible questions of the form.",
+        pp_ai_p2: "Because of this, we do not claim that your data is never passed to anyone: profile, CV, job posting and draft text really are transmitted for these purposes. The form help request never contains a value you typed into an employer’s form. Prompts and responses are not written to the application log.",
+        pp_ai_p3: "Every AI result is a draft. Check it before you use it. The deterministic part of the suitability score works without the AI service, and the employer never sees Työtori’s estimate.",
+
+        pp_browser_h: "The Työtori browser and employer forms",
+        pp_browser_p1: "Työtori has an internal browser for filling in an employer’s own application form. From the page, it reads only the visible structure of the form: field labels, field types, options, whether a field is required, and nearby help text. It does not read the values you type, passwords, hidden fields, cookies, local or session storage, and it does not extract the page’s HTML, DOM or full text.",
+        pp_browser_1: "Checking the form, filling in basic details and inserting an application text are three separate actions that you start and confirm.",
+        pp_browser_2: "Only name, first name, last name, email, phone, city, LinkedIn and portfolio can be filled, and only into text, email and phone fields.",
+        pp_browser_3: "Checkboxes, radio buttons, dropdowns and consent controls are shown as recommendations and are never selected for you.",
+        pp_browser_4: "You choose an attachment yourself in the employer page’s own file picker.",
+        pp_browser_5: "Työtori never submits a form.",
+        pp_browser_p2: "Employer pages commonly save a field as soon as its content changes. This means the employer’s service can hold the filled values, and a file you have chosen, before you press send. The app tells you this before each of those steps.",
+        pp_browser_p3: "The employer’s site sets its own cookies and storage inside the browser view, under its own privacy policy. Työtori clears the browser cookies and storage at an account boundary: app start, sign-out, account deletion and a change of signed-in identity.",
+        pp_browser_p4: "“Analyze application instructions” sends the visible text of the current page and its address to the Työtori backend, where the result is produced by rules, without the AI service, and is not stored.",
+
+        pp_third_h: "Third-party services",
+        pp_third_1: "<b>Firebase Authentication</b> and <b>Google Sign-In</b> for signing in.",
+        pp_third_2: "<b>Firebase App Check with Play Integrity</b>, so the backend can tell a genuine app installation from a forged request. No user content is sent.",
+        pp_third_3: "<b>Firebase Analytics</b> for coarse usage events, unless you switch usage statistics off.",
+        pp_third_4: "<b>Firebase Crashlytics</b> for crash and error diagnostics.",
+        pp_third_5: "<b>A text-generation service</b> for the four purposes listed above.",
+        pp_third_6: "<b>The Työtori backend</b> on CodentraTec-operated hosting, which stores everything in the list above.",
+        pp_third_7: "<b>Google Play</b> and <b>Google Play Billing</b> for distribution, updates and the Työtori+ subscription.",
+        pp_third_p1: "Työtori’s backend reads the public job boards <b>tyomarkkinatori.fi</b>, <b>duunitori.fi</b>, <b>jobly.fi</b>, <b>kuntarekry.fi</b> and <b>valtiolle.fi</b>. They receive an ordinary search request; they do not receive your profile, your CV or your application.",
+        pp_third_p2: "Employer sites and applicant tracking systems that you open yourself are independent services with their own privacy policies.",
+        pp_third_p3: "Työtori does not sell personal data and does not use it for advertising profiling.",
+
+        pp_analytics_h: "Usage statistics and crash reporting",
+        pp_analytics_p1: "Usage statistics are coarse: fixed event names and a small allow-list of parameters such as search mode, number of sources, a bucketed result count, the sending channel and the action taken. Email address, name, phone number, LinkedIn or portfolio address, CV content, application text, the full text of a job posting, search words and exact locations are never sent to analytics. You can switch usage statistics off in Settings.",
+        pp_analytics_p2: "Crash reporting is separate and stays on in release builds, because it is what makes a crash fixable. It carries stack traces and technical keys plus the backend user id, and no application content. <b>The usage statistics switch does not cover crash reporting.</b>",
+
+        pp_storage_h: "Storage, retention and backups",
+        pp_storage_1: "<b>Backend:</b> account, profile, CV, jobs, searches, applications and subscription state, kept as long as the account exists.",
+        pp_storage_2: "<b>On the device:</b> prepared application material PDFs, generated CV PDFs, a preview cache and app settings. These are cleared on sign-out and on account deletion.",
+        pp_storage_3: "<b>Server logs:</b> application logs are category-level and rotate after 14 days. Web server access logs are standard.",
+        pp_storage_4: "<b>Android Auto Backup:</b> Android may back up the app’s private files to your own Google Drive. The browser session files are excluded, so an employer session never returns through a restore. This is your data going to your own Drive under Google’s platform backup.",
+        pp_storage_5: "<b>Files you saved yourself:</b> attachments you save to your phone’s Downloads folder are your own files, and Työtori does not delete them.",
+
+        pp_delete_h: "Deleting your data",
+        pp_delete_p: "You can delete your account and its data in the app: <b>Settings → Account → User account → Delete my account and all my data</b>. This removes your rows from the backend database, the CV files stored on the server, your Firebase identity, and the material files on the device. If the identity deletion fails, the app reports the deletion as incomplete instead of claiming success. Limited technical logs and backend backups can survive for a short time, so we do not promise instant erasure from every backup. A Työtori+ subscription is cancelled separately in Google Play. See the <a href=\"/legal/tyotori/delete-data.html\">Delete Data</a> page.",
+
+        pp_security_h: "Security",
+        pp_security_1: "All traffic between the app and the backend uses HTTPS.",
+        pp_security_2: "Every protected backend request validates the Firebase ID token of the signed-in user.",
+        pp_security_3: "Firebase App Check with Play Integrity is used to attest production requests.",
+        pp_security_4: "Application logs record categories and error classes, not addresses, email, prompts, payloads, tokens or form values.",
+
+        pp_rights_h: "Your rights",
+        pp_rights_1: "View and edit your profile and CV in the app at any time.",
+        pp_rights_2: "Switch usage statistics off in Settings.",
+        pp_rights_3: "Delete your account and its data in Settings, without a subscription.",
+        pp_rights_4: "Ask about privacy or request deletion by email if you cannot get into the app.",
+
+        pp_children_h: "Children",
+        pp_children_p: "Työtori is not directed at children.",
+
+        pp_contact_h: "Contact",
+        pp_contact_p: "For privacy questions or deletion requests, contact: <b>janstech.apps@gmail.com</b>",
+
+        pp_footer: "This policy may change as features, service providers or legal requirements change. The “Updated” date at the top indicates the latest revision.",
+
+        quick_h: "Quick links",
+        quick_delete: "How to delete data",
+        quick_support: "Support",
+        quick_terms: "Terms of Use",
+        quick_app: "About Työtori",
+
+        facts_h: "What Työtori never does",
+        facts_1: "Send an application to an employer for you",
+        facts_2: "Submit an employer’s form",
+        facts_3: "Read what you type into an employer’s form",
+        facts_4: "Choose or upload an attachment without you",
+        facts_5: "Collect an Advertising ID or your location",
+
+        control_h: "What you control",
+        control_1: "Usage statistics on or off, in Settings",
+        control_2: "Which job sources a search uses",
+        control_3: "Every word of an application before it is sent",
+        control_4: "Deleting your account and its data, at any time"
+      },
+      fi: {
+        nav_privacy: "Tietosuoja",
+        nav_support: "Tuki",
+        nav_terms: "Käyttöehdot",
+        nav_delete: "Poista tiedot",
+        lang_label: "Kieli",
+        badge: "Päivitetty",
+        title: "Tietosuojaseloste",
+        subtitle: "Tällä sivulla kerrotaan, mitä tietoja Työtori käsittelee, miksi, kenelle niitä välitetään ja miten voit poistaa ne.",
+
+        pp_overview_h: "Yleiskuva",
+        pp_overview_p: "Työtori on Android-sovellus suomalaiselle työnhakijalle. Se hakee työpaikkoja julkisista työpaikkalähteistä, säilyttää työnhakuprofiilin ja CV:n, valmistelee hakemusluonnoksia liitteineen, auttaa työnantajan hakulomakkeen täytössä ja seuraa tarkastelujakson hakemuksia. Työtori ei koskaan lähetä hakemusta työnantajalle: sen lähetät aina itse.",
+
+        pp_service_h: "Palvelu ja yhteystiedot",
+        pp_service_p: "Työtori on julkaistu Google Playssa JanstechApps-sovellusbrändin alla, ja sen taustapalvelu toimii CodentraTecin ylläpitämässä palvelinympäristössä. Tietosuojakysymykset ja poistopyynnöt: <b>janstech.apps@gmail.com</b>",
+
+        pp_data_h: "Mitä tietoja käsitellään",
+        pp_data_note: "Lähes kaikki alla oleva on tietoa, jonka syötät itse. Kaikki liittyy Työtori-tiliisi, ja kaikki poistetaan, kun poistat tilin.",
+        pp_data_1: "<b>Tili:</b> sähköpostiosoite, Firebase Authenticationin tunnisteet ja Työtorin taustapalvelun numeerinen käyttäjätunnus. Työtori ei tallenna salasanaasi.",
+        pp_data_2: "<b>Profiili:</b> etu- ja sukunimi, puhelinnumero, kaupunki, LinkedIn- ja portfolio-osoite, toivotut tehtävänimikkeet ja sijainnit, etätyötoive, koulutus, työkokemus, osaaminen, kielitaito, ajokorttitiedot ja profiilin yhteenveto.",
+        pp_data_3: "<b>CV:</b> ladattu PDF-tiedosto, siitä poimittu teksti tai sovelluksessa käsin kirjoitettu CV.",
+        pp_data_4: "<b>Haut ja työpaikat:</b> käytetyt hakuosoitteet, hakutulokset, tallennetut työpaikat kuvauksineen ja hakuaikoineen sekä sopivuuspisteet, sopivuustaso ja perustelu.",
+        pp_data_5: "<b>Hakemukset:</b> hakemusluonnokset, saateviestit, asiakirjan kieli, hakemuksen tila sekä lähetetyksi merkitsemisen ja arkistoinnin päivämäärät.",
+        pp_data_6: "<b>Tilaus:</b> jos ostat Työtori+:n, Google Playn ostotieto ja tilauksen tila. Työtori ei vastaanota eikä tallenna korttitietoja.",
+        pp_data_7: "<b>Käyttötilastot:</b> karkeat tapahtumat ennalta rajatulla parametrijoukolla, jos jätät käyttötilastot päälle Asetuksissa.",
+        pp_data_8: "<b>Kaatumisraportit:</b> pinolistaukset ja tekniset avaimet, kuten build-tyyppi, sovellusversio, kieliasetus ja virheluokka.",
+        pp_data_9: "<b>Väärinkäytön esto:</b> Androidin App Set ID, joka tallennetaan taustapalveluun vain avaimellisena tiivisteenä ilmaisten hakujen kiintiön valvomiseksi.",
+        pp_data_10: "<b>Tekniset lokit:</b> luokkatason palvelinlokit ja tavanomaiset verkkopalvelimen käyttölokit.",
+        pp_data_not: "Työtori ei pyydä sijaintilupaa, ei kerää mainostunnistetta eikä tue profiilikuvaa.",
+
+        pp_purpose_h: "Miksi tietoja käsitellään",
+        pp_purpose_1: "Tilin luomiseen, kirjautumiseen ja tietojesi tunnistamiseen.",
+        pp_purpose_2: "Työpaikkojen hakemiseen sekä tulosten pisteyttämiseen ja järjestämiseen.",
+        pp_purpose_3: "Hakemustekstien, saateviestien, hakemuskirje-PDF:n ja PDF-CV:n valmisteluun.",
+        pp_purpose_4: "Työnantajan lomakkeen täytön avustamiseen ja ilmoituksen hakuohjeiden näyttämiseen.",
+        pp_purpose_5: "Tarkastelujakson hakemusten laskemiseen.",
+        pp_purpose_6: "Työtori+-tilauksen varmentamiseen ja sitä vastaavan käyttöoikeuden myöntämiseen.",
+        pp_purpose_7: "Palvelun toiminnan ja turvallisuuden ylläpitoon, virheiden korjaamiseen ja väärinkäytön estämiseen.",
+
+        pp_ai_h: "Tekoälyn käyttö",
+        pp_ai_p1: "Työtori käyttää tekstintuottamispalvelua käsittelijänä, joka toimii Työtorin ohjeiden mukaan. Kutsut tekee taustapalvelu, ei sovellus, ja niitä on neljä:",
+        pp_ai_1: "Hakemusluonnoksen ja saateviestin tuottaminen profiilin, CV-tekstin ja työpaikkailmoituksen pohjalta.",
+        pp_ai_2: "Yksittäisen tallennetun työpaikan sopivuusanalyysin kirjoittaminen.",
+        pp_ai_3: "Selityksen tuottaminen sille, miksi haun parhaat ehdokkaat valikoituivat.",
+        pp_ai_4: "Lomakeavun vastaukset Työtorin selaimessa, lomakkeen näkyvien kysymysten pohjalta.",
+        pp_ai_p2: "Tämän vuoksi emme väitä, ettei tietojasi välitetä kenellekään: profiili-, CV-, ilmoitus- ja luonnosteksti todella välitetään näitä tarkoituksia varten. Lomakeavun pyyntö ei koskaan sisällä arvoa, jonka olet kirjoittanut työnantajan lomakkeelle. Kehotteita tai vastauksia ei kirjoiteta sovelluslokiin.",
+        pp_ai_p3: "Jokainen tekoälyn tuottama tulos on luonnos. Tarkista se ennen käyttöä. Sopivuusarvion deterministinen osa toimii ilman tekoälypalvelua, eikä työnantaja näe Työtorin arviota.",
+
+        pp_browser_h: "Työtorin selain ja työnantajien lomakkeet",
+        pp_browser_p1: "Työtorissa on sisäinen selain työnantajan oman hakulomakkeen täyttämiseen. Sivulta luetaan vain lomakkeen näkyvä rakenne: kenttien otsikot, kenttätyypit, vaihtoehdot, pakollisuus ja kentän lähellä oleva ohjeteksti. Kirjoittamiasi arvoja, salasanoja, piilokenttiä, evästeitä eikä local- tai session storagea lueta, eikä sivun HTML:ää, DOMia tai koko tekstiä poimita.",
+        pp_browser_1: "Lomakkeen tarkistaminen, perustietojen täyttö ja hakemustekstin lisääminen ovat kolme erillistä toimintoa, jotka käynnistät ja vahvistat itse.",
+        pp_browser_2: "Täyttää voidaan vain nimi, etunimi, sukunimi, sähköposti, puhelin, kaupunki, LinkedIn ja portfolio, ja vain teksti-, sähköposti- ja puhelinkenttiin.",
+        pp_browser_3: "Valintaruudut, valintanapit, alasvetovalikot ja suostumusvalinnat näytetään suosituksina, eikä niitä valita puolestasi.",
+        pp_browser_4: "Liitteen valitset itse työnantajan sivun omassa tiedostonvalitsimessa.",
+        pp_browser_5: "Työtori ei koskaan lähetä lomaketta.",
+        pp_browser_p2: "Työnantajien sivut tallentavat kentän sisällön usein heti, kun se muuttuu. Siksi työnantajan palvelu voi saada haltuunsa täytetyt tiedot ja valitsemasi tiedoston jo ennen kuin painat lähetä. Sovellus kertoo tämän ennen kumpaakin vaihetta.",
+        pp_browser_p3: "Työnantajan sivusto asettaa selainnäkymään omat evästeensä ja tallennustilansa oman tietosuojakäytäntönsä mukaisesti. Työtori tyhjentää selaimen evästeet ja tallennustilan tilirajalla: sovelluksen käynnistyessä, uloskirjautumisessa, tilin poistossa ja kirjautuneen käyttäjän vaihtuessa.",
+        pp_browser_p4: "”Analysoi hakuohjeet” lähettää nykyisen sivun näkyvän tekstin ja sivun osoitteen Työtorin taustapalveluun, jossa tulos tuotetaan säännöillä ilman tekoälypalvelua eikä sitä tallenneta.",
+
+        pp_third_h: "Palveluntarjoajat ja kolmannet osapuolet",
+        pp_third_1: "<b>Firebase Authentication</b> ja <b>Google Sign-In</b> kirjautumiseen.",
+        pp_third_2: "<b>Firebase App Check ja Play Integrity</b>, jotta taustapalvelu erottaa aidon sovellusasennuksen väärennetystä pyynnöstä. Käyttäjän sisältöä ei lähetetä.",
+        pp_third_3: "<b>Firebase Analytics</b> karkeisiin käyttötapahtumiin, ellet kytke käyttötilastoja pois.",
+        pp_third_4: "<b>Firebase Crashlytics</b> kaatumisten ja virheiden diagnostiikkaan.",
+        pp_third_5: "<b>Tekstintuottamispalvelu</b> edellä lueteltuihin neljään tarkoitukseen.",
+        pp_third_6: "<b>Työtorin taustapalvelu</b> CodentraTecin ylläpitämässä palvelinympäristössä. Se tallentaa kaiken yllä olevan.",
+        pp_third_7: "<b>Google Play</b> ja <b>Google Play Billing</b> jakeluun, päivityksiin ja Työtori+-tilaukseen.",
+        pp_third_p1: "Työtorin taustapalvelu lukee julkisia työpaikkalähteitä <b>tyomarkkinatori.fi</b>, <b>duunitori.fi</b>, <b>jobly.fi</b>, <b>kuntarekry.fi</b> ja <b>valtiolle.fi</b>. Ne saavat tavallisen hakupyynnön; ne eivät saa profiiliasi, CV:täsi eivätkä hakemustasi.",
+        pp_third_p2: "Työnantajien sivustot ja rekrytointijärjestelmät, jotka avaat itse, ovat itsenäisiä palveluita omine tietosuojakäytäntöineen.",
+        pp_third_p3: "Työtori ei myy henkilötietoja eikä käytä niitä mainosprofilointiin.",
+
+        pp_analytics_h: "Käyttötilastot ja kaatumisraportointi",
+        pp_analytics_p1: "Käyttötilastot ovat karkeita: kiinteät tapahtumanimet ja pieni sallittujen parametrien joukko, kuten hakutapa, lähteiden määrä, luokiteltu tulosmäärä, lähetyskanava ja tehty toiminto. Sähköpostiosoitetta, nimeä, puhelinnumeroa, LinkedIn- tai portfolio-osoitetta, CV:n sisältöä, hakemustekstiä, työpaikkailmoituksen koko tekstiä, hakusanoja tai tarkkoja sijainteja ei lähetetä analytiikkaan koskaan. Voit kytkeä käyttötilastot pois Asetuksista.",
+        pp_analytics_p2: "Kaatumisraportointi on tästä erillinen ja pysyy päällä julkaisuversioissa, koska juuri se tekee kaatumisesta korjattavan. Se sisältää pinolistaukset, tekniset avaimet ja taustapalvelun käyttäjätunnuksen, ei hakemussisältöä. <b>Käyttötilastojen kytkin ei kata kaatumisraportointia.</b>",
+
+        pp_storage_h: "Säilytys, säilytysaika ja varmuuskopiot",
+        pp_storage_1: "<b>Taustapalvelu:</b> tili, profiili, CV, työpaikat, haut, hakemukset ja tilauksen tila säilyvät niin kauan kuin tili on olemassa.",
+        pp_storage_2: "<b>Laitteella:</b> valmistellut hakemusliitteet PDF:nä, luodut CV-PDF:t, esikatselun välimuisti ja sovelluksen asetukset. Nämä tyhjennetään uloskirjautumisessa ja tilin poistossa.",
+        pp_storage_3: "<b>Palvelinlokit:</b> sovelluslokit ovat luokkatasoisia ja kiertävät 14 päivän jaksossa. Verkkopalvelimen käyttölokit ovat tavanomaisia.",
+        pp_storage_4: "<b>Androidin automaattinen varmuuskopiointi:</b> Android voi varmuuskopioida sovelluksen yksityiset tiedostot omaan Google Driveesi. Selaimen istuntotiedostot on rajattu pois, joten työnantajaistunto ei palaa palautuksen mukana. Kyse on omista tiedoistasi omaan Driveesi Googlen alustan varmuuskopiona.",
+        pp_storage_5: "<b>Itse tallentamasi tiedostot:</b> puhelimen Lataukset-kansioon tallentamasi liitteet ovat omia tiedostojasi, eikä Työtori poista niitä.",
+
+        pp_delete_h: "Tietojen poistaminen",
+        pp_delete_p: "Voit poistaa tilisi ja sen tiedot sovelluksessa: <b>Asetukset → Tili → Käyttäjätili → Poista tilini ja kaikki tietoni</b>. Tämä poistaa rivisi taustapalvelun tietokannasta, palvelimelle tallennetut CV-tiedostot, Firebase-identiteettisi ja laitteella olevat materiaalitiedostot. Jos identiteetin poisto epäonnistuu, sovellus ilmoittaa poiston keskeneräiseksi eikä väitä sitä onnistuneeksi. Rajatut tekniset lokit ja taustapalvelun varmuuskopiot voivat säilyä lyhyen aikaa, joten emme lupaa välitöntä poistumista jokaisesta varmuuskopiosta. Työtori+-tilaus perutaan erikseen Google Playssa. Katso <a href=\"/legal/tyotori/delete-data.html\">Poista tiedot</a> -sivu.",
+
+        pp_security_h: "Tietoturva",
+        pp_security_1: "Kaikki liikenne sovelluksen ja taustapalvelun välillä käyttää HTTPS-yhteyttä.",
+        pp_security_2: "Jokainen suojattu taustapalvelun pyyntö validoi kirjautuneen käyttäjän Firebase ID -tokenin.",
+        pp_security_3: "Firebase App Check ja Play Integrity varmentavat tuotantopyynnöt.",
+        pp_security_4: "Sovelluslokeihin kirjataan luokkia ja virheluokkia, ei osoitteita, sähköposteja, kehotteita, hyötykuormia, tokeneita eikä lomakkeen arvoja.",
+
+        pp_rights_h: "Käyttäjän oikeudet",
+        pp_rights_1: "Voit tarkastella ja muokata profiiliasi ja CV:täsi sovelluksessa milloin tahansa.",
+        pp_rights_2: "Voit kytkeä käyttötilastot pois Asetuksista.",
+        pp_rights_3: "Voit poistaa tilisi ja sen tiedot Asetuksista ilman tilausta.",
+        pp_rights_4: "Voit kysyä tietosuojasta tai pyytää poistoa sähköpostitse, jos et pääse sovellukseen.",
+
+        pp_children_h: "Lapset",
+        pp_children_p: "Työtoria ei ole suunnattu lapsille.",
+
+        pp_contact_h: "Yhteystiedot",
+        pp_contact_p: "Tietosuoja- ja poistopyynnöt: <b>janstech.apps@gmail.com</b>",
+
+        pp_footer: "Tätä selostetta voidaan päivittää, kun ominaisuudet, palveluntarjoajat tai lainsäädännön vaatimukset muuttuvat. Yläreunan ”Päivitetty”-päivä kertoo viimeisimmän version.",
+
+        quick_h: "Pikalinkit",
+        quick_delete: "Miten tietoja poistetaan",
+        quick_support: "Tuki",
+        quick_terms: "Käyttöehdot",
+        quick_app: "Tietoa Työtorista",
+
+        facts_h: "Mitä Työtori ei koskaan tee",
+        facts_1: "Lähetä hakemusta työnantajalle puolestasi",
+        facts_2: "Lähetä työnantajan lomaketta",
+        facts_3: "Lue sitä, mitä kirjoitat työnantajan lomakkeelle",
+        facts_4: "Valitse tai lataa liitettä ilman sinua",
+        facts_5: "Kerää mainostunnistetta tai sijaintiasi",
+
+        control_h: "Mitä hallitset itse",
+        control_1: "Käyttötilastot päälle tai pois Asetuksissa",
+        control_2: "Mitä työpaikkalähteitä haku käyttää",
+        control_3: "Hakemuksen jokaisen sanan ennen lähettämistä",
+        control_4: "Tilin ja sen tietojen poistamisen milloin tahansa"
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+      document.getElementById("btnFi").setAttribute("aria-pressed", String(lang === "fi"));
+      document.getElementById("btnEn").setAttribute("aria-pressed", String(lang === "en"));
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
+</body>
+</html>

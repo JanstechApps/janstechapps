@@ -1,0 +1,918 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Työtori is an Android job search assistant for Finland: search five job boards, keep an eye on deadlines, prepare an application draft and its attachments, and track the applications of your review period. You always send the application yourself." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://janstechapps.com/apps/tyotori/">
+
+  <meta property="og:title" content="Työtori – Job search assistant">
+  <meta property="og:description" content="Search Finnish job boards, prepare an application and its attachments, and track your review period in one Android app. You always send the application yourself.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://janstechapps.com/apps/tyotori/">
+  <meta property="og:image" content="https://janstechapps.com/assets/tyotori-icon.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:site_name" content="JanstechApps">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fi_FI">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Työtori – Job search assistant">
+  <meta name="twitter:description" content="Search Finnish job boards, prepare an application and its attachments, and track your review period in one Android app. You always send the application yourself.">
+  <meta name="twitter:image" content="https://janstechapps.com/assets/tyotori-icon.png">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Työtori",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Android",
+      "url": "https://janstechapps.com/apps/tyotori/",
+      "image": "https://janstechapps.com/assets/tyotori-icon.png",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.janstech.tyotori",
+      "inLanguage": ["fi", "sv", "en"],
+      "description": "An Android job search assistant for Finland: search several job boards, follow application deadlines, prepare an application draft and its attachments, and track the applications of a review period. The user always sends the application.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "JanstechApps",
+        "url": "https://janstechapps.com/"
+      }
+    }
+  </script>
+
+  <title>Työtori - JanstechApps</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    // Apply the stored language to <html lang> before first paint so the page
+    // never renders with the wrong language attribute or screenshot set.
+    try {
+      var storedLang = localStorage.getItem("janstech_apps_lang");
+      if (storedLang === "fi" || storedLang === "en") document.documentElement.lang = storedLang;
+    } catch (e) {}
+  </script>
+</head>
+<body class="app-page app--tyotori">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="masthead">
+    <div class="shell masthead__inner">
+      <a class="brand" href="/">
+        <span class="brand__name">JanstechApps</span>
+        <span class="brand__tag" data-i18n="sub">Työtori</span>
+      </a>
+
+      <nav class="masthead__nav" data-i18n-label="aria_nav" aria-label="Primary">
+        <a href="/" data-i18n="nav_apps">Apps</a>
+        <a href="/apps/tyotori/" aria-current="page" data-i18n="nav_app">Työtori</a>
+        <a href="/legal/tyotori/" data-i18n="nav_legal">Legal</a>
+      </nav>
+
+      <div class="langswitch">
+        <span class="langswitch__label" data-i18n="lang_label">Language</span>
+        <div class="langswitch__group">
+          <button class="langswitch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+          <button class="langswitch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="app-hero">
+      <div class="shell app-hero__inner">
+        <div class="app-hero__copy">
+          <p class="app-hero__context">
+            <span class="label" aria-hidden="true">04</span>
+            <span class="app-hero__context-sep" aria-hidden="true"></span>
+            <span class="label" data-i18n="hero_cat">Job search</span>
+          </p>
+
+          <div class="app-hero__mark">
+            <img class="app-hero__icon" src="/assets/tyotori-icon.png" alt="Työtori app icon" width="512" height="512" fetchpriority="high" decoding="async">
+            <div>
+              <h1 class="app-hero__title">Työtori</h1>
+              <p class="app-hero__alt-name" data-i18n="alt_name">Job search assistant for Finland</p>
+            </div>
+          </div>
+
+          <p class="app-hero__promise" data-i18n="hero_promise">
+            Search Finnish job boards, prepare the application and its attachments, and keep track of what you have already sent.
+          </p>
+
+          <p class="app-hero__lede" data-i18n="hero_lede">
+            Työtori collects openings from several Finnish job boards into one list, shows the application deadline, drafts an application from your own profile and CV, and helps you fill in the employer’s form. You read the application, you approve it, and you send it yourself — Työtori never sends anything to an employer on its own.
+          </p>
+
+          <div class="actions app-hero__actions">
+            <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.tyotori" target="_blank" rel="noopener noreferrer" data-i18n="btn_play">Open in Google Play</a>
+            <a class="link" href="#features" data-i18n="btn_features">See the features</a>
+          </div>
+
+          <ul class="quiet app-hero__links">
+            <li><a href="/legal/tyotori/" data-i18n="btn_privacy">Privacy</a></li>
+            <li><a href="/legal/tyotori/support.html" data-i18n="btn_support">Support</a></li>
+            <li><a href="/legal/tyotori/terms.html" data-i18n="btn_terms">Terms</a></li>
+            <li><a href="/legal/tyotori/delete-data.html" data-i18n="btn_delete">Delete data</a></li>
+          </ul>
+        </div>
+
+        <div class="app-hero__facts">
+          <p class="label" data-i18n="facts_label">At a glance</p>
+          <dl class="spec">
+            <div class="spec__row">
+              <dt class="label" data-i18n="spec_platform">Platform</dt>
+              <dd data-i18n="spec_platform_v">Android</dd>
+            </div>
+            <div class="spec__row">
+              <dt class="label" data-i18n="spec_availability">Availability</dt>
+              <dd data-i18n="spec_availability_v">Google Play</dd>
+            </div>
+            <div class="spec__row">
+              <dt class="label" data-i18n="spec_langs">App languages</dt>
+              <dd data-i18n="spec_langs_v">Finnish, Swedish, English</dd>
+            </div>
+            <div class="spec__row">
+              <dt class="label" data-i18n="spec_account">Account</dt>
+              <dd data-i18n="spec_account_v">Required</dd>
+            </div>
+          </dl>
+
+          <div class="summary">
+            <p class="label" data-i18n="summary_label">What the app does</p>
+            <dl class="summary__list">
+              <div>
+                <dt data-i18n="sum_1_h">Finding</dt>
+                <dd data-i18n="sum_1_p">Five Finnish job boards, plus a link or posting text you add yourself</dd>
+              </div>
+              <div>
+                <dt data-i18n="sum_2_h">Preparing</dt>
+                <dd data-i18n="sum_2_p">Application draft, cover message, application letter PDF and a PDF CV</dd>
+              </div>
+              <div>
+                <dt data-i18n="sum_3_h">Sending</dt>
+                <dd data-i18n="sum_3_p">Työtori browser, form help and email — you press send yourself</dd>
+              </div>
+              <div>
+                <dt data-i18n="sum_4_h">Tracking</dt>
+                <dd data-i18n="sum_4_p">Review period, required number of applications and sent applications</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="shell">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="label" data-i18n="features_label">Features</p>
+            <h2 class="section__title" data-i18n="features_h">Job searching in one place</h2>
+          </div>
+          <p class="section__intro" data-i18n="features_intro">
+            Työtori is built for the part of job searching that repeats: open several sites, read the same posting again, write the letter, find the attachments, remember what you already applied for.
+          </p>
+        </div>
+
+        <ol class="feature-rows">
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">01</span>
+            <h3 class="feature__title" data-i18n="f1_h">Search several job boards at once</h3>
+            <p class="feature__text" data-i18n="f1_p">
+              One search reads Työmarkkinatori, Duunitori, Jobly, Kuntarekry and Valtiolle.fi. You choose which sources are used, and the results arrive in a single list with the source shown on every posting.
+            </p>
+          </li>
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">02</span>
+            <h3 class="feature__title" data-i18n="f2_h">A posting you can read as a posting</h3>
+            <p class="feature__text" data-i18n="f2_p">
+              Each result carries the job title, the employer, the location, the source and the application deadline. Työtori also gives an indicative suitability estimate with a short reason. The estimate is Työtori’s own, and the employer never sees it.
+            </p>
+          </li>
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">03</span>
+            <h3 class="feature__title" data-i18n="f3_h">An application draft, not a finished application</h3>
+            <p class="feature__text" data-i18n="f3_p">
+              Save a job and Työtori drafts the application text and the cover message from your profile, your CV and the posting itself. You edit the draft, choose the language it is written in, and export it as an application letter PDF. If your CV is only written by hand, Työtori can turn it into a PDF CV you approve first.
+            </p>
+          </li>
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">04</span>
+            <h3 class="feature__title" data-i18n="f4_h">Help with the employer’s own form</h3>
+            <p class="feature__text" data-i18n="f4_p">
+              The Työtori browser opens the employer’s application form inside the app. Form help lists the fields it recognises, and — only when you start it and confirm it — fills in basic details such as name, email, phone, city, LinkedIn and portfolio. Nothing is submitted, no option is selected for you, and no attachment is chosen without you.
+            </p>
+          </li>
+          <li class="feature">
+            <span class="feature__num" aria-hidden="true">05</span>
+            <h3 class="feature__title" data-i18n="f5_h">Your review period, counted for you</h3>
+            <p class="feature__text" data-i18n="f5_p">
+              Set the start and end date of your review period and the number of applications required from you. The home screen then shows how many of them you have marked as sent, how many are left, and which drafts are still unfinished.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <p class="label" data-i18n="steps_label">How it works</p>
+          <h2 class="section__title" data-i18n="steps_h">From an empty profile to a sent application</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title" data-i18n="s1_h">Profile and CV</h3>
+            <p class="step__text" data-i18n="s1_p">
+              Fill in your contact details, the roles and locations you are after, and your background. Upload a PDF CV or write it by hand.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title" data-i18n="s2_h">Search and save</h3>
+            <p class="step__text" data-i18n="s2_p">
+              Let Työtori search with your profile, or add a posting yourself from a link or by pasting its text. Save the jobs you want to apply for.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title" data-i18n="s3_h">Write and check</h3>
+            <p class="step__text" data-i18n="s3_p">
+              Create the draft, read it, correct anything that is not true about you, and prepare the attachments you are going to send.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">04</span>
+            <h3 class="step__title" data-i18n="s4_h">Send it yourself</h3>
+            <p class="step__text" data-i18n="s4_p">
+              Send by email or through the employer’s form, then mark the application as sent. Only that marking moves your review period counter.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="label" data-i18n="sources_label">Sources</p>
+            <h2 class="section__title" data-i18n="sources_h">Where the jobs come from, and how the list is narrowed</h2>
+          </div>
+          <p class="section__intro" data-i18n="sources_intro">
+            Työtori reads public job boards on your behalf. It does not create a profile for you on those sites and does not apply on those sites for you.
+          </p>
+        </div>
+
+        <div class="duo">
+          <div class="duo__col">
+            <h3 class="duo__title" data-i18n="sources_list_h">Job sources</h3>
+            <ul class="duo__list">
+              <li data-i18n="src_1">Työmarkkinatori</li>
+              <li data-i18n="src_2">Duunitori</li>
+              <li data-i18n="src_3">Jobly</li>
+              <li data-i18n="src_4">Kuntarekry</li>
+              <li data-i18n="src_5">Valtiolle.fi</li>
+              <li data-i18n="src_6">A job posting link you paste yourself</li>
+              <li data-i18n="src_7">Posting text you paste yourself when a page cannot be read</li>
+            </ul>
+            <p class="duo__text" data-i18n="sources_note">
+              Työmarkkinatori is included in the free version. The other four sources are part of Työtori+.
+            </p>
+          </div>
+
+          <div class="duo__col">
+            <h3 class="duo__title" data-i18n="filters_h">Narrowing the search</h3>
+            <ul class="duo__list">
+              <li data-i18n="flt_1">Keywords built from the roles in your profile</li>
+              <li data-i18n="flt_2">One or more locations, the whole country, or remote work</li>
+              <li data-i18n="flt_3">The set of job sources you tick yourself</li>
+              <li data-i18n="flt_4">Sorting by best match or by newest</li>
+              <li data-i18n="flt_5">Hiding a posting that is not for you</li>
+            </ul>
+            <p class="duo__text" data-i18n="filters_note">
+              Weak matches are kept separate from the good ones, and results are loaded a page at a time so a broad search does not turn into an endless list.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="screenshots-title">
+      <div class="shell">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="label" data-i18n="screens_label">Screenshots</p>
+            <h2 class="section__title" id="screenshots-title" data-i18n="screenshots_h">Inside Työtori</h2>
+          </div>
+          <p class="section__intro" data-i18n="screenshots_p">
+            The home screen, the job sources, a result, an application draft and the form help. Swipe or scroll the strip sideways.
+          </p>
+        </div>
+
+        <div class="gallery" tabindex="0" role="group" data-i18n-label="aria_gallery" aria-label="Työtori screenshot gallery, scrollable">
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/tyotori/1.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Työtori home screen in Finnish: job search obligation, review period and the number of applications sent">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/tyotori/2.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="The same Työtori home screen in Swedish">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/tyotori/3.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Työtori job source selection in Finnish: Duunitori, Jobly, Työmarkkinatori, Kuntarekry and Valtiolle.fi">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/tyotori/4.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="A Työtori search result in Finnish: job title, source, location, application deadline and suitability estimate">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/tyotori/5.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="A Työtori application draft in Finnish with the application text and cover message tabs">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/tyotori/6.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Form help in the Työtori browser in Finnish, listing the recognised fields of an employer form">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="en">
+            <img src="/assets/tyotori/7.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="The Työtori confirmation dialog in Finnish before basic details are filled into an employer form">
+          </figure>
+
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/tyotori/1.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Työtorin Koti-näkymä: työnhakuvelvoite, tarkastelujakso ja lähetettyjen hakemusten määrä">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/tyotori/2.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Sama Työtorin Koti-näkymä ruotsiksi">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/tyotori/3.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Työtorin työpaikkalähteiden valinta: Duunitori, Jobly, Työmarkkinatori, Kuntarekry ja Valtiolle.fi">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/tyotori/4.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Työtorin hakutulos: työnimike, lähde, sijainti, hakuajan päättyminen ja sopivuusarvio">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/tyotori/5.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Työtorin hakemusluonnos, jossa hakemusteksti- ja saateviesti-välilehdet">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/tyotori/6.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Lomakeapu Työtorin selaimessa: tunnistetut työnantajan lomakkeen kentät">
+          </figure>
+          <figure class="gallery__item" data-screenshot-lang="fi">
+            <img src="/assets/tyotori/7.jpeg" width="1048" height="2048" loading="lazy" decoding="async" alt="Työtorin vahvistuskysely ennen perustietojen täyttämistä työnantajan lomakkeelle">
+          </figure>
+        </div>
+
+        <p class="fineprint" data-i18n="screenshots_note">
+          The screenshots show the Finnish interface, and the second one shows the same screen in Swedish. Työtori itself runs in Finnish, Swedish or English.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <p class="label" data-i18n="who_label">Who it is for</p>
+          <h2 class="section__title" data-i18n="who_h">Three situations the app was built around</h2>
+        </div>
+
+        <ol class="steps steps--3">
+          <li class="step">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title" data-i18n="w1_h">You have a job search obligation</h3>
+            <p class="step__text" data-i18n="w1_p">
+              The review period, the number of applications required and the ones you have marked as sent are on the home screen, so you do not have to keep the count in your head.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title" data-i18n="w2_h">You apply through many sites</h3>
+            <p class="step__text" data-i18n="w2_p">
+              Five job boards, a link you found somewhere else and a posting you pasted in yourself all end up in the same saved list, with the same deadline and the same draft workflow.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title" data-i18n="w3_h">Writing is the slow part</h3>
+            <p class="step__text" data-i18n="w3_p">
+              The draft gives you a first version grounded in your own profile and CV. You correct it, choose the language of the document, and export the letter and the CV as PDFs.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="label" data-i18n="plans_label">Free and Työtori+</p>
+            <h2 class="section__title" data-i18n="plans_h">What the free version includes</h2>
+          </div>
+          <p class="section__intro" data-i18n="plans_intro">
+            Työtori Free is a usable job search app on its own. Työtori+ is a subscription for the parts that keep costing something every time they run: the other job boards and the continuous AI help.
+          </p>
+        </div>
+
+        <div class="plans">
+          <article class="plan">
+            <h3 class="plan__title" data-i18n="plan_free_h">Free</h3>
+            <p class="plan__text" data-i18n="plan_free_p">
+              Everything you need to build a profile, find jobs on Työmarkkinatori and follow your own job search.
+            </p>
+            <ul class="plan__list">
+              <li data-i18n="plan_free_1">Profile, CV, saved jobs and application history</li>
+              <li data-i18n="plan_free_2">Työmarkkinatori search, ten successful searches per 30 days</li>
+              <li data-i18n="plan_free_3">Ten active saved jobs without a draft</li>
+              <li data-i18n="plan_free_4">One AI application draft per account</li>
+              <li data-i18n="plan_free_5">Application letter PDF, PDF CV, attachments, email paths and archive</li>
+              <li data-i18n="plan_free_6">Review period tracking, data deletion and the privacy settings</li>
+            </ul>
+          </article>
+
+          <article class="plan plan--pro">
+            <h3 class="plan__title" data-i18n="plan_plus_h">Työtori+</h3>
+            <p class="plan__text" data-i18n="plan_plus_p">
+              A monthly or yearly subscription through Google Play. It adds the sources and the AI features on top of everything above.
+            </p>
+            <ul class="plan__list">
+              <li data-i18n="plan_plus_1">Duunitori, Jobly, Kuntarekry and Valtiolle.fi as job sources</li>
+              <li data-i18n="plan_plus_2">Job searches without the free search limit</li>
+              <li data-i18n="plan_plus_3">Application drafts and rewrites without the one-draft limit</li>
+              <li data-i18n="plan_plus_4">AI suitability analysis and AI search explanations</li>
+              <li data-i18n="plan_plus_5">AI form help in the Työtori browser</li>
+              <li data-i18n="plan_plus_6">The sending assistant with backend support</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="fineprint" data-i18n="plans_note">
+          Prices are shown by Google Play inside the app, in your own currency, so no price is published here. The subscription is managed and cancelled in Google Play. If a subscription ends, nothing you have already saved is deleted: your jobs, drafts, applications and archive stay readable and exportable.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head">
+          <p class="label" data-i18n="trust_label">Privacy</p>
+          <h2 class="section__title" data-i18n="trust_h">What Työtori does with your job search data</h2>
+        </div>
+
+        <div class="duo">
+          <div class="duo__col">
+            <h3 class="duo__title" data-i18n="privacy_h">An account and a backend</h3>
+            <p class="duo__text" data-i18n="privacy_p1">
+              Työtori needs an account, created with an email address and password or with Google sign-in. Your profile, CV, saved jobs, drafts and application history are stored on the Työtori backend so they survive a reinstall and a new phone.
+            </p>
+            <p class="duo__text" data-i18n="privacy_p2">
+              Application drafts, suitability explanations and form help are produced by a text-generation service acting for Työtori, which means your profile, CV, posting and draft text are sent to it for that purpose. Usage statistics can be switched off in Settings, and you can delete your account and its data from Settings at any time. The privacy policy describes each case.
+            </p>
+          </div>
+
+          <div class="duo__col">
+            <h3 class="duo__title" data-i18n="browser_h">The Työtori browser has hard limits</h3>
+            <p class="duo__text" data-i18n="browser_p1">
+              When you fill in an employer’s form inside Työtori, the app reads only the visible structure of the form — labels, field types and options. It does not read what you type, passwords, hidden fields, cookies or the page’s storage, and it does not extract the page’s HTML or full text.
+            </p>
+            <ul class="duo__list">
+              <li data-i18n="br_1">Nothing is filled in until you start it and confirm it</li>
+              <li data-i18n="br_2">Only basic details are filled: name, email, phone, city, LinkedIn, portfolio</li>
+              <li data-i18n="br_3">Checkboxes, radio buttons and dropdowns are suggestions only</li>
+              <li data-i18n="br_4">You choose the attachment yourself, every time</li>
+              <li data-i18n="br_5">Työtori never presses send</li>
+            </ul>
+            <p class="duo__text" data-i18n="browser_p2">
+              The employer’s own service can keep what has been typed into its form, and a file you choose, before you send anything. Työtori says so in the app before each of those steps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="label" data-i18n="legal_label">Legal and support</p>
+            <h2 class="section__title" data-i18n="legal_h">Published pages for this app</h2>
+          </div>
+          <p class="section__intro" data-i18n="legal_p">
+            Privacy policy, terms, support instructions and data deletion, in Finnish and English.
+          </p>
+        </div>
+
+        <ul class="quiet">
+          <li><a href="/legal/tyotori/" data-i18n="btn_privacy">Privacy</a></li>
+          <li><a href="/legal/tyotori/support.html" data-i18n="btn_support">Support</a></li>
+          <li><a href="/legal/tyotori/terms.html" data-i18n="btn_terms">Terms</a></li>
+          <li><a href="/legal/tyotori/delete-data.html" data-i18n="btn_delete">Delete data</a></li>
+          <li><a href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="shell closing__inner">
+        <div>
+          <h2 class="closing__title" data-i18n="cta_h">Työtori on Google Play</h2>
+          <p class="closing__text" data-i18n="cta_p">
+            Finnish job boards, application drafts, form help and review period tracking in one Android app.
+          </p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.janstech.tyotori" target="_blank" rel="noopener noreferrer" data-i18n="btn_play">Open in Google Play</a>
+          <a class="link" href="/" data-i18n="btn_all_apps">All apps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <div class="footer-grid">
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="sub">Työtori</h2>
+          <p class="footer-group__text" data-i18n="footer_p">An Android job search assistant by JanstechApps.</p>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_legal_h">Support &amp; privacy</h2>
+          <ul class="footer-links">
+            <li><a href="/legal/tyotori/" data-i18n="btn_privacy">Privacy</a></li>
+            <li><a href="/legal/tyotori/support.html" data-i18n="btn_support">Support</a></li>
+            <li><a href="/legal/tyotori/terms.html" data-i18n="btn_terms">Terms</a></li>
+            <li><a href="/legal/tyotori/delete-data.html" data-i18n="btn_delete">Delete data</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_apps_h">Apps</h2>
+          <ul class="footer-links">
+            <li><a href="/" data-i18n="btn_all_apps">All apps</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.janstech.tyotori" target="_blank" rel="noopener noreferrer" data-i18n="btn_play">Open in Google Play</a></li>
+            <li><a href="mailto:janstech.apps@gmail.com" data-i18n="btn_email">Email support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-group">
+          <h2 class="footer-group__heading" data-i18n="footer_lang_h">Language</h2>
+          <div class="langswitch">
+            <div class="langswitch__group">
+              <button class="langswitch__btn" type="button" data-set-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+              <button class="langswitch__btn" type="button" data-set-lang="fi" lang="fi" aria-label="Suomi" aria-pressed="false">FI</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> JanstechApps</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const dict = {
+      en: {
+        meta_title: "Työtori - JanstechApps",
+        meta_description: "Työtori is an Android job search assistant for Finland: search five job boards, keep an eye on deadlines, prepare an application draft and its attachments, and track the applications of your review period. You always send the application yourself.",
+        skip: "Skip to content",
+        sub: "Työtori",
+        aria_nav: "Primary",
+        nav_apps: "Apps",
+        nav_app: "Työtori",
+        nav_legal: "Legal",
+        lang_label: "Language",
+
+        hero_cat: "Job search",
+        alt_name: "Job search assistant for Finland",
+        hero_promise: "Search Finnish job boards, prepare the application and its attachments, and keep track of what you have already sent.",
+        hero_lede: "Työtori collects openings from several Finnish job boards into one list, shows the application deadline, drafts an application from your own profile and CV, and helps you fill in the employer’s form. You read the application, you approve it, and you send it yourself — Työtori never sends anything to an employer on its own.",
+
+        facts_label: "At a glance",
+        spec_platform: "Platform",
+        spec_platform_v: "Android",
+        spec_availability: "Availability",
+        spec_availability_v: "Google Play",
+        spec_langs: "App languages",
+        spec_langs_v: "Finnish, Swedish, English",
+        spec_account: "Account",
+        spec_account_v: "Required",
+
+        summary_label: "What the app does",
+        sum_1_h: "Finding",
+        sum_1_p: "Five Finnish job boards, plus a link or posting text you add yourself",
+        sum_2_h: "Preparing",
+        sum_2_p: "Application draft, cover message, application letter PDF and a PDF CV",
+        sum_3_h: "Sending",
+        sum_3_p: "Työtori browser, form help and email — you press send yourself",
+        sum_4_h: "Tracking",
+        sum_4_p: "Review period, required number of applications and sent applications",
+
+        features_label: "Features",
+        features_h: "Job searching in one place",
+        features_intro: "Työtori is built for the part of job searching that repeats: open several sites, read the same posting again, write the letter, find the attachments, remember what you already applied for.",
+        f1_h: "Search several job boards at once",
+        f1_p: "One search reads Työmarkkinatori, Duunitori, Jobly, Kuntarekry and Valtiolle.fi. You choose which sources are used, and the results arrive in a single list with the source shown on every posting.",
+        f2_h: "A posting you can read as a posting",
+        f2_p: "Each result carries the job title, the employer, the location, the source and the application deadline. Työtori also gives an indicative suitability estimate with a short reason. The estimate is Työtori’s own, and the employer never sees it.",
+        f3_h: "An application draft, not a finished application",
+        f3_p: "Save a job and Työtori drafts the application text and the cover message from your profile, your CV and the posting itself. You edit the draft, choose the language it is written in, and export it as an application letter PDF. If your CV is only written by hand, Työtori can turn it into a PDF CV you approve first.",
+        f4_h: "Help with the employer’s own form",
+        f4_p: "The Työtori browser opens the employer’s application form inside the app. Form help lists the fields it recognises, and — only when you start it and confirm it — fills in basic details such as name, email, phone, city, LinkedIn and portfolio. Nothing is submitted, no option is selected for you, and no attachment is chosen without you.",
+        f5_h: "Your review period, counted for you",
+        f5_p: "Set the start and end date of your review period and the number of applications required from you. The home screen then shows how many of them you have marked as sent, how many are left, and which drafts are still unfinished.",
+
+        steps_label: "How it works",
+        steps_h: "From an empty profile to a sent application",
+        s1_h: "Profile and CV",
+        s1_p: "Fill in your contact details, the roles and locations you are after, and your background. Upload a PDF CV or write it by hand.",
+        s2_h: "Search and save",
+        s2_p: "Let Työtori search with your profile, or add a posting yourself from a link or by pasting its text. Save the jobs you want to apply for.",
+        s3_h: "Write and check",
+        s3_p: "Create the draft, read it, correct anything that is not true about you, and prepare the attachments you are going to send.",
+        s4_h: "Send it yourself",
+        s4_p: "Send by email or through the employer’s form, then mark the application as sent. Only that marking moves your review period counter.",
+
+        sources_label: "Sources",
+        sources_h: "Where the jobs come from, and how the list is narrowed",
+        sources_intro: "Työtori reads public job boards on your behalf. It does not create a profile for you on those sites and does not apply on those sites for you.",
+        sources_list_h: "Job sources",
+        src_1: "Työmarkkinatori",
+        src_2: "Duunitori",
+        src_3: "Jobly",
+        src_4: "Kuntarekry",
+        src_5: "Valtiolle.fi",
+        src_6: "A job posting link you paste yourself",
+        src_7: "Posting text you paste yourself when a page cannot be read",
+        sources_note: "Työmarkkinatori is included in the free version. The other four sources are part of Työtori+.",
+        filters_h: "Narrowing the search",
+        flt_1: "Keywords built from the roles in your profile",
+        flt_2: "One or more locations, the whole country, or remote work",
+        flt_3: "The set of job sources you tick yourself",
+        flt_4: "Sorting by best match or by newest",
+        flt_5: "Hiding a posting that is not for you",
+        filters_note: "Weak matches are kept separate from the good ones, and results are loaded a page at a time so a broad search does not turn into an endless list.",
+
+        screens_label: "Screenshots",
+        screenshots_h: "Inside Työtori",
+        screenshots_p: "The home screen, the job sources, a result, an application draft and the form help. Swipe or scroll the strip sideways.",
+        aria_gallery: "Työtori screenshot gallery, scrollable",
+        screenshots_note: "The screenshots show the Finnish interface, and the second one shows the same screen in Swedish. Työtori itself runs in Finnish, Swedish or English.",
+
+        who_label: "Who it is for",
+        who_h: "Three situations the app was built around",
+        w1_h: "You have a job search obligation",
+        w1_p: "The review period, the number of applications required and the ones you have marked as sent are on the home screen, so you do not have to keep the count in your head.",
+        w2_h: "You apply through many sites",
+        w2_p: "Five job boards, a link you found somewhere else and a posting you pasted in yourself all end up in the same saved list, with the same deadline and the same draft workflow.",
+        w3_h: "Writing is the slow part",
+        w3_p: "The draft gives you a first version grounded in your own profile and CV. You correct it, choose the language of the document, and export the letter and the CV as PDFs.",
+
+        plans_label: "Free and Työtori+",
+        plans_h: "What the free version includes",
+        plans_intro: "Työtori Free is a usable job search app on its own. Työtori+ is a subscription for the parts that keep costing something every time they run: the other job boards and the continuous AI help.",
+        plan_free_h: "Free",
+        plan_free_p: "Everything you need to build a profile, find jobs on Työmarkkinatori and follow your own job search.",
+        plan_free_1: "Profile, CV, saved jobs and application history",
+        plan_free_2: "Työmarkkinatori search, ten successful searches per 30 days",
+        plan_free_3: "Ten active saved jobs without a draft",
+        plan_free_4: "One AI application draft per account",
+        plan_free_5: "Application letter PDF, PDF CV, attachments, email paths and archive",
+        plan_free_6: "Review period tracking, data deletion and the privacy settings",
+        plan_plus_h: "Työtori+",
+        plan_plus_p: "A monthly or yearly subscription through Google Play. It adds the sources and the AI features on top of everything above.",
+        plan_plus_1: "Duunitori, Jobly, Kuntarekry and Valtiolle.fi as job sources",
+        plan_plus_2: "Job searches without the free search limit",
+        plan_plus_3: "Application drafts and rewrites without the one-draft limit",
+        plan_plus_4: "AI suitability analysis and AI search explanations",
+        plan_plus_5: "AI form help in the Työtori browser",
+        plan_plus_6: "The sending assistant with backend support",
+        plans_note: "Prices are shown by Google Play inside the app, in your own currency, so no price is published here. The subscription is managed and cancelled in Google Play. If a subscription ends, nothing you have already saved is deleted: your jobs, drafts, applications and archive stay readable and exportable.",
+
+        trust_label: "Privacy",
+        trust_h: "What Työtori does with your job search data",
+        privacy_h: "An account and a backend",
+        privacy_p1: "Työtori needs an account, created with an email address and password or with Google sign-in. Your profile, CV, saved jobs, drafts and application history are stored on the Työtori backend so they survive a reinstall and a new phone.",
+        privacy_p2: "Application drafts, suitability explanations and form help are produced by a text-generation service acting for Työtori, which means your profile, CV, posting and draft text are sent to it for that purpose. Usage statistics can be switched off in Settings, and you can delete your account and its data from Settings at any time. The privacy policy describes each case.",
+        browser_h: "The Työtori browser has hard limits",
+        browser_p1: "When you fill in an employer’s form inside Työtori, the app reads only the visible structure of the form — labels, field types and options. It does not read what you type, passwords, hidden fields, cookies or the page’s storage, and it does not extract the page’s HTML or full text.",
+        br_1: "Nothing is filled in until you start it and confirm it",
+        br_2: "Only basic details are filled: name, email, phone, city, LinkedIn, portfolio",
+        br_3: "Checkboxes, radio buttons and dropdowns are suggestions only",
+        br_4: "You choose the attachment yourself, every time",
+        br_5: "Työtori never presses send",
+        browser_p2: "The employer’s own service can keep what has been typed into its form, and a file you choose, before you send anything. Työtori says so in the app before each of those steps.",
+
+        legal_label: "Legal and support",
+        legal_h: "Published pages for this app",
+        legal_p: "Privacy policy, terms, support instructions and data deletion, in Finnish and English.",
+
+        cta_h: "Työtori on Google Play",
+        cta_p: "Finnish job boards, application drafts, form help and review period tracking in one Android app.",
+
+        btn_play: "Open in Google Play",
+        btn_features: "See the features",
+        btn_all_apps: "All apps",
+        btn_privacy: "Privacy",
+        btn_support: "Support",
+        btn_terms: "Terms",
+        btn_delete: "Delete data",
+        btn_email: "Email support",
+
+        footer_p: "An Android job search assistant by JanstechApps.",
+        footer_legal_h: "Support & privacy",
+        footer_apps_h: "Apps",
+        footer_lang_h: "Language"
+      },
+      fi: {
+        meta_title: "Työtori - JanstechApps",
+        meta_description: "Työtori on Android-sovellus työnhakuun: hae töitä viidestä työpaikkalähteestä, pidä hakuajat näkyvissä, valmistele hakemus ja sen liitteet ja seuraa tarkastelujakson hakemuksia. Hakemuksen lähetät aina itse.",
+        skip: "Siirry sisältöön",
+        sub: "Työtori",
+        aria_nav: "Ensisijainen",
+        nav_apps: "Sovellukset",
+        nav_app: "Työtori",
+        nav_legal: "Legal",
+        lang_label: "Kieli",
+
+        hero_cat: "Työnhaku",
+        alt_name: "Työnhaun apuri",
+        hero_promise: "Hae töitä suomalaisista työpaikkalähteistä, valmistele hakemus liitteineen ja pidä kirjaa siitä, mitä olet jo lähettänyt.",
+        hero_lede: "Työtori kokoaa avoimet työpaikat useasta suomalaisesta työpaikkalähteestä yhteen listaan, näyttää hakuajan päättymisen, luo hakemusluonnoksen oman profiilisi ja CV:si pohjalta ja auttaa työnantajan lomakkeen täytössä. Sinä luet hakemuksen, sinä hyväksyt sen ja sinä lähetät sen — Työtori ei lähetä työnantajalle mitään omin päin.",
+
+        facts_label: "Lyhyesti",
+        spec_platform: "Alusta",
+        spec_platform_v: "Android",
+        spec_availability: "Saatavuus",
+        spec_availability_v: "Google Play",
+        spec_langs: "Sovelluskielet",
+        spec_langs_v: "suomi, ruotsi, englanti",
+        spec_account: "Tili",
+        spec_account_v: "Tarvitaan",
+
+        summary_label: "Mitä sovellus tekee",
+        sum_1_h: "Löytäminen",
+        sum_1_p: "Viisi suomalaista työpaikkalähdettä sekä itse lisätty linkki tai ilmoitusteksti",
+        sum_2_h: "Valmistelu",
+        sum_2_p: "Hakemusluonnos, saateviesti, hakemuskirje PDF:nä ja PDF-CV",
+        sum_3_h: "Lähettäminen",
+        sum_3_p: "Työtorin selain, Lomakeapu ja sähköposti — lähetä-napin painat itse",
+        sum_4_h: "Seuranta",
+        sum_4_p: "Tarkastelujakso, vaadittu hakemusmäärä ja lähetetyt hakemukset",
+
+        features_label: "Ominaisuudet",
+        features_h: "Työnhaku yhdessä paikassa",
+        features_intro: "Työtori on tehty työnhaun toistuvaa osaa varten: avaa monta sivustoa, lue sama ilmoitus uudestaan, kirjoita hakemuskirje, etsi liitteet ja muista, mihin jo hait.",
+        f1_h: "Hae monesta työpaikkalähteestä kerralla",
+        f1_p: "Yksi haku lukee Työmarkkinatorin, Duunitorin, Joblyn, Kuntarekryn ja Valtiolle.fi:n. Valitset itse, mitä lähteitä käytetään, ja tulokset tulevat yhteen listaan niin, että jokaisessa ilmoituksessa näkyy sen lähde.",
+        f2_h: "Ilmoitus, jonka voi lukea ilmoituksena",
+        f2_p: "Jokaisessa tuloksessa näkyy työnimike, työnantaja, sijainti, lähde ja hakuajan päättyminen. Lisäksi Työtori antaa suuntaa-antavan sopivuusarvion ja lyhyen perustelun. Arvio on Työtorin oma, eikä työnantaja näe sitä.",
+        f3_h: "Hakemusluonnos, ei valmis hakemus",
+        f3_p: "Kun tallennat työpaikan, Työtori luo hakemustekstin ja saateviestin luonnoksen profiilisi, CV:si ja itse ilmoituksen pohjalta. Muokkaat luonnosta, valitset millä kielellä se kirjoitetaan ja viet sen hakemuskirjeenä PDF:ksi. Jos CV on kirjoitettu vain käsin, Työtori tekee siitä PDF-CV:n, jonka hyväksyt ennen käyttöä.",
+        f4_h: "Apua työnantajan omalle lomakkeelle",
+        f4_p: "Työtorin selain avaa työnantajan hakulomakkeen sovelluksen sisällä. Lomakeapu listaa tunnistamansa kentät ja täyttää — vain kun itse käynnistät ja vahvistat sen — perustiedot kuten nimen, sähköpostin, puhelinnumeron, kaupungin, LinkedInin ja portfolion. Mitään ei lähetetä, mitään vaihtoehtoa ei valita puolestasi eikä liitettä valita ilman sinua.",
+        f5_h: "Tarkastelujakso lasketaan puolestasi",
+        f5_p: "Aseta tarkastelujakson alku- ja loppupäivä sekä sinulta vaadittu hakemusmäärä. Koti-näkymä näyttää sen jälkeen, montako niistä olet merkinnyt lähetetyksi, montako on jäljellä ja mitkä luonnokset ovat vielä kesken.",
+
+        steps_label: "Näin se toimii",
+        steps_h: "Tyhjästä profiilista lähetettyyn hakemukseen",
+        s1_h: "Profiili ja CV",
+        s1_p: "Täytä yhteystiedot, toivomasi tehtävät ja sijainnit sekä taustasi. Lataa CV PDF:nä tai kirjoita se käsin.",
+        s2_h: "Hae ja tallenna",
+        s2_p: "Anna Työtorin hakea profiilisi perusteella tai lisää ilmoitus itse linkkinä tai liittämällä sen teksti. Tallenna ne työpaikat, joihin haluat hakea.",
+        s3_h: "Kirjoita ja tarkista",
+        s3_p: "Luo luonnos, lue se, korjaa kaikki, mikä ei pidä sinusta paikkaansa, ja valmistele lähetettävät liitteet.",
+        s4_h: "Lähetä itse",
+        s4_p: "Lähetä sähköpostilla tai työnantajan lomakkeella ja merkitse hakemus sen jälkeen lähetetyksi. Vain tämä merkintä siirtää tarkastelujakson laskuria.",
+
+        sources_label: "Lähteet",
+        sources_h: "Mistä työpaikat tulevat ja miten listaa rajataan",
+        sources_intro: "Työtori lukee julkisia työpaikkalähteitä puolestasi. Se ei luo sinulle profiilia näihin palveluihin eikä hae töitä niissä sinun puolestasi.",
+        sources_list_h: "Työpaikkalähteet",
+        src_1: "Työmarkkinatori",
+        src_2: "Duunitori",
+        src_3: "Jobly",
+        src_4: "Kuntarekry",
+        src_5: "Valtiolle.fi",
+        src_6: "Itse liittämäsi työpaikkailmoituksen linkki",
+        src_7: "Itse liittämäsi ilmoitusteksti, jos sivua ei voi lukea",
+        sources_note: "Työmarkkinatori kuuluu ilmaisversioon. Neljä muuta lähdettä kuuluvat Työtori+:aan.",
+        filters_h: "Haun rajaaminen",
+        flt_1: "Hakusanat, jotka muodostetaan profiilin tehtävänimikkeistä",
+        flt_2: "Yksi tai useampi sijainti, koko maa tai etätyö",
+        flt_3: "Itse valitsemasi joukko työpaikkalähteitä",
+        flt_4: "Järjestys parhaan osuvuuden tai uusimman mukaan",
+        flt_5: "Sinulle sopimattoman ilmoituksen piilottaminen",
+        filters_note: "Heikot osumat pidetään erillään hyvistä, ja tuloksia ladataan sivu kerrallaan, jottei laaja haku muutu loputtomaksi listaksi.",
+
+        screens_label: "Kuvakaappaukset",
+        screenshots_h: "Työtori sisältä",
+        screenshots_p: "Koti-näkymä, työpaikkalähteet, hakutulos, hakemusluonnos ja Lomakeapu. Selaa nauhaa sivusuunnassa sormella tai hiirellä.",
+        aria_gallery: "Työtorin kuvakaappausgalleria, vieritettävä",
+        screenshots_note: "Kuvakaappaukset ovat suomenkielisestä käyttöliittymästä, ja toisessa kuvassa sama näkymä on ruotsiksi. Työtori itse toimii suomeksi, ruotsiksi tai englanniksi.",
+
+        who_label: "Kenelle",
+        who_h: "Kolme tilannetta, joita varten sovellus on tehty",
+        w1_h: "Sinulla on työnhakuvelvoite",
+        w1_p: "Tarkastelujakso, vaadittu hakemusmäärä ja lähetetyiksi merkitsemäsi hakemukset ovat Koti-näkymässä, joten laskua ei tarvitse pitää päässä.",
+        w2_h: "Haet töitä monen sivuston kautta",
+        w2_p: "Viisi työpaikkalähdettä, muualta löytynyt linkki ja itse liittämäsi ilmoitus päätyvät samaan tallennettujen listaan, samalla hakuajalla ja samalla luonnospolulla.",
+        w3_h: "Kirjoittaminen on hitain vaihe",
+        w3_p: "Luonnos antaa ensimmäisen version, joka nojaa omaan profiiliisi ja CV:hesi. Sinä korjaat sen, valitset asiakirjan kielen ja viet hakemuskirjeen ja CV:n PDF-tiedostoina.",
+
+        plans_label: "Free ja Työtori+",
+        plans_h: "Mitä ilmaisversio sisältää",
+        plans_intro: "Työtori Free on jo itsessään käyttökelpoinen työnhakusovellus. Työtori+ on tilaus niille osille, jotka maksavat joka käyttökerralla: muut työpaikkalähteet ja jatkuva AI-apu.",
+        plan_free_h: "Free",
+        plan_free_p: "Kaikki, mitä profiilin rakentamiseen, Työmarkkinatorin työpaikkoihin ja oman työnhaun seurantaan tarvitaan.",
+        plan_free_1: "Profiili, CV, tallennetut työpaikat ja hakemushistoria",
+        plan_free_2: "Työmarkkinatori-haku, kymmenen onnistunutta hakua 30 päivässä",
+        plan_free_3: "Kymmenen aktiivista tallennettua työpaikkaa ilman luonnosta",
+        plan_free_4: "Yksi AI-hakemusluonnos tiliä kohden",
+        plan_free_5: "Hakemuskirje PDF:nä, PDF-CV, liitteet, sähköpostipolut ja arkisto",
+        plan_free_6: "Tarkastelujakson seuranta, tietojen poisto ja tietosuoja-asetukset",
+        plan_plus_h: "Työtori+",
+        plan_plus_p: "Kuukausi- tai vuositilaus Google Playn kautta. Se lisää lähteet ja AI-toiminnot kaiken yllä olevan päälle.",
+        plan_plus_1: "Duunitori, Jobly, Kuntarekry ja Valtiolle.fi työpaikkalähteinä",
+        plan_plus_2: "Työpaikkahaut ilman ilmaisversion hakurajaa",
+        plan_plus_3: "Hakemusluonnokset ja uudelleenkirjoitukset ilman yhden luonnoksen rajaa",
+        plan_plus_4: "AI-sopivuusanalyysi ja AI-selitykset hakutuloksille",
+        plan_plus_5: "Lomakeavun AI Työtorin selaimessa",
+        plan_plus_6: "Lähetysavustin backendin tuella",
+        plans_note: "Hinnat näyttää Google Play sovelluksen sisällä omassa valuutassasi, joten hintaa ei julkaista täällä. Tilausta hallitaan ja se perutaan Google Playssa. Jos tilaus päättyy, mitään jo tallennettua ei poisteta: työpaikat, luonnokset, hakemukset ja arkisto pysyvät luettavissa ja vietävissä.",
+
+        trust_label: "Tietosuoja",
+        trust_h: "Mitä Työtori tekee työnhakusi tiedoilla",
+        privacy_h: "Tili ja taustapalvelu",
+        privacy_p1: "Työtori tarvitsee tilin, joka luodaan sähköpostilla ja salasanalla tai Google-kirjautumisella. Profiili, CV, tallennetut työpaikat, luonnokset ja hakemushistoria tallennetaan Työtorin taustapalveluun, jotta ne säilyvät uudelleenasennuksen ja puhelimen vaihdon yli.",
+        privacy_p2: "Hakemusluonnokset, sopivuusselitykset ja Lomakeavun ehdotukset tuottaa Työtorin lukuun toimiva tekstintuottamispalvelu, eli profiili-, CV-, ilmoitus- ja luonnosteksti lähetetään sille tätä tarkoitusta varten. Käyttötilastot voi kytkeä pois Asetuksista, ja voit poistaa tilisi ja sen tiedot Asetuksista milloin tahansa. Tietosuojaseloste kuvaa jokaisen tapauksen.",
+        browser_h: "Työtorin selaimella on tiukat rajat",
+        browser_p1: "Kun täytät työnantajan lomaketta Työtorin sisällä, sovellus lukee vain lomakkeen näkyvän rakenteen — otsikot, kenttätyypit ja vaihtoehdot. Se ei lue kirjoittamaasi tekstiä, salasanoja, piilokenttiä, evästeitä eikä sivun tallennustilaa, eikä se poimi sivun HTML:ää tai koko tekstiä.",
+        br_1: "Mitään ei täytetä ennen kuin itse käynnistät ja vahvistat sen",
+        br_2: "Täytetään vain perustiedot: nimi, sähköposti, puhelin, kaupunki, LinkedIn, portfolio",
+        br_3: "Valintaruudut, valintanapit ja alasvetovalikot ovat vain suosituksia",
+        br_4: "Liitteen valitset itse joka kerta",
+        br_5: "Työtori ei koskaan paina lähetä-nappia",
+        browser_p2: "Työnantajan oma palvelu voi tallentaa lomakkeelle kirjoitetut tiedot ja valitsemasi tiedoston jo ennen kuin lähetät mitään. Työtori kertoo tämän sovelluksessa ennen kumpaakin vaihetta.",
+
+        legal_label: "Legal ja tuki",
+        legal_h: "Tämän sovelluksen julkaistut sivut",
+        legal_p: "Tietosuojaseloste, käyttöehdot, tukiohjeet ja tietojen poisto suomeksi ja englanniksi.",
+
+        cta_h: "Työtori Google Playssa",
+        cta_p: "Suomalaiset työpaikkalähteet, hakemusluonnokset, Lomakeapu ja tarkastelujakson seuranta yhdessä Android-sovelluksessa.",
+
+        btn_play: "Avaa Google Playssa",
+        btn_features: "Katso ominaisuudet",
+        btn_all_apps: "Kaikki sovellukset",
+        btn_privacy: "Tietosuoja",
+        btn_support: "Tuki",
+        btn_terms: "Käyttöehdot",
+        btn_delete: "Poista tiedot",
+        btn_email: "Sähköpostituki",
+
+        footer_p: "JanstechAppsin Android-sovellus työnhakuun.",
+        footer_legal_h: "Tuki ja tietosuoja",
+        footer_apps_h: "Sovellukset",
+        footer_lang_h: "Kieli"
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("janstech_apps_lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+
+      if (dict[lang].meta_title) document.title = dict[lang].meta_title;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta && dict[lang].meta_description) meta.setAttribute("content", dict[lang].meta_description);
+
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang][key] != null) el.textContent = dict[lang][key];
+      }
+
+      for (const el of document.querySelectorAll("[data-i18n-label]")){
+        const key = el.getAttribute("data-i18n-label");
+        if (dict[lang][key] != null) el.setAttribute("aria-label", dict[lang][key]);
+      }
+
+      for (const btn of document.querySelectorAll("[data-set-lang]")){
+        btn.setAttribute("aria-pressed", String(btn.dataset.setLang === lang));
+      }
+    }
+
+    for (const btn of document.querySelectorAll("[data-set-lang]")){
+      btn.addEventListener("click", () => setLang(btn.dataset.setLang));
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    setLang(localStorage.getItem("janstech_apps_lang") || "en");
+  </script>
+</body>
+</html>

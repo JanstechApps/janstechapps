@@ -11,12 +11,16 @@ This repository contains the static JanstechApps website served from the reposit
 - `apps/kauppalista/` - Shopping List & Notes public app landing page.
 - `apps/waveiq/` - WaveIQ Radio public app landing page.
 - `apps/gainsai/` - GainsAI public app landing page.
+- `apps/tyotori/` - Työtori public app landing page.
 - `assets/gainsai-config.js` - Central verified regional GainsAI Pro-price configuration.
+- `assets/tyotori/` - Työtori app screenshots used by the Työtori app page.
 - `docs/janstechapps-redesign.md` - "JanstechApps Product Editorial" design direction: audit findings, colour, typography, spacing, breakpoints, per-app accents, and when a card is allowed.
 - `docs/apps/gainsai_app_profile.md` - GainsAI public product profile, source audit, and website release notes.
+- `docs/apps/tyotori_app_profile.md` - Työtori public product profile, verified feature and privacy facts, and the "do not claim" list.
 - `legal/kauppalista/` - Shopping List & Notes privacy, support, terms, and delete-data pages.
 - `legal/waveiq/` - WaveIQ Radio privacy, support, terms, and delete-data pages.
 - `legal/gainsai/` - GainsAI privacy, support, terms, and delete-data pages.
+- `legal/tyotori/` - Työtori privacy, support, terms, and delete-data pages.
 - `legal/surekeep/` - SureKeep privacy, support, terms, and delete-data pages.
 - `CNAME` - GitHub Pages custom domain configuration for `janstechapps.com`.
 - `sitemap.xml` - Generated sitemap of every indexable page, submitted to Google Search Console.
@@ -31,6 +35,7 @@ This repository contains the static JanstechApps website served from the reposit
 - https://janstechapps.com/apps/kauppalista/
 - https://janstechapps.com/apps/waveiq/
 - https://janstechapps.com/apps/gainsai/
+- https://janstechapps.com/apps/tyotori/
 
 ### Shopping List & Notes
 
@@ -53,6 +58,14 @@ This repository contains the static JanstechApps website served from the reposit
 - https://janstechapps.com/legal/gainsai/support.html
 - https://janstechapps.com/legal/gainsai/terms.html
 - https://janstechapps.com/legal/gainsai/delete-data.html
+
+### Työtori
+
+- https://janstechapps.com/apps/tyotori/
+- https://janstechapps.com/legal/tyotori/
+- https://janstechapps.com/legal/tyotori/support.html
+- https://janstechapps.com/legal/tyotori/terms.html
+- https://janstechapps.com/legal/tyotori/delete-data.html
 
 ### SureKeep
 
@@ -117,8 +130,9 @@ The page background is a single flat colour: no gradients, no images, no dot
 grid, no ambient washes and no animation. Depth comes from typography, hairlines
 and whitespace.
 
-Per-app accents are applied with the `.a-kauppalista`, `.a-waveiq` and
-`.a-gainsai` utility classes, which set `--app-accent` for that row only. The
+Per-app accents are applied with the `.a-kauppalista`, `.a-waveiq`,
+`.a-gainsai` and `.a-tyotori` utility classes, which set `--app-accent` for that
+row only. The
 accent drives the index number and the short rule in front of each feature — not
 a background, a glow or a card.
 
@@ -153,9 +167,10 @@ meantime.
 
 ## App pages
 
-The three app pages under `apps/` (`gainsai/`, `kauppalista/`, `waveiq/`) share
-one structure and one stylesheet, `style.css`. Each page is a single HTML file
-with its own inline EN/FI dictionary. There is no build step and no framework.
+The four app pages under `apps/` (`gainsai/`, `kauppalista/`, `tyotori/`,
+`waveiq/`) share one structure and one stylesheet, `style.css`. Each page is a
+single HTML file with its own inline EN/FI dictionary. There is no build step and
+no framework.
 
 ### Shared structure
 
@@ -171,9 +186,9 @@ hero. Section titles are `h2`, row and column titles are `h3`.
 | Section head | `section.section > .shell > .section__head` (`p.label` + `h2.section__title` [+ `p.section__intro` with `--split`]) | all |
 | Feature rows | `ol.feature-rows > li.feature` (`.feature__num`, `h3.feature__title`, `p.feature__text`) | all |
 | Open two-column prose | `.duo > .duo__col` (`h3.duo__title`, `p.duo__text`, optional `ul.duo__list`) | all |
-| Steps | `ol.steps > li.step` (`.step__num`, `h3.step__title`, `p.step__text`) | GainsAI, WaveIQ (`--3`) |
-| Screenshot gallery | `.gallery[tabindex="0"][role="group"] > figure.gallery__item` | GainsAI |
-| Plans | `.plans > article.plan` | GainsAI |
+| Steps | `ol.steps > li.step` (`.step__num`, `h3.step__title`, `p.step__text`) | GainsAI, Työtori, WaveIQ (`--3`) |
+| Screenshot gallery | `.gallery[tabindex="0"][role="group"] > figure.gallery__item` | GainsAI, Työtori |
+| Plans | `.plans > article.plan` | GainsAI, Työtori |
 | FAQ | `.faq > details > summary + p` | GainsAI |
 | Quiet link row | `ul.quiet > li > a` | all |
 | Closing CTA | `section.closing > .shell.closing__inner` | all |
@@ -215,6 +230,7 @@ own page:
 | Shopping List & Notes | `app-page app--kauppalista` | `#8fb894` |
 | WaveIQ Radio | `app-page app--waveiq` | `#8aa6c6` |
 | GainsAI | `app-page app--gainsai` | `#c78d6a` |
+| Työtori | `app-page app--tyotori` | `#a79ac6` |
 
 The accent drives the hero context rule, index numbers, the short rules in front
 of list items, the step top rules, the summary labels and the active nav
@@ -228,9 +244,9 @@ the GainsAI Pro price summary.
 
 ### Google Play CTA logic
 
-Kauppalista, WaveIQ Radio and GainsAI all link straight to their published Play
-listings from the hero, the closing CTA and the footer, and from their card on
-the landing page. The URL is a plain anchor `href` in the markup and is also the
+Kauppalista, WaveIQ Radio, GainsAI and Työtori all link straight to their
+published Play listings from the hero, the closing CTA and the footer, and from
+their card on the landing page. The URL is a plain anchor `href` in the markup and is also the
 `downloadUrl` of each app page's `SoftwareApplication` JSON-LD block.
 
 The GainsAI Pro price summary stays hidden until `proPricing` is filled in in
@@ -250,6 +266,12 @@ nothing is cropped and nothing is scaled past its natural size. There is no
 per-image frame and no shadow. All gallery images use `loading="lazy"`; the hero
 icon and the GainsAI promo image use `fetchpriority="high"` instead, because they
 are in the first viewport.
+
+Työtori's screenshots exist only in the app's Finnish interface (one of them in
+Swedish), so the same files are listed in both the `en` and the `fi` set with
+`alt` text in the page's own language, and a `.fineprint` note under the strip
+says which interface language is shown. Never present a Finnish-only screenshot
+as an English one.
 
 ### Adding a new app page
 
@@ -289,7 +311,7 @@ untouched.
 
 ## Sitemap and robots.txt
 
-`sitemap.xml` lists all 20 indexable pages: the landing page, the three app pages and the four legal pages of each app. It is generated from the pages on disk, so it never lists a page that does not exist and never misses one that does. Each `<lastmod>` is the file's last git commit date; no `priority` or `changefreq` values are published.
+`sitemap.xml` lists all 25 indexable pages: the landing page, the four app pages and the four legal pages of each app, plus the SureKeep legal set. It is generated from the pages on disk, so it never lists a page that does not exist and never misses one that does. Each `<lastmod>` is the file's last git commit date; no `priority` or `changefreq` values are published.
 
 Regenerate it after adding, removing, renaming or editing a public page:
 
@@ -321,6 +343,9 @@ To also check the pages in a browser, serve the publish root locally:
 ~~~bash
 python -m http.server 8000
 ~~~
+
+A quick key-parity check is worth running alongside it, because a missing
+`data-i18n` key only shows up as an untranslated string in the browser.
 
 Then check both languages of the landing page and every app page at 320, 360,
 390, 412, 600, 768, 1024, 1366 and 1920px. What to look for: no horizontal

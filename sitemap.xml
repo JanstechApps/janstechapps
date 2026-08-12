@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://janstechapps.com/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://janstechapps.com/apps/gainsai/</loc>
@@ -11,6 +11,10 @@
   <url>
     <loc>https://janstechapps.com/apps/kauppalista/</loc>
     <lastmod>2026-07-31</lastmod>
+  </url>
+  <url>
+    <loc>https://janstechapps.com/apps/tyotori/</loc>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://janstechapps.com/apps/waveiq/</loc>
@@ -63,6 +67,22 @@
   <url>
     <loc>https://janstechapps.com/legal/surekeep/terms.html</loc>
     <lastmod>2026-07-31</lastmod>
+  </url>
+  <url>
+    <loc>https://janstechapps.com/legal/tyotori/</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://janstechapps.com/legal/tyotori/delete-data.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://janstechapps.com/legal/tyotori/support.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://janstechapps.com/legal/tyotori/terms.html</loc>
+    <lastmod>2026-08-12</lastmod>
   </url>
   <url>
     <loc>https://janstechapps.com/legal/waveiq/</loc>

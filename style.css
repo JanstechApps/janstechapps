@@ -41,6 +41,7 @@
   --accent-kauppalista:#8fb894;
   --accent-waveiq:#8aa6c6;
   --accent-gainsai:#c78d6a;
+  --accent-tyotori:#a79ac6;
   --app-accent:var(--brand);
 
   --font-sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -89,6 +90,7 @@
 .app--kauppalista{ --app-accent:var(--accent-kauppalista); }
 .app--waveiq{ --app-accent:var(--accent-waveiq); }
 .app--gainsai{ --app-accent:var(--accent-gainsai); }
+.app--tyotori{ --app-accent:var(--accent-tyotori); }
 
 @media (min-width: 640px){
   :root{ --gutter:32px; }

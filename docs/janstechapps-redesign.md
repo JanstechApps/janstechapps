@@ -123,13 +123,17 @@ Per-app accents, used only as identifiers:
 
 | App | Token | Value |
 | --- | --- | --- |
-| Shopping List & Notes | `--accent-kauppalista` | `#8fb894` |
-| WaveIQ Radio | `--accent-waveiq` | `#8aa6c6` |
-| GainsAI | `--accent-gainsai` | `#c78d6a` |
+| Shopping List & Notes | `--accent-kauppalista` | `#8fb894` sage |
+| WaveIQ Radio | `--accent-waveiq` | `#8aa6c6` dusty blue |
+| GainsAI | `--accent-gainsai` | `#c78d6a` terracotta |
+| Työtori | `--accent-tyotori` | `#a79ac6` heather |
 
-All three clear 6.5:1 on the page background. An app page selects one with
-`body class="app-page app--<app>"`, which sets `--app-accent`. On the landing
-page the same job is done by the `.a-<app>` utility class.
+All four clear 6.5:1 on the page background — Työtori's is 7.3:1. They are
+picked to stay separable at the size they are actually used, which is why the
+fourth one is a cool violet rather than another green, blue or warm tone. An app
+page selects one with `body class="app-page app--<app>"`, which sets
+`--app-accent`. On the landing page the same job is done by the `.a-<app>`
+utility class.
 
 **Banned:** ambient washes, radial glows, multi-layer gradients, dot or line
 grids, background images, translucent veils, coloured shadows, `backdrop-filter`.
@@ -198,8 +202,8 @@ by default.
 
 A bounded surface (border + background + radius) is allowed only when the
 content is genuinely a discrete object that is compared against a sibling. In
-practice that is the GainsAI Free/Pro pair (`.plan`), and nothing else on the
-landing or app pages.
+practice that is the GainsAI Free/Pro pair and the Työtori Free/Työtori+ pair
+(`.plan`), and nothing else on the landing or app pages.
 
 Everything that used to be a card is now:
 
@@ -273,9 +277,15 @@ No legal sentence, link, heading or date was changed.
 6. Add every new visible string to both `dict.en` and `dict.fi`.
 7. Update `README.md`, regenerate the sitemap, run the validator.
 
-The landing hero copy does not name a number of apps, so it does not need
-editing when the fourth one ships. `apps_h` ("Three published Android apps")
-does.
+Työtori was added this way in August 2026 and is the worked example: index
+number `04`, accent `#a79ac6`, `apps/tyotori/`, `legal/tyotori/`, and
+`docs/apps/tyotori_app_profile.md` as the source of every factual claim on its
+pages.
+
+Copy that names a count has to move with the list. Adding Työtori changed
+`hero_lede`, `hero_index_note` ("All four…"), `apps_h` ("Four published Android
+apps") and the third principle, which now says out loud that Työtori needs an
+account and a server. Check those four before shipping a fifth app.
 
 ### FI/EN content
 
@@ -295,7 +305,11 @@ The brand name stays `JanstechApps` in both.
 `.gallery` is a horizontal scroll-snap strip: `tabindex="0"`, `role="group"`,
 translated `aria-label`. Each `figure.gallery__item` carries
 `data-screenshot-lang="en|fi"` and CSS shows only the items matching
-`html[lang]`. Images keep their real `width`/`height` and are sized by height
+`html[lang]`. When an app has screenshots in only one interface language, as
+Työtori does, the same files appear in both sets with `alt` text written in the
+page language, and a `.fineprint` note under the strip states which interface
+language is on screen. Do not pass a Finnish-only screenshot off as an English
+one. Images keep their real `width`/`height` and are sized by height
 (`--shot-h`: 400 → 520 → 620px), so each keeps its own aspect ratio, nothing is
 cropped and nothing is scaled past its natural size. No per-image frame, no
 shadow. Gallery images are `loading="lazy"`; hero icons and the GainsAI promo

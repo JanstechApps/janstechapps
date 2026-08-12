@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Työtori – Delete Data</title>
+  <link rel="icon" type="image/png" href="/assets/tyotori-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/tyotori-icon.png" alt="Työtori logo">
+        <div>
+          <h1>Työtori <span class="sub">Legal &amp; Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/legal/tyotori/" data-i18n="nav_privacy">Privacy</a>
+        <a href="/legal/tyotori/support.html" data-i18n="nav_support">Support</a>
+        <a href="/legal/tyotori/terms.html" data-i18n="nav_terms">Terms</a>
+        <a class="active" href="/legal/tyotori/delete-data.html" data-i18n="nav_delete">Delete Data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button" aria-pressed="true">EN</button>
+        <button id="btnFi" type="button" aria-pressed="false">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span>2026-08-12</span></span>
+      <h2 data-i18n="title">Delete Data</h2>
+      <p data-i18n="subtitle">How to delete your Työtori account and the data stored with it.</p>
+    </section>
+
+    <main class="card">
+      <h3 data-i18n="app_h">1) Delete the account in the app</h3>
+      <p data-i18n="app_p">
+        Open Työtori and go to <b>Settings → Account → User account → Delete my account and all my data</b>. The app asks you to confirm, then deletes the account. No subscription is needed for this, and it is the fastest route.
+      </p>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="what_h">2) What that deletes</h3>
+      <ul>
+        <li data-i18n="what_1"><b>From the Työtori backend:</b> your account row, profile, CV records and the CV files stored on the server, job searches and their results, saved jobs, suitability analyses, application drafts including sent and archived ones, and subscription and usage records.</li>
+        <li data-i18n="what_2"><b>Your sign-in identity:</b> the Firebase Authentication account. If this step fails, the app reports the deletion as incomplete instead of claiming success, so you can try again.</li>
+        <li data-i18n="what_3"><b>From the device:</b> prepared application material PDFs, generated CV PDFs, the preview cache, the analytics user state and the crash-reporting user id.</li>
+        <li data-i18n="what_4"><b>Browser session data:</b> cookies and storage that employer sites set in the Työtori browser are cleared at the account boundary.</li>
+      </ul>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="keep_h">3) What can still remain for a while</h3>
+      <ul>
+        <li data-i18n="keep_1"><b>Server logs:</b> category-level application logs rotate after 14 days, and standard web server access logs follow their own rotation. They contain no application content.</li>
+        <li data-i18n="keep_2"><b>Backend backups:</b> database backups can still hold a copy for a limited time, so we do not promise instant erasure from every backup.</li>
+        <li data-i18n="keep_3"><b>Your own Android backup:</b> Android may have copied the app’s private files to your own Google Drive. That backup is under your Google account, and you manage it there.</li>
+        <li data-i18n="keep_4"><b>Files you saved yourself:</b> attachments you saved to your phone’s Downloads folder are your own files. Työtori does not delete them.</li>
+        <li data-i18n="keep_5"><b>Applications you already sent:</b> once an application is with an employer, it is in the employer’s system under their own privacy policy. Työtori cannot delete it.</li>
+      </ul>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="sub_h">4) Cancel the subscription separately</h3>
+      <p data-i18n="sub_p">
+        A Työtori+ subscription is a Google Play subscription. Deleting your Työtori account does not cancel it. Cancel it in Google Play, from the subscription management link in the Työtori+ view or from your Google Play subscriptions.
+      </p>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="email_h">5) If you cannot get into the app</h3>
+      <p data-i18n="email_p">
+        Send a deletion request by email. Use the same email address you signed in to Työtori with, so the request can be matched to the right account.
+      </p>
+
+      <div class="kv">
+        <div data-i18n="kv_email_k">Email</div>
+        <div><b>janstech.apps@gmail.com</b></div>
+
+        <div data-i18n="kv_subject_k">Subject</div>
+        <div><span class="inline code">Työtori – Data deletion request</span></div>
+
+        <div data-i18n="kv_body_k">Include</div>
+        <div data-i18n="kv_body_v">
+          The email address of your Työtori account, and whether you also want the account itself removed or only its data. Do not send your password.
+        </div>
+      </div>
+
+      <p class="footer" data-i18n="footer">
+        We may ask for a minimal amount of additional information to make sure the correct account is deleted. Deleting the app from the phone alone does not delete the account on the server.
+      </p>
+    </main>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy", nav_support:"Support", nav_terms:"Terms", nav_delete:"Delete Data",
+        lang_label:"Language", badge:"Updated",
+        title:"Delete Data",
+        subtitle:"How to delete your Työtori account and the data stored with it.",
+
+        app_h:"1) Delete the account in the app",
+        app_p:"Open Työtori and go to <b>Settings → Account → User account → Delete my account and all my data</b>. The app asks you to confirm, then deletes the account. No subscription is needed for this, and it is the fastest route.",
+
+        what_h:"2) What that deletes",
+        what_1:"<b>From the Työtori backend:</b> your account row, profile, CV records and the CV files stored on the server, job searches and their results, saved jobs, suitability analyses, application drafts including sent and archived ones, and subscription and usage records.",
+        what_2:"<b>Your sign-in identity:</b> the Firebase Authentication account. If this step fails, the app reports the deletion as incomplete instead of claiming success, so you can try again.",
+        what_3:"<b>From the device:</b> prepared application material PDFs, generated CV PDFs, the preview cache, the analytics user state and the crash-reporting user id.",
+        what_4:"<b>Browser session data:</b> cookies and storage that employer sites set in the Työtori browser are cleared at the account boundary.",
+
+        keep_h:"3) What can still remain for a while",
+        keep_1:"<b>Server logs:</b> category-level application logs rotate after 14 days, and standard web server access logs follow their own rotation. They contain no application content.",
+        keep_2:"<b>Backend backups:</b> database backups can still hold a copy for a limited time, so we do not promise instant erasure from every backup.",
+        keep_3:"<b>Your own Android backup:</b> Android may have copied the app’s private files to your own Google Drive. That backup is under your Google account, and you manage it there.",
+        keep_4:"<b>Files you saved yourself:</b> attachments you saved to your phone’s Downloads folder are your own files. Työtori does not delete them.",
+        keep_5:"<b>Applications you already sent:</b> once an application is with an employer, it is in the employer’s system under their own privacy policy. Työtori cannot delete it.",
+
+        sub_h:"4) Cancel the subscription separately",
+        sub_p:"A Työtori+ subscription is a Google Play subscription. Deleting your Työtori account does not cancel it. Cancel it in Google Play, from the subscription management link in the Työtori+ view or from your Google Play subscriptions.",
+
+        email_h:"5) If you cannot get into the app",
+        email_p:"Send a deletion request by email. Use the same email address you signed in to Työtori with, so the request can be matched to the right account.",
+        kv_email_k:"Email",
+        kv_subject_k:"Subject",
+        kv_body_k:"Include",
+        kv_body_v:"The email address of your Työtori account, and whether you also want the account itself removed or only its data. Do not send your password.",
+
+        footer:"We may ask for a minimal amount of additional information to make sure the correct account is deleted. Deleting the app from the phone alone does not delete the account on the server."
+      },
+      fi: {
+        nav_privacy:"Tietosuoja", nav_support:"Tuki", nav_terms:"Käyttöehdot", nav_delete:"Poista tiedot",
+        lang_label:"Kieli", badge:"Päivitetty",
+        title:"Tietojen poistaminen",
+        subtitle:"Näin poistat Työtori-tilisi ja siihen tallennetut tiedot.",
+
+        app_h:"1) Poista tili sovelluksessa",
+        app_p:"Avaa Työtori ja mene kohtaan <b>Asetukset → Tili → Käyttäjätili → Poista tilini ja kaikki tietoni</b>. Sovellus pyytää vahvistuksen ja poistaa sitten tilin. Tähän ei tarvita tilausta, ja se on nopein tapa.",
+
+        what_h:"2) Mitä se poistaa",
+        what_1:"<b>Työtorin taustapalvelusta:</b> tilirivin, profiilin, CV-tiedot ja palvelimelle tallennetut CV-tiedostot, työpaikkahaut ja niiden tulokset, tallennetut työpaikat, sopivuusanalyysit, hakemusluonnokset mukaan lukien lähetetyt ja arkistoidut sekä tilaus- ja käyttötiedot.",
+        what_2:"<b>Kirjautumisidentiteetin:</b> Firebase Authentication -tilin. Jos tämä vaihe epäonnistuu, sovellus ilmoittaa poiston keskeneräiseksi eikä väitä sitä onnistuneeksi, joten voit yrittää uudelleen.",
+        what_3:"<b>Laitteelta:</b> valmistellut hakemusliitteet PDF:nä, luodut CV-PDF:t, esikatselun välimuistin, analytiikan käyttäjätilan ja kaatumisraportoinnin käyttäjätunnuksen.",
+        what_4:"<b>Selaimen istuntotiedot:</b> työnantajien sivustojen Työtorin selaimeen asettamat evästeet ja tallennustila tyhjennetään tilirajalla.",
+
+        keep_h:"3) Mitä voi säilyä vielä hetken",
+        keep_1:"<b>Palvelinlokit:</b> luokkatasoiset sovelluslokit kiertävät 14 päivän jaksossa, ja verkkopalvelimen tavanomaiset käyttölokit noudattavat omaa kiertoaan. Niissä ei ole hakemussisältöä.",
+        keep_2:"<b>Taustapalvelun varmuuskopiot:</b> tietokannan varmuuskopioissa voi olla kopio rajatun ajan, joten emme lupaa välitöntä poistumista jokaisesta varmuuskopiosta.",
+        keep_3:"<b>Oma Android-varmuuskopiosi:</b> Android on voinut kopioida sovelluksen yksityiset tiedostot omaan Google Driveesi. Tämä varmuuskopio on Google-tilisi alla, ja hallitset sitä siellä.",
+        keep_4:"<b>Itse tallentamasi tiedostot:</b> puhelimen Lataukset-kansioon tallentamasi liitteet ovat omia tiedostojasi. Työtori ei poista niitä.",
+        keep_5:"<b>Jo lähettämäsi hakemukset:</b> kun hakemus on työnantajalla, se on työnantajan järjestelmässä heidän oman tietosuojakäytäntönsä alla. Työtori ei voi poistaa sitä.",
+
+        sub_h:"4) Peru tilaus erikseen",
+        sub_p:"Työtori+ on Google Play -tilaus. Työtori-tilin poistaminen ei peru sitä. Peru tilaus Google Playssa Työtori+-näkymän tilauksen hallintalinkin kautta tai Google Playn tilauksista.",
+
+        email_h:"5) Jos et pääse sovellukseen",
+        email_p:"Lähetä poistopyyntö sähköpostitse. Käytä samaa sähköpostiosoitetta, jolla olet kirjautunut Työtoriin, jotta pyyntö voidaan kohdistaa oikeaan tiliin.",
+        kv_email_k:"Sähköposti",
+        kv_subject_k:"Aihe",
+        kv_body_k:"Liitä viestiin",
+        kv_body_v:"Työtori-tilisi sähköpostiosoite ja se, haluatko poistaa myös itse tilin vai vain sen tiedot. Älä lähetä salasanaasi.",
+
+        footer:"Saatamme pyytää mahdollisimman vähän lisätietoa varmistaaksemme, että oikea tili poistetaan. Pelkkä sovelluksen poistaminen puhelimesta ei poista tiliä palvelimelta."
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+      document.getElementById("btnFi").setAttribute("aria-pressed", String(lang === "fi"));
+      document.getElementById("btnEn").setAttribute("aria-pressed", String(lang === "en"));
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
+</body>
+</html>

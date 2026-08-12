@@ -47,6 +47,7 @@
   --accent-kauppalista:#8fb894;
   --accent-waveiq:#8aa6c6;
   --accent-gainsai:#c78d6a;
+  --accent-tyotori:#a79ac6;
   --app-accent:var(--brand);
 
   /* Type families. System stacks only, no downloaded fonts. */
@@ -517,6 +518,7 @@ button:focus-visible{
 .a-kauppalista{ --app-accent:var(--accent-kauppalista); }
 .a-waveiq{ --app-accent:var(--accent-waveiq); }
 .a-gainsai{ --app-accent:var(--accent-gainsai); }
+.a-tyotori{ --app-accent:var(--accent-tyotori); }
 
 .app-index{ border-top:1px solid var(--rule); }
 

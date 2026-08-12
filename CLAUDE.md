@@ -65,13 +65,15 @@ Expected structure:
 ├── apps/
 │   ├── gainsai/
 │   ├── kauppalista/
+│   ├── tyotori/
 │   └── waveiq/
 ├── docs/
 │   └── apps/
 └── legal/
     ├── kauppalista/
     ├── waveiq/
-    └── gainsai/
+    ├── gainsai/
+    └── tyotori/
 ~~~
 
 Root should stay clean.
@@ -101,6 +103,7 @@ Public app landing pages belong under:
 
 - apps/gainsai/
 - apps/kauppalista/
+- apps/tyotori/
 - apps/waveiq/
 
 Public app-page source profiles belong under:
@@ -112,6 +115,7 @@ Legal and support pages belong under:
 - legal/kauppalista/
 - legal/waveiq/
 - legal/gainsai/
+- legal/tyotori/
 
 Do NOT recreate imported folders such as:
 
@@ -153,6 +157,14 @@ Agents MUST preserve or intentionally update these public URLs.
 - https://janstechapps.com/legal/gainsai/support.html
 - https://janstechapps.com/legal/gainsai/terms.html
 - https://janstechapps.com/legal/gainsai/delete-data.html
+
+## Työtori
+
+- https://janstechapps.com/apps/tyotori/
+- https://janstechapps.com/legal/tyotori/
+- https://janstechapps.com/legal/tyotori/support.html
+- https://janstechapps.com/legal/tyotori/terms.html
+- https://janstechapps.com/legal/tyotori/delete-data.html
 
 Before completing work, agents MUST check that internal links still point to valid paths.
 
@@ -324,9 +336,11 @@ Then test key pages locally:
 - http://127.0.0.1:8000/
 - http://127.0.0.1:8000/apps/kauppalista/
 - http://127.0.0.1:8000/apps/waveiq/
+- http://127.0.0.1:8000/apps/tyotori/
 - http://127.0.0.1:8000/legal/kauppalista/
 - http://127.0.0.1:8000/legal/waveiq/
 - http://127.0.0.1:8000/legal/gainsai/
+- http://127.0.0.1:8000/legal/tyotori/
 
 At minimum, validate:
 
@@ -503,7 +517,10 @@ instruction.
 
 Each app page sets `<body class="app-page app--<app>">`. The `.app--<app>` block
 in `style.css` overrides `--app-accent` only; the same value is applied on the
-landing page through the `.a-<app>` utility class. Do NOT give an app page a
+landing page through the `.a-<app>` utility class. The four accents in use are
+`#8fb894` (Kauppalista), `#8aa6c6` (WaveIQ), `#c78d6a` (GainsAI) and `#a79ac6`
+(Työtori); a new app needs one that stays separable from all of them on the
+warm charcoal page. Do NOT give an app page a
 separate design — the accent is the only per-app visual difference, and it stays
 an identifier (index number, short rule, nav underline), never a surface, a glow
 or a card.
@@ -517,7 +534,7 @@ Do NOT remove it. `.btn` is `display:inline-flex`, which otherwise overrides the
 user-agent `[hidden]` rule and reveals elements a page keeps hidden until it has
 verified data, such as the GainsAI Pro price summary.
 
-Every app has a published Google Play listing, so all three apps link to their
+Every app has a published Google Play listing, so all four apps link to their
 store page with plain anchors from the landing page card, the hero, the closing
 CTA and the app page footer. Agents MUST NOT add a guessed URL, a disabled
 button, a "coming soon" label, or any placeholder that renders as a broken

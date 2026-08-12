@@ -1,0 +1,351 @@
+/* Colours follow the JanstechApps Product Editorial direction shared with
+   home.css and style.css (see docs/janstechapps-redesign.md). Only the palette,
+   radii and surfaces were harmonised here; the layout and the legal content of
+   these pages are unchanged. */
+:root{
+  --bg: #121110;
+  --panel: #171614;
+  --panel2: #1b1917;
+  --text: #ece9e6;
+  --muted: #b5aea6;
+  --faint: #8f8880;
+  --accent: #e07a4f;
+  --accent2: #a79ac6;
+  --border: #2b2825;
+  --shadow: none;
+  --radius: 6px;
+  --radius2: 8px;
+  --maxw: 980px;
+}
+
+*{ box-sizing:border-box; }
+html, body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a{ color: var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+.container{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 22px 18px 70px;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding: 14px 16px;
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: var(--radius2);
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width: 220px;
+}
+
+.logo{
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+
+.brand h1{
+  font-size: 14px;
+  line-height: 1.15;
+  margin:0;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.brand .sub{
+  display:block;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+.nav a{
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  color: var(--text);
+  font-size: 13px;
+  background: transparent;
+}
+.nav a:hover{
+  border-color: var(--border);
+  background: var(--panel2);
+}
+.nav a.active{
+  border-color: var(--accent);
+  background: rgba(224,122,79,0.14);
+  color: var(--accent);
+}
+
+.lang{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width: 160px;
+  justify-content:flex-end;
+}
+.lang .hint{
+  font-size: 12px;
+  color: var(--faint);
+}
+.lang button{
+  border: 1px solid var(--border);
+  background: var(--panel2);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.lang button.active{
+  border-color: var(--accent);
+  background: rgba(224,122,79,0.14);
+  color: var(--accent);
+}
+
+.hero{
+  padding: 26px 6px 12px;
+}
+.hero h2{
+  font-size: 40px;
+  margin: 18px 0 10px;
+  letter-spacing: 0;
+}
+.hero p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 80ch;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+@media(min-width: 900px){
+  .grid{ grid-template-columns: 1.15fr 0.85fr; }
+}
+
+.card{
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: var(--radius2);
+  padding: 18px 16px;
+}
+.card h3{
+  margin: 0 0 10px;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+}
+.card p, .card li{
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+.card ul{
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+.kv{
+  display:grid;
+  grid-template-columns: 160px 1fr;
+  gap: 8px 14px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.kv div:nth-child(odd){
+  color: var(--faint);
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  font-size: 12px;
+  color: var(--muted);
+}
+.badge i{
+  display:inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 4px;
+  background: var(--accent);
+}
+
+.footer{
+  margin-top: 24px;
+  color: var(--faint);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+hr.sep{
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 14px 0;
+}
+
+.small{
+  font-size: 12px;
+  color: var(--faint);
+}
+code.inline{
+  padding: 2px 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--panel2);
+  color: var(--text);
+}
+
+@media (max-width: 900px){
+  .brand{
+    min-width: 0;
+  }
+
+  .lang{
+    min-width: 0;
+  }
+}
+
+@media (max-width: 700px){
+  .container{
+    padding: 16px 10px 52px;
+  }
+
+  .topbar{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 18px 14px;
+    position: static;
+  }
+
+  .brand{
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .logo{
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+  }
+
+  .brand h1{
+    font-size: 21px;
+    line-height: 1.18;
+  }
+
+  .brand .sub{
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 10px 12px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 14px;
+  }
+
+  .lang{
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .lang .hint{
+    font-size: 13px;
+  }
+
+  /* 44px on the touch layout; the wider layout keeps the shared legal sizing. */
+  .lang button{
+    min-width: 54px;
+    min-height: 44px;
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+
+  .hero{
+    padding: 22px 4px 12px;
+  }
+
+  .hero h2{
+    font-size: 32px;
+    line-height: 1.12;
+  }
+
+  .card{
+    padding: 16px;
+  }
+}
+
+@media (max-width: 520px){
+  .kv{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px){
+  .nav{
+    grid-template-columns: 1fr;
+  }
+
+  .brand h1{
+    font-size: 19px;
+  }
+
+  .hero h2{
+    font-size: 28px;
+  }
+}

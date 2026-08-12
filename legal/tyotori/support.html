@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Työtori – Support</title>
+  <link rel="icon" type="image/png" href="/assets/tyotori-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img class="logo" src="/assets/tyotori-icon.png" alt="Työtori logo">
+        <div>
+          <h1>Työtori <span class="sub">Legal &amp; Support Pages</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/legal/tyotori/" data-i18n="nav_privacy">Privacy</a>
+        <a class="active" href="/legal/tyotori/support.html" data-i18n="nav_support">Support</a>
+        <a href="/legal/tyotori/terms.html" data-i18n="nav_terms">Terms</a>
+        <a href="/legal/tyotori/delete-data.html" data-i18n="nav_delete">Delete Data</a>
+      </nav>
+
+      <div class="lang">
+        <span class="hint" data-i18n="lang_label">Language</span>
+        <button id="btnEn" type="button" aria-pressed="true">EN</button>
+        <button id="btnFi" type="button" aria-pressed="false">FI</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="badge"><i></i> <span data-i18n="badge">Updated</span>: <span>2026-08-12</span></span>
+      <h2 data-i18n="title">Support</h2>
+      <p data-i18n="subtitle">Help with signing in, searching, application drafts, the Työtori browser and the Työtori+ subscription.</p>
+    </section>
+
+    <main class="card">
+      <h3 data-i18n="contact_h">Contact</h3>
+      <p data-i18n="contact_p">Email: <b>janstech.apps@gmail.com</b></p>
+      <p class="small" data-i18n="contact_note">You can also send feedback from the app: Settings → Send feedback. That message includes the app version and device details, and no profile, CV, job or application content.</p>
+
+      <hr class="sep"/>
+
+      <h3 data-i18n="faq_h">Common questions</h3>
+      <ul>
+        <li data-i18n="faq_1"><b>Do I need an account?</b> Yes. Työtori keeps your profile, CV, saved jobs and applications on its backend, so sign-in is needed. You can create an account with an email address and password, or sign in with Google.</li>
+        <li data-i18n="faq_2"><b>The password reset email did not arrive:</b> check the spam folder and make sure you used the same address you signed up with. You can request a new link from the sign-in screen.</li>
+        <li data-i18n="faq_3"><b>“Your free search quota is used up”:</b> the free version includes ten successful searches per 30 days on Työmarkkinatori. The screen shows when the quota renews. Työtori+ removes the limit.</li>
+        <li data-i18n="faq_4"><b>“In the Free version, you can save up to 10 active jobs”:</b> the limit counts only saved jobs that do not yet have an application draft. Delete a saved job you no longer need, or create the draft, and the limit frees up.</li>
+        <li data-i18n="faq_5"><b>A job source is greyed out or marked Työtori+:</b> Työmarkkinatori is free. Duunitori, Jobly, Kuntarekry and Valtiolle.fi are part of Työtori+.</li>
+        <li data-i18n="faq_6"><b>“We could not read a job posting from this link”:</b> some employer pages require sign-in or block automated reading. Open the posting in the Työtori browser and paste the posting text manually — the draft can be created from pasted text.</li>
+        <li data-i18n="faq_7"><b>No jobs were found:</b> try broader keywords, add locations or the whole country, or turn on more job sources. Public job boards also return nothing for some search words.</li>
+        <li data-i18n="faq_8"><b>The application draft could not be created:</b> Työtori needs your name in the profile, a CV or written CV text, and the posting description. The error message names the one that is missing.</li>
+        <li data-i18n="faq_9"><b>The application text is not quite right:</b> it is a draft. Edit it in the app, or change the application language and create it again. Always check the facts about yourself before you send.</li>
+        <li data-i18n="faq_10"><b>Form help does not find the form:</b> open the employer’s actual application form first, then press “Check the form”. Sign-in pages are never analysed. If the page cannot be handled, open it in an external browser.</li>
+        <li data-i18n="faq_11"><b>Google or Microsoft sign-in does not work in the Työtori browser:</b> external sign-in providers are deliberately not handled inside it. Use the employer’s email sign-in or account creation if there is one, or open the form in an external browser.</li>
+        <li data-i18n="faq_12"><b>The email draft opened without attachments:</b> some email apps drop attachments from a draft. Attach the application letter PDF and the CV yourself, or save the attachments to your phone first and add them from there.</li>
+        <li data-i18n="faq_13"><b>The review period counter did not move:</b> only marking an application as sent moves it. Archiving an application that was already sent does not count it a second time, and deleting an unsent draft does not change the count.</li>
+        <li data-i18n="faq_14"><b>I bought Työtori+ but it is not active:</b> a purchase becomes active only after the backend has verified it with Google Play. If the purchase is pending, wait a moment and try “Restore purchase” in the Työtori+ view.</li>
+        <li data-i18n="faq_15"><b>How do I cancel the subscription?</b> In Google Play, from the subscription management link in the Työtori+ view. Cancelling does not delete anything you have saved.</li>
+        <li data-i18n="faq_16"><b>How do I change the app language?</b> Settings → Language. Työtori runs in Finnish, Swedish and English, and the language of an application document is chosen separately in the draft.</li>
+      </ul>
+
+      <p class="footer" data-i18n="footer">
+        When reporting a problem, include your device model, the Android version, the app version from Settings, and what you were doing just before it happened. Do not send passwords or account credentials by email.
+      </p>
+    </main>
+  </div>
+
+  <script>
+    const dict = {
+      en: {
+        nav_privacy:"Privacy", nav_support:"Support", nav_terms:"Terms", nav_delete:"Delete Data",
+        lang_label:"Language", badge:"Updated",
+        title:"Support",
+        subtitle:"Help with signing in, searching, application drafts, the Työtori browser and the Työtori+ subscription.",
+        contact_h:"Contact",
+        contact_p:"Email: <b>janstech.apps@gmail.com</b>",
+        contact_note:"You can also send feedback from the app: Settings → Send feedback. That message includes the app version and device details, and no profile, CV, job or application content.",
+        faq_h:"Common questions",
+        faq_1:"<b>Do I need an account?</b> Yes. Työtori keeps your profile, CV, saved jobs and applications on its backend, so sign-in is needed. You can create an account with an email address and password, or sign in with Google.",
+        faq_2:"<b>The password reset email did not arrive:</b> check the spam folder and make sure you used the same address you signed up with. You can request a new link from the sign-in screen.",
+        faq_3:"<b>“Your free search quota is used up”:</b> the free version includes ten successful searches per 30 days on Työmarkkinatori. The screen shows when the quota renews. Työtori+ removes the limit.",
+        faq_4:"<b>“In the Free version, you can save up to 10 active jobs”:</b> the limit counts only saved jobs that do not yet have an application draft. Delete a saved job you no longer need, or create the draft, and the limit frees up.",
+        faq_5:"<b>A job source is greyed out or marked Työtori+:</b> Työmarkkinatori is free. Duunitori, Jobly, Kuntarekry and Valtiolle.fi are part of Työtori+.",
+        faq_6:"<b>“We could not read a job posting from this link”:</b> some employer pages require sign-in or block automated reading. Open the posting in the Työtori browser and paste the posting text manually — the draft can be created from pasted text.",
+        faq_7:"<b>No jobs were found:</b> try broader keywords, add locations or the whole country, or turn on more job sources. Public job boards also return nothing for some search words.",
+        faq_8:"<b>The application draft could not be created:</b> Työtori needs your name in the profile, a CV or written CV text, and the posting description. The error message names the one that is missing.",
+        faq_9:"<b>The application text is not quite right:</b> it is a draft. Edit it in the app, or change the application language and create it again. Always check the facts about yourself before you send.",
+        faq_10:"<b>Form help does not find the form:</b> open the employer’s actual application form first, then press “Check the form”. Sign-in pages are never analysed. If the page cannot be handled, open it in an external browser.",
+        faq_11:"<b>Google or Microsoft sign-in does not work in the Työtori browser:</b> external sign-in providers are deliberately not handled inside it. Use the employer’s email sign-in or account creation if there is one, or open the form in an external browser.",
+        faq_12:"<b>The email draft opened without attachments:</b> some email apps drop attachments from a draft. Attach the application letter PDF and the CV yourself, or save the attachments to your phone first and add them from there.",
+        faq_13:"<b>The review period counter did not move:</b> only marking an application as sent moves it. Archiving an application that was already sent does not count it a second time, and deleting an unsent draft does not change the count.",
+        faq_14:"<b>I bought Työtori+ but it is not active:</b> a purchase becomes active only after the backend has verified it with Google Play. If the purchase is pending, wait a moment and try “Restore purchase” in the Työtori+ view.",
+        faq_15:"<b>How do I cancel the subscription?</b> In Google Play, from the subscription management link in the Työtori+ view. Cancelling does not delete anything you have saved.",
+        faq_16:"<b>How do I change the app language?</b> Settings → Language. Työtori runs in Finnish, Swedish and English, and the language of an application document is chosen separately in the draft.",
+        footer:"When reporting a problem, include your device model, the Android version, the app version from Settings, and what you were doing just before it happened. Do not send passwords or account credentials by email."
+      },
+      fi: {
+        nav_privacy:"Tietosuoja", nav_support:"Tuki", nav_terms:"Käyttöehdot", nav_delete:"Poista tiedot",
+        lang_label:"Kieli", badge:"Päivitetty",
+        title:"Tuki",
+        subtitle:"Apua kirjautumiseen, hakuun, hakemusluonnoksiin, Työtorin selaimeen ja Työtori+-tilaukseen.",
+        contact_h:"Yhteystiedot",
+        contact_p:"Sähköposti: <b>janstech.apps@gmail.com</b>",
+        contact_note:"Voit lähettää palautetta myös sovelluksesta: Asetukset → Lähetä palautetta. Viesti sisältää sovellusversion ja laitetiedot, ei profiili-, CV-, työpaikka- tai hakemussisältöä.",
+        faq_h:"Yleisimmät kysymykset",
+        faq_1:"<b>Tarvitsenko tilin?</b> Kyllä. Työtori säilyttää profiilin, CV:n, tallennetut työpaikat ja hakemukset taustapalvelussaan, joten kirjautuminen tarvitaan. Voit luoda tilin sähköpostilla ja salasanalla tai kirjautua Google-tilillä.",
+        faq_2:"<b>Salasanan palautusviesti ei tullut perille:</b> tarkista roskapostikansio ja varmista, että käytit samaa osoitetta, jolla loit tilin. Voit pyytää uuden linkin kirjautumisnäkymästä.",
+        faq_3:"<b>”Ilmaiset haut on käytetty”:</b> ilmaisversioon kuuluu kymmenen onnistunutta hakua 30 päivässä Työmarkkinatorista. Näkymä kertoo, milloin kiintiö uusiutuu. Työtori+ poistaa rajan.",
+        faq_4:"<b>”Ilmaisversiossa voit tallentaa enintään 10 aktiivista työpaikkaa”:</b> raja laskee vain ne tallennetut työpaikat, joilla ei vielä ole hakemusluonnosta. Poista tarpeeton tallennus tai luo luonnos, niin raja vapautuu.",
+        faq_5:"<b>Työpaikkalähde on merkitty Työtori+:lla:</b> Työmarkkinatori on ilmainen. Duunitori, Jobly, Kuntarekry ja Valtiolle.fi kuuluvat Työtori+:aan.",
+        faq_6:"<b>”Emme saaneet luettua työpaikkailmoitusta tästä linkistä”:</b> osa työnantajien sivuista vaatii kirjautumisen tai estää automaattisen lukemisen. Avaa ilmoitus Työtorin selaimessa ja liitä ilmoituksen teksti käsin — luonnos voidaan luoda liitetystä tekstistä.",
+        faq_7:"<b>Työpaikkoja ei löytynyt:</b> kokeile laajempia hakusanoja, lisää sijainteja tai koko maa, tai ota käyttöön useampi työpaikkalähde. Julkiset työpaikkalähteet eivät myöskään palauta osumia kaikilla hakusanoilla.",
+        faq_8:"<b>Hakemusluonnosta ei voitu luoda:</b> Työtori tarvitsee nimen profiiliin, CV:n tai kirjoitetun CV-tekstin sekä ilmoituksen kuvauksen. Virheilmoitus kertoo, mikä niistä puuttuu.",
+        faq_9:"<b>Hakemusteksti ei ole aivan oikein:</b> se on luonnos. Muokkaa sitä sovelluksessa tai vaihda hakemuksen kieli ja luo se uudelleen. Tarkista itseäsi koskevat tiedot aina ennen lähettämistä.",
+        faq_10:"<b>Lomakeapu ei löydä lomaketta:</b> avaa ensin työnantajan varsinainen hakulomake ja paina sitten ”Tarkista lomake”. Kirjautumissivuja ei analysoida koskaan. Jos sivu ei toimi, avaa se ulkoisessa selaimessa.",
+        faq_11:"<b>Google- tai Microsoft-kirjautuminen ei toimi Työtorin selaimessa:</b> ulkoisia kirjautumispalveluita ei tarkoituksella käsitellä sen sisällä. Käytä työnantajan omaa sähköpostikirjautumista tai tilin luontia, jos sellainen on, tai avaa lomake ulkoisessa selaimessa.",
+        faq_12:"<b>Sähköpostiluonnos avautui ilman liitteitä:</b> osa sähköpostisovelluksista pudottaa liitteet luonnoksesta. Liitä hakemuskirje-PDF ja CV itse, tai tallenna liitteet ensin puhelimeen ja lisää ne sieltä.",
+        faq_13:"<b>Tarkastelujakson laskuri ei liikkunut:</b> vain lähetetyksi merkitseminen siirtää sitä. Jo lähetetyn hakemuksen arkistointi ei laske sitä toiseen kertaan, eikä lähettämättömän luonnoksen poisto muuta lukemaa.",
+        faq_14:"<b>Ostin Työtori+:n, mutta se ei ole aktiivinen:</b> osto aktivoituu vasta, kun taustapalvelu on varmentanut sen Google Playsta. Jos osto on odottavassa tilassa, odota hetki ja kokeile ”Palauta ostos” Työtori+-näkymässä.",
+        faq_15:"<b>Miten perun tilauksen?</b> Google Playssa, Työtori+-näkymän tilauksen hallintalinkin kautta. Peruminen ei poista mitään jo tallennettua.",
+        faq_16:"<b>Miten vaihdan sovelluksen kielen?</b> Asetukset → Kieli. Työtori toimii suomeksi, ruotsiksi ja englanniksi, ja hakemusasiakirjan kieli valitaan erikseen luonnoksessa.",
+        footer:"Kun raportoit ongelmasta, kerro laitteen malli, Android-versio, Asetuksissa näkyvä sovellusversio ja mitä teit juuri ennen ongelmaa. Älä lähetä salasanoja tai tilitunnuksia sähköpostilla."
+      }
+    };
+
+    function setLang(lang){
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = (lang === "fi") ? "fi" : "en";
+      for (const el of document.querySelectorAll("[data-i18n]")){
+        const key = el.getAttribute("data-i18n");
+        if (dict[lang] && dict[lang][key] != null) el.innerHTML = dict[lang][key];
+      }
+      document.getElementById("btnFi").classList.toggle("active", lang === "fi");
+      document.getElementById("btnEn").classList.toggle("active", lang === "en");
+      document.getElementById("btnFi").setAttribute("aria-pressed", String(lang === "fi"));
+      document.getElementById("btnEn").setAttribute("aria-pressed", String(lang === "en"));
+    }
+
+    const saved = localStorage.getItem("lang") || "en";
+    document.getElementById("btnFi").addEventListener("click", ()=>setLang("fi"));
+    document.getElementById("btnEn").addEventListener("click", ()=>setLang("en"));
+    setLang(saved);
+  </script>
+</body>
+</html>
