@@ -285,7 +285,8 @@ Keep it short. It is a trust signal, not a CV.
 Keep the site focused on:
 
 - JanstechApps
-- Android apps
+- websites, Android apps, backend systems and AI features
+- customer projects, described accurately and linked to the customer's own site
 - Google Play links
 - privacy/support/terms/delete-data pages
 - brand contact information
@@ -517,9 +518,10 @@ instruction.
 
 Each app page sets `<body class="app-page app--<app>">`. The `.app--<app>` block
 in `style.css` overrides `--app-accent` only; the same value is applied on the
-landing page through the `.a-<app>` utility class. The four accents in use are
-`#8fb894` (Kauppalista), `#8aa6c6` (WaveIQ), `#c78d6a` (GainsAI) and `#a79ac6`
-(Työtori); a new app needs one that stays separable from all of them on the
+landing page through the `.a-<app>` utility class. The accents in use are
+`#8fb894` (Kauppalista), `#8aa6c6` (WaveIQ), `#c78d6a` (GainsAI), `#a79ac6`
+(Työtori) and `#c98ba0` (the Piikula customer project, landing page only); a new
+app or project needs one that stays separable from all of them on the
 warm charcoal page. Do NOT give an app page a
 separate design — the accent is the only per-app visual difference, and it stays
 an identifier (index number, short rule, nav underline), never a surface, a glow

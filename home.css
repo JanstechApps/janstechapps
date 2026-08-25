@@ -42,12 +42,13 @@
   --on-brand:#1a0d06;
   --focus:#e07a4f;
 
-  /* Per-app identifiers: an index number, a bullet rule, an icon frame edge.
-     Never a background, a glow or a whole card. */
+  /* Per-app and per-project identifiers: an index number, a bullet rule, an
+     icon frame edge. Never a background, a glow or a whole card. */
   --accent-kauppalista:#8fb894;
   --accent-waveiq:#8aa6c6;
   --accent-gainsai:#c78d6a;
   --accent-tyotori:#a79ac6;
+  --accent-piikula:#c98ba0;
   --app-accent:var(--brand);
 
   /* Type families. System stacks only, no downloaded fonts. */
@@ -263,6 +264,12 @@ button:focus-visible{
   border-color:var(--brand-hover);
   background:var(--brand-hover);
   color:var(--on-brand);
+}
+
+/* Primary action that leaves the site: the same arrow the text links use. */
+.btn--out::after{
+  content:"\2197";
+  font-weight:400;
 }
 
 /* Secondary action: a text link with an arrow, never a second filled button. */
@@ -512,13 +519,51 @@ button:focus-visible{
 }
 
 /* --------------------------------------------------------------------------
-   8. App index (the product rows that replaced the app cards)
+   8. Services
+
+   Four capability columns in the same open language as the app pages' steps:
+   a rule on top, a mono number, a title and one short paragraph. Not a card.
+   -------------------------------------------------------------------------- */
+
+.services{
+  display:grid;
+  gap:var(--space-5);
+}
+
+.service{
+  min-width:0;
+  padding-top:var(--space-3);
+  border-top:1px solid var(--rule-strong);
+}
+
+.service__num{
+  font-family:var(--font-mono);
+  font-size:var(--fs-meta);
+  letter-spacing:.08em;
+  color:var(--app-accent);
+}
+
+.service__title{ margin-top:var(--space-2); font-size:var(--fs-h3); }
+
+.service__text{
+  max-width:52ch;
+  margin-top:var(--space-2);
+  color:var(--text-muted);
+  font-size:var(--fs-small);
+}
+
+/* --------------------------------------------------------------------------
+   9. Work and app index (the product rows that replaced the app cards)
+
+   Customer projects and the brand's own apps use the same row, so the two
+   indexes read as one portfolio.
    -------------------------------------------------------------------------- */
 
 .a-kauppalista{ --app-accent:var(--accent-kauppalista); }
 .a-waveiq{ --app-accent:var(--accent-waveiq); }
 .a-gainsai{ --app-accent:var(--accent-gainsai); }
 .a-tyotori{ --app-accent:var(--accent-tyotori); }
+.a-piikula{ --app-accent:var(--accent-piikula); }
 
 .app-index{ border-top:1px solid var(--rule); }
 
@@ -558,6 +603,21 @@ button:focus-visible{
   border-radius:var(--radius-icon);
   background:var(--surface-subtle);
   object-fit:contain;
+}
+
+/* A project with no icon of its own keeps the column rhythm with a monogram
+   in the same frame as the app icons. */
+.app-row__glyph{
+  display:grid;
+  place-items:center;
+  width:52px;
+  height:52px;
+  border:1px solid var(--rule);
+  border-radius:var(--radius-icon);
+  background:var(--surface-subtle);
+  color:var(--app-accent);
+  font-family:var(--font-mono);
+  font-size:1.1rem;
 }
 
 .app-row__head{
@@ -654,7 +714,7 @@ button:focus-visible{
 .app-row__legal{ margin-top:var(--space-2); }
 
 /* --------------------------------------------------------------------------
-   9. Principles
+   10. Principles
    -------------------------------------------------------------------------- */
 
 .tenets{ border-top:1px solid var(--rule); }
@@ -682,7 +742,7 @@ button:focus-visible{
 }
 
 /* --------------------------------------------------------------------------
-   10. Developer
+   11. Developer
    -------------------------------------------------------------------------- */
 
 .developer{
@@ -707,7 +767,39 @@ button:focus-visible{
 }
 
 /* --------------------------------------------------------------------------
-   11. Footer
+   12. Contact
+
+   The closing band the app pages already use: one strong rule, a title, one
+   line of text and a single action.
+   -------------------------------------------------------------------------- */
+
+.closing{ padding-block:var(--section-gap); }
+.section + .closing{ padding-block-start:0; }
+
+.closing__inner{
+  display:grid;
+  gap:var(--space-5);
+  padding-top:var(--space-6);
+  border-top:1px solid var(--rule-strong);
+}
+
+.closing__title{ font-size:var(--fs-h2); }
+
+.closing__text{
+  max-width:52ch;
+  margin-top:var(--space-3);
+  color:var(--text-muted);
+}
+
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:var(--space-3) var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   13. Footer
    -------------------------------------------------------------------------- */
 
 .site-footer{
@@ -764,10 +856,12 @@ button:focus-visible{
 }
 
 /* --------------------------------------------------------------------------
-   12. Responsive steps (mobile first, min-width only)
+   14. Responsive steps (mobile first, min-width only)
    -------------------------------------------------------------------------- */
 
 @media (min-width: 560px){
+  .services{ grid-template-columns:repeat(2, minmax(0,1fr)); column-gap:var(--space-6); }
+
   .app-row__features{
     grid-template-columns:repeat(2, minmax(0,1fr));
     column-gap:var(--space-5);
@@ -811,6 +905,12 @@ button:focus-visible{
 
   /* Lines the deck up with the title rather than with the small label above it. */
   .section__head--split .section__intro{ margin-top:2.1rem; }
+
+  .closing__inner{
+    grid-template-columns:minmax(0,1fr) auto;
+    align-items:start;
+    gap:var(--space-6);
+  }
 }
 
 @media (min-width: 1024px){
@@ -846,11 +946,15 @@ button:focus-visible{
 
   .app-row__icon{ width:60px; height:60px; }
 
+  .app-row__glyph{ width:60px; height:60px; font-size:1.25rem; }
+
+  .services{ grid-template-columns:repeat(4, minmax(0,1fr)); }
+
   .footer-grid{ grid-template-columns:1.2fr 1.2fr 1fr auto; }
 }
 
 /* --------------------------------------------------------------------------
-   13. Motion preferences
+   15. Motion preferences
    -------------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce){

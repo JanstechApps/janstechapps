@@ -60,9 +60,16 @@ the stylesheet ownership split.
 
 ## 3. The direction
 
-**Practical, not futuristic.** These apps do concrete jobs: shopping lists,
-notes, finding a radio station, logging a training session. The visual language
-argues for usefulness, not for the future.
+**Practical, not futuristic.** The work does concrete jobs: a shopping list, a
+radio station you want to find again, a training session to log, a treatment
+price a customer has to find on a phone. The visual language argues for
+usefulness, not for the future.
+
+**One portfolio, two kinds of entry.** Since August 2026 the brand covers
+websites, Android applications, backend systems and AI features rather than
+Android alone. Customer projects and the brand's own apps are presented with the
+same `.app-row` component, so the widening changed the copy and added two
+sections — it did not add a second visual identity.
 
 **Editorial, not brochure.** Structure comes from typographic hierarchy,
 hairline rules, whitespace, index numbers, categories and product metadata.
@@ -128,12 +135,20 @@ Per-app accents, used only as identifiers:
 | GainsAI | `--accent-gainsai` | `#c78d6a` terracotta |
 | Työtori | `--accent-tyotori` | `#a79ac6` heather |
 
-All four clear 6.5:1 on the page background — Työtori's is 7.3:1. They are
+Customer projects take an accent from the same family, used in exactly the same
+places:
+
+| Project | Token | Value |
+| --- | --- | --- |
+| Tmi Piikula | `--accent-piikula` | `#c98ba0` dusty rose — 6.9:1, the customer's own crimson brought onto the charcoal page |
+
+All of them clear 6.5:1 on the page background — Työtori's is 7.3:1. They are
 picked to stay separable at the size they are actually used, which is why the
-fourth one is a cool violet rather than another green, blue or warm tone. An app
+fourth app accent is a cool violet rather than another green, blue or warm tone. An app
 page selects one with `body class="app-page app--<app>"`, which sets
-`--app-accent`. On the landing page the same job is done by the `.a-<app>`
-utility class.
+`--app-accent`. On the landing page the same job is done by the `.a-<app>` and
+`.a-<project>` utility classes. `--accent-piikula` is used only on the landing
+page; it is mirrored into `style.css` to keep the two token blocks identical.
 
 **Banned:** ambient washes, radial glows, multi-layer gradients, dot or line
 grids, background images, translucent veils, coloured shadows, `backdrop-filter`.
@@ -188,10 +203,10 @@ Breakpoints, all `min-width`:
 | Width | What changes |
 | --- | --- |
 | base | one column; masthead nav on its own row; app rows stack |
-| 560 / 620px | landing feature lists to two columns; footer to two columns; larger app icons and screenshots |
+| 560 / 620px | landing services and feature lists to two columns; footer to two columns; larger app icons and screenshots |
 | 720px | masthead on one row; feature rows, principles, duo columns, steps and plans go two-column |
 | 900px | split section heads (title left, intro right); closing CTA text and actions side by side |
-| 1024px | hero and app hero to two columns with a hairline between; app rows to number/icon + body + availability; steps to four columns; footer to four columns; screenshots grow to 620px |
+| 1024px | hero and app hero to two columns with a hairline between; landing services to four columns; app rows to number/icon + body + availability; steps to four columns; footer to four columns; screenshots grow to 620px |
 
 ---
 
@@ -218,6 +233,8 @@ Everything that used to be a card is now:
 | `.faq details` cards | hairline-separated `<details>` |
 | `.cta-band` gradient panel | `.closing` with a single top rule |
 | `.icon-stack` hero collage | `.hero__index` typographic list |
+| a service-card grid (never built) | `.services` → `.service` columns with a rule on top |
+| a project-card grid (never built) | `.app-row` reused in `#work` |
 | `.media-band__frame` with shadow | 1px border, no shadow |
 
 ---
@@ -286,6 +303,30 @@ Copy that names a count has to move with the list. Adding Työtori changed
 `hero_lede`, `hero_index_note` ("All four…"), `apps_h` ("Four published Android
 apps") and the third principle, which now says out loud that Työtori needs an
 account and a server. Check those four before shipping a fifth app.
+
+### Adding a customer project
+
+1. Add an `<li class="app-row a-<project>">` to the `.app-index` in `#work`:
+   index number, `.app-row__glyph` monogram (or an icon the customer publishes),
+   category, an `h3` name linking to the customer's own site with
+   `target="_blank" rel="noopener noreferrer"`, a one-line promise, 3–4 lines of
+   real implementation detail, the `.spec` list and one
+   `.btn--primary.btn--out` link.
+2. Add `--accent-<project>` to `home.css`, mirror it into `style.css`, and add
+   the `.a-<project>` rule.
+3. Add every new visible string to both `dict.en` and `dict.fi`.
+
+Tmi Piikula (`piikula.fi`) was added this way in August 2026 and is the worked
+example. Describe a project by what was actually built — for Piikula that is
+WordPress on a custom Kadence child theme, custom treatment and pricing
+templates, per-treatment detail pages, a Soluni partner shop integration,
+privacy pages and the production setup. No invented client counts, no
+exaggerated scope, and no internal infrastructure detail, credentials or hosting
+specifics.
+
+Copy that names a count still has to move with the list: `hero_index_note`
+("Four apps on Google Play, and the first customer website below.") and
+`apps_h` ("Four published Android apps") both name one.
 
 ### FI/EN content
 

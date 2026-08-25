@@ -8,15 +8,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
 
-  <meta name="description" content="JanstechApps is the app brand of Finnish independent developer Jan Sarivuo: Shopping List &amp; Notes, WaveIQ Radio, GainsAI and Työtori for Android, each with its own feature, privacy and support pages.">
-  <meta name="keywords" content="android apps, shopping list app, internet radio app, training app, job search app, JanstechApps, WaveIQ Radio, GainsAI, Työtori">
+  <meta name="description" content="JanstechApps is the software and digital-services brand of Finnish independent developer Jan Sarivuo: business websites, Android apps on Google Play, backend systems and integrations, and practical AI features.">
+  <meta name="keywords" content="web development, WordPress, business website, android apps, backend, API integrations, AI features, Finland, JanstechApps">
   <meta name="author" content="JanstechApps">
   <meta name="robots" content="index,follow" />
 
   <link rel="canonical" href="https://janstechapps.com/">
 
-  <meta property="og:title" content="JanstechApps – Practical Android apps">
-  <meta property="og:description" content="Android apps by JanstechApps: Shopping List &amp; Notes, WaveIQ Radio, GainsAI and Työtori.">
+  <meta property="og:title" content="JanstechApps – Websites, Android apps and digital solutions">
+  <meta property="og:description" content="Websites, Android applications, backend systems and practical AI features, built and maintained by an independent developer in Finland.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://janstechapps.com/">
   <meta property="og:image" content="https://janstechapps.com/assets/AI.png">
@@ -27,8 +27,8 @@
   <meta property="og:locale:alternate" content="fi_FI">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="JanstechApps – Practical Android apps">
-  <meta name="twitter:description" content="Android apps by JanstechApps: Shopping List &amp; Notes, WaveIQ Radio, GainsAI and Työtori.">
+  <meta name="twitter:title" content="JanstechApps – Websites, Android apps and digital solutions">
+  <meta name="twitter:description" content="Websites, Android applications, backend systems and practical AI features, built and maintained by an independent developer in Finland.">
   <meta name="twitter:image" content="https://janstechapps.com/assets/AI.png">
 
   <script type="application/ld+json">
@@ -37,6 +37,7 @@
       "@type": "Organization",
       "name": "JanstechApps",
       "url": "https://janstechapps.com/",
+      "description": "Websites, Android applications, backend systems and practical AI features, built and maintained by an independent developer in Finland.",
       "logo": "https://janstechapps.com/assets/AI.png",
       "email": "janstech.apps@gmail.com",
       "founder": {
@@ -56,7 +57,7 @@
     gtag('config', 'G-19F6NRS712');
   </script>
 
-  <title>JanstechApps – Practical Android apps</title>
+  <title>JanstechApps – Websites, Android apps and digital solutions</title>
 
   <link rel="stylesheet" href="/home.css">
   <script>
@@ -75,12 +76,13 @@
     <div class="shell masthead__inner">
       <a class="brand" href="/">
         <span class="brand__name">JanstechApps</span>
-        <span class="brand__tag" data-i18n="brand_tag">Android apps</span>
+        <span class="brand__tag" data-i18n="brand_tag">Websites, apps and backends</span>
       </a>
 
       <nav class="masthead__nav" data-i18n-label="aria_nav" aria-label="Primary">
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
         <a href="#apps" data-i18n="nav_apps">Apps</a>
-        <a href="#principles" data-i18n="nav_principles">How they are built</a>
         <a href="#developer" data-i18n="nav_developer">Developer</a>
       </nav>
 
@@ -98,54 +100,160 @@
     <section class="hero">
       <div class="shell hero__inner">
         <div class="hero__copy">
-          <p class="label" data-i18n="hero_eyebrow">Independent Android developer · Finland</p>
+          <p class="label" data-i18n="hero_eyebrow">Independent software developer · Finland</p>
 
-          <h1 class="hero__title" data-i18n="hero_title">Android apps for the small jobs you repeat every week</h1>
+          <h1 class="hero__title" data-i18n="hero_title">Websites, Android apps and the systems behind them</h1>
 
           <p class="hero__lede" data-i18n="hero_lede">
-            Shopping lists and notes, internet radio, strength training, job searching. Four apps, designed and maintained by one developer, each with its own page for features, privacy and the store link.
+            One developer in Finland: business websites, published Android apps, and the backends and integrations behind them — from design and implementation through deployment and maintenance.
           </p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#apps" data-i18n="cta_apps">Browse the apps</a>
-            <a class="link" href="#principles" data-i18n="cta_principles">How they are built</a>
+            <a class="btn btn--primary" href="#services" data-i18n="cta_services">What I build</a>
+            <a class="link" href="#contact" data-i18n="cta_contact">Get in touch</a>
           </div>
         </div>
 
         <div class="hero__index">
-          <p class="label" data-i18n="hero_index_label">In this catalogue</p>
+          <p class="label" data-i18n="hero_index_label">Areas of work</p>
           <ol class="hero__index-list">
-            <li class="a-kauppalista">
-              <a href="/apps/kauppalista/">
+            <li>
+              <a href="#svc-web">
                 <span class="hero__index-num" aria-hidden="true">01</span>
-                <span class="hero__index-name" data-i18n="shopping_title">Shopping List &amp; Notes</span>
-                <span class="hero__index-cat" data-i18n="cat_shopping">Shopping &amp; notes</span>
+                <span class="hero__index-name" data-i18n="svc_web_h">Websites</span>
+                <span class="hero__index-cat" data-i18n="svc_web_cat">WordPress and custom</span>
               </a>
             </li>
-            <li class="a-waveiq">
-              <a href="/apps/waveiq/">
+            <li>
+              <a href="#svc-android">
                 <span class="hero__index-num" aria-hidden="true">02</span>
-                <span class="hero__index-name" data-i18n="waveiq_title">WaveIQ Radio</span>
-                <span class="hero__index-cat" data-i18n="cat_waveiq">Internet radio</span>
+                <span class="hero__index-name" data-i18n="svc_android_h">Android applications</span>
+                <span class="hero__index-cat" data-i18n="svc_android_cat">On Google Play</span>
               </a>
             </li>
-            <li class="a-gainsai">
-              <a href="/apps/gainsai/">
+            <li>
+              <a href="#svc-backend">
                 <span class="hero__index-num" aria-hidden="true">03</span>
-                <span class="hero__index-name" data-i18n="gainsai_title">GainsAI</span>
-                <span class="hero__index-cat" data-i18n="cat_gainsai">Training &amp; progress</span>
+                <span class="hero__index-name" data-i18n="svc_backend_h">Backend and integrations</span>
+                <span class="hero__index-cat" data-i18n="svc_backend_cat">APIs and data</span>
               </a>
             </li>
-            <li class="a-tyotori">
-              <a href="/apps/tyotori/">
+            <li>
+              <a href="#svc-ai">
                 <span class="hero__index-num" aria-hidden="true">04</span>
-                <span class="hero__index-name" data-i18n="tyotori_title">Työtori</span>
-                <span class="hero__index-cat" data-i18n="cat_tyotori">Job search</span>
+                <span class="hero__index-name" data-i18n="svc_ai_h">AI features</span>
+                <span class="hero__index-cat" data-i18n="svc_ai_cat">Where it helps</span>
               </a>
             </li>
           </ol>
-          <p class="hero__index-note" data-i18n="hero_index_note">All four are published on Google Play.</p>
+          <p class="hero__index-note" data-i18n="hero_index_note">Four apps on Google Play, and the first customer website below.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="shell">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="label" data-i18n="services_label">Services</p>
+            <h2 class="section__title" data-i18n="services_h">What I build</h2>
+          </div>
+          <p class="section__intro" data-i18n="services_intro">
+            Four areas that usually turn up in the same project: a website needs somewhere to run and a form that actually delivers, and an app needs something behind it.
+          </p>
+        </div>
+
+        <ol class="services">
+          <li class="service" id="svc-web">
+            <span class="service__num" aria-hidden="true">01</span>
+            <h3 class="service__title" data-i18n="svc_web_h">Websites</h3>
+            <p class="service__text" data-i18n="svc_web_p">
+              Responsive business sites with a clear structure, fast pages and accessible markup. WordPress with a custom theme when the content has to be edited by its owner, hand-built when it does not.
+            </p>
+          </li>
+          <li class="service" id="svc-android">
+            <span class="service__num" aria-hidden="true">02</span>
+            <h3 class="service__title" data-i18n="svc_android_h">Android applications</h3>
+            <p class="service__text" data-i18n="svc_android_p">
+              Native Android in Kotlin, taken to production: navigation, background work and offline behaviour, plus the Play release, the store listing and the data-safety declarations that come with it.
+            </p>
+          </li>
+          <li class="service" id="svc-backend">
+            <span class="service__num" aria-hidden="true">03</span>
+            <h3 class="service__title" data-i18n="svc_backend_h">Backend and integrations</h3>
+            <p class="service__text" data-i18n="svc_backend_p">
+              APIs, databases, sign-in and the third-party services a site or an app depends on: storage, backups and the server-side parts that still have to work a year later.
+            </p>
+          </li>
+          <li class="service" id="svc-ai">
+            <span class="service__num" aria-hidden="true">04</span>
+            <h3 class="service__title" data-i18n="svc_ai_h">AI features</h3>
+            <p class="service__text" data-i18n="svc_ai_p">
+              AI where it does concrete work: drafting a training programme, reading an ingredient list, finding what a search box cannot. In when it earns its place in the feature list, out when it does not.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="shell">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="label" data-i18n="work_label">Selected work</p>
+            <h2 class="section__title" data-i18n="work_h">Customer projects</h2>
+          </div>
+          <p class="section__intro" data-i18n="work_intro">
+            Website work built for a customer and handed over to them: design and implementation first, then deployment and maintenance.
+          </p>
+        </div>
+
+        <ol class="app-index">
+          <li class="app-row a-piikula">
+            <article class="app-row__inner">
+              <div class="app-row__mark">
+                <span class="app-row__num" aria-hidden="true">01</span>
+                <span class="app-row__glyph" aria-hidden="true">P</span>
+              </div>
+
+              <header class="app-row__head">
+                <p class="app-row__cat" data-i18n="piikula_cat">Business website</p>
+                <h3 class="app-row__name">
+                  <a href="https://piikula.fi/" target="_blank" rel="noopener noreferrer">Tmi Piikula</a>
+                </h3>
+              </header>
+
+              <div class="app-row__body">
+                <p class="app-row__promise" data-i18n="piikula_promise">
+                  A website for a Finnish massage and wellbeing business in Jämsänkoski: treatments, prices and the practical details a customer looks for before getting in touch.
+                </p>
+                <ul class="app-row__features">
+                  <li data-i18n="piikula_f1">WordPress on a custom Kadence child theme</li>
+                  <li data-i18n="piikula_f2">Custom templates for the treatment and pricing pages</li>
+                  <li data-i18n="piikula_f3">Per-treatment detail pages and a Soluni partner shop integration</li>
+                  <li data-i18n="piikula_f4">Privacy pages, mobile-first layout, and a production setup for performance and security</li>
+                </ul>
+              </div>
+
+              <div class="app-row__side">
+                <dl class="spec">
+                  <div class="spec__row">
+                    <dt class="label" data-i18n="spec_platform">Platform</dt>
+                    <dd data-i18n="spec_wordpress">WordPress</dd>
+                  </div>
+                  <div class="spec__row">
+                    <dt class="label" data-i18n="spec_scope">Scope</dt>
+                    <dd data-i18n="spec_scope_value">Design to maintenance</dd>
+                  </div>
+                </dl>
+
+                <div class="app-row__actions">
+                  <a class="btn btn--primary btn--out" href="https://piikula.fi/" target="_blank" rel="noopener noreferrer" data-i18n="btn_visit_piikula">Visit piikula.fi</a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -157,7 +265,7 @@
             <h2 class="section__title" data-i18n="apps_h">Four published Android apps</h2>
           </div>
           <p class="section__intro" data-i18n="apps_intro">
-            Each app has its own page with the full feature list and, where they exist, screenshots. Privacy, support, terms and data deletion pages are published per app.
+            The brand's own products, published under the JanstechApps name. Each app has its own page with the full feature list and, where they exist, screenshots. Privacy, support, terms and data deletion pages are published per app.
           </p>
         </div>
 
@@ -381,41 +489,41 @@
       <div class="shell">
         <div class="section__head section__head--split">
           <div>
-            <p class="label" data-i18n="principles_label">Principles</p>
-            <h2 class="section__title" data-i18n="principles_h">How these apps are built</h2>
+            <p class="label" data-i18n="principles_label">Approach</p>
+            <h2 class="section__title" data-i18n="principles_h">How I work</h2>
           </div>
           <p class="section__intro" data-i18n="principles_intro">
-            Four things that stay the same from one app to the next.
+            Four things that stay the same from one project to the next.
           </p>
         </div>
 
         <ol class="tenets">
           <li class="tenet">
             <span class="tenet__num" aria-hidden="true">01</span>
-            <h3 class="tenet__claim" data-i18n="p1_h">Each app starts from a real task</h3>
+            <h3 class="tenet__claim" data-i18n="p1_h">Every project starts from a real task</h3>
             <p class="tenet__text" data-i18n="p1_p">
-              A shopping list you use while standing in the shop. A station you want to find again. A session you need to log before you forget it. The feature list follows the task, not the other way round.
+              A shopping list you use while standing in the shop. A price a customer has to find on a phone in ten seconds. A session you need to log before you forget it. The feature list follows the task, not the other way round.
             </p>
           </li>
           <li class="tenet">
             <span class="tenet__num" aria-hidden="true">02</span>
-            <h3 class="tenet__claim" data-i18n="p2_h">Built for Android, not adapted to it</h3>
+            <h3 class="tenet__claim" data-i18n="p2_h">Built for the platform, not adapted to it</h3>
             <p class="tenet__text" data-i18n="p2_p">
-              Navigation, local reminders, background playback and offline behaviour are built against the platform the apps actually run on.
+              On Android that means navigation, local reminders, background playback and offline behaviour built against the platform the apps actually run on. On the web it means markup that works with a keyboard and a screen reader, and pages that still load on a slow connection.
             </p>
           </li>
           <li class="tenet">
             <span class="tenet__num" aria-hidden="true">03</span>
-            <h3 class="tenet__claim" data-i18n="p3_h">Local first where it is possible</h3>
+            <h3 class="tenet__claim" data-i18n="p3_h">Only the data the job needs</h3>
             <p class="tenet__text" data-i18n="p3_p">
-              Core use in Shopping List &amp; Notes and WaveIQ Radio runs from data kept on the device. Online services are used where the feature needs them: AI tools, shared lists, recommendations, backup and the account-linked parts of GainsAI. Työtori is the honest exception: job searching needs an account and a server, and its own page says so.
+              Every stored field, script and cookie has to justify itself. Core use in Shopping List &amp; Notes and WaveIQ Radio runs from data kept on the device. Online services are used where the feature needs them: AI tools, shared lists, recommendations, backup and the account-linked parts of GainsAI. Työtori is the honest exception: job searching needs an account and a server, and its own page says so.
             </p>
           </li>
           <li class="tenet">
             <span class="tenet__num" aria-hidden="true">04</span>
             <h3 class="tenet__claim" data-i18n="p4_h">Documented, not only published</h3>
             <p class="tenet__text" data-i18n="p4_p">
-              Every app has its own privacy policy, terms, support page and data deletion instructions on this site, in Finnish and English, maintained alongside the app itself.
+              Every app has its own privacy policy, terms, support page and data deletion instructions on this site, in Finnish and English, maintained alongside the app itself. A customer project is handed over the same way: what runs where, and what keeping it running involves.
             </p>
           </li>
         </ol>
@@ -431,15 +539,30 @@
 
         <div>
           <p class="developer__text" data-i18n="dev_p1">
-            JanstechApps is the app brand of Jan Sarivuo, an independent Android and backend developer in Finland. The same person designs the app, writes the Android and backend code, publishes the release and answers the support mail.
+            JanstechApps is the software and digital-services brand of Jan Sarivuo, an independent developer in Finland. The work covers websites, Android applications and the backend systems behind them: the same person designs the project, writes the code, publishes it and answers the mail afterwards.
           </p>
           <p class="developer__text" data-i18n="dev_p2">
-            That is also why the apps stay small and specific: everything in them has to be worth maintaining.
+            That is also why projects stay tightly scoped: everything in them has to be worth maintaining.
           </p>
           <div class="developer__links">
             <a class="link link--out" href="https://janstech.github.io/" target="_blank" rel="noopener noreferrer" data-i18n="dev_portfolio">Developer portfolio</a>
             <a class="link link--plain" href="mailto:janstech.apps@gmail.com" data-i18n="dev_email">janstech.apps@gmail.com</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="contact">
+      <div class="shell closing__inner">
+        <div>
+          <h2 class="closing__title" data-i18n="contact_h">A website, an app, or the system behind one</h2>
+          <p class="closing__text" data-i18n="contact_p">
+            Tell me what the project has to do and roughly when it should be ready. Email is the fastest way to reach me — the same address answers the support mail for the apps.
+          </p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--primary" href="mailto:janstech.apps@gmail.com" data-i18n="dev_email">janstech.apps@gmail.com</a>
+          <a class="link" href="#principles" data-i18n="cta_principles">How I work</a>
         </div>
       </div>
     </section>
@@ -497,23 +620,54 @@
   <script>
     const dict = {
       en: {
-        meta_title: "JanstechApps – Practical Android apps",
-        meta_description: "JanstechApps is the app brand of Finnish independent developer Jan Sarivuo: Shopping List & Notes, WaveIQ Radio, GainsAI and Työtori for Android, each with its own feature, privacy and support pages.",
+        meta_title: "JanstechApps – Websites, Android apps and digital solutions",
+        meta_description: "JanstechApps is the software and digital-services brand of Finnish independent developer Jan Sarivuo: business websites, Android apps on Google Play, backend systems and integrations, and practical AI features.",
         skip: "Skip to content",
-        brand_tag: "Android apps",
+        brand_tag: "Websites, apps and backends",
         aria_nav: "Primary",
+        nav_services: "Services",
+        nav_work: "Work",
         nav_apps: "Apps",
-        nav_principles: "How they are built",
         nav_developer: "Developer",
         lang_label: "Language",
 
-        hero_eyebrow: "Independent Android developer · Finland",
-        hero_title: "Android apps for the small jobs you repeat every week",
-        hero_lede: "Shopping lists and notes, internet radio, strength training, job searching. Four apps, designed and maintained by one developer, each with its own page for features, privacy and the store link.",
-        cta_apps: "Browse the apps",
-        cta_principles: "How they are built",
-        hero_index_label: "In this catalogue",
-        hero_index_note: "All four are published on Google Play.",
+        hero_eyebrow: "Independent software developer · Finland",
+        hero_title: "Websites, Android apps and the systems behind them",
+        hero_lede: "One developer in Finland: business websites, published Android apps, and the backends and integrations behind them — from design and implementation through deployment and maintenance.",
+        cta_services: "What I build",
+        cta_contact: "Get in touch",
+        cta_principles: "How I work",
+        hero_index_label: "Areas of work",
+        hero_index_note: "Four apps on Google Play, and the first customer website below.",
+
+        services_label: "Services",
+        services_h: "What I build",
+        services_intro: "Four areas that usually turn up in the same project: a website needs somewhere to run and a form that actually delivers, and an app needs something behind it.",
+
+        svc_web_h: "Websites",
+        svc_web_cat: "WordPress and custom",
+        svc_web_p: "Responsive business sites with a clear structure, fast pages and accessible markup. WordPress with a custom theme when the content has to be edited by its owner, hand-built when it does not.",
+        svc_android_h: "Android applications",
+        svc_android_cat: "On Google Play",
+        svc_android_p: "Native Android in Kotlin, taken to production: navigation, background work and offline behaviour, plus the Play release, the store listing and the data-safety declarations that come with it.",
+        svc_backend_h: "Backend and integrations",
+        svc_backend_cat: "APIs and data",
+        svc_backend_p: "APIs, databases, sign-in and the third-party services a site or an app depends on: storage, backups and the server-side parts that still have to work a year later.",
+        svc_ai_h: "AI features",
+        svc_ai_cat: "Where it helps",
+        svc_ai_p: "AI where it does concrete work: drafting a training programme, reading an ingredient list, finding what a search box cannot. In when it earns its place in the feature list, out when it does not.",
+
+        work_label: "Selected work",
+        work_h: "Customer projects",
+        work_intro: "Website work built for a customer and handed over to them: design and implementation first, then deployment and maintenance.",
+
+        piikula_cat: "Business website",
+        piikula_promise: "A website for a Finnish massage and wellbeing business in Jämsänkoski: treatments, prices and the practical details a customer looks for before getting in touch.",
+        piikula_f1: "WordPress on a custom Kadence child theme",
+        piikula_f2: "Custom templates for the treatment and pricing pages",
+        piikula_f3: "Per-treatment detail pages and a Soluni partner shop integration",
+        piikula_f4: "Privacy pages, mobile-first layout, and a production setup for performance and security",
+        btn_visit_piikula: "Visit piikula.fi",
 
         cat_shopping: "Shopping & notes",
         cat_waveiq: "Internet radio",
@@ -522,7 +676,7 @@
 
         apps_label: "Apps",
         apps_h: "Four published Android apps",
-        apps_intro: "Each app has its own page with the full feature list and, where they exist, screenshots. Privacy, support, terms and data deletion pages are published per app.",
+        apps_intro: "The brand's own products, published under the JanstechApps name. Each app has its own page with the full feature list and, where they exist, screenshots. Privacy, support, terms and data deletion pages are published per app.",
 
         shopping_title: "Shopping List & Notes",
         shopping_promise: "Plan the shop and keep notes, recipes and reminders in one place on your own device.",
@@ -554,8 +708,11 @@
 
         spec_platform: "Platform",
         spec_android: "Android",
+        spec_wordpress: "WordPress",
         spec_availability: "Availability",
         spec_store: "Google Play",
+        spec_scope: "Scope",
+        spec_scope_value: "Design to maintenance",
 
         btn_app_page: "See what it does",
         btn_play: "Open in Google Play",
@@ -564,23 +721,26 @@
         btn_terms: "Terms",
         btn_delete: "Delete data",
 
-        principles_label: "Principles",
-        principles_h: "How these apps are built",
-        principles_intro: "Four things that stay the same from one app to the next.",
-        p1_h: "Each app starts from a real task",
-        p1_p: "A shopping list you use while standing in the shop. A station you want to find again. A session you need to log before you forget it. The feature list follows the task, not the other way round.",
-        p2_h: "Built for Android, not adapted to it",
-        p2_p: "Navigation, local reminders, background playback and offline behaviour are built against the platform the apps actually run on.",
-        p3_h: "Local first where it is possible",
-        p3_p: "Core use in Shopping List & Notes and WaveIQ Radio runs from data kept on the device. Online services are used where the feature needs them: AI tools, shared lists, recommendations, backup and the account-linked parts of GainsAI. Työtori is the honest exception: job searching needs an account and a server, and its own page says so.",
+        principles_label: "Approach",
+        principles_h: "How I work",
+        principles_intro: "Four things that stay the same from one project to the next.",
+        p1_h: "Every project starts from a real task",
+        p1_p: "A shopping list you use while standing in the shop. A price a customer has to find on a phone in ten seconds. A session you need to log before you forget it. The feature list follows the task, not the other way round.",
+        p2_h: "Built for the platform, not adapted to it",
+        p2_p: "On Android that means navigation, local reminders, background playback and offline behaviour built against the platform the apps actually run on. On the web it means markup that works with a keyboard and a screen reader, and pages that still load on a slow connection.",
+        p3_h: "Only the data the job needs",
+        p3_p: "Every stored field, script and cookie has to justify itself. Core use in Shopping List & Notes and WaveIQ Radio runs from data kept on the device. Online services are used where the feature needs them: AI tools, shared lists, recommendations, backup and the account-linked parts of GainsAI. Työtori is the honest exception: job searching needs an account and a server, and its own page says so.",
         p4_h: "Documented, not only published",
-        p4_p: "Every app has its own privacy policy, terms, support page and data deletion instructions on this site, in Finnish and English, maintained alongside the app itself.",
+        p4_p: "Every app has its own privacy policy, terms, support page and data deletion instructions on this site, in Finnish and English, maintained alongside the app itself. A customer project is handed over the same way: what runs where, and what keeping it running involves.",
 
         dev_label: "Developer",
-        dev_p1: "JanstechApps is the app brand of Jan Sarivuo, an independent Android and backend developer in Finland. The same person designs the app, writes the Android and backend code, publishes the release and answers the support mail.",
-        dev_p2: "That is also why the apps stay small and specific: everything in them has to be worth maintaining.",
+        dev_p1: "JanstechApps is the software and digital-services brand of Jan Sarivuo, an independent developer in Finland. The work covers websites, Android applications and the backend systems behind them: the same person designs the project, writes the code, publishes it and answers the mail afterwards.",
+        dev_p2: "That is also why projects stay tightly scoped: everything in them has to be worth maintaining.",
         dev_portfolio: "Developer portfolio",
         dev_email: "janstech.apps@gmail.com",
+
+        contact_h: "A website, an app, or the system behind one",
+        contact_p: "Tell me what the project has to do and roughly when it should be ready. Email is the fastest way to reach me — the same address answers the support mail for the apps.",
 
         footer_apps_h: "Apps",
         footer_support_h: "Support & privacy",
@@ -593,23 +753,54 @@
         footer_note: "Every app has its own privacy, support and terms pages."
       },
       fi: {
-        meta_title: "JanstechApps – Käytännöllisiä Android-sovelluksia",
-        meta_description: "JanstechApps on suomalaisen itsenäisen kehittäjän Jan Sarivuon sovellusbrändi: Kauppalista & Muistiinpanot, WaveIQ Radio, GainsAI ja Työtori Androidille, kullakin omat ominaisuus-, tietosuoja- ja tukisivunsa.",
+        meta_title: "JanstechApps – Verkkosivut, Android-sovellukset ja digiratkaisut",
+        meta_description: "JanstechApps on suomalaisen itsenäisen kehittäjän Jan Sarivuon ohjelmisto- ja digipalvelubrändi: yrityssivustot, Google Playssa julkaistut Android-sovellukset, taustajärjestelmät ja integraatiot sekä käytännölliset AI-ominaisuudet.",
         skip: "Siirry sisältöön",
-        brand_tag: "Android-sovellukset",
+        brand_tag: "Verkkosivut, sovellukset, backend",
         aria_nav: "Ensisijainen",
+        nav_services: "Palvelut",
+        nav_work: "Työt",
         nav_apps: "Sovellukset",
-        nav_principles: "Miten ne rakennetaan",
         nav_developer: "Kehittäjä",
         lang_label: "Kieli",
 
-        hero_eyebrow: "Itsenäinen Android-kehittäjä · Suomi",
-        hero_title: "Android-sovelluksia arjen toistuviin tehtäviin",
-        hero_lede: "Ostoslistat ja muistiinpanot, nettiradio, voimaharjoittelu, työnhaku. Neljä sovellusta, jotka suunnittelee ja ylläpitää sama kehittäjä. Jokaisella on oma sivunsa ominaisuuksille, tietosuojalle ja kauppalinkille.",
-        cta_apps: "Selaa sovelluksia",
-        cta_principles: "Miten ne rakennetaan",
-        hero_index_label: "Tällä sivustolla",
-        hero_index_note: "Kaikki neljä on julkaistu Google Playssa.",
+        hero_eyebrow: "Itsenäinen ohjelmistokehittäjä · Suomi",
+        hero_title: "Verkkosivut, Android-sovellukset ja järjestelmät niiden takana",
+        hero_lede: "Yksi kehittäjä Suomessa: yrityssivustot, julkaistut Android-sovellukset sekä niiden taustajärjestelmät ja integraatiot — suunnittelusta ja toteutuksesta julkaisuun ja ylläpitoon.",
+        cta_services: "Mitä rakennan",
+        cta_contact: "Ota yhteyttä",
+        cta_principles: "Miten teen työtä",
+        hero_index_label: "Osaamisalueet",
+        hero_index_note: "Neljä sovellusta Google Playssa ja ensimmäinen asiakassivusto alla.",
+
+        services_label: "Palvelut",
+        services_h: "Mitä rakennan",
+        services_intro: "Neljä aluetta, jotka tulevat yleensä vastaan samassa projektissa: verkkosivu tarvitsee paikan jossa pyöriä ja lomakkeen joka oikeasti toimittaa viestin perille, ja sovellus tarvitsee jotain taakseen.",
+
+        svc_web_h: "Verkkosivut",
+        svc_web_cat: "WordPress ja custom",
+        svc_web_p: "Responsiivisia yrityssivustoja: selkeä rakenne, nopeat sivut ja saavutettava merkkaus. WordPress ja oma teema silloin kun sisältöä pitää päästä itse muokkaamaan, käsin tehty silloin kun ei tarvitse.",
+        svc_android_h: "Android-sovellukset",
+        svc_android_cat: "Google Playssa",
+        svc_android_p: "Natiivi Android Kotlinilla tuotantokuntoon asti: navigaatio, taustatyöt ja verkoton käyttö sekä Play-julkaisu, kauppasivu ja siihen kuuluvat tietosuojatiedot.",
+        svc_backend_h: "Taustajärjestelmät ja integraatiot",
+        svc_backend_cat: "Rajapinnat ja data",
+        svc_backend_p: "Rajapinnat, tietokannat, kirjautuminen ja ne kolmannen osapuolen palvelut, joista sivusto tai sovellus riippuu: tallennus, varmuuskopiot ja ne palvelinpuolen osat, joiden pitää toimia vielä vuodenkin päästä.",
+        svc_ai_h: "AI-ominaisuudet",
+        svc_ai_cat: "Kun siitä on hyötyä",
+        svc_ai_p: "AI siellä missä se tekee oikeaa työtä: luonnostelee treeniohjelman, lukee ainesosaluettelon, löytää sen mitä hakukenttä ei löydä. Mukaan silloin kun se ansaitsee paikkansa ominaisuuslistalla, muuten ei.",
+
+        work_label: "Valitut työt",
+        work_h: "Asiakasprojektit",
+        work_intro: "Asiakkaalle rakennettuja ja asiakkaalle luovutettuja verkkosivutöitä: ensin suunnittelu ja toteutus, sitten julkaisu ja ylläpito.",
+
+        piikula_cat: "Yrityssivusto",
+        piikula_promise: "Verkkosivut jämsänkoskelaiselle hieronta- ja hyvinvointialan yritykselle: hoidot, hinnat ja ne käytännön tiedot, jotka asiakas etsii ennen yhteydenottoa.",
+        piikula_f1: "WordPress ja räätälöity Kadence-lapsiteema",
+        piikula_f2: "Omat sivupohjat hoito- ja hintasivuille",
+        piikula_f3: "Hoitokohtaiset esittelysivut ja Soluni-kumppanikaupan integrointi",
+        piikula_f4: "Tietosuojasivut, mobiili edellä tehty ulkoasu sekä suorituskyvyn ja tietoturvan tuotantoasetukset",
+        btn_visit_piikula: "Avaa piikula.fi",
 
         cat_shopping: "Ostokset ja muistiinpanot",
         cat_waveiq: "Nettiradio",
@@ -618,7 +809,7 @@
 
         apps_label: "Sovellukset",
         apps_h: "Neljä julkaistua Android-sovellusta",
-        apps_intro: "Jokaisella sovelluksella on oma sivunsa, jolla ominaisuudet on kuvattu kokonaan ja jolla on kuvakaappaukset silloin kun niitä on. Tietosuoja-, tuki-, käyttöehto- ja tietojen poistosivut julkaistaan sovelluskohtaisesti.",
+        apps_intro: "JanstechAppsin omat tuotteet, julkaistu brändin omalla nimellä. Jokaisella sovelluksella on oma sivunsa, jolla ominaisuudet on kuvattu kokonaan ja jolla on kuvakaappaukset silloin kun niitä on. Tietosuoja-, tuki-, käyttöehto- ja tietojen poistosivut julkaistaan sovelluskohtaisesti.",
 
         shopping_title: "Kauppalista & Muistiinpanot",
         shopping_promise: "Suunnittele kaupassakäynti ja pidä muistiinpanot, reseptit ja muistutukset yhdessä paikassa omalla laitteellasi.",
@@ -650,8 +841,11 @@
 
         spec_platform: "Alusta",
         spec_android: "Android",
+        spec_wordpress: "WordPress",
         spec_availability: "Saatavuus",
         spec_store: "Google Play",
+        spec_scope: "Laajuus",
+        spec_scope_value: "Suunnittelusta ylläpitoon",
 
         btn_app_page: "Katso mitä se tekee",
         btn_play: "Avaa Google Playssa",
@@ -660,23 +854,26 @@
         btn_terms: "Käyttöehdot",
         btn_delete: "Poista tiedot",
 
-        principles_label: "Periaatteet",
-        principles_h: "Miten nämä sovellukset rakennetaan",
-        principles_intro: "Neljä asiaa, jotka pysyvät samana sovelluksesta toiseen.",
-        p1_h: "Jokainen sovellus lähtee oikeasta tehtävästä",
-        p1_p: "Ostoslista, jota käytetään kaupan hyllyjen välissä. Asema, joka halutaan löytää uudelleen. Treeni, joka pitää kirjata ennen kuin se unohtuu. Ominaisuudet seuraavat tehtävää, eivät toisin päin.",
-        p2_h: "Rakennettu Androidille, ei sovitettu siihen",
-        p2_p: "Navigaatio, paikalliset muistutukset, taustatoisto ja verkoton käyttö rakennetaan sille alustalle, jolla sovellukset oikeasti pyörivät.",
-        p3_h: "Local-first silloin kun se on mahdollista",
-        p3_p: "Kauppalistan ja WaveIQ Radion peruskäyttö toimii laitteelle tallennetusta datasta. Verkkopalveluita käytetään siellä missä ominaisuus niitä tarvitsee: AI-työkalut, jaetut listat, suositukset, varmuuskopiot ja GainsAI:n tilikohtaiset osat. Työtori on tästä rehellinen poikkeus: työnhaku tarvitsee tilin ja palvelimen, ja sen omalla sivulla se sanotaan suoraan.",
+        principles_label: "Työtapa",
+        principles_h: "Miten teen työtä",
+        principles_intro: "Neljä asiaa, jotka pysyvät samana projektista toiseen.",
+        p1_h: "Jokainen projekti lähtee oikeasta tehtävästä",
+        p1_p: "Ostoslista, jota käytetään kaupan hyllyjen välissä. Hinta, joka asiakkaan pitää löytää puhelimella kymmenessä sekunnissa. Treeni, joka pitää kirjata ennen kuin se unohtuu. Ominaisuudet seuraavat tehtävää, eivät toisin päin.",
+        p2_h: "Rakennettu alustalle, ei sovitettu siihen",
+        p2_p: "Androidilla se tarkoittaa navigaatiota, paikallisia muistutuksia, taustatoistoa ja verkotonta käyttöä, jotka rakennetaan sille alustalle jolla sovellukset oikeasti pyörivät. Verkossa se tarkoittaa merkkausta, joka toimii näppäimistöllä ja ruudunlukijalla, ja sivuja, jotka latautuvat hitaallakin yhteydellä.",
+        p3_h: "Vain se data, jota tehtävä tarvitsee",
+        p3_p: "Jokaisen tallennetun kentän, skriptin ja evästeen pitää perustella paikkansa. Kauppalistan ja WaveIQ Radion peruskäyttö toimii laitteelle tallennetusta datasta. Verkkopalveluita käytetään siellä missä ominaisuus niitä tarvitsee: AI-työkalut, jaetut listat, suositukset, varmuuskopiot ja GainsAI:n tilikohtaiset osat. Työtori on tästä rehellinen poikkeus: työnhaku tarvitsee tilin ja palvelimen, ja sen omalla sivulla se sanotaan suoraan.",
         p4_h: "Dokumentoitu, ei vain julkaistu",
-        p4_p: "Jokaisella sovelluksella on tällä sivustolla oma tietosuojaseloste, käyttöehdot, tukisivu ja tietojen poisto-ohje suomeksi ja englanniksi, ja niitä ylläpidetään sovelluksen rinnalla.",
+        p4_p: "Jokaisella sovelluksella on tällä sivustolla oma tietosuojaseloste, käyttöehdot, tukisivu ja tietojen poisto-ohje suomeksi ja englanniksi, ja niitä ylläpidetään sovelluksen rinnalla. Asiakasprojekti luovutetaan samalla tavalla: mikä pyörii missäkin ja mitä sen ylläpitäminen vaatii.",
 
         dev_label: "Kehittäjä",
-        dev_p1: "JanstechApps on Jan Sarivuon sovellusbrändi. Hän on suomalainen itsenäinen Android- ja backend-kehittäjä. Sama henkilö suunnittelee sovelluksen, kirjoittaa Android- ja backend-koodin, julkaisee version ja vastaa tukipostiin.",
-        dev_p2: "Siksi sovellukset myös pysyvät pieninä ja tarkkarajaisina: kaiken niissä olevan pitää olla ylläpitämisen arvoista.",
+        dev_p1: "JanstechApps on Jan Sarivuon ohjelmisto- ja digipalvelubrändi. Hän on itsenäinen kehittäjä Suomessa. Työ kattaa verkkosivut, Android-sovellukset ja niiden taustajärjestelmät: sama henkilö suunnittelee projektin, kirjoittaa koodin, julkaisee sen ja vastaa postiin jälkeenpäin.",
+        dev_p2: "Siksi projektit myös pysyvät tarkkarajaisina: kaiken niissä olevan pitää olla ylläpitämisen arvoista.",
         dev_portfolio: "Kehittäjän portfolio",
         dev_email: "janstech.apps@gmail.com",
+
+        contact_h: "Verkkosivut, sovellus tai järjestelmä niiden taustalle",
+        contact_p: "Kerro mitä projektin pitää tehdä ja suunnilleen milloin sen pitäisi olla valmis. Sähköposti on nopein tapa tavoittaa minut — samasta osoitteesta vastataan myös sovellusten tukipostiin.",
 
         footer_apps_h: "Sovellukset",
         footer_support_h: "Tuki ja tietosuoja",

@@ -2,6 +2,8 @@
 
 This repository contains the static JanstechApps website served from the repository root by GitHub Pages. The custom domain is configured with `CNAME`, so production pages are available under `https://janstechapps.com`.
 
+JanstechApps is the software and digital-services brand of Jan Sarivuo: websites, Android applications, backend systems and integrations, and AI features. The landing page presents the services, the customer projects and the four published Android apps; each app keeps its own product page and its own legal/support pages.
+
 ## Structure
 
 - `index.html` - JanstechApps landing page.
@@ -98,10 +100,18 @@ styling can change without touching any other page.
 
 ### Structure
 
-`header.masthead` (brand, three nav links, EN/FI switch) → `main` with the hero
-(message plus a typographic app index), the `#apps` product index, the
-`#principles` list and the `#developer` note → `footer` with four link groups
-and a second EN/FI switch. There is exactly one `h1` (the hero title).
+`header.masthead` (brand, four nav links — Services, Work, Apps, Developer — and
+the EN/FI switch) → `main` with the hero (message plus a typographic index of the
+four areas of work), the `#services` columns, the `#work` customer-project index,
+the `#apps` product index, the `#principles` list, the `#developer` note and the
+`#contact` closing band → `footer` with four link groups and a second EN/FI
+switch. There is exactly one `h1` (the hero title).
+
+`#services` and `#work` are the two blocks added when the brand widened past
+Android-only. `#work` reuses the `.app-index` / `.app-row` component from
+`#apps`, so a customer project and an app read as one portfolio; a project with
+no icon of its own uses `.app-row__glyph`, a mono monogram in the same frame as
+the app icons. `#contact` is the `.closing` band the app pages already use.
 
 ### Responsive behaviour
 
@@ -113,10 +123,10 @@ media query is `min-width`. A single `.shell` wrapper centres content at
 | Breakpoint | What changes |
 | --- | --- |
 | base | one column everywhere; masthead nav on its own row; app rows stack |
-| 560px | app feature lists to 2 columns, footer to 2 columns |
+| 560px | services to 2 columns, app feature lists to 2 columns, footer to 2 columns |
 | 720px | masthead on one row, principles to 3 columns, developer note to 2 |
-| 900px | split section heads: title left, intro right |
-| 1024px | hero to 2 columns with a hairline, app rows to number/icon + body + availability, footer to 4 columns |
+| 900px | split section heads: title left, intro right; closing band text and actions side by side |
+| 1024px | hero to 2 columns with a hairline, services to 4 columns, app rows to number/icon + body + availability, footer to 4 columns |
 
 ### Design tokens
 
@@ -132,13 +142,28 @@ and whitespace.
 
 Per-app accents are applied with the `.a-kauppalista`, `.a-waveiq`,
 `.a-gainsai` and `.a-tyotori` utility classes, which set `--app-accent` for that
-row only. The
-accent drives the index number and the short rule in front of each feature — not
-a background, a glow or a card.
+row only; `.a-piikula` (`#c98ba0`) does the same job for the customer project in
+`#work`. The
+accent drives the index number, the monogram letter and the short rule in front
+of each feature — not a background, a glow or a card.
 
 `home.css` also contains `[hidden]{display:none !important}`. Keep it: `.btn` is
 `display:inline-flex`, which would otherwise override the browser's `[hidden]`
 rule and reveal elements a page keeps hidden until it has verified data.
+
+### Adding a customer project to the landing page
+
+1. Add an `li.app-row.a-<project>` to the `.app-index` list in `#work` with the
+   index number, an `.app-row__glyph` monogram (or an icon the customer has
+   published), the category, an `h3` name linking to the customer's own site with
+   `target="_blank" rel="noopener noreferrer"`, a one-line promise, 3–4 lines of
+   real implementation detail, the `.spec` list and one `.btn--primary.btn--out`
+   link to the site.
+2. Add an `--accent-<project>` token and an `.a-<project>` rule to `home.css`,
+   and mirror the token into `style.css`.
+3. Add every new visible string to both `dict.en` and `dict.fi`.
+4. Describe the project accurately: no invented client counts, no exaggerated
+   scope, and no internal infrastructure detail.
 
 ### Adding an app to the landing page
 
