@@ -770,7 +770,8 @@ button:focus-visible{
    12. Contact
 
    The closing band the app pages already use: one strong rule, a title, one
-   line of text and a single action.
+   line of text and a single action. The address under the button is the quiet
+   link row, so the primary button can carry a plain-language label instead.
    -------------------------------------------------------------------------- */
 
 .closing{ padding-block:var(--section-gap); }
@@ -797,6 +798,8 @@ button:focus-visible{
   align-items:center;
   gap:var(--space-3) var(--space-5);
 }
+
+.closing .quiet{ margin-top:var(--space-2); }
 
 /* --------------------------------------------------------------------------
    13. Footer
