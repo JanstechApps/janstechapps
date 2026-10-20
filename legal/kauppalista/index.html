@@ -178,6 +178,10 @@
           it uses the profile photo URL provided by Google/Firebase authentication.
         </p>
 
+        <p data-i18n="p_shared_4">
+          To delete a Firebase user account used for shared lists, use Settings → Account → Delete user account. The app requires recent Google reauthentication and asks how owned shared lists should be handled. Signing out is separate and does not delete an account or cloud data. See the <a href="/legal/kauppalista/delete-data.html">Delete data</a> page for the full process.
+        </p>
+
         <hr class="sep"/>
 
         <h3 data-i18n="h_ai">AI Features (Meal Suggestions &amp; Weekly Meal Plans)</h3>
@@ -402,6 +406,10 @@
           According to Firebase documentation, Crashlytics retains crash stack traces, extracted NDK minidump data, and associated identifiers for 90 days before beginning removal from live and backup systems.
         </p>
 
+        <p data-i18n="p_ret_6">
+          When an account-deletion request is completed, the Firebase Authentication account and associated cloud collaboration records described on the <a href="/legal/kauppalista/delete-data.html">Delete data</a> page are removed. Firestore TTL is not currently enabled for deletion-status records, so we do not state an automatic Firestore TTL deletion period for those records.
+        </p>
+
         <hr class="sep"/>
 
         <h3 data-i18n="h_not_collect">What We Do NOT Collect</h3>
@@ -576,6 +584,7 @@
       shared_5:"Member roles and permissions",
       shared_6:"Notification preferences related to shared lists",
       p_shared_3:"This data is used solely to provide collaboration functionality, realtime synchronization, member display, invitations, and notifications between shared list members. The app does not upload profile image files; if a profile photo is shown, it uses the profile photo URL provided by Google/Firebase authentication.",
+      p_shared_4:"To delete a Firebase user account used for shared lists, use Settings → Account → Delete user account. The app requires recent Google reauthentication and asks how owned shared lists should be handled. Signing out is separate and does not delete an account or cloud data. See the <a href=\"/legal/kauppalista/delete-data.html\">Delete data</a> page for the full process.",
 
       h_ai:"AI Features (Meal Suggestions &amp; Weekly Meal Plans)",
       p_ai_1:"The application includes optional AI-powered features, such as meal/recipe suggestions and weekly meal plans.",
@@ -632,6 +641,7 @@
       p_ret_3:"Limited technical and anti-abuse records (such as technical identifiers, request counters, timestamps, and notification tokens) may be stored temporarily for security and service protection purposes.",
       p_ret_4:"Analytics data may be retained for a limited period according to Firebase/Google Analytics retention settings and is used only for app quality, reliability, and feature improvement.",
       p_ret_5:"According to Firebase documentation, Crashlytics retains crash stack traces, extracted NDK minidump data, and associated identifiers for 90 days before beginning removal from live and backup systems.",
+      p_ret_6:"When an account-deletion request is completed, the Firebase Authentication account and associated cloud collaboration records described on the <a href=\"/legal/kauppalista/delete-data.html\">Delete data</a> page are removed. Firestore TTL is not currently enabled for deletion-status records, so we do not state an automatic Firestore TTL deletion period for those records.",
 
       h_not_collect:"What We Do NOT Collect",
       not_1:"The app does not sell your personal data.",
@@ -703,6 +713,7 @@
       shared_5:"Jäsenten roolit ja käyttöoikeudet",
       shared_6:"Jaettuihin listoihin liittyvät ilmoitusasetukset",
       p_shared_3:"Näitä tietoja käytetään ainoastaan yhteiskäyttöominaisuuksien, reaaliaikaisen synkronoinnin, jäsenten näyttämisen, kutsujen ja jaettujen listojen ilmoitusten toteuttamiseen. Sovellus ei lataa profiilikuvatiedostoja itse; jos profiilikuva näytetään, se käyttää Google/Firebase-kirjautumisen tarjoamaa profiilikuvan URL-osoitetta.",
+      p_shared_4:"Poistaaksesi jaetuissa listoissa käytetyn Firebase-käyttäjätilin, käytä polkua Asetukset → Tili → Poista käyttäjätili. Sovellus vaatii tuoreen Google-uudelleentodennuksen ja pyytää valitsemaan, miten omistettuja jaettuja listoja käsitellään. Uloskirjautuminen on erillinen toiminto eikä se poista käyttäjätiliä tai pilvidataa. Katso koko prosessi <a href=\"/legal/kauppalista/delete-data.html\">Tietojen poistaminen</a> -sivulta.",
 
       h_ai:"AI-toiminnot (ateriaehdotukset ja viikkoruokalistat)",
       p_ai_1:"Sovellus sisältää vapaaehtoisia tekoälypohjaisia ominaisuuksia, kuten ateria-/reseptiehdotuksia ja viikkoruokalistoja.",
@@ -759,6 +770,7 @@
       p_ret_3:"Rajattuja teknisiä ja väärinkäytösten estoon liittyviä tietoja, kuten teknisiä tunnisteita, pyyntölaskureita, aikaleimoja ja ilmoitustokeneita, voidaan säilyttää väliaikaisesti tietoturvan ja palvelun suojaamisen vuoksi.",
       p_ret_4:"Analytiikkatietoja voidaan säilyttää rajatun ajan Firebase/Google Analyticsin säilytysasetusten mukaisesti, ja niitä käytetään vain sovelluksen laadun, luotettavuuden ja ominaisuuksien parantamiseen.",
       p_ret_5:"Firebase-dokumentaation mukaan Crashlytics säilyttää kaatumisten pinojälkiä, purettua NDK-minidump-dataa ja siihen liittyviä tunnisteita 90 päivää ennen kuin niiden poisto tuotanto- ja varmuuskopiojärjestelmistä alkaa.",
+      p_ret_6:"Kun käyttäjätilin poistopyyntö valmistuu, Firebase Authentication -käyttäjätili ja Tietojen poistaminen -sivulla kuvatut siihen liittyvät pilviyhteiskäyttötiedot poistetaan. Firestore TTL ei ole tällä hetkellä käytössä poistopyyntöjen tilatiedoille, joten emme ilmoita niille automaattista Firestore TTL -poistoaikaa.",
 
       h_not_collect:"Mitä emme kerää",
       not_1:"Sovellus ei myy henkilötietojasi.",
