@@ -120,7 +120,7 @@ chosen separately from the app language.
 - Support: `https://janstechapps.com/legal/tyotori/support.html`
 - Terms: `https://janstechapps.com/legal/tyotori/terms.html`
 - Delete data: `https://janstechapps.com/legal/tyotori/delete-data.html`
-- Support email: `janstech.apps@gmail.com`
+- Support email: `info@janstechapps.com`
 
 Open follow-up owned by the Työtori project, not by this repository: the app constant
 `TyotoriLegalLinks.PrivacyPolicyUrl` and the Play Console privacy policy URL still point

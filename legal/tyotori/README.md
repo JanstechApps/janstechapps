@@ -16,7 +16,7 @@ memory. When Työtori's data handling changes, update these pages from the same
 source and move the "Updated" date.
 
 ## Notes
-- Support email: janstech.apps@gmail.com
+- Support email: info@janstechapps.com
 - Update the "Updated" date when you change content.
 - The Google Play Console privacy policy URL and the in-app privacy link are
   configured in the Työtori project, not here. If these pages are meant to be

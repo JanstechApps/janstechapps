@@ -16,5 +16,5 @@ This repository hosts the GitHub Pages site for the Android app: **WaveIQ Radio*
 5. Save → wait for the Pages URL.
 
 ## Notes
-- Support email: janstech.apps@gmail.com
+- Support email: info@janstechapps.com
 - Update the “Updated” date when you change content.

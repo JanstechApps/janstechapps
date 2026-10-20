@@ -262,7 +262,7 @@ footers, `<title>` and meta tags, Open Graph, JSON-LD, documentation,
 messages.
 
 Do NOT "fix" the domain `janstechapps.com`, file paths, technical identifiers
-(`janstech_apps_lang`, `com.janstech.*`, `janstech.apps@gmail.com`), existing
+(`janstech_apps_lang`, `com.janstech.*`, `info@janstechapps.com`), existing
 URLs, or historical/external strings.
 
 ## Scope

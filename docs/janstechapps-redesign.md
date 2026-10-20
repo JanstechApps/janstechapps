@@ -24,7 +24,7 @@ messages.
 
 Not affected, because changing them would break something: the domain
 `janstechapps.com`, file paths, technical identifiers (`janstech_apps_lang`,
-`com.janstech.*`, `janstech.apps@gmail.com`), existing URLs, and historical or
+`com.janstech.*`, `info@janstechapps.com`), existing URLs, and historical or
 external strings.
 
 ---

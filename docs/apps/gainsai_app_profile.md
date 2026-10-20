@@ -9,7 +9,7 @@
 - Support: https://janstechapps.com/legal/gainsai/support.html
 - Terms: https://janstechapps.com/legal/gainsai/terms.html
 - Delete data: https://janstechapps.com/legal/gainsai/delete-data.html
-- Support email: janstech.apps@gmail.com
+- Support email: info@janstechapps.com
 
 ## Verified release information
 

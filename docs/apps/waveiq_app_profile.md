@@ -59,7 +59,7 @@ Placeholder: `https://play.google.com/store/apps/details?id=com.janstech.radiopl
 
 - Website: `https://janstechapps.com/`
 - Privacy policy: `https://janstechapps.com/legal/waveiq/`
-- Support email: `janstech.apps@gmail.com`
+- Support email: `info@janstechapps.com`
 - Terms / data deletion: use the published legal page or support contact unless separate public URLs are added.
 
 ## Do Not Claim

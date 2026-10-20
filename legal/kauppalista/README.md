@@ -60,7 +60,7 @@ Last updated: 2026-10-20
 
 Support and privacy-related questions:
 
-**janstech.apps@gmail.com**
+**info@janstechapps.com**
 
 ---
 
@@ -130,4 +130,4 @@ Päivitetty: 20.10.2026
 
 Sovelluksen tuki ja tietosuojaan liittyvät kysymykset:
 
-**janstech.apps@gmail.com**
+**info@janstechapps.com**

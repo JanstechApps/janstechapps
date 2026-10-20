@@ -79,7 +79,7 @@ Documented supported locales:
 
 - Privacy policy: https://janstechapps.com/legal/kauppalista/
 - JanstechApps: https://janstechapps.com/
-- Support email: `janstech.apps@gmail.com`
+- Support email: `info@janstechapps.com`
 
 ## Do Not Claim
 
