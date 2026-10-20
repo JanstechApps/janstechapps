@@ -43,6 +43,7 @@ The application and related services may use:
 - Firebase Firestore
 - Firebase Cloud Messaging (FCM)
 - Firebase App Check
+- Firebase Crashlytics (including NDK crash reporting; controlled by the optional Usage statistics setting)
 - Google Play Integrity
 - Cloud Functions
 - AI backend services
@@ -51,7 +52,7 @@ The application and related services may use:
 
 # Updates
 
-Last updated: 2026-05-12
+Last updated: 2026-10-20
 
 ---
 
@@ -112,6 +113,7 @@ Sovellus ja siihen liittyvät palvelut voivat käyttää:
 - Firebase Firestore
 - Firebase Cloud Messaging (FCM)
 - Firebase App Check
+- Firebase Crashlytics (mukaan lukien NDK-kaatumisraportointi; Käyttötilastot-asetus hallitsee käyttöä)
 - Google Play Integrity
 - Cloud Functions
 - AI-taustapalvelut
@@ -120,7 +122,7 @@ Sovellus ja siihen liittyvät palvelut voivat käyttää:
 
 # Päivitykset
 
-Päivitetty: 12.5.2026
+Päivitetty: 20.10.2026
 
 ---
 

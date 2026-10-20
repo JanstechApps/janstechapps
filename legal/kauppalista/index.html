@@ -50,7 +50,7 @@
       <span class="badge">
         <i></i>
         <span data-i18n="badge">Last updated</span>:
-        <span>2026-06-03</span>
+        <span>2026-10-20</span>
       </span>
 
       <h2 data-i18n="title">Privacy Policy</h2>
@@ -103,7 +103,7 @@
           </li>
 
           <li data-i18n="s7">
-            Anonymous usage analytics may be collected to improve app quality and features. User content is never included in analytics.
+            Optional usage analytics and crash diagnostics may be collected while Usage statistics is enabled. The app does not add user content to these reports.
           </li>
         </ul>
 
@@ -220,6 +220,30 @@
 
         <hr class="sep"/>
 
+        <h3 data-i18n="h_crashlytics">Crash Diagnostics (Firebase Crashlytics)</h3>
+
+        <p data-i18n="p_crashlytics_1">
+          Firebase Crashlytics is controlled by the Usage statistics setting. Automatic Crashlytics collection is disabled by default, and the app applies the saved Usage statistics setting after it has loaded.
+        </p>
+
+        <p data-i18n="p_crashlytics_2">
+          With the setting enabled, Crashlytics processes crash and diagnostic information to help us identify, reproduce, and correct reliability problems. This includes Java/Kotlin and NDK native crash reports.
+        </p>
+
+        <p data-i18n="p_crashlytics_3">
+          Reports can contain a Crashlytics Installation UUID, Firebase Installation ID, session and crash identifiers, timestamps, app package and version, operating system version, device model, CPU architecture, RAM/disk information, application state, and crash stack trace, exception, or fatal-signal information. For an NDK crash, temporary Breakpad minidump data may be processed.
+        </p>
+
+        <p data-i18n="p_crashlytics_4">
+          The app does not add your account identifier or other app-defined user identifier, custom keys, or log entries to Crashlytics reports. Shopping list and note contents, health values, recipes, searches, email addresses, and user-generated text are not added by the app to Crashlytics reports.
+        </p>
+
+        <p data-i18n="p_crashlytics_5">
+          Turning Usage statistics off disables both Firebase Analytics and Firebase Crashlytics. The app then asks Crashlytics to delete unsent reports. Reports already sent may be retained by Firebase under its retention rules.
+        </p>
+
+        <hr class="sep"/>
+
         <h3 data-i18n="h_push">Push Notifications</h3>
 
         <p data-i18n="p_push_1">
@@ -325,6 +349,10 @@
             Firebase Analytics
           </li>
 
+          <li data-i18n="third_8">
+            Firebase Crashlytics (including NDK crash reporting)
+          </li>
+
           <li data-i18n="third_3">
             Firebase Cloud Messaging (FCM)
           </li>
@@ -368,6 +396,10 @@
 
         <p data-i18n="p_ret_4">
           Analytics data may be retained for a limited period according to Firebase/Google Analytics retention settings and is used only for app quality, reliability, and feature improvement.
+        </p>
+
+        <p data-i18n="p_ret_5">
+          According to Firebase documentation, Crashlytics retains crash stack traces, extracted NDK minidump data, and associated identifiers for 90 days before beginning removal from live and backup systems.
         </p>
 
         <hr class="sep"/>
@@ -526,7 +558,7 @@
       s4:"Google Sign-In is only required when using shared collaborative lists.",
       s5:"Push notifications are optional and can be disabled from device/app settings.",
       s6:"Limited technical and collaboration-related data may be processed to provide shared list features and protect the service from abuse.",
-      s7:"Anonymous usage analytics may be collected to improve app quality and features. User content is never included in analytics.",
+      s7:"Optional usage analytics and crash diagnostics may be collected while Usage statistics is enabled. The app does not add user content to these reports.",
 
       h_collect:"Data Collection and Usage",
       p_collect_1:"The application is designed with an offline-first and privacy-first approach. Most everyday usage does not require creating an account.",
@@ -556,6 +588,13 @@
       p_analytics_3:"Analytics does not include shopping list contents, note contents, health information values, recipe contents, search terms, email addresses, user-generated text, or shared list contents.",
       p_analytics_4:"Analytics data is not used for advertising, personalized advertising, or cross-app tracking.",
 
+      h_crashlytics:"Crash Diagnostics (Firebase Crashlytics)",
+      p_crashlytics_1:"Firebase Crashlytics is controlled by the Usage statistics setting. Automatic Crashlytics collection is disabled by default, and the app applies the saved Usage statistics setting after it has loaded.",
+      p_crashlytics_2:"With the setting enabled, Crashlytics processes crash and diagnostic information to help us identify, reproduce, and correct reliability problems. This includes Java/Kotlin and NDK native crash reports.",
+      p_crashlytics_3:"Reports can contain a Crashlytics Installation UUID, Firebase Installation ID, session and crash identifiers, timestamps, app package and version, operating system version, device model, CPU architecture, RAM/disk information, application state, and crash stack trace, exception, or fatal-signal information. For an NDK crash, temporary Breakpad minidump data may be processed.",
+      p_crashlytics_4:"The app does not add your account identifier or other app-defined user identifier, custom keys, or log entries to Crashlytics reports. Shopping list and note contents, health values, recipes, searches, email addresses, and user-generated text are not added by the app to Crashlytics reports.",
+      p_crashlytics_5:"Turning Usage statistics off disables both Firebase Analytics and Firebase Crashlytics. The app then asks Crashlytics to delete unsent reports. Reports already sent may be retained by Firebase under its retention rules.",
+
       h_push:"Push Notifications",
       p_push_1:"If enabled, the application may use Firebase Cloud Messaging (FCM) to deliver shared list notifications such as:",
       push_1:"Shared list invitations",
@@ -580,6 +619,7 @@
       third_1:"Firebase Authentication",
       third_2:"Firebase Firestore",
       third_7:"Firebase Analytics",
+      third_8:"Firebase Crashlytics (including NDK crash reporting)",
       third_3:"Firebase Cloud Messaging (FCM)",
       third_4:"Firebase App Check",
       third_5:"Google Play Integrity",
@@ -591,6 +631,7 @@
       p_ret_2:"Shared collaboration data may remain stored while shared lists are active in order to provide synchronization and collaboration between members.",
       p_ret_3:"Limited technical and anti-abuse records (such as technical identifiers, request counters, timestamps, and notification tokens) may be stored temporarily for security and service protection purposes.",
       p_ret_4:"Analytics data may be retained for a limited period according to Firebase/Google Analytics retention settings and is used only for app quality, reliability, and feature improvement.",
+      p_ret_5:"According to Firebase documentation, Crashlytics retains crash stack traces, extracted NDK minidump data, and associated identifiers for 90 days before beginning removal from live and backup systems.",
 
       h_not_collect:"What We Do NOT Collect",
       not_1:"The app does not sell your personal data.",
@@ -644,7 +685,7 @@
       s4:"Google-kirjautumista tarvitaan vain jaettujen listojen yhteiskäyttöön.",
       s5:"Push-ilmoitukset ovat vapaaehtoisia ja ne voi poistaa käytöstä laitteen tai sovelluksen asetuksista.",
       s6:"Rajattua teknistä ja yhteiskäyttöön liittyvää dataa voidaan käsitellä jaettujen listojen toiminnallisuutta ja palvelun suojaamista varten.",
-      s7:"Sovellus voi kerätä rajattua anonyymiä käyttötietoa sovelluksen laadun ja ominaisuuksien kehittämiseksi. Käyttäjän sisältöä ei koskaan sisällytetä analytiikkaan.",
+      s7:"Käyttötilastot-asetuksen ollessa käytössä sovellus voi kerätä käyttötilastoja ja kaatumisdiagnostiikkaa. Sovellus ei lisää käyttäjän sisältöä näihin raportteihin.",
 
       h_collect:"Tietojen kerääminen ja käyttö",
       p_collect_1:"Sovellus on suunniteltu offline-first- ja privacy-first-periaatteella. Tavallinen käyttö ei yleensä vaadi käyttäjätilin luomista.",
@@ -674,6 +715,13 @@
       p_analytics_3:"Analytiikka ei sisällä ostoslistojen sisältöä, muistiinpanojen sisältöä, terveystietojen arvoja, reseptien sisältöä, hakusanoja, sähköpostiosoitteita, käyttäjän kirjoittamaa tekstiä tai jaettujen listojen sisältöä.",
       p_analytics_4:"Analytiikkatietoja ei käytetä mainontaan, personoituun mainontaan tai sovellusten väliseen seurantaan.",
 
+      h_crashlytics:"Kaatumisdiagnostiikka (Firebase Crashlytics)",
+      p_crashlytics_1:"Firebase Crashlyticsia ohjaa Käyttötilastot-asetus. Crashlyticsin automaattinen keruu on oletuksena pois päältä, ja sovellus soveltaa tallennettua Käyttötilastot-asetusta sen latauduttua.",
+      p_crashlytics_2:"Kun asetus on käytössä, Crashlytics käsittelee kaatumis- ja diagnostiikkatietoja luotettavuusongelmien tunnistamista, toistamista ja korjaamista varten. Tähän sisältyvät Java/Kotlin- ja NDK-natiivikaatumisraportit.",
+      p_crashlytics_3:"Raportit voivat sisältää Crashlytics-asennustunnisteen (UUID), Firebase-asennustunnisteen, istunto- ja kaatumistunnisteita, aikaleimoja, sovelluksen paketti- ja versiotiedot, käyttöjärjestelmäversion, laitemallin, suorittimen arkkitehtuurin, RAM- ja levytilatiedot, sovelluksen tilan sekä kaatumisen pinojälki-, poikkeus- tai kuolettavaa signaalia koskevia tietoja. NDK-kaatumisessa voidaan käsitellä väliaikaista Breakpad-minidump-dataa.",
+      p_crashlytics_4:"Sovellus ei lisää Crashlytics-raportteihin tilitunnistettasi tai muuta sovelluksen määrittämää käyttäjätunnistetta, custom key -tietoja eikä lokimerkintöjä. Sovellus ei lisää Crashlytics-raportteihin kauppalistojen tai muistiinpanojen sisältöä, terveystietojen arvoja, reseptejä, hakuja, sähköpostiosoitteita eikä käyttäjän kirjoittamaa tekstiä.",
+      p_crashlytics_5:"Käyttötilastojen poistaminen käytöstä poistaa käytöstä sekä Firebase Analyticsin että Firebase Crashlyticsin. Tällöin sovellus pyytää Crashlyticsia poistamaan lähettämättömät raportit. Jo lähetettyjä raportteja voidaan säilyttää Firebase-palvelussa sen säilytyssääntöjen mukaisesti.",
+
       h_push:"Push-ilmoitukset",
       p_push_1:"Jos ilmoitukset ovat käytössä, sovellus voi käyttää Firebase Cloud Messagingia (FCM) jaettujen listojen ilmoitusten toimittamiseen, kuten:",
       push_1:"Jaettujen listojen kutsut",
@@ -698,6 +746,7 @@
       third_1:"Firebase Authentication",
       third_2:"Firebase Firestore",
       third_7:"Firebase Analytics",
+      third_8:"Firebase Crashlytics (mukaan lukien NDK-kaatumisraportointi)",
       third_3:"Firebase Cloud Messaging (FCM)",
       third_4:"Firebase App Check",
       third_5:"Google Play Integrity",
@@ -709,6 +758,7 @@
       p_ret_2:"Jaettujen listojen yhteiskäyttödataa voidaan säilyttää niin kauan kuin jaetut listat ovat aktiivisia, jotta synkronointi ja yhteiskäyttö jäsenten välillä toimivat.",
       p_ret_3:"Rajattuja teknisiä ja väärinkäytösten estoon liittyviä tietoja, kuten teknisiä tunnisteita, pyyntölaskureita, aikaleimoja ja ilmoitustokeneita, voidaan säilyttää väliaikaisesti tietoturvan ja palvelun suojaamisen vuoksi.",
       p_ret_4:"Analytiikkatietoja voidaan säilyttää rajatun ajan Firebase/Google Analyticsin säilytysasetusten mukaisesti, ja niitä käytetään vain sovelluksen laadun, luotettavuuden ja ominaisuuksien parantamiseen.",
+      p_ret_5:"Firebase-dokumentaation mukaan Crashlytics säilyttää kaatumisten pinojälkiä, purettua NDK-minidump-dataa ja siihen liittyviä tunnisteita 90 päivää ennen kuin niiden poisto tuotanto- ja varmuuskopiojärjestelmistä alkaa.",
 
       h_not_collect:"Mitä emme kerää",
       not_1:"Sovellus ei myy henkilötietojasi.",
